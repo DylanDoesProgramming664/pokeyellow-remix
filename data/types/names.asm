@@ -9,6 +9,8 @@ TypeNames:
 	dw .Rock
 	dw .Normal
 	dw .Bug
+	dw .Steel
+	dw .Dark
 	dw .Ghost
 
 REPT UNUSED_TYPES_END - UNUSED_TYPES
@@ -37,7 +39,9 @@ ENDR
 .Ice:      db "ICE@"
 .Ground:   db "GROUND@"
 .Rock:     db "ROCK@"
+.Steel:    db "STEEL@"
 .Bird:     db "BIRD@"
 .Bug:      db "BUG@"
 .Ghost:    db "GHOST@"
+.Dark:     db "DARK@"
 .Dragon:   db "DRAGON@"

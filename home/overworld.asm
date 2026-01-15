@@ -708,6 +708,7 @@ CheckMapConnections::
 ; x#SPRITESTATEDATA2_IMAGEBASEOFFSET without loading any tile patterns.
 	call InitMapSprites
 	call LoadTileBlockMap
+	farcall RemoveAlreadyCutTrees
 	jp OverworldLoopLessDelay
 
 .didNotEnterConnectedMap
@@ -2051,6 +2052,7 @@ LoadMapData::
 
 LoadScreenRelatedData::
 	call LoadTileBlockMap
+	farcall RemoveAlreadyCutTrees
 	call LoadTilesetTilePatternData
 	call LoadCurrentMapView
 	ret

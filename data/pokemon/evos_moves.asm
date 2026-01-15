@@ -402,7 +402,7 @@ GengarEvosMoves:
 ; Learnset
 	db 10, SMOG
 	db 15, PSYWAVE
-	db 36, NIGHT_SHADE
+	db 36, SHADOW_SNEAK
 	db 55, HYPNOSIS
 	db 55, DREAM_EATER
 	db 0
@@ -558,7 +558,7 @@ GastlyEvosMoves:
 	db 10, SMOG
 	db 15, PSYWAVE
 	db 23, POISON_GAS
-	db 36, NIGHT_SHADE
+	db 36, SHADOW_SNEAK
 	db 55, HYPNOSIS
 	db 55, DREAM_EATER
 	db 0
@@ -1243,7 +1243,7 @@ VulpixEvosMoves:
 	db 16, CONFUSE_RAY
 	db 25, REFLECT
 	db 32, FLAMETHROWER
-	db 37, NIGHT_SHADE
+	db 37, SHADOW_SNEAK
 	db 42, FIRE_SPIN
 	db 0
 
@@ -1256,7 +1256,7 @@ NinetalesEvosMoves:
 	db 16, CONFUSE_RAY
 	db 25, REFLECT
 	db 32, FLAMETHROWER
-	db 37, NIGHT_SHADE
+	db 37, SHADOW_SNEAK
 	db 42, FIRE_SPIN
 	db 0
 
@@ -2039,7 +2039,7 @@ HaunterEvosMoves:
 ; Learnset
 	db 10, SMOG
 	db 15, PSYWAVE
-	db 36, NIGHT_SHADE
+	db 36, SHADOW_SNEAK
 	db 55, HYPNOSIS
 	db 55, DREAM_EATER
 	db 0

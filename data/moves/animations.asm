@@ -100,7 +100,7 @@ AttackAnimationPointers:
 	dw QuickAttackAnim
 	dw RageAnim
 	dw TeleportAnim
-	dw NightShadeAnim
+	dw ShadowSneakAnim
 	dw MimicAnim
 	dw ScreechAnim
 	dw DoubleTeamAnim
@@ -764,7 +764,7 @@ TeleportAnim:
 	battle_anim NO_MOVE, SE_SHOOT_BALLS_UPWARD
 	db -1 ; end
 
-NightShadeAnim:
+ShadowSneakAnim:
 	battle_anim CONFUSION, SE_FLASH_SCREEN_LONG
 	battle_anim NO_MOVE, SE_WAVY_SCREEN
 	db -1 ; end

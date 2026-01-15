@@ -59,6 +59,7 @@ Cut2::
 	call InitCutAnimOAM
 	ld de, CutTreeBlockSwaps
 	call ReplaceTreeTileBlock
+	farcall SetCutTreeFlags
 	call RedrawMapView
 	farcall AnimCut
 	ld a, $1
@@ -239,6 +240,11 @@ ReplaceTreeTileBlock:
 	pop de
 	ld a, [hl]
 	ld c, a
+	call LoopForTileReplacement
+	ld [hl], a
+	ret
+
+LoopForTileReplacement:
 .loop ; find the matching tile block in the array
 	ld a, [de]
 	inc de
@@ -249,7 +255,14 @@ ReplaceTreeTileBlock:
 	jr nz, .loop
 	dec de
 	ld a, [de] ; replacement tile block from matching array entry
-	ld [hl], a
+	ret
+
+FindTileBlockReplacementCut::
+	ld de, CutTreeBlockSwaps
+	ld a, [wNewTileBlockID]
+	ld c, a
+	call LoopForTileReplacement
+	ld [wNewTileBlockID], a
 	ret
 
 INCLUDE "data/tilesets/cut_tree_blocks.asm"

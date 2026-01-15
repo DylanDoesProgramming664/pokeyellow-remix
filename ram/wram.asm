@@ -210,7 +210,6 @@ wc5d2:: db
 wSurfingMinigameWaveFunctionNumber:: dw
 wc5d5:: db
 wSurfingMinigamePikachuHP:: dw ; little-endian BCD
-wc5d8:: db ; unused?
 ; number of consecutive tricks
 wSurfingMinigameRadnessMeter:: db
 wSurfingMinigameRadnessScore:: dw ; little-endian BCD
@@ -558,7 +557,13 @@ NEXTU
 wBoostExpByExpAll::
 wUnusedCC5B:: db
 
-	ds 59
+	ds 53
+
+wCutTrees::
+; Check CutTreeLocations for the indexes
+	ds 3
+	; unused
+	ds 3
 
 wNPCMovementDirections2:: ds 10
 ; used in Pallet Town scripted movement

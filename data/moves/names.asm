@@ -100,7 +100,7 @@ MoveNames::
 	li "QUICK ATTACK"
 	li "RAGE"
 	li "TELEPORT"
-	li "NIGHT SHADE"
+	li "SHADOW SNEAK"
 	li "MIMIC"
 	li "SCREECH"
 	li "DOUBLE TEAM"

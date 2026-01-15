@@ -473,41 +473,41 @@ HandleMovePriority:
 ; the enemy's priority value will be stored in register e.
 ; These values will be compared after the 'ret' instruction is called
 
-        ld a, [wPlayerSelectedMove]
-        ld b, a
-        ld hl, PriorityMovesList
-        ld c, 7           ; no priority is 7
+	ld a, [wPlayerSelectedMove]
+	ld b, a
+	ld hl, PriorityMovesList
+	ld c, 7           ; no priority is 7
 .playerPriorityMoveLoop
-        ld a, [hli]       ; load the move ID from priority list and 
-                          ; increment address to the priority value address
-        cp b              ; compare with move being used
-        jr z, .playerUsingPriorityMove
-        inc a             ; if at end of list: -1 + 1 = 0xFF + 0x01 = 0
-        jr z, .noPlayerPriorityMove
-        inc hl            ; increment address to the next move
-        jr .playerPriorityMoveLoop
+	ld a, [hli]       ; load the move ID from priority list and
+	                  ; increment address to the priority value address
+	cp b              ; compare with move being used
+	jr z, .playerUsingPriorityMove
+	inc a             ; if at end of list: -1 + 1 = 0xFF + 0x01 = 0
+	jr z, .noPlayerPriorityMove
+	inc hl            ; increment address to the next move
+	jr .playerPriorityMoveLoop
 .playerUsingPriorityMove
-        ld c, [hl]        ; get new priority value 
+	ld c, [hl]        ; get new priority value
 .noPlayerPriorityMove
 
 ; Now check enemy priority 
-        ld a, [wEnemySelectedMove]
-        ld d, a
-        ld hl, PriorityMovesList
-        ld e, 7           ; no priority is 7
+	ld a, [wEnemySelectedMove]
+	ld d, a
+	ld hl, PriorityMovesList
+	ld e, 7           ; no priority is 7
 .enemyPriorityMoveLoop
-        ld a, [hli]       ; load the move ID from priority list and 
-                          ; increment address to the priority value address
-        cp d              ; compare with move being used
-        jr z, .enemyUsingPriorityMove
-        inc a             ; if at end of list: -1 + 1 = 0xFF + 0x01 = 0
-        jr z, .noEnemyPriorityMove
-        inc hl            ; increment address to the next move
-        jr .enemyPriorityMoveLoop
+	ld a, [hli]       ; load the move ID from priority list and
+	                  ; increment address to the priority value address
+	cp d              ; compare with move being used
+	jr z, .enemyUsingPriorityMove
+	inc a             ; if at end of list: -1 + 1 = 0xFF + 0x01 = 0
+	jr z, .noEnemyPriorityMove
+	inc hl            ; increment address to the next move
+	jr .enemyPriorityMoveLoop
 .enemyUsingPriorityMove
-        ld e, [hl]        ; get new priority value 
+	ld e, [hl]        ; get new priority value
 .noEnemyPriorityMove
-        ret
+	ret
 
 INCLUDE "data/battle/priority_moves.asm"
 
@@ -4156,14 +4156,14 @@ CheckForDisobedience:
 	cp 5
 	ld a, 50 ; Alakazam's level
 	jr nc, .next
-    cp 4
+	cp 4
 	ld a, 43 ; Venomoth's level
 	jr nc, .next
 	cp 3
 	ld a, 35 ; Vileplume's level
 	jr nc, .next
 	cp 2
-    ld a, 24 ; Bit below Raichu's level
+	ld a, 24 ; Bit below Raichu's level
 	jr nc, .next
 	cp 1
 	ld a, 21 ; Starmie's level
@@ -4979,8 +4979,6 @@ ApplyAttackToEnemyPokemon:
 	ld a, [wPlayerMoveNum]
 	cp SEISMIC_TOSS
 	jr z, .storeDamage
-	cp NIGHT_SHADE
-	jr z, .storeDamage
 	ld b, SONICBOOM_DAMAGE ; 20
 	cp SONICBOOM
 	jr z, .storeDamage
@@ -5102,7 +5100,7 @@ ApplyAttackToPlayerPokemon:
 	ld a, [wEnemyMoveNum]
 	cp SEISMIC_TOSS
 	jr z, .storeDamage
-	cp NIGHT_SHADE
+	cp SHADOW_SNEAK
 	jr z, .storeDamage
 	ld b, SONICBOOM_DAMAGE
 	cp SONICBOOM
@@ -5608,24 +5606,25 @@ MoveHitTest:
 .dreamEaterCheck
 	ld a, [de]
 	cp DREAM_EATER_EFFECT
-	jr nz, .swiftCheck
+	jr nz, .checkForDigOrFlyStatus
 	ld a, [bc]
 	and SLP_MASK
 	jp z, .moveMissed
+.checkForDigOrFlyStatus
+	bit INVULNERABLE, [hl]
+	jp nz, .moveMissed
 .swiftCheck
 	ld a, [de]
 	cp SWIFT_EFFECT
 	ret z ; Swift never misses (this was fixed from the Japanese versions)
 	call CheckTargetSubstitute ; substitute check (note that this overwrites a)
-	jr z, .checkForDigOrFlyStatus
+	jr z, .noSubstitute
 	ld a, [de]
 	cp DRAIN_HP_EFFECT
 	jp z, .moveMissed
 	cp DREAM_EATER_EFFECT
 	jp z, .moveMissed
-.checkForDigOrFlyStatus
-	bit INVULNERABLE, [hl]
-	jp nz, .moveMissed
+.noSubstitute
 	ldh a, [hWhoseTurn]
 	and a
 	jr nz, .enemyTurn
@@ -6491,13 +6490,13 @@ LoadEnemyMonData:
 	ld a, [hl]     ; base exp
 	ld [de], a
 	; Nickname code
-    ld a, [wCurOpponent]
-    cp OPP_CRAIG
-    jr nz, .loadSpeciesName
-    ld hl, .CraigMonsNicks
-    ld a, [wWhichPokemon]
-    call SkipFixedLengthTextEntries
-    jr .copyNick
+	ld a, [wCurOpponent]
+	cp OPP_CRAIG
+	jr nz, .loadSpeciesName
+	ld hl, .CraigMonsNicks
+	ld a, [wWhichPokemon]
+	call SkipFixedLengthTextEntries
+	jr .copyNick
 .loadSpeciesName
 	ld a, [wEnemyMonSpecies2]
 	ld [wd11e], a
@@ -6881,9 +6880,9 @@ ApplyBadgeStatBoosts:
 	rr e
 	srl d
 	rr e
-    ld a, [wBattleMonSpecies] ; Check if the species is Pikachu
-    cp PIKACHU
-    jr nz, .continue ; times by 1.25 if its Pikachu
+	ld a, [wBattleMonSpecies] ; Check if the species is Pikachu
+	cp PIKACHU
+	jr nz, .continue ; times by 1.25 if its Pikachu
 	srl d
 	rr e
 .continue

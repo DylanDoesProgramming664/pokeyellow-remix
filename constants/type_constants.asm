@@ -10,9 +10,11 @@ DEF PHYSICAL EQU const_value
 	const ROCK         ; $05
 	const BIRD         ; $06
 	const BUG          ; $07
+	const STEEL        ; $08
+	const DARK         ; $09
 
 DEF SPECIAL EQU const_value
-	const GHOST        ; $08
+	const GHOST        ; $0A
 
 DEF UNUSED_TYPES EQU const_value
 	const_next 20

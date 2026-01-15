@@ -4,5 +4,6 @@
 PriorityMovesList:
     db COUNTER,        1
     db QUICK_ATTACK,   8
+    db SHADOW_SNEAK,   8
     db TRANSFORM,      8
     db -1 ; end

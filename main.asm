@@ -305,6 +305,7 @@ INCLUDE "engine/items/itemfinder.asm"
 SECTION "Vending Machine", ROMX
 
 INCLUDE "engine/events/vending_machine.asm"
+INCLUDE "engine/pokemon/calc_stats.asm"
 
 
 SECTION "Itemfinder 2", ROMX
@@ -416,6 +417,7 @@ INCLUDE "engine/battle/get_trainer_name.asm"
 INCLUDE "engine/math/random.asm"
 INCLUDE "engine/predefs.asm"
 INCLUDE "engine/overworld/field_moves.asm"
+INCLUDE "engine/overworld/remove_cut_trees.asm"
 
 
 SECTION "Surfing Minigame", ROMX
