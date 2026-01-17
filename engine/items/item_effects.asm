@@ -1505,12 +1505,12 @@ ItemUseMedicine:
 	ld b, 35 ; Vileplume's level
 	jr nc, .next1
 	cp 2
-    ld b, 24 ; Bit below Raichu's level
+    ld b, 26 ; Bit below Raichu's level
 	jr nc, .next1
 	cp 1
-	ld b, 21 ; Starmie's level
+	ld b, 22 ; Starmie's level
 	jr nc, .next1
-	ld b, 12 ; Onix's level
+	ld b, 15 ; Onix's level
 .next1
 
 	pop hl

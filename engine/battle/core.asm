@@ -4163,12 +4163,12 @@ CheckForDisobedience:
 	ld a, 35 ; Vileplume's level
 	jr nc, .next
 	cp 2
-	ld a, 24 ; Bit below Raichu's level
+	ld a, 26 ; Bit below Raichu's level
 	jr nc, .next
 	cp 1
-	ld a, 21 ; Starmie's level
+	ld a, 22 ; Starmie's level
 	jr nc, .next
-	ld a, 12 ; Onix's level
+	ld a, 15 ; Onix's level
 	jp .next
 .NormalMode2
 	inc hl

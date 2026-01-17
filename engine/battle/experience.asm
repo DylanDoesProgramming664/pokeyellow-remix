@@ -150,15 +150,15 @@ GainExperience:
 	ld d, 43 ; Venomoth's level
 	jr nc, .next1
 	cp 3
-	ld d, 35 ; Vileplume's level
+	ld d, 37 ; Vileplume's level
 	jr nc, .next1
 	cp 2
-    ld d, 24 ; Bit below Raichu's level
+    ld d, 26 ; Bit below Raichu's level
 	jr nc, .next1
 	cp 1
-	ld d, 21 ; Starmie's level
+	ld d, 22 ; Starmie's level
 	jr nc, .next1
-	ld d, 12 ; Onix's level
+	ld d, 15 ; Onix's level
 .next1
 	callfar CalcExperience ; get max exp
 ; compare max exp with current exp
