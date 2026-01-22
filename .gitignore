@@ -47,3 +47,6 @@ pokeyellow_debug.map
 *.ss8
 *.ss9
 *.cheats
+
+# debugging logs
+*.log

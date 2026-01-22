@@ -111,9 +111,20 @@ _AddPartyMon::
 	jr nz, .copyEnemyMonData
 
 ; Not wild.
+; Check if Pikachu
+	ld a, [wcf91]
+    cp a, STARTER_PIKACHU
+    jr z, .setStarterDVs
+
+; Not Pikachu
 	call Random ; generate random IVs
 	ld b, a
 	call Random
+    jr .next4
+
+.setStarterDVs
+    ld a, $ff
+    ld b, a
 
 .next4
 	push bc

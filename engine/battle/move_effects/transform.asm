@@ -99,7 +99,7 @@ TransformEffect_:
 	ld a, [hli]
 	and a
 	jr z, .lessThanFourMoves
-	ld a, $5
+	ld a, 10
 .lessThanFourMoves
 	ld [de], a
 	inc de

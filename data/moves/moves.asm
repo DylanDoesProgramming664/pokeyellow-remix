@@ -76,13 +76,13 @@ Moves:
 	move HYPER_BEAM,   HYPER_BEAM_EFFECT,          150, NORMAL,        90,  5
 	move PECK,         NO_ADDITIONAL_EFFECT,        35, FLYING,       100, 35
 	move DRILL_PECK,   NO_ADDITIONAL_EFFECT,        80, FLYING,       100, 20
-	move SUBMISSION,   RECOIL_EFFECT,               80, FIGHTING,     100, 25
+	move SUBMISSION,   RECOIL_EFFECT,               90, FIGHTING,     100, 25
 	move LOW_KICK,     FLINCH_SIDE_EFFECT2,         60, FIGHTING,     100, 20
 	move COUNTER,      NO_ADDITIONAL_EFFECT,         1, FIGHTING,     100, 20
 	move SEISMIC_TOSS, SPECIAL_DAMAGE_EFFECT,        1, FIGHTING,     100, 20
 	move STRENGTH,     NO_ADDITIONAL_EFFECT,        80, NORMAL,       100, 15
 	move ABSORB,       DRAIN_HP_EFFECT,             30, GRASS,        100, 25
-	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             65, GRASS,        100, 20
+	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             60, GRASS,        100, 20
 	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,         90, 10
 	move GROWTH,       SPECIAL_UP1_EFFECT,           0, BIRD,         100, 40
 	move RAZOR_LEAF,   NO_ADDITIONAL_EFFECT,        55, GRASS,         95, 25
@@ -91,7 +91,7 @@ Moves:
 	move STUN_SPORE,   PARALYZE_EFFECT,              0, GRASS,         75, 30
 	move SLEEP_POWDER, SLEEP_EFFECT,                 0, GRASS,         75, 15
 	move PETAL_DANCE,  THRASH_PETAL_DANCE_EFFECT,  120, GRASS,        100, 20
-	move STRING_SHOT,  SPEED_DOWN1_EFFECT,           0, BUG,           95, 40
+	move STRING_SHOT,  SPEED_DOWN1_EFFECT,           0, BUG,          100, 40
 	move DRAGON_RAGE,  SPECIAL_DAMAGE_EFFECT,        1, DRAGON,       100, 20
 	move FIRE_SPIN,    TRAPPING_EFFECT,             35, FIRE,          85, 15
 	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT1,       40, ELECTRIC,     100, 30
@@ -109,7 +109,7 @@ Moves:
 	move MEDITATE,     ATTACK_UP1_EFFECT,            0, BIRD,   	  100, 40
 	move AGILITY,      SPEED_UP2_EFFECT,             0, BIRD,         100, 30
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 30
-	move RAGE,         RAGE_EFFECT,                 60, NORMAL,       100, 20
+	move RAGE,         RAGE_EFFECT,                 60, DRAGON,       100, 20
 	move TELEPORT,     SWITCH_AND_TELEPORT_EFFECT,   0, PSYCHIC_TYPE, 100, 20
 	move SHADOW_SNEAK, NO_ADDITIONAL_EFFECT,        40, GHOST,        100, 30
 	move MIMIC,        MIMIC_EFFECT,                 0, BIRD,         100, 10

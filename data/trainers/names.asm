@@ -51,4 +51,5 @@ TrainerNames::
 	li "JANINE"
 	li "NURSE JOY"
 	li "OFF.JENNY"
+    li "DYLAN"
 	assert_list_length NUM_TRAINERS

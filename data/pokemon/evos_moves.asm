@@ -412,8 +412,8 @@ NidoranFEvosMoves:
 	db EVOLVE_LEVEL, 16, NIDORINA
 	db 0
 ; Learnset
- 	db 6, POISON_STING
-	db 8, BITE
+	db 6,  POISON_STING
+	db 8,  BITE
 	db 12, DOUBLE_KICK
 	db 23, TAIL_WHIP
 	db 30, HEADBUTT
@@ -726,6 +726,7 @@ SlowpokeEvosMoves:
 
 KadabraEvosMoves:
 ; Evolutions
+	db EVOLVE_TRADE, ALAKAZAM
 	db EVOLVE_LEVEL, 42, ALAKAZAM
 	db 0
 ; Learnset
@@ -739,6 +740,7 @@ KadabraEvosMoves:
 
 GravelerEvosMoves:
 ; Evolutions
+	db EVOLVE_TRADE, GOLEM
 	db EVOLVE_LEVEL, 38, GOLEM
 	db 0
 ; Learnset
@@ -768,6 +770,7 @@ ChanseyEvosMoves:
 
 MachokeEvosMoves:
 ; Evolutions
+	db EVOLVE_TRADE, MACHAMP
 	db EVOLVE_LEVEL, 38, MACHAMP
 	db 0
 ; Learnset
@@ -839,8 +842,8 @@ ParasectEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 6, STUN_SPORE
-	db 8, ABSORB
+	db 6,  STUN_SPORE
+	db 8,  ABSORB
 	db 10, LEECH_LIFE
 	db 13, POISONPOWDER
 	db 24, SPORE
@@ -1077,6 +1080,7 @@ DragoniteEvosMoves:
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
+	db 15, RAGE
 	db 20, DRAGON_RAGE
 	db 25, AGILITY
 	db 30, SLAM
@@ -1307,10 +1311,11 @@ MissingNo57EvosMoves:
 
 DratiniEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 30, DRAGONAIR
+	db EVOLVE_LEVEL, 25, DRAGONAIR
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
+	db 15, RAGE
 	db 20, DRAGON_RAGE
 	db 25, AGILITY
 	db 30, SLAM
@@ -1319,10 +1324,11 @@ DratiniEvosMoves:
 
 DragonairEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 55, DRAGONITE
+	db EVOLVE_LEVEL, 50, DRAGONITE
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
+	db 15, RAGE
 	db 20, DRAGON_RAGE
 	db 25, AGILITY
 	db 30, SLAM
@@ -1532,6 +1538,7 @@ JolteonEvosMoves:
 	db 0
 ; Learnset
 	db 8, SAND_ATTACK
+	db 10, LEER
 	db 23, QUICK_ATTACK
 	db 26, THUNDERSHOCK
 	db 30, DOUBLE_KICK
@@ -1547,6 +1554,7 @@ VaporeonEvosMoves:
 	db 0
 ; Learnset
 	db 8, SAND_ATTACK
+	db 10, LEER
 	db 16, WATER_GUN
 	db 23, QUICK_ATTACK
 	db 26, BUBBLEBEAM
@@ -2034,6 +2042,7 @@ MissingNo92EvosMoves:
 
 HaunterEvosMoves:
 ; Evolutions
+	db EVOLVE_TRADE, GENGAR
 	db EVOLVE_LEVEL, 42, GENGAR
 	db 0
 ; Learnset
@@ -2213,7 +2222,7 @@ MissingNoA2EvosMoves:
 
 PonytaEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 40, RAPIDASH
+	db EVOLVE_LEVEL, 33, RAPIDASH
 	db 0
 ; Learnset
 	db 19, STOMP

@@ -55,4 +55,5 @@ TrainerAIPointers:
 	dbw 3, GenericAI ; janine
 	dbw 3, GenericAI ; joy
 	dbw 3, GenericAI ; jenny
+	dbw 3, GenericAI ; Dylan
 	assert_table_length NUM_TRAINERS

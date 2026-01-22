@@ -557,11 +557,11 @@ NEXTU
 wBoostExpByExpAll::
 wUnusedCC5B:: db
 
-	ds 53
+	ds 52
 
 wCutTrees::
 ; Check CutTreeLocations for the indexes
-	ds 3
+	ds 4
 	; unused
 	ds 3
 

@@ -4,8 +4,56 @@
 ;	db 0
 
 SpecialTrainerMoves:
+	db YOUNGSTER, 9
+	db 1, 1, SUBSTITUTE
+	db 1, 2, CONSTRICT
+	db 1, 3, ACID
+	db 1, 4, BITE
+	db 0
+
+	db YOUNGSTER, 10
+	db 2, 1, LEECH_LIFE
+	db 2, 2, CONFUSE_RAY
+	db 2, 3, WING_ATTACK
+	db 0
+
 	db YOUNGSTER, 14
 	db 1, 4, FISSURE
+	db 0
+
+	db LASS, 13
+	db 1, 1, GROWTH
+	db 1, 4, ACID
+	db 2, 2, BODY_SLAM
+	db 2, 4, BITE
+	db 0
+
+	db LASS, 14
+	db 3, 2, BODY_SLAM
+	db 3, 4, BITE
+	db 0
+
+	db LASS, 15
+	db 3, 2, BODY_SLAM
+	db 3, 4, BITE
+	db 5, 3, POISON_STING
+	db 5, 4, DIG
+	db 0
+
+	db LASS, 17
+	db 1, 1, ACID
+	db 1, 2, POISONPOWDER
+	db 1, 3, LEECH_SEED
+	db 1, 4, MEGA_DRAIN
+	db 2, 1, GROWTH
+	db 2, 4, ACID
+	db 0
+
+	db LASS, 17
+	db 1, 1, SCRATCH
+	db 1, 2, SPORE
+	db 2, 3, POISONPOWDER
+	db 2, 4, LEECH_SEED
 	db 0
 
 	db BROCK, 1
@@ -715,6 +763,33 @@ SpecialTrainerMoves:
 	db 6, 2, BODY_SLAM
 	db 6, 3, REST
 	db 6, 4, DIG
+	db 0
+
+	db DYLAN, 1
+	db 1, 1, THUNDERPUNCH
+	db 1, 2, BODY_SLAM
+	db 1, 3, SURF
+	db 1, 4, DOUBLE_TEAM
+	db 2, 1, GUST
+	db 2, 2, THRASH
+	db 2, 3, BITE
+	db 2, 4, WATERFALL
+	db 3, 1, SLUDGE
+	db 3, 2, TOXIC
+	db 3, 3, LEECH_SEED
+	db 3, 4, RAZOR_LEAF
+	db 4, 1, CUT
+	db 4, 2, FLY
+	db 4, 3, FLAMETHROWER
+	db 4, 4, DIG
+	db 5, 1, RECOVER
+	db 5, 2, PSYCHIC_M
+	db 5, 3, REFLECT
+	db 5, 4, PSYBEAM
+	db 6, 1, FLY
+	db 6, 2, BITE
+	db 6, 3, DOUBLE_EDGE
+	db 6, 4, ROCK_SLIDE
 	db 0
 
 	db -1 ; end

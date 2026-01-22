@@ -66,4 +66,5 @@ ENDM
 	trainer_const JANINE		 ; $31
 	trainer_const JOY		 	 ; $32
 	trainer_const JENNY		 	 ; $33
+	trainer_const DYLAN		 	 ; $34
 DEF NUM_TRAINERS EQU const_value - 1
