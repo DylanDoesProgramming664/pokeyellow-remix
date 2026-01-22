@@ -4856,19 +4856,9 @@ CriticalHitTest:
 	jr nc, .noFocusEnergyUsed
 	ld b, $ff                    ; cap at 255/256
 .noFocusEnergyUsed
-	ld a, [wDifficulty] ; Check if player is on hard mode
-	and a
-	jr nz, .NotGuarenteedCrit ; keep 1/256 chance to not crit if on hard mode
 	ld a, b
 	inc a ; optimization of "cp $ff"
 	jr z, .guaranteedCriticalHit
-.NotGuarenteedCrit
-	call BattleRandom            ; generates a random value, in "a"
-	rlc a
-	rlc a
-	rlc a
-	cp b                         ; check a against calculated crit rate
-	ret nc                       ; no critical hit if no borrow
 .guaranteedCriticalHit
 	ld a, $1
 	ld [wCriticalHitOrOHKO], a   ; set critical hit flag
@@ -5685,14 +5675,10 @@ MoveHitTest:
 	ld a, [wEnemyMoveAccuracy]
 	ld b, a
 .doAccuracyCheck
-	ld a, [wDifficulty] ; Check if player is on hard mode
-	and a
-	jr nz, .DontRemoveMiss ; Keep 1/256 chance to miss on hard mode
 	; The following snippet fixes 1/256 chance to miss on 100% accurate moves bug on normal mode
 	ld a, b
 	cp $FF ; Is the value $FF?
 	ret z ; If so, we need not calculate, just so we can fix this bug.
-.DontRemoveMiss
 	call BattleRandom
 	cp b
 	jr nc, .moveMissed
