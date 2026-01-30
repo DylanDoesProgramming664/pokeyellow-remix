@@ -150,7 +150,7 @@ GainExperience:
 	ld d, 43 ; Venomoth's level
 	jr nc, .next1
 	cp 3
-	ld d, 37 ; Vileplume's level
+	ld d, 35 ; Vileplume's level
 	jr nc, .next1
 	cp 2
     ld d, 26 ; Bit below Raichu's level

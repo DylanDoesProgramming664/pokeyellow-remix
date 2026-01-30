@@ -216,7 +216,6 @@ SECTION "Battle Engine 7", ROMX
 INCLUDE "gfx/trade.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 INCLUDE "engine/battle/experience.asm"
-INCLUDE "engine/battle/level_cap.asm"
 
 
 SECTION "Diploma", ROMX

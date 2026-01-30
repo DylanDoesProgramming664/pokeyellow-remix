@@ -12,7 +12,7 @@
 # compiled roms
 *.gbc
 *.gb
-*.patch
+poke*.patch
 
 # rgbds extras
 # *.map
@@ -48,8 +48,10 @@ pokeyellow_debug.map
 *.ss9
 *.cheats
 
-# debug
+# debug, diff and dev
 *.log
 *.orig
 *.bak
 *.rej
+Makefile.patch
+mail-patches/*.txt
