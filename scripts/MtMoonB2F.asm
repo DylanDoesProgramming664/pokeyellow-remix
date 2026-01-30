@@ -420,6 +420,7 @@ MtMoonB2F_TextPointers:
 	dw_const MtMoonB2FRocket1Text,                  TEXT_MTMOONB2F_ROCKET1
 	dw_const MtMoonB2FRocket2Text,                  TEXT_MTMOONB2F_ROCKET2
 	dw_const MtMoonB2FRocket3Text,                  TEXT_MTMOONB2F_ROCKET3
+	dw_const MtMoonB2FRocket4Text,                  TEXT_MTMOONB2F_ROCKET4
 	dw_const MtMoonB2FJessieJamesText,              TEXT_MTMOONB2F_JAMES
 	dw_const MtMoonB2FDomeFossilText,               TEXT_MTMOONB2F_DOME_FOSSIL
 	dw_const MtMoonB2FHelixFossilText,              TEXT_MTMOONB2F_HELIX_FOSSIL
@@ -438,6 +439,8 @@ MtMoon3TrainerHeader1:
 	trainer EVENT_BEAT_MT_MOON_3_TRAINER_2, 4, MtMoonB2FRocket3BattleText, MtMoonB2FRocket3EndBattleText, MtMoonB2FRocket3AfterBattleText
 MtMoon3TrainerHeader2:
 	trainer EVENT_BEAT_MT_MOON_3_TRAINER_3, 4, MtMoonB2FRocket4BattleText, MtMoonB2FRocket4EndBattleText, MtMoonB2FRocket4AfterBattleText
+MtMoon3TrainerHeader3:
+	trainer EVENT_BEAT_MT_MOON_3_TRAINER_4, 4, MtMoonB2FRocket5BattleText, MtMoonB2FRocket5EndBattleText, MtMoonB2FRocket5AfterBattleText
 	db -1 ; end
 
 MtMoonB2FJessieJamesText:
@@ -519,6 +522,11 @@ MtMoonB2FRocket2Text:
 MtMoonB2FRocket3Text:
 	text_asm
 	ld hl, MtMoon3TrainerHeader2
+	jr MtMoonB2FTalkToTrainer
+
+MtMoonB2FRocket4Text:
+	text_asm
+	ld hl, MtMoon3TrainerHeader3
 MtMoonB2FTalkToTrainer:
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -652,4 +660,16 @@ MtMoonB2FRocket4EndBattleText:
 
 MtMoonB2FRocket4AfterBattleText:
 	text_far _MtMoonB2FRocket4AfterBattleText
+	text_end
+
+MtMoonB2FRocket5BattleText:
+	text_far _MtMoonB2FRocket5BattleText
+	text_end
+
+MtMoonB2FRocket5EndBattleText:
+	text_far _MtMoonB2FRocket5EndBattleText
+	text_end
+
+MtMoonB2FRocket5AfterBattleText:
+	text_far _MtMoonB2FRocket5AfterBattleText
 	text_end

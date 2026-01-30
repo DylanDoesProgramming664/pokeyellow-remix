@@ -4,4 +4,5 @@ UnusedHighCriticalMoves:
 	db CRABHAMMER
 	db SLASH
 	db CUT
+	db SHADOW_CLAW
 	db -1 ; end

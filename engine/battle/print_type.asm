@@ -35,6 +35,7 @@ PrintMoveType:
 	call GetPredefRegisters
 	push hl
 	ld a, [wPlayerMoveType]
+	and TYPE_MASK
 ; fall through
 
 PrintType_:

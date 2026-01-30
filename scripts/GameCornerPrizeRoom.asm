@@ -53,7 +53,7 @@ GameCornerPrizeRoomClerkText:
 	ld de, wPlayerMoney + 2
 	ld c, $3
 	predef SubBCDPredef
-	; Receive 50 coins
+	; Receive 500 coins
 	xor a
 	ldh [hUnusedCoinsByte], a
 	ldh [hCoins], a

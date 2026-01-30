@@ -2150,7 +2150,7 @@ DisplayBattleMenu::
 .menuselected
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
- ; handle menu input if it's not the old man tutorial or prof. oak pikachu battle
+	; handle menu input if it's not the old man tutorial or prof. oak pikachu battle
 	ld a, [wBattleType]
 	cp BATTLE_TYPE_OLD_MAN
 	jr z, .doSimulatedMenuInput
@@ -4363,7 +4363,12 @@ GetDamageVarsForPlayerAttack:
 	ld d, a ; d = move power
 	ret z ; return if move power is zero
 	ld a, [hl] ; a = [wPlayerMoveType]
-	cp SPECIAL ; types >= SPECIAL are all special
+	and ~TYPE_MASK
+	cp STATUS ; CATEGORY == STATUS
+	jr nc, .specialAttack
+    cp MIXED   ; CATEGORY == MIXED
+	jr nc, .setMixedAttackTrueCategory
+	cp SPECIAL ; CATEGORY == SPECIAL
 	jr nc, .specialAttack
 .physicalAttack
 	ld hl, wEnemyMonDefense
@@ -4395,6 +4400,13 @@ GetDamageVarsForPlayerAttack:
 	call AddNTimes
 	pop bc
 	jr .scaleStats
+.setMixedAttackTrueCategory
+	ld hl, wPartyMon1Special
+	ld c, [hl]
+	ld hl, wPartyMon1Attack
+	ld a, [hl]
+	cp c
+	jr nc, .physicalAttack ; if partyMon1.attack >= partyMon1.special then move is PHYSICAL
 .specialAttack
 	ld hl, wEnemyMonSpecial
 	ld a, [hli]
@@ -4476,8 +4488,13 @@ GetDamageVarsForEnemyAttack:
 	and a
 	ret z ; return if move power is zero
 	ld a, [hl] ; a = [wEnemyMoveType]
-	cp SPECIAL ; types >= SPECIAL are all special
-	jr nc, .specialAttack
+	and ~TYPE_MASK
+	cp STATUS   ; CATEGORY == STATUS
+	jr z, .physicalAttack
+	cp MIXED    ; CATEGORY == MIXED
+	jr z, .setMixedAttackTrueCategory
+	cp SPECIAL  ; CATEGORY == SPECIAL
+	jr z, .specialAttack
 .physicalAttack
 	ld hl, wBattleMonDefense
 	ld a, [hli]
@@ -4508,6 +4525,13 @@ GetDamageVarsForEnemyAttack:
 	ld hl, hProduct + 2
 	pop bc
 	jr .scaleStats
+.setMixedAttackTrueCategory
+	ld hl, wEnemyMonSpecial
+	ld c, [hl]
+	ld hl, wEnemyMonAttack
+	ld a, [hl]
+	cp c
+	jr nc, .physicalAttack ; if enemyMon.ATK >= enemyMon.SPC then move is PHYSICAL
 .specialAttack
 	ld hl, wBattleMonSpecial
 	ld a, [hli]
@@ -4859,6 +4883,13 @@ CriticalHitTest:
 	ld a, b
 	inc a ; optimization of "cp $ff"
 	jr z, .guaranteedCriticalHit
+.NotGuarenteedCrit
+	call BattleRandom            ; generates a random value, in "a"
+	rlc a
+	rlc a
+	rlc a
+	cp b                         ; check a against calculated crit rate
+	ret nc                       ; no critical hit if no borrow
 .guaranteedCriticalHit
 	ld a, $1
 	ld [wCriticalHitOrOHKO], a   ; set critical hit flag
@@ -5089,8 +5120,6 @@ ApplyAttackToPlayerPokemon:
 	ld b, a
 	ld a, [wEnemyMoveNum]
 	cp SEISMIC_TOSS
-	jr z, .storeDamage
-	cp SHADOW_SNEAK
 	jr z, .storeDamage
 	ld b, SONICBOOM_DAMAGE
 	cp SONICBOOM
@@ -5412,10 +5441,11 @@ AdjustDamageForMoveType:
 	ld d, a    ; d = type 1 of defender
 	ld e, [hl] ; e = type 2 of defender
 	ld a, [wPlayerMoveType]
+	and TYPE_MASK
 	ld [wMoveType], a
 	ldh a, [hWhoseTurn]
 	and a
-	jr z, .next
+	jr z, .nextPlayer
 ; values for enemy turn
 	ld hl, wEnemyMonType
 	ld a, [hli]
@@ -5426,9 +5456,22 @@ AdjustDamageForMoveType:
 	ld d, a    ; d = type 1 of defender
 	ld e, [hl] ; e = type 2 of defender
 	ld a, [wEnemyMoveType]
+	and TYPE_MASK
 	ld [wMoveType], a
-.next
+.nextEnemy
 	ld a, [wMoveType]
+	and TYPE_MASK
+	cp b ; does the move type match type 1 of the attacker?
+	jr z, .sameTypeAttackBonus
+	cp c ; does the move type match type 2 of the attacker?
+	jr z, .sameTypeAttackBonus
+	jr .skipSameTypeAttackBonus
+.nextPlayer
+	ld a, [wPlayerMoveEffect]
+    cp a, STRUGGLE_EFFECT ; does the move effect match Struggle?
+    jr z, .skipSameTypeAttackBonus ; Struggle doesn't get STAB
+	ld a, [wMoveType]
+	and TYPE_MASK
 	cp b ; does the move type match type 1 of the attacker?
 	jr z, .sameTypeAttackBonus
 	cp c ; does the move type match type 2 of the attacker?
@@ -5453,6 +5496,8 @@ AdjustDamageForMoveType:
 	ld hl, wDamageMultipliers
 	set 7, [hl]
 .skipSameTypeAttackBonus
+	cp a, STRUGGLE_EFFECT
+    jr z, .isStruggle
 	ld a, [wMoveType]
 	ld b, a
 	ld hl, TypeEffects
@@ -5486,6 +5531,9 @@ AdjustDamageForMoveType:
 	and $7f
 	srl a
 	jr .gotMultiplier
+.isStruggle
+	ld a, EFFECTIVE
+    jr .gotMultiplier
 .nothalf
 	cp SUPER_EFFECTIVE
 	jr nz, .gotMultiplier
@@ -5536,13 +5584,18 @@ AdjustDamageForMoveType:
 ; as far is can tell, this is only used once in some AI code to help decide which move to use
 AIGetTypeEffectiveness:
 	ld a, [wEnemyMoveType]
+	and ~TYPE_MASK
+	cp STATUS
+	jr z, .isNeutral
+    ld a, [wEnemyMoveType]
+    and TYPE_MASK
 	ld d, a                    ; d = type of enemy move
 	ld hl, wBattleMonType
 	ld b, [hl]                 ; b = type 1 of player's pokemon
 	inc hl
 	ld c, [hl]                 ; c = type 2 of player's pokemon
 	; initialize to neutral effectiveness
-	ld a, $10 ; bug: should be EFFECTIVE (10)
+	ld a, EFFECTIVE
 	ld [wTypeEffectiveness], a
 	ld hl, TypeEffects
 .loop
@@ -5576,6 +5629,10 @@ AIGetTypeEffectiveness:
 .ok
 	ld a, [hl]
 	ld [wTypeEffectiveness], a ; store damage multiplier
+	ret
+.isNeutral
+	ld a, EFFECTIVE
+	ld [wTypeEffectiveness], a
 	ret
 
 INCLUDE "data/types/type_matchups.asm"
@@ -5675,7 +5732,7 @@ MoveHitTest:
 	ld a, [wEnemyMoveAccuracy]
 	ld b, a
 .doAccuracyCheck
-	; The following snippet fixes 1/256 chance to miss on 100% accurate moves bug on normal mode
+	; The following snippet fixes 1/256 chance to miss on 100% accurate moves bug
 	ld a, b
 	cp $FF ; Is the value $FF?
 	ret z ; If so, we need not calculate, just so we can fix this bug.

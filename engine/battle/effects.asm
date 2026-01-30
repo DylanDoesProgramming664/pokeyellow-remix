@@ -103,8 +103,12 @@ PoisonEffect:
 	ld a, [hli]
 	cp POISON ; can't poison a poison-type target
 	jr z, .noEffect
+	cp STEEL ; can't poison a steel-type target
+	jr z, .noEffect
 	ld a, [hld]
 	cp POISON ; can't poison a poison-type target
+	jr z, .noEffect
+	cp STEEL ; can't poison a steel-type target
 	jr z, .noEffect
 	ld a, [de]
 	cp POISON_SIDE_EFFECT1
@@ -213,6 +217,7 @@ FreezeBurnParalyzeEffect:
 	and a
 	jp nz, CheckDefrost ; can't inflict status if opponent is already statused
 	ld a, [wPlayerMoveType]
+	and TYPE_MASK
 	ld b, a
 	ld a, [wEnemyMonType1]
 	cp b ; do target type 1 and move type match?
@@ -276,6 +281,7 @@ FreezeBurnParalyzeEffect:
 	and a
 	jp nz, CheckDefrost
 	ld a, [wEnemyMoveType]
+	and TYPE_MASK
 	ld b, a
 	ld a, [wBattleMonType1]
 	cp b
@@ -353,6 +359,7 @@ CheckDefrost:
 	jr nz, .opponent
 	;player [attacker]
 	ld a, [wPlayerMoveType]
+	and TYPE_MASK
 	sub FIRE
 	ret nz ; return if type of move used isn't fire
 	ld [wEnemyMonStatus], a ; set opponent status to 00 ["defrost" a frozen monster]
@@ -366,6 +373,7 @@ CheckDefrost:
 	jr .common
 .opponent
 	ld a, [wEnemyMoveType] ; same as above with addresses swapped
+	and TYPE_MASK
 	sub FIRE
 	ret nz
 	ld [wBattleMonStatus], a
@@ -608,10 +616,18 @@ StatModifierDownEffect:
 	bit INVULNERABLE, a ; fly/dig
 	jp nz, MoveMissed
 	ld a, [de]
+    and a
+    cp KINESIS_EFFECT ; Is this the Kinesis effect?
+    jr z, .isKinesis
+.cont
 	sub ATTACK_DOWN1_EFFECT
 	cp EVASION_DOWN1_EFFECT + $3 - ATTACK_DOWN1_EFFECT ; covers all -1 effects
 	jr c, .decrementStatMod
 	sub ATTACK_DOWN2_EFFECT - ATTACK_DOWN1_EFFECT ; map -2 effects to corresponding -1 effect
+    jr .decrementStatMod
+.isKinesis
+    ld a, ACCURACY_DOWN1_EFFECT ; Treat as -1 stage accuracy move.
+    jr .cont
 .decrementStatMod
 	ld c, a
 	ld b, $0
@@ -1436,6 +1452,9 @@ TransformEffect:
 
 ReflectLightScreenEffect:
 	jpfar ReflectLightScreenEffect_
+
+StruggleEffect:
+	jpfar RecoilEffect_
 
 NothingHappenedText:
 	text_far _NothingHappenedText

@@ -48,5 +48,8 @@ pokeyellow_debug.map
 *.ss9
 *.cheats
 
-# debugging logs
+# debug
 *.log
+*.orig
+*.bak
+*.rej

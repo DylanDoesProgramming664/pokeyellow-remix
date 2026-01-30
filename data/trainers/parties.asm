@@ -70,7 +70,7 @@ YoungsterData:
 ; Mt. Moon 1F
 	db 13, RATTATA, SANDSHREW, ZUBAT, 0
 ; Route 24
-	db 14, RATTATA, EKANS, ZUBAT, 0
+	db 16, RATICATE, EKANS, ZUBAT, 0
 ; Route 25
 	db 16, RATTATA, SPEAROW, 0
 	db 17, SLOWPOKE, 0
@@ -81,18 +81,19 @@ YoungsterData:
 	db 22, ARBOK, 0
 	db $FF, 19, SANDSHREW, 22, GOLBAT, 0
 	db $FF, 15, RATTATA, 17, RATICATE, 20, RATICATE, 0
+;+Route 11
 	db 18, NIDORINA, NIDORINO, 0
 	db 17, SPEAROW, RATTATA, RATTATA, SPEAROW, 0
 ; Route 9
 	db 28, SANDSHREW, 0
-; Victory Road - collinator (six most common mons)
-	db 50, RATICATE, FEAROW, ARBOK, GOLBAT, SANDSLASH, NIDOKING, 0
+;+Victory Road - collinator (six most common mons)
+	db 53, RATICATE, FEAROW, ARBOK, GOLBAT, SANDSLASH, NIDOKING, 0
 
 BugCatcherData:
 ; Viridian Forest
 	db 6, CATERPIE, WEEDLE, CATERPIE, 0
 	db $FF, 7, METAPOD, 6, CATERPIE, 7, KAKUNA, 0
-	db $FF, 8, PINSIR, 9, SCYTHER, 0
+	db $FF, 8, PINSIR, 10, SCYTHER, 0
 ; Route 3
 	db $FF, 9, METAPOD, 9, KAKUNA, 13, BUTTERFREE, 0
 	db $FF, 9, KAKUNA, 9, METAPOD, 13, BEEDRILL, 0
@@ -101,10 +102,11 @@ BugCatcherData:
 	db $FF, 12, WEEDLE, 15, BEEDRILL, 0
 	db $FF, 12, CATERPIE, 15, BUTTERFREE,  0
 ; Route 24
-	db 13, BUTTERFREE, BEEDRILL, 0
+	db 20, BUTTERFREE, BEEDRILL, 0
 ; Route 6
 	db 18, BUTTERFREE, BEEDRILL, 0
 	db 18, VENONAT, SCYTHER, 0
+;+Route 6
 	db 18, BUTTERFREE, PINSIR, VENONAT, 0
 ; Route 9
 	db 23, VENONAT, PINSIR, 0
@@ -113,8 +115,8 @@ BugCatcherData:
 	db 6, CATERPIE, METAPOD, 0
 ; Victory Road - Talos
 	db 53, SCYTHER, KABUTOPS, STARMIE, BLASTOISE, 0
-; Victory Road - coolguy222c (Ultimate Bug Catcher)
-	db 50, SCYTHER, PINSIR, BUTTERFREE, BEEDRILL, PARASECT, VENOMOTH, 0
+;+Victory Road - Owchh (Ultimate Bug Catcher)
+	db 53, SCYTHER, PINSIR, BUTTERFREE, BEEDRILL, PARASECT, VENOMOTH, 0
 
 LassData:
 ; Route 3
@@ -146,8 +148,8 @@ LassData:
 	db 29, PARASECT, EXEGGUTOR, 0
 ; Viridian Forest
 	db 8, NIDORAN_F, NIDORAN_M, 0
-; Victory Road - REMIX (Ultimate Lass)
-	db 50, PIDGEOT, WIGGLYTUFF, VILEPLUME, NIDOQUEEN, NIDOKING, VICTREEBEL, 0
+;+Victory Road - Lhea (Ultimate Lass)
+	db 53, PIDGEOT, WIGGLYTUFF, VILEPLUME, NIDOQUEEN, NIDOKING, VICTREEBEL, 0
 
 SailorData:
 ; SS Anne Stern
@@ -161,20 +163,22 @@ SailorData:
 	db 20, MACHOP, 0
 ; Vermilion Gym
 	db 24, MAGNEMITE, 0
-; Victory Road - REMIX (Ultimate Sailor)
-	db 50, MACHAMP, KINGLER, TENTACRUEL, CLOYSTER, STARMIE, SEADRA, 0
+;+Victory Road - Winter (Ultimate Sailor)
+	db 53, MACHAMP, KINGLER, TENTACRUEL, CLOYSTER, STARMIE, SEADRA, 0
 
 JrTrainerMData:
 ; Pewter Gym
 	db $FF, 11, DIGLETT, 10, SANDSHREW, 0
 ; Route 24/Route 25
-	db 15, DIGLETT, PSYDUCK, 0
+	db 20, DIGLETT, PSYDUCK, 0
 ; Route 24
 	db 18, MANKEY, 0
+;+Route 25
 	db 20, WARTORTLE, 0
 ; Route 6
 	db 17, MANKEY, RATICATE, 0
 	db 18, DIGLETT, DIGLETT, SANDSHREW, 0
+;+Route 6
 	db 21, GROWLITHE, CHARMELEON, 0
 ; Route 9
 	db 21, RATICATE, DIGLETT, BELLSPROUT, SANDSHREW, 0
@@ -182,25 +186,27 @@ JrTrainerMData:
 	db 29, NIDOQUEEN, NIDOKING, 0
 ; Route 6
 	db 16, HORSEA, BELLSPROUT, 0
-; Victory Road - REMIX (Ultimate JrTrainer Male)
-	db 50, DUGTRIO, SANDSLASH, PRIMEAPE, RATICATE, VICTREEBEL, GOLDUCK, 0
+;+Victory Road - Luka (Ultimate JrTrainer Male)
+	db 53, DUGTRIO, SANDSLASH, PRIMEAPE, RATICATE, VICTREEBEL, GOLDUCK, 0
 
 JrTrainerFData:
 ; Cerulean Gym
 	db 19, SEEL, 0
+;+Route 6
+	db 22, GLOOM, WEEPINBELL, 0
 ; Route 6
-	db 16, ODDISH, BELLSPROUT, 0
-	db 16, PIDGEY, SPEAROW, PIDGEY, 0
+	db $FF, 20, PIDGEOTTO, 22, DODUO, 24, FEAROW, 0
+;+Route 9
+	db 24, IVYSAUR, 0
 ; Route 9
-	db 22, IVYSAUR, 0
-	db 21, ODDISH, BELLSPROUT, TANGELA, PIDGEOTTO, 0
-	db 24, MEOWTH, 0
+	db 24, GLOOM, WEEPINBELL, TANGELA, PIDGEOTTO, 0
+	db 26, MEOWTH, JIGGLYPUFF, CLEFAIRY, 0
 ; Route 10
-	db 25, CLEFAIRY, WIGGLYTUFF, 0
-	db 26, PIDGEOTTO, FARFETCHD, 0
+	db 28, CLEFAIRY, WIGGLYTUFF, 0
+	db 29, PIDGEOTTO, FARFETCHD, 0
 ; Rock Tunnel B1F
-	db 23, JIGGLYPUFF, PIDGEOTTO, MEOWTH, 0
-	db 24, GLOOM, IVYSAUR, 0
+	db 26, JIGGLYPUFF, PIDGEOTTO, MEOWTH, 0
+	db 27, GLOOM, IVYSAUR, 0
 ; Celadon Gym
 	db 29, IVYSAUR, IVYSAUR, 0
 ; Route 13
@@ -223,8 +229,8 @@ JrTrainerFData:
 	db 40, TENTACRUEL, SEADRA, DEWGONG, 0
 ; Route 6
 	db 19, CUBONE, 0
-; Victory Road - REMIX (Ultimate JrTrainer Female)
-	db 50, PIDGEOT, VICTREEBEL, PERSIAN, CLEFABLE, POLIWRATH, VENUSAUR, 0
+;+Victory Road - REMIX (Ultimate JrTrainer Female)
+	db 53, PIDGEOT, VICTREEBEL, PERSIAN, CLEFABLE, POLIWRATH, VENUSAUR, 0
 
 PokemaniacData:
 ; Route 10
@@ -238,33 +244,33 @@ PokemaniacData:
 	db 52, VENUSAUR, LAPRAS, LICKITUNG, 0
 ; Rock Tunnel 1F
 	db 25, CUBONE, SLOWPOKE, 0
-; Victory Road - REMIX (Ultimate Pokemaniac)
-	db 50, SLOWBRO, LAPRAS, LICKITUNG, MAROWAK, JYNX, CHARIZARD, 0
+;+Victory Road - REMIX (Ultimate Pokemaniac)
+	db 53, SLOWBRO, LAPRAS, LICKITUNG, MAROWAK, JYNX, CHARIZARD, 0
 
 SuperNerdData:
 ; Mt. Moon 1F
 	db 13, MAGNEMITE, VOLTORB, 0
 ; Mt. Moon B2F
-	db $FF, 15, GRIMER, VOLTORB, MAGNEMITE, 0
+	db $FF, 15, GRIMER, 15, VOLTORB, 17, MAGNEMITE, 0
 ; Route 8
 	db 26, VOLTORB, KOFFING, VOLTORB, MAGNEMITE, 0
 	db 27, GRIMER, PORYGON, GRIMER, 0
 	db 28, KOFFING, 0
-; Route 9
+;+Rock Tunnel
 	db 22, KOFFING, MAGNEMITE, WEEZING, 0
-	db 20, MAGNEMITE, MAGNEMITE, KOFFING, MAGNEMITE, 0
+	db 23, MAGNEMITE, MAGNEMITE, KOFFING, MAGNEMITE, 0
 	db 24, MAGNEMITE, VOLTORB, 0
 ; Cinnabar Gym
 	db 49, VULPIX, NINETALES, 0
 	db 53, PONYTA, CHARMELEON, VULPIX, GROWLITHE, 0
 	db 52, RAPIDASH, 0
 	db 50, CHARMELEON, FLAREON, 0
-; Victory Road - ti84p (ultimate Super Nerd)
-	db 50, MAGNETON, ELECTRODE, WEEZING, MUK, NINETALES, PORYGON, 0
+;+Victory Road - ti84p (ultimate Super Nerd)
+	db 53, MAGNETON, ELECTRODE, WEEZING, MUK, NINETALES, PORYGON, 0
 
 HikerData:
 ; Mt. Moon 1F
-	db 10, GEODUDE, GEODUDE, ONIX, 0
+	db $FF, 13, RHYHORN, 13, GEODUDE, 16, ONIX, 0
 ; Route 25
 	db 16, MACHOP, GEODUDE, 0
 	db 15, GEODUDE, ZUBAT, MACHOP, GEODUDE, 0
@@ -287,7 +293,7 @@ HikerData:
 ; Victory Road - Sable
 	db 52, AERODACTYL, PARASECT, JOLTEON, ARCANINE, 0
 ; Victory Road - REMIX (Ultimate Hiker)
-	db 50, GOLEM, ONIX, MACHAMP, GOLBAT, RHYDON, DUGTRIO, 0
+	db 53, GOLEM, ONIX, MACHAMP, GOLBAT, RHYDON, DUGTRIO, 0
 
 BikerData:
 ; Route 13
@@ -311,11 +317,11 @@ BikerData:
 	db 31, BEEDRILL, WEEZING, BEEDRILL, 0
 	db 32, HITMONCHAN, GRIMER, KOFFING, 0
 	db 32, HITMONLEE, MUK, 0
-; Victory Road - REMIX (Ultimate Biker)
-	db 50, WEEZING, MUK, SANDSLASH, BEEDRILL, KINGLER, ELECTRODE, 0
+;+Victory Road - REMIX (Ultimate Biker)
+	db 53, WEEZING, MUK, SANDSLASH, BEEDRILL, KINGLER, ELECTRODE, 0
 
 BurglarData:
-; Mansion 1F
+;+Mansion 1F
 	db 43, ARCANINE, NINETALES, 0
 	db 47, ARCANINE, 0
 	db 42, NINETALES, CHARIZARD, RAPIDASH, 0
@@ -331,16 +337,17 @@ BurglarData:
 	db 44, MACHOKE, RAPIDASH, 0
 ; Victory Road - Disq
 	db 53, FLAREON, TENTACRUEL, NINETALES, DEWGONG, 0
-; Victory Road - REMIX (Ultimate Burglar)
-	db 50, NINETALES, ARCANINE, RAPIDASH, MACHAMP, PRIMEAPE, MAGMAR, 0
+;+Victory Road - REMIX (Ultimate Burglar)
+	db 53, NINETALES, ARCANINE, RAPIDASH, MACHAMP, PRIMEAPE, MAGMAR, 0
 
 EngineerData:
+;+Route 11
+	db 24, VOLTORB, MAGNEMITE, JOLTEON, 0
 ; Route 11
-	db 21, VOLTORB, MAGNEMITE, JOLTEON, 0
-	db 21, MAGNEMITE, ELECTABUZZ, KOFFING, 0
-	db 18, MAGNEMITE, MACHOP, MAGNEMITE, 0
-; Victory Road - REMIX (Ultimate Engineer)
-	db 50, MAGNETON, MACHAMP, ELECTRODE, JOLTEON, ELECTABUZZ, WEEZING, 0
+	db 25, MAGNEMITE, ELECTABUZZ, KOFFING, 0
+	db 23, MAGNEMITE, MACHOP, MAGNEMITE, 0
+;+Victory Road - REMIX (Ultimate Engineer)
+	db 53, MAGNETON, MACHAMP, ELECTRODE, JOLTEON, ELECTABUZZ, WEEZING, 0
 
 FisherData:
 ; SS Anne 2F Rooms
@@ -359,8 +366,8 @@ FisherData:
 	db 40, SEAKING, TENTACRUEL, 0
 ; Route 12
 	db $FF, 27, MAGIKARP, 27, MAGIKARP, 32, GYARADOS, 0
-; Victory Road - REMIX (Ultimate Fisher)
-	db 50, SEAKING, GYARADOS, TENTACRUEL, CLOYSTER, POLIWRATH, STARMIE, 0
+;+Victory Road - REMIX (Ultimate Fisher)
+	db 53, SEAKING, GYARADOS, TENTACRUEL, CLOYSTER, POLIWRATH, STARMIE, 0
 
 SwimmerData:
 ; Cerulean Gym
@@ -382,8 +389,8 @@ SwimmerData:
 	db 47, STARMIE, 0
 	db 44, TENTACRUEL, BLASTOISE, 0
 	db 44, POLIWRATH, KINGLER, SEADRA, 0
-; Victory Road - REMIX (Ultimate Swimmer)
-	db 50, SEADRA, TENTACRUEL, CLOYSTER, SEAKING, STARMIE, GYARADOS, 0
+;+Victory Road - REMIX (Ultimate Swimmer)
+	db 53, SEADRA, TENTACRUEL, CLOYSTER, SEAKING, STARMIE, GYARADOS, 0
 
 CueBallData:
 ; Route 16
@@ -398,8 +405,8 @@ CueBallData:
 	db 32, PRIMEAPE, MACHOKE, 0
 ; Route 21
 	db 42, CLOYSTER, RHYDON, TENTACRUEL, 0
-; Victory Road - REMIX (Ultimate CueBall)
-	db 50, MACHAMP, PRIMEAPE, WIGGLYTUFF, CLEFABLE, RHYDON, TENTACRUEL, 0
+;+Victory Road - REMIX (Ultimate CueBall)
+	db 53, MACHAMP, PRIMEAPE, WIGGLYTUFF, CLEFABLE, RHYDON, TENTACRUEL, 0
 
 GamblerData:
 ; Route 11
@@ -409,11 +416,12 @@ GamblerData:
 	db 19, GROWLITHE, VULPIX, 0
 ; Route 8
 	db $FF, 24, POLIWAG, 24, POLIWHIRL, 27, POLIWRATH, 0
+;+Route 8
 	db 22, ONIX, GEODUDE, GRAVELER, 0
 ; Route 8
 	db 27, GROWLITHE, VULPIX, 0
-; Victory Road - REMIX (Ultimate Gambler)
-	db 50, POLIWRATH, ARCANINE, NINETALES, GOLEM, SEADRA, VICTREEBEL, 0
+;+Victory Road - REMIX (Ultimate Gambler)
+	db 53, POLIWRATH, ARCANINE, NINETALES, GOLEM, SEADRA, VICTREEBEL, 0
 
 BeautyData:
 ; Celadon Gym
@@ -439,8 +447,8 @@ BeautyData:
 	db 43, BLASTOISE, DEWGONG, SLOWBRO, 0
 ; Victory Road - ReaderDragon
 	db 53, RAICHU, HYPNO, PERSIAN, TAUROS, 0
-; Victory Road - REMIX (Ultimate Beauty)
-	db 50, VILEPLUME, TANGELA, SEAKING, VENUSAUR, PERSIAN, CLOYSTER, 0
+;+Victory Road - REMIX (Ultimate Beauty)
+	db 53, VILEPLUME, TANGELA, SEAKING, VENUSAUR, PERSIAN, CLOYSTER, 0
 
 PsychicData:
 ; Saffron Gym
@@ -448,16 +456,16 @@ PsychicData:
 	db 43, MR_MIME, KADABRA, 0
 	db 41, VENOMOTH, JYNX, SLOWBRO, 0
 	db 45, STARMIE, 0
-; Victory Road - REMIX (Ultimate Psychic)
-	db 50, JYNX, HYPNO, MR_MIME, SLOWBRO, STARMIE, ALAKAZAM, 0
+;+Victory Road - REMIX (Ultimate Psychic)
+	db 53, JYNX, HYPNO, MR_MIME, SLOWBRO, STARMIE, ALAKAZAM, 0
 
 RockerData:
 ; Vermilion Gym
 	db 21, VOLTORB, VOLTORB, VOLTORB, 0
 ; Route 12
 	db 29, VOLTORB, ELECTRODE, 0
-; Victory Road - REMIX (Ultimate Rocker)
-	db 50, ELECTRODE, ELECTRODE, ELECTRODE, ELECTRODE, ELECTRODE, ELECTRODE, 0
+;+Victory Road - REMIX (Ultimate Rocker)
+	db 53, ELECTRODE, ELECTRODE, ELECTRODE, ELECTRODE, ELECTRODE, ELECTRODE, 0
 
 JugglerData:
 ; Silph Co. 5F
@@ -469,12 +477,13 @@ JugglerData:
 	db 37, TENTACRUEL, MUK, 0
 ; Victory Road 2F - Alakadoof
 	db 53, OMASTAR, ALAKAZAM, RAICHU, MR_MIME, 0
-; Fuchsia Gym
+;+Fuchsia Gym
 	db 33, HYPNO, 0
+; Fuchsia Gym
 	db 40, HYPNO, 0
 	db 36, WEEZING, HYPNO, 0
-; Victory Road - REMIX (Ultimate Juggler)
-	db 50, HYPNO, ALAKAZAM, MR_MIME, POLIWRATH, JOLTEON, NIDOKING, 0
+;+Victory Road - REMIX (Ultimate Juggler)
+	db 53, HYPNO, ALAKAZAM, MR_MIME, POLIWRATH, JOLTEON, NIDOKING, 0
 
 TamerData:
 ; Fuchsia Gym
@@ -485,8 +494,8 @@ TamerData:
 	db 53, ARBOK, TAUROS, 0
 ; Victory Road 2F - Regi
 	db 53, TANGELA, SANDSLASH, LICKITUNG, ARBOK, 0
-; Victory Road - REMIX (Ultimate Tamer)
-	db 50, RHYDON, PRIMEAPE, ARBOK, TAUROS, SANDSLASH, NIDOQUEEN, 0
+;+Victory Road - REMIX (Ultimate Tamer)
+	db 53, RHYDON, PRIMEAPE, ARBOK, TAUROS, SANDSLASH, NIDOQUEEN, 0
 
 BirdKeeperData:
 ; Route 13
@@ -505,6 +514,7 @@ BirdKeeperData:
 	db 32, FARFETCHD, DODUO, FEAROW,  0
 ; Route 20
 	db 41, FEAROW, FEAROW, PIDGEOT, 0
+;+Route 20
 	db 39, PIDGEOTTO, PIDGEOTTO, PIDGEOT, PIDGEOTTO, 0
 	db 42, FARFETCHD, FEAROW, 0
 ; Route 14
@@ -512,8 +522,8 @@ BirdKeeperData:
 	db 31, FARFETCHD, SPEAROW, PIDGEY, FEAROW, 0
 	db 34, FEAROW, PIDGEOTTO,  0
 	db 32, PIDGEOTTO, DODUO, FEAROW, 0
-; Victory Road - REMIX (Ultimate Bird Keeper)
-	db 50, PIDGEOT, FEAROW, DODRIO, FARFETCHD, DODRIO, FEAROW, 0
+;+Victory Road - REMIX (Ultimate Bird Keeper)
+	db 53, PIDGEOT, FEAROW, DODRIO, FARFETCHD, DODRIO, FEAROW, 0
 
 BlackbeltData:
 ; Fighting Dojo
@@ -528,8 +538,8 @@ BlackbeltData:
 	db 51, HITMONLEE, HITMONCHAN, MACHOKE, 0
 ; Victory Road 2F - Brice
 	db 52, POLIWRATH, DODRIO, MACHAMP, PINSIR, 0
-; Victory Road - REMIX (Ultimate Blackbelt)
-	db 50, MACHAMP, PRIMEAPE, HITMONLEE, HITMONCHAN, POLIWRATH, DODRIO, 0
+;+Victory Road - REMIX (Ultimate Blackbelt)
+	db 53, MACHAMP, PRIMEAPE, HITMONLEE, HITMONCHAN, POLIWRATH, PINSIR, 0
 
 Rival1Data:
 ; Oak's Lab
@@ -552,7 +562,7 @@ CraigData:
 	db 55, JOLTEON, AERODACTYL, EXEGGUTOR, SNORLAX, CLOYSTER, ARCANINE, 0
 
 ScientistData:
-; Silph Co. 1F
+;+Silph Co. 1F
 	db 34, KOFFING, VOLTORB, 0
 ; Silph Co. 2F
 	db 37, MUK, WEEZING, PORYGON, WEEZING, 0
@@ -577,9 +587,8 @@ ScientistData:
 	db 45, MAGNETON, ARCANINE, MUK, 0
 ; Mansion B1F
 	db 46, PORYGON, ELECTRODE, 0
-; Victory Road - REMIX (Ultimate Scientist)
-	db 50, ELECTRODE, WEEZING, MAGNETON, MUK, PORYGON, STARMIE, 0
-	; +6 WEEZING, +7 ELECTRODE, +4 MUK, +4 PORYGON, +6 MAGNETON, +1 ELECTABUZZ, +2 STARMIE, +1 KABUTOPS, +1 OMASTAR, +1 ARCANINE
+;+Victory Road - REMIX (Ultimate Scientist)
+	db 53, ELECTRODE, WEEZING, MAGNETON, MUK, PORYGON, STARMIE, 0
 
 GiovanniData:
 ; Rocket Hideout B4F
@@ -592,8 +601,8 @@ GiovanniData:
 RocketData:
 ; Mt. Moon B2F
 	db 13, RATTATA, ZUBAT, 0
-	db 11, SANDSHREW, RATTATA, ZUBAT, 0
-	db 12, ZUBAT, EKANS, 0
+	db 13, SANDSHREW, RATTATA, ZUBAT, 0
+	db 13, ZUBAT, EKANS, 0
 	db 16, RATICATE, 0
 ; Cerulean City
 	db 17, MACHOP, DROWZEE, 0
@@ -612,16 +621,16 @@ RocketData:
 ; Rocket Hideout B3F
 	db 26, EKANS, RATICATE, DROWZEE, 0
 	db 27, MACHOKE, ARBOK, 0
-; Unused
+;+Rocket Hideout B2F
 	db 23, SANDSHREW, EKANS, SANDSLASH, 0
 	db 23, EKANS, SANDSHREW, ARBOK, 0
 ; Rocket Hideout B4F
 	db 26, KOFFING, GOLBAT, 0
-; Unused
-	db 25, ZUBAT, ZUBAT, GOLBAT, 0
-	db 26, KOFFING, DROWZEE, 0
-	db 23, ZUBAT, RATICATE, RATICATE, ZUBAT, 0
-	db 26, DROWZEE, KOFFING, 0
+;+Rocket Hideout B4F
+	db 25, GOLBAT, GOLBAT, GOLBAT, 0
+	db 26, KOFFING, HYPNO, 0
+	db 23, GOLBAT, RATICATE, RATICATE, GOLBAT, 0
+	db 26, HYPNO, KOFFING, 0
 ; Silph Co. 2F
 	db 39, MAROWAK, GOLBAT, 0
 	db 35, GOLBAT, RATICATE, GOLBAT, PINSIR, 0
@@ -650,18 +659,19 @@ RocketData:
 	db 43, MACHOKE, 0
 ; Silph Co. 11F
 	db 38, RATICATE, MUK, GOLBAT, MAROWAK, ARBOK, 0
-; Unused
-	db 32, CUBONE, DROWZEE, MAROWAK, 0
+;+Silph Co. 10F
+	db $FF, 32, CUBONE, 32, DROWZEE, 37, HYPNO, 40, MAROWAK, 0
 ; Jessie & James
 	db $FF, 15, EKANS, 16, MEOWTH, 15, KOFFING, 0 ; Mt. Moon B2F
 	db $FF, 28, KOFFING, 29, MEOWTH, 28, ARBOK, 0 ; Rocket Hideout B4F
-	db $FF, 33, MEOWTH, 31, ARBOK, 30, LICKITUNG, 31, WEEZING, 0 ; Pokémon Tower 7F
+	db $FF, 33, MEOWTH, 31, ARBOK, 30, LICKITUNG, 35, WEEZING, 0 ; Pokémon Tower 7F
 	db $FF, 42, WEEZING, 41, LICKITUNG, 42, ARBOK, 44, MEOWTH, 43, VICTREEBEL, 0 ; Silph Co. 11F
-; Unused
-	db 16, KOFFING, 0
-	db 27, KOFFING, 0
-	db 29, WEEZING, 0
-	db 33, WEEZING, 0
+;+Buffed Up Pokemon Rocket Grunt
+	db 20, RATICATE, KOFFING, 0 ; Rock Tunnel
+	db 27, RATICATE, KOFFING, GOLBAT, 0 ; Rocket Hideout
+	db 36, RATICATE, WEEZING, GOLBAT, FEAROW, 0 ; Pokemon Tower
+	db 45, RATICATE, WEEZING, GOLBAT, FEAROW, MAROWAK, 0 ; Silph Co.
+    db 53, RATICATE, WEEZING, GOLBAT, FEAROW, MAROWAK, NINETALES, 0 ; Victory Road
 
 CooltrainerMData:
 ; Viridian Gym
@@ -669,19 +679,19 @@ CooltrainerMData:
 ; Victory Road 3F - Karlos, Tiberius
 	db 52, CHARIZARD, MAGNETON, TENTACRUEL, RHYDON, 0
 	db 53, NIDOKING, CHARIZARD, VILEPLUME, SLOWBRO, 0
-; Unused
+;+Seafoam Islands
 	db 45, KINGLER, STARMIE, 0
 ; Victory Road 1F - Aero
 	db 53, ELECTABUZZ, SNORLAX, SLOWBRO, PORYGON, 0
-; Unused
-	db 44, IVYSAUR, WARTORTLE, CHARMELEON, 0
+;+Seafoam Islands
+	db 44, VENUSAUR, BLASTOISE, CHARIZARD, 0
 	db 49, NIDOKING, 0
 	db 44, KINGLER, CLOYSTER, 0
 ; Viridian Gym
 	db 53, SANDSLASH, MAROWAK, 0
 	db 51, GOLEM, ELECTRODE, VICTREEBEL, 0
-; Victory Road - REMIX (Ultimate Cooltrainer Male)
-	db 50, NIDOKING, CHARIZARD, KINGLER, SLOWBRO, NIDOQUEEN, SNORLAX, 0
+;+Victory Road - REMIX (Ultimate Cooltrainer Male)
+	db 53, NIDOKING, CHARIZARD, KINGLER, SLOWBRO, NIDOQUEEN, SNORLAX, 0
 
 CooltrainerFData:
 ; Celadon Gym
@@ -689,16 +699,16 @@ CooltrainerFData:
 ; Victory Road 3F -  Soul, Zach
 	db 53, DRAGONAIR, GENGAR, TAUROS, NIDOQUEEN, 0
 	db $FF, 54, WIGGLYTUFF, 54, CLEFABLE, 54, CHANSEY, 57, EEVEE, 0
-; Unused
+;+ Seafoam Islands
 	db 46, VILEPLUME, BUTTERFREE, 0
 ; Victory Road 1F - Isona
 	db 53, SEADRA, DRAGONAIR, VENUSAUR, HYPNO, 0
-; Unused
-	db 45, IVYSAUR, VENUSAUR, 0
+;+ Seafoam Islands
+	db 45, VICTREEBEL, VENUSAUR, 0
 	db 45, NIDOKING, NIDOQUEEN, 0
 	db 43, PERSIAN, NINETALES, RAICHU, 0
-; Victory Road - REMIX (Ultimate Cooltrainer Female)
-	db 50, RAICHU, NINETALES, VENUSAUR, NIDOKING, NIDOQUEEN, VICTREEBEL, 0
+;+Victory Road - REMIX (Ultimate Cooltrainer Female)
+	db 53, RAICHU, NINETALES, VENUSAUR, NIDOKING, NIDOQUEEN, VICTREEBEL, 0
 
 BrunoData:
 	db $FF, 57, HITMONCHAN, 56, POLIWRATH, 57, HITMONLEE, 56, ONIX, 58, MACHAMP, 0
@@ -754,8 +764,8 @@ GentlemanData:
 	db 48, PRIMEAPE, 0
 ; SS Anne 2F Rooms
 	db 18, GROWLITHE, PONYTA, 0
-; Victory Road - REMIX (Ultimate Gentleman)
-	db 50, ARCANINE, NIDOKING, NIDOQUEEN, MAGNETON, PRIMEAPE, RAPIDASH, 0
+;+Victory Road - REMIX (Ultimate Gentleman)
+	db 53, ARCANINE, NIDOKING, NIDOQUEEN, MAGNETON, PRIMEAPE, RAPIDASH, 0
 
 Rival2Data:
 ; SS Anne 2F
@@ -787,7 +797,7 @@ LoreleiData:
 	db $FF, 70, WIGGLYTUFF, 71, STARMIE, 71, CLOYSTER, 70, OMASTAR, 70, EXEGGUTOR, 72, LAPRAS, 0
 
 ChannelerData:
-; Unused
+;+Pokemon Tower 2F
 	db 22, GASTLY, 0
 	db 24, GASTLY, 0
 	db 23, GASTLY, GASTLY, 0
@@ -795,22 +805,22 @@ ChannelerData:
 ; Pokémon Tower 3F
 	db 26, GASTLY, 0
 	db 26, VULPIX, 0
-; Unused
-	db 24, HAUNTER, 0
+;+Pokemon Tower 3F
+	db 25, HAUNTER, 0
 ; Pokémon Tower 3F
 	db 27, GASTLY, 0
 ; Pokémon Tower 4F
 	db 27, GASTLY, VULPIX, 0
 	db 28, GASTLY, DROWZEE, 0
-; Unused
-	db 24, GASTLY, 0
+;+Pokemon Tower 4F
+	db 24, VULPIX, MR_MIME, 0
 ; Pokémon Tower 4F
 	db 29, HAUNTER, 0
-; Unused
-	db 24, GASTLY, 0
+;+Pokemon Tower 4F
+	db 24, CUBONE, 0
 ; Pokémon Tower 5F
 	db 28, HAUNTER, HYPNO, 0
-; Unused
+;+Pokemon Tower 5F
 	db 24, GASTLY, 0
 ; Pokémon Tower 5F
 	db 30, GASTLY, NINETALES, 0
@@ -822,13 +832,13 @@ ChannelerData:
 	db 33, HYPNO, HAUNTER, NINETALES, 0
 ; Saffron Gym
 	db 44, HAUNTER, NINETALES, 0
-	db 45, HYPNO, 0
+	db 45, HYPNO, MAROWAK, 0
 	db 43, HYPNO, HAUNTER, KADABRA, 0
-; Victory Road - REMIX (Ultimate Channeler)
-	db 50, GENGAR, NINETALES, HYPNO, MR_MIME, ALAKAZAM, GENGAR, 0
+;+Victory Road - REMIX (Ultimate Channeler)
+	db 53, GENGAR, NINETALES, HYPNO, MR_MIME, ALAKAZAM, MAROWAK, 0
 
 AgathaData:
-	db $FF, 57, GENGAR, 58, GOLBAT, 57, MAROWAK, 58, ARBOK, 59, GENGAR, 0
+	db $FF, 57, GENGAR, 58, GOLBAT, 57, MAROWAK, 57, NINETALES, 58, ARBOK, 59, GENGAR, 0
 ; Rematch
 	db $FF, 71, JYNX, 71, GYARADOS, 72, ALAKAZAM, 71, VENUSAUR, 72, ARBOK, 73, GENGAR, 0
 
@@ -843,6 +853,7 @@ WeebraData:
 JanineData:
 ; Fuchsia Gym
 	db 40, GOLBAT, VENOMOTH, NIDOQUEEN, 0
+	db 45, GOLBAT, VENOMOTH, NIDOQUEEN, ARBOK, 0
 
 JoyData:
 ; Fuchsia Pokecenter
@@ -853,5 +864,5 @@ JennyData:
 	db 65, PIDGEOT, BLASTOISE, TANGELA, GENGAR, PARASECT, ARCANINE, 0
 
 DylanData:
-; Viridian Mart
+; Pewter Mart
 	db 65, PIKACHU, GYARADOS, VENUSAUR, CHARIZARD, ALAKAZAM, AERODACTYL, 0

@@ -275,6 +275,23 @@ FuchsiaGymJanineText:
 	text_asm
 	ld hl, FuchsiaGymTrainerHeader2
 	call TalkToTrainer
+    CheckEvent EVENT_BEAT_FUCHSIA_GYM_TRAINER_2
+    jr nz, .done
+	farcall GetBadgesObtained
+	ld a, [wNumSetBits]
+	cp 5
+    jr nc, .janine6thGym
+	jr .done
+.janine6thGym
+	call Delay3
+	ld a, OPP_JANINE
+	ld [wCurOpponent], a
+	ld a, 2
+	ld [wTrainerNo], a
+	ld a, $4 ; new script
+	ld [wFuchsiaGymCurScript], a
+	ld [wCurMapScript], a
+.done
 	jp TextScriptEnd
 
 FuchsiaGymJanineBattleText:

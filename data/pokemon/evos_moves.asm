@@ -402,7 +402,7 @@ GengarEvosMoves:
 ; Learnset
 	db 10, SMOG
 	db 15, PSYWAVE
-	db 36, SHADOW_SNEAK
+	db 36, SHADOW_CLAW
 	db 55, HYPNOSIS
 	db 55, DREAM_EATER
 	db 0
@@ -558,7 +558,7 @@ GastlyEvosMoves:
 	db 10, SMOG
 	db 15, PSYWAVE
 	db 23, POISON_GAS
-	db 36, SHADOW_SNEAK
+	db 36, SHADOW_CLAW
 	db 55, HYPNOSIS
 	db 55, DREAM_EATER
 	db 0
@@ -952,7 +952,7 @@ MagnetonEvosMoves:
 
 KoffingEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 35, WEEZING
+	db EVOLVE_LEVEL, 33, WEEZING
 	db 0
 ; Learnset
 	db 23, ACID
@@ -1243,11 +1243,12 @@ VulpixEvosMoves:
 	db 0
 ; Learnset
 	db 7, QUICK_ATTACK
+	db 10, LICK
 	db 13, ROAR
 	db 16, CONFUSE_RAY
 	db 25, REFLECT
 	db 32, FLAMETHROWER
-	db 37, SHADOW_SNEAK
+	db 37, SHADOW_CLAW
 	db 42, FIRE_SPIN
 	db 0
 
@@ -1256,11 +1257,12 @@ NinetalesEvosMoves:
 	db 0
 ; Learnset
 	db 7, QUICK_ATTACK
+	db 10, LICK
 	db 13, ROAR
 	db 16, CONFUSE_RAY
 	db 25, REFLECT
 	db 32, FLAMETHROWER
-	db 37, SHADOW_SNEAK
+	db 37, SHADOW_CLAW
 	db 42, FIRE_SPIN
 	db 0
 
@@ -1897,7 +1899,7 @@ MagikarpEvosMoves:
 	db EVOLVE_LEVEL, 20, GYARADOS
 	db 0
 ; Learnset
-	db 15, TACKLE
+	db 10, TACKLE
 	db 0
 
 MissingNo86EvosMoves:
@@ -2029,6 +2031,7 @@ MarowakEvosMoves:
 	db 13, TAIL_WHIP
 	db 18, HEADBUTT
 	db 25, FOCUS_ENERGY
+	db 28, SHADOW_CLAW
 	db 31, BONEMERANG
 	db 38, THRASH
 	db 46, EARTHQUAKE
@@ -2048,7 +2051,7 @@ HaunterEvosMoves:
 ; Learnset
 	db 10, SMOG
 	db 15, PSYWAVE
-	db 36, SHADOW_SNEAK
+	db 36, SHADOW_CLAW
 	db 55, HYPNOSIS
 	db 55, DREAM_EATER
 	db 0

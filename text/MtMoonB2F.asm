@@ -128,3 +128,22 @@ _MtMoonB2FRocket4AfterBattleText::
 	line "here long before"
 	cont "people came."
 	done
+
+_MtMoonB2FRocket5BattleText::
+	text "You won't"
+	line "beat me with"
+	cont "my powered up"
+	cont "pokemon!"
+	done
+
+_MtMoonB2FRocket5EndBattleText::
+	text "B-But, my"
+	line "powered up"
+	cont "pokemon!"
+	prompt
+
+_MtMoonB2FRocket5AfterBattleText::
+	text "Just... just"
+	line "leave me be..."
+	cont "[sniffle]"
+	done

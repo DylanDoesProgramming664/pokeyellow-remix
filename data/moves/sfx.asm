@@ -101,7 +101,7 @@ MoveSoundTable:
 	db SFX_BATTLE_25,          $00, $10 ; QUICK_ATTACK
 	db SFX_BATTLE_26,          $f0, $20 ; RAGE
 	db SFX_BATTLE_33,          $f0, $c0 ; TELEPORT
-	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; SHADOW_SNEAK
+	db SFX_NOT_VERY_EFFECTIVE, $f0, $e0 ; SHADOW_CLAW
 	db SFX_BATTLE_09,          $f0, $40 ; MIMIC
 	db SFX_BATTLE_31,          $00, $80 ; SCREECH
 	db SFX_BATTLE_33,          $80, $40 ; DOUBLE_TEAM

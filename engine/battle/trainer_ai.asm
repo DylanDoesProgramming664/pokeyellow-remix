@@ -334,6 +334,7 @@ CheckStatusImmunity:
 	jr .done
 .checkParalyze
 	ld a, [wEnemyMoveType]
+    and TYPE_MASK
 	cp ELECTRIC
 	ld b, GROUND
 	jr nz, .done
@@ -427,6 +428,7 @@ Modifier2PreferredMoves:
 	db SPECIAL_DOWN1_EFFECT
 	db ACCURACY_DOWN1_EFFECT
 	db EVASION_DOWN1_EFFECT
+	db KINESIS_EFFECT
 	db ATTACK_UP2_EFFECT
 	db DEFENSE_UP2_EFFECT
 	db SPEED_UP2_EFFECT
@@ -492,6 +494,7 @@ AIMoveChoiceModification3:
 	push de
 	push bc
 	ld a, [wEnemyMoveType]
+    and TYPE_MASK
 	ld d, a
 	ld hl, wEnemyMonMoves  ; enemy moves
 	ld bc, NUM_MOVES + 1
@@ -511,6 +514,7 @@ AIMoveChoiceModification3:
 	cp FLY_EFFECT
 	jr z, .betterMoveFound ; Fly is considered to be a better move
 	ld a, [wEnemyMoveType]
+    and TYPE_MASK
 	cp d
 	jr z, .loopMoves
 	ld a, [wEnemyMovePower]

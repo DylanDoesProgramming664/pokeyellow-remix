@@ -10,27 +10,32 @@ Route2GateOaksAideText:
 	text_asm
 	CheckEvent EVENT_GOT_HM05
 	jr nz, .got_item
-	ld a, 10
-	ldh [hOaksAideRequirement], a
-	ld a, HM_FLASH
-	ldh [hOaksAideRewardItem], a
-	ld [wd11e], a
-	call GetItemName
-	ld hl, wcd6d
-	ld de, wOaksAideRewardItemName
-	ld bc, ITEM_NAME_LENGTH
-	call CopyData
-	predef OaksAideScript
-	ldh a, [hOaksAideResult]
-	cp OAKS_AIDE_GOT_ITEM
-	jr nz, .no_item
+	ld hl, .Route2GateOaksAideHiText
+	call PrintText
+	lb bc, HM_FLASH, 1
+	call GiveItem
+	jr nc, .bag_full
+	ld hl, .Route2GateOaksAideGotItemText
+	call PrintText
 	SetEvent EVENT_GOT_HM05
+	jr .got_item
+.bag_full
+	ld hl, .Route2GateOaksAideNoRoomText
+	call PrintText
 .got_item
 	ld hl, .FlashExplanationText
 	call PrintText
-.no_item
 	jp TextScriptEnd
-
+	
+.Route2GateOaksAideHiText:
+	text_far _Route2GateOaksAideHiText
+	text_end
+.Route2GateOaksAideGotItemText:
+	text_far _Route2GateOaksAideGotItemText
+	text_end
+.Route2GateOaksAideNoRoomText:
+	text_far _Route2GateOaksAideNoRoomText
+	text_end
 .FlashExplanationText:
 	text_far _Route2GateOaksAideFlashExplanationText
 	text_end

@@ -2,46 +2,39 @@ TypeNames:
 	table_width 2, TypeNames
 
 	dw .Normal
-	dw .Fighting
-	dw .Flying
-	dw .Poison
-	dw .Ground
-	dw .Rock
-	dw .Normal
-	dw .Bug
-	dw .Steel
-	dw .Dark
-	dw .Ghost
-
-REPT UNUSED_TYPES_END - UNUSED_TYPES
-	dw .Normal
-ENDR
-
 	dw .Fire
 	dw .Water
-	dw .Grass
 	dw .Electric
-	dw .Psychic
+	dw .Grass
 	dw .Ice
+	dw .Fighting
+	dw .Poison
+	dw .Ground
+	dw .Flying
+	dw .Psychic
+	dw .Bug
+	dw .Rock
+	dw .Ghost
 	dw .Dragon
+	dw .Dark
+	dw .Steel
 
 	assert_table_length NUM_TYPES
 
 .Normal:   db "NORMAL@"
-.Fighting: db "FIGHTING@"
-.Flying:   db "FLYING@"
-.Poison:   db "POISON@"
 .Fire:     db "FIRE@"
 .Water:    db "WATER@"
-.Grass:    db "GRASS@"
 .Electric: db "ELECTRIC@"
-.Psychic:  db "PSYCHIC@"
+.Grass:    db "GRASS@"
 .Ice:      db "ICE@"
+.Fighting: db "FIGHTING@"
+.Poison:   db "POISON@"
 .Ground:   db "GROUND@"
-.Rock:     db "ROCK@"
-.Steel:    db "STEEL@"
-.Bird:     db "BIRD@"
+.Flying:   db "FLYING@"
+.Psychic:  db "PSYCHIC@"
 .Bug:      db "BUG@"
+.Rock:     db "ROCK@"
 .Ghost:    db "GHOST@"
-.Dark:     db "DARK@"
 .Dragon:   db "DRAGON@"
+.Dark:     db "DARK@"
+.Steel:    db "STEEL@"

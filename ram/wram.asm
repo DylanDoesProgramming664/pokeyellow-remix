@@ -557,13 +557,18 @@ NEXTU
 wBoostExpByExpAll::
 wUnusedCC5B:: db
 
-	ds 52
+	ds 50
+
+wLevelCap::
+    ds 1
+    ; padding
+    ds 2
 
 wCutTrees::
 ; Check CutTreeLocations for the indexes
 	ds 4
-	; unused
-	ds 3
+	; padding
+	ds 2
 
 wNPCMovementDirections2:: ds 10
 ; used in Pallet Town scripted movement

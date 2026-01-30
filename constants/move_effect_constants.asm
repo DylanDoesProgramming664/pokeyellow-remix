@@ -5,7 +5,7 @@
 ; MoveEffectPointerTable indexes (see data/moves/effects_pointers.asm)
 	const_def
 	const NO_ADDITIONAL_EFFECT       ; $00
-	const EFFECT_01                  ; $01 unused
+	const STRUGGLE_EFFECT            ; $01 unused
 	const POISON_SIDE_EFFECT1        ; $02
 	const DRAIN_HP_EFFECT            ; $03
 	const BURN_SIDE_EFFECT1          ; $04
@@ -28,13 +28,13 @@
 	const SPECIAL_DOWN1_EFFECT       ; $15
 	const ACCURACY_DOWN1_EFFECT      ; $16
 	const EVASION_DOWN1_EFFECT       ; $17
-	const CONVERSION_EFFECT          ; $18
-	const HAZE_EFFECT                ; $19
-	const BIDE_EFFECT                ; $1A
-	const THRASH_PETAL_DANCE_EFFECT  ; $1B
-	const SWITCH_AND_TELEPORT_EFFECT ; $1C
-	const TWO_TO_FIVE_ATTACKS_EFFECT ; $1D
-	const EFFECT_1E                  ; $1E unused
+	const KINESIS_EFFECT             ; $18
+	const CONVERSION_EFFECT          ; $19
+	const HAZE_EFFECT                ; $1A
+	const BIDE_EFFECT                ; $1B
+	const THRASH_PETAL_DANCE_EFFECT  ; $1C
+	const SWITCH_AND_TELEPORT_EFFECT ; $1D
+	const TWO_TO_FIVE_ATTACKS_EFFECT ; $1E
 	const FLINCH_SIDE_EFFECT1        ; $1F
 	const SLEEP_EFFECT               ; $20
 	const POISON_SIDE_EFFECT2        ; $21

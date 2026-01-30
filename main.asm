@@ -132,6 +132,7 @@ INCLUDE "engine/pokemon/bills_pc.asm"
 SECTION "Battle Engine 3", ROMX
 
 INCLUDE "engine/battle/print_type.asm"
+INCLUDE "engine/battle/print_category.asm"
 ; INCLUDE "engine/battle/save_trainer_name.asm"
 
 
@@ -215,6 +216,7 @@ SECTION "Battle Engine 7", ROMX
 INCLUDE "gfx/trade.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 INCLUDE "engine/battle/experience.asm"
+INCLUDE "engine/battle/level_cap.asm"
 
 
 SECTION "Diploma", ROMX

@@ -113,7 +113,7 @@ _AddPartyMon::
 ; Not wild.
 ; Check if Pikachu
 	ld a, [wcf91]
-    cp a, STARTER_PIKACHU
+    cp STARTER_PIKACHU
     jr z, .setStarterDVs
 
 ; Not Pikachu

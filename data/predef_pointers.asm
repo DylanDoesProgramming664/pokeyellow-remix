@@ -104,6 +104,7 @@ PredefPointers::
 	add_predef PrintStrengthTxt
 	add_predef PickUpItem
 	add_predef PrintMoveType
+	add_predef PrintMoveCategory
 	add_predef LoadMovePPs
 	add_predef DrawHP
 	add_predef DrawHP2

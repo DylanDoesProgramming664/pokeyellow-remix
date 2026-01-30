@@ -106,7 +106,7 @@
 	const QUICK_ATTACK ; 62
 	const RAGE         ; 63
 	const TELEPORT     ; 64
-	const SHADOW_SNEAK ; 65
+	const SHADOW_CLAW  ; 65
 	const MIMIC        ; 66
 	const SCREECH      ; 67
 	const DOUBLE_TEAM  ; 68
