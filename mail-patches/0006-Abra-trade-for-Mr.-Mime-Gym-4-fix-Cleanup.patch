@@ -1,0 +1,149 @@
+From 4f967e9df7e544e38cec8de6b816c840cf0230f6 Mon Sep 17 00:00:00 2001
+From: dylandoesprogramming664 <dylan20xx@outlook.com>
+Date: Fri, 30 Jan 2026 17:40:07 -0500
+Subject: [PATCH 6/6] Abra trade for Mr. Mime, Gym 4 fix, Cleanup
+
+Repo Changes:
+- Enabled git formatted patch notes to be committed
+
+Gameplay Changes:
+- The trade for Mr. Mime in Route 2 now requires Abra instead of
+  Clefairy
+- Gym 4's LVL cap is now reverted to 35
+
+Move Changes:
+- DRAGON_RAGE is realigned with DRAGON type now being PHYSICAL
+
+Miscellaneous Changes:
+- Removed the `level_cap.asm` file
+
+---
+ .gitignore                   |  6 ++++--
+ data/events/trades.asm       |  2 +-
+ data/moves/moves.asm         |  2 +-
+ engine/battle/experience.asm |  2 +-
+ engine/battle/level_cap.asm  | 35 -----------------------------------
+ main.asm                     |  1 -
+ 6 files changed, 7 insertions(+), 41 deletions(-)
+ delete mode 100644 engine/battle/level_cap.asm
+
+diff --git a/.gitignore b/.gitignore
+index ba3a9da..fb6e3c7 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -12,7 +12,7 @@
+ # compiled roms
+ *.gbc
+ *.gb
+-*.patch
++poke*.patch
+ 
+ # rgbds extras
+ # *.map
+@@ -48,8 +48,10 @@ pokeyellow_debug.map
+ *.ss9
+ *.cheats
+ 
+-# debug
++# debug, diff and dev
+ *.log
+ *.orig
+ *.bak
+ *.rej
++Makefile.patch
++mail-patches/*.txt
+diff --git a/data/events/trades.asm b/data/events/trades.asm
+index 58a8dd6..cfea4a3 100644
+--- a/data/events/trades.asm
++++ b/data/events/trades.asm
+@@ -7,7 +7,7 @@ TradeMons:
+ 	; Japanese Red and Green used TRADE_DIALOGSET_CASUAL, and had
+ 	; the same species as English Red and Blue.
+ 	db LICKITUNG,  DUGTRIO,  TRADE_DIALOGSET_CASUAL,    "GURIO@@@@@@"
+-	db CLEFAIRY,   MR_MIME,  TRADE_DIALOGSET_CASUAL,    "MILES@@@@@@"
++	db ABRA,       MR_MIME,  TRADE_DIALOGSET_CASUAL,    "MILES@@@@@@"
+ 	db BUTTERFREE, BEEDRILL, TRADE_DIALOGSET_HAPPY,     "STINGER@@@@" ; unused
+ 	db KANGASKHAN, MUK,      TRADE_DIALOGSET_CASUAL,    "STICKY@@@@@"
+ 	db MEW,        MEW,      TRADE_DIALOGSET_HAPPY,     "BART@@@@@@@" ; unused
+diff --git a/data/moves/moves.asm b/data/moves/moves.asm
+index 07dd1a0..48308b4 100644
+--- a/data/moves/moves.asm
++++ b/data/moves/moves.asm
+@@ -92,7 +92,7 @@ Moves:
+ 	move SLEEP_POWDER, SLEEP_EFFECT,                 0, GRASS,        STATUS,       75, 15
+ 	move PETAL_DANCE,  THRASH_PETAL_DANCE_EFFECT,  120, GRASS,        SPECIAL,     100, 20
+ 	move STRING_SHOT,  SPEED_DOWN1_EFFECT,           0, BUG,          STATUS,      100, 40
+-	move DRAGON_RAGE,  SPECIAL_DAMAGE_EFFECT,        1, DRAGON,       SPECIAL,     100, 20
++	move DRAGON_RAGE,  SPECIAL_DAMAGE_EFFECT,        1, DRAGON,       PHYSICAL,    100, 20
+ 	move FIRE_SPIN,    TRAPPING_EFFECT,             35, FIRE,         SPECIAL,      85, 15
+ 	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT1,       40, ELECTRIC,     SPECIAL,     100, 30
+ 	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT1,       95, ELECTRIC,     SPECIAL,     100, 15
+diff --git a/engine/battle/experience.asm b/engine/battle/experience.asm
+index 82c47ce..6bca893 100644
+--- a/engine/battle/experience.asm
++++ b/engine/battle/experience.asm
+@@ -150,7 +150,7 @@ GainExperience:
+ 	ld d, 43 ; Venomoth's level
+ 	jr nc, .next1
+ 	cp 3
+-	ld d, 37 ; Vileplume's level
++	ld d, 35 ; Vileplume's level
+ 	jr nc, .next1
+ 	cp 2
+     ld d, 26 ; Bit below Raichu's level
+diff --git a/engine/battle/level_cap.asm b/engine/battle/level_cap.asm
+deleted file mode 100644
+index d950997..0000000
+--- a/engine/battle/level_cap.asm
++++ /dev/null
+@@ -1,35 +0,0 @@
+-GetLevelCap:
+-	ld a, [wGameStage] ; Check if player has beat the game
+-	and a
+-	ld b, 100
+-	jr nz, .next1
+-	call GetBadgesObtained
+-	ld a, [wNumSetBits]
+-	cp 8
+-	ld b, 65 ; Jolteon/Flareon/Vaporeon's level
+-	jr nc, .next1
+-	cp 7
+-	ld b, 55 ; Rhydon's level
+-	jr nc, .next1
+-	cp 6
+-	ld b, 53 ; Magmar's level
+-	jr nc, .next1
+-	cp 5
+-	ld b, 50 ; Alakazam's level
+-	jr nc, .next1
+-    cp 4
+-	ld b, 43 ; Venomoth's level
+-	jr nc, .next1
+-	cp 3
+-	ld b, 37 ; Vileplume's level
+-	jr nc, .next1
+-	cp 2
+-    ld b, 26 ; Bit below Raichu's level
+-	jr nc, .next1
+-	cp 1
+-	ld b, 22 ; Starmie's level
+-	jr nc, .next1
+-	ld b, 15 ; Onix's level
+-.next1
+-    ld a, b
+-    ld [wLevelCap], a
+diff --git a/main.asm b/main.asm
+index e5ece8a..3b54895 100644
+--- a/main.asm
++++ b/main.asm
+@@ -216,7 +216,6 @@ SECTION "Battle Engine 7", ROMX
+ INCLUDE "gfx/trade.asm"
+ INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
+ INCLUDE "engine/battle/experience.asm"
+-INCLUDE "engine/battle/level_cap.asm"
+ 
+ 
+ SECTION "Diploma", ROMX
+-- 
+2.52.0
+
