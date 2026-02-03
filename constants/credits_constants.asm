@@ -98,6 +98,7 @@
 	const CRED_PRET2
 	const CRED_PRET3
 	const CRED_PRET4
+    const CRED_LEGACY
 	const CRED_SMITH_PLAYS_POKEMON
 	const CRED_SMITH
 	const CRED_CRZSHADOWS
@@ -141,6 +142,9 @@
 	const CRED_LAKE
 	const CRED_NESLUG
 	const CRED_TOM_WANG
+    const CRED_REMIX
+    const CRED_DYLANDOESPROGRAMMING664
+    const CRED_DYLAN
 DEF NUM_CRED_STRINGS EQU const_value
 
 	const_def -1, -1

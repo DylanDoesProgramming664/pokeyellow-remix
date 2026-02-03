@@ -100,6 +100,7 @@ CreditsTextPointers:
 	dw CreditsText_Pret2
 	dw CreditsText_Pret3
 	dw CreditsText_Pret4
+	dw CreditsText_Legacy
 	dw CreditsText_SmithPlaysPokemon
 	dw CreditsText_Smith
 	dw CreditsText_cRzShadows
@@ -143,6 +144,9 @@ CreditsTextPointers:
 	dw CreditsText_Lake
 	dw CreditsText_Neslug
 	dw CreditsText_TomWang
+    dw CreditsText_Remix
+    dw CreditsText_DylanDoesProgramming664
+    dw CreditsText_Dylan
 	assert_table_length NUM_CRED_STRINGS
 
 ; 
@@ -155,7 +159,7 @@ CreditsTextPointers:
 ; 16 / 17 = -7
 ; 18 / 19 = -8
 CreditsText_Version:
-	db -6, "YELLOW LEGACY"
+	db -6, "YELLOW VERSION"
 	next   "    STAFF@"
 CreditsText_Tajiri:
 	db -6, "SATOSHI TAJIRI@"
@@ -356,6 +360,9 @@ CreditsText_Pret3:
 CreditsText_Pret4:
 	db -4, "DISASSEMBLY@"
 
+CreditsText_Legacy:
+	db -6, "YELLOW LEGACY"
+	next   "    STAFF@"
 CreditsText_SmithPlaysPokemon:
 	db -7, "SMITHPLAYSPOKEMON@"
 
@@ -471,3 +478,12 @@ CreditsText_Neslug:
 	db -2, "NESLUG@"
 CreditsText_TomWang:
 	db -3, "TOM WANG@"
+
+; Pokemon Yellow Remix
+CreditsText_Remix:
+	db -6, "YELLOW REMIX"
+	next   "    STAFF@"
+CreditsText_DylanDoesProgramming664:
+	db -7, "DYLANDOESPROGRAMMING664@"
+CreditsText_Dylan:
+	db -6, "DYLAN@"

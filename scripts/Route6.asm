@@ -21,6 +21,10 @@ Route6_TextPointers:
 	dw_const Route6CooltrainerM2Text,       TEXT_ROUTE6_COOLTRAINER_M2
 	dw_const Route6CooltrainerF2Text,       TEXT_ROUTE6_COOLTRAINER_F2
 	dw_const Route6Youngster2Text,          TEXT_ROUTE6_YOUNGSTER2
+	dw_const Route6Youngster3Text,          TEXT_ROUTE6_YOUNGSTER3
+	dw_const Route6CooltrainerM3Text,       TEXT_ROUTE6_COOLTRAINER_M3
+	dw_const Route6CooltrainerM4Text,       TEXT_ROUTE6_COOLTRAINER_M4
+	dw_const Route6CooltrainerF3Text,       TEXT_ROUTE6_COOLTRAINER_F3
 	dw_const Route6UndergroundPathSignText, TEXT_ROUTE6_UNDERGROUND_PATH_SIGN
 
 Route6TrainerHeaders:
@@ -37,6 +41,14 @@ Route6TrainerHeader4:
 	trainer EVENT_BEAT_ROUTE_6_TRAINER_4, 3, Route6CooltrainerF2BattleText, Route6CooltrainerF2EndBattleText, Route6CooltrainerF2AfterBattleText
 Route6TrainerHeader5:
 	trainer EVENT_BEAT_ROUTE_6_TRAINER_5, 3, Route6Youngster2BattleText, Route6Youngster2EndBattleText, Route6Youngster2AfterBattleText
+Route6TrainerHeader6:
+	trainer EVENT_BEAT_ROUTE_6_TRAINER_6, 3, Route6Youngster3BattleText, Route6Youngster3EndBattleText, Route6Youngster3AfterBattleText
+Route6TrainerHeader7:
+	trainer EVENT_BEAT_ROUTE_6_TRAINER_7, 3, Route6CooltrainerM3BattleText, Route6CooltrainerM3EndBattleText, Route6CooltrainerM3AfterBattleText
+Route6TrainerHeader8:
+	trainer EVENT_BEAT_ROUTE_6_TRAINER_8, 0, Route6CooltrainerM4BattleText, Route6CooltrainerM4EndBattleText, Route6CooltrainerM4AfterBattleText
+Route6TrainerHeader9:
+	trainer EVENT_BEAT_ROUTE_6_TRAINER_9, 0, Route6CooltrainerF3BattleText, Route6CooltrainerF3EndBattleText, Route6CooltrainerF3AfterBattleText
 	db -1 ; end
 
 Route6CooltrainerM1Text:
@@ -145,6 +157,78 @@ Route6Youngster2EndBattleText:
 
 Route6Youngster2AfterBattleText:
 	text_far _Route6Youngster2AfterBattleText
+	text_end
+
+Route6Youngster3Text:
+	text_asm
+	ld hl, Route6TrainerHeader6
+	call TalkToTrainer
+	jp TextScriptEnd
+
+Route6Youngster3BattleText:
+	text_far _Route6Youngster3BattleText
+	text_end
+
+Route6Youngster3EndBattleText:
+	text_far _Route6Youngster3EndBattleText
+	text_end
+
+Route6Youngster3AfterBattleText:
+	text_far _Route6Youngster3AfterBattleText
+	text_end
+
+Route6CooltrainerM3Text:
+	text_asm
+	ld hl, Route6TrainerHeader7
+	call TalkToTrainer
+	jp TextScriptEnd
+
+Route6CooltrainerM3BattleText:
+	text_far _Route6CooltrainerM3BattleText
+	text_end
+
+Route6CooltrainerM3EndBattleText:
+	text_far _Route6CooltrainerM3EndBattleText
+	text_end
+
+Route6CooltrainerM3AfterBattleText:
+	text_far _Route6CooltrainerM3AfterBattleText
+	text_end
+
+Route6CooltrainerM4Text:
+	text_asm
+	ld hl, Route6TrainerHeader8
+	call TalkToTrainer
+	jp TextScriptEnd
+
+Route6CooltrainerM4BattleText:
+	text_far _Route6CooltrainerM4BattleText
+	text_end
+
+Route6CooltrainerM4EndBattleText:
+	text_far _Route6CooltrainerM4EndBattleText
+	text_end
+
+Route6CooltrainerM4AfterBattleText:
+	text_far _Route6CooltrainerM4AfterBattleText
+	text_end
+
+Route6CooltrainerF3Text:
+	text_asm
+	ld hl, Route6TrainerHeader9
+	call TalkToTrainer
+	jp TextScriptEnd
+
+Route6CooltrainerF3BattleText:
+	text_far _Route6CooltrainerF3BattleText
+	text_end
+
+Route6CooltrainerF3EndBattleText:
+	text_far _Route6CooltrainerF3EndBattleText
+	text_end
+
+Route6CooltrainerF3AfterBattleText:
+	text_far _Route6CooltrainerF3AfterBattleText
 	text_end
 
 Route6UndergroundPathSignText:

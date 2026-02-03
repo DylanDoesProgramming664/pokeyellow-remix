@@ -97,6 +97,71 @@ _Route6Youngster2AfterBattleText::
 	cont "just bad?"
 	done
 
+_Route6Youngster3BattleText::
+	text "I've never seen"
+	line "you around!"
+	cont "Are you good?"
+	done
+
+_Route6Youngster3EndBattleText::
+	text "You"
+	line "are too good!"
+	prompt
+
+_Route6Youngster3AfterBattleText::
+	text "Are my #MON"
+	line "weak? Or, am I"
+	cont "just bad?"
+	done
+
+_Route6CooltrainerM3BattleText::
+	text "Huh? You want"
+	line "to talk to me?"
+	done
+
+_Route6CooltrainerM3EndBattleText::
+	text "I"
+	line "didn't start it!"
+	prompt
+
+_Route6CooltrainerM3AfterBattleText::
+	text "I should carry"
+	line "more #MON with"
+	cont "me for safety."
+	done
+
+_Route6CooltrainerM4BattleText::
+	text "Huh? You want"
+	line "to talk to me?"
+	done
+
+_Route6CooltrainerM4EndBattleText::
+	text "I"
+	line "didn't start it!"
+	prompt
+
+_Route6CooltrainerM4AfterBattleText::
+	text "I should carry"
+	line "more #MON with"
+	cont "me for safety."
+	done
+
+_Route6CooltrainerF3BattleText::
+	text "Me? Well, OK."
+	line "I'll play!"
+	done
+
+_Route6CooltrainerF3EndBattleText::
+	text "Just"
+	line "didn't work!"
+	prompt
+
+_Route6CooltrainerF3AfterBattleText::
+	text "I want to get"
+	line "stronger! What's"
+	cont "your secret?"
+	done
+
 _Route6UndergroundPathSignText::
 	text "UNDERGROUND PATH"
 	line "CERULEAN CITY -"

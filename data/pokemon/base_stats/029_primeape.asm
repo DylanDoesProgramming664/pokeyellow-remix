@@ -1,11 +1,13 @@
 	db DEX_PRIMEAPE ; pokedex id
 
-	db  65, 105,  60,  95,  70 ; 395 -> 465
-	;   hp  atk  def  spd  spc
+	db  65, 105,  60,  95,  70 ; 395 / 465
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,   0,   0, +10 = +10 / +10
 
 	db FIGHTING, FIGHTING ; type
 	db 75 ; catch rate
 	db 149 ; base exp
+    ; STAT_EXP_EFFICIENCY = (395 * 7) / 149 = 18.6
 
 	INCBIN "gfx/pokemon/front/primeape.pic", 0, 1 ; sprite dimensions
 	dw PrimeapePicFront, PrimeapePicBack

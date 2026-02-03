@@ -1,7 +1,8 @@
 	db DEX_KABUTOPS ; pokedex id
 
-	db  60, 115, 105,  80,  70 ; 430 -> 500
-	;   hp  atk  def  spd  spc
+	db  65, 125, 115,  85,  75 ; 465 / 540
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;   +5, +10, +10,  +5,  +5 = +35 / +45
 
 	db ROCK, WATER ; type
 	db 45 ; catch rate

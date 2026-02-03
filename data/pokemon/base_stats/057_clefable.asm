@@ -1,7 +1,8 @@
 	db DEX_CLEFABLE ; pokedex id
 
-	db  95,  70,  75,  60,  95 ; 395 -> 490
-	;   hp  atk  def  spd  spc
+	db  95,  70,  75,  60,  95 ; 405 / 500
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,  +2,   0, +10 = +12 / +17
 
 	db NORMAL, NORMAL ; type
 	db 25 ; catch rate

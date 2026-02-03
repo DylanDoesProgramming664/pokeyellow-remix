@@ -7,8 +7,8 @@ ViridianForestWildMons:
 	db  5, ODDISH
 	db  6, METAPOD
 	db  6, ODDISH
-	db  7, KAKUNA
-	db  8, PIDGEY
+	db  7, PINSIR
+	db  7, SCYTHER
 	db  9, PIDGEOTTO
 	end_grass_wildmons
 

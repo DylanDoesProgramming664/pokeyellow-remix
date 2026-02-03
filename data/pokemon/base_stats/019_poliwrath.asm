@@ -1,11 +1,13 @@
 	db DEX_POLIWRATH ; pokedex id
 
-	db  90,  95,  95,  90,  80 ; 450 -> 530
-	;   hp  atk  def  spd  spc
+	db  90,  95,  95,  90,  80 ; 450 / 530
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,   0, +20, +10 = +30 / +20
 
 	db WATER, FIGHTING ; type
 	db 45 ; catch rate
 	db 185 ; base exp
+    ; STAT_EXP_EFFICIENCY = (450 * 7) / 185 = 17.0
 
 	INCBIN "gfx/pokemon/front/poliwrath.pic", 0, 1 ; sprite dimensions
 	dw PoliwrathPicFront, PoliwrathPicBack

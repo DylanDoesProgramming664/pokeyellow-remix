@@ -1,0 +1,23 @@
+	db DEX_VENONAT ; pokedex id
+
+	db  60,  60,  50,  50,  55 ; 275 / 330
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,  +5,   0,  +5, +15 = +25 / +25
+
+	db BUG, POISON ; type
+	db 190 ; catch rate
+	db 75 ; base exp
+
+	INCBIN "gfx/pokemon/front/venonat.pic", 0, 1 ; sprite dimensions
+	dw VenonatPicFront, VenonatPicBack
+
+	db TACKLE, DISABLE, NO_MOVE, NO_MOVE ; level 1 learnset
+	db GROWTH_MEDIUM_FAST ; growth rate
+
+	; tm/hm learnset
+	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         MEGA_DRAIN,   \
+	     SOLARBEAM,    PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
+	     BIDE,         REST,         PSYWAVE,      SUBSTITUTE,   FLASH
+	; end
+
+	db 0 ; padding

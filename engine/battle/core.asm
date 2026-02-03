@@ -4160,10 +4160,10 @@ CheckForDisobedience:
 	ld a, 43 ; Venomoth's level
 	jr nc, .next
 	cp 3
-	ld a, 35 ; Vileplume's level
+	ld a, 36 ; Vileplume's level
 	jr nc, .next
 	cp 2
-	ld a, 26 ; Bit below Raichu's level
+	ld a, 29 ; Bit below Raichu's level
 	jr nc, .next
 	cp 1
 	ld a, 22 ; Starmie's level

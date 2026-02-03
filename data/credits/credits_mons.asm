@@ -1,5 +1,10 @@
 CreditsMons:
 ; one entry per CRED_TEXT_MON or CRED_TEXT_FADE_MON in CreditsOrder
+	db NINETALES
+	db GOLDUCK
+	db ONIX
+	db MAROWAK
+
 	db PIKACHU
 	db STARMIE
 	db ARCANINE

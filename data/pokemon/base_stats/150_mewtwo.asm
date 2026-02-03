@@ -1,7 +1,9 @@
 	db DEX_MEWTWO ; pokedex id
 
-	db 106, 110,  90, 130, 154 ; 590 -> 700 (110 base Sp.DEF in future gens)
-	;   hp  atk  def  spd  spc
+	db 106, 110,  90, 130, 154 ; 590 / 700
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+    ;    0,   0,   0,   0,   0 =   0 / +20
+    ; Sp.DEF will be 110 in Gen 2-5
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
 	db 3 ; catch rate

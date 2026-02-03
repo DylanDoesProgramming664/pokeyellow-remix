@@ -28,6 +28,8 @@ MonPartyData:
 	db ICON_NIDOKING      ; Nidoking
 	db ICON_MANKEY        ; Mankey
 	db ICON_PRIMEAPE      ; Primeape
+	db ICON_VULPIX        ; Vulpix
+	db ICON_NINETALES     ; Ninetales
 	db ICON_CATERPIE      ; Caterpie
 	db ICON_METAPOD       ; Metapod
 	db ICON_BUTTERFREE    ; Butterfree
@@ -41,8 +43,6 @@ MonPartyData:
 	db ICON_RAICHU        ; Raichu
 	db ICON_PINSIR        ; Pinsir
 	db ICON_SCYTHER       ; Scyther
-	db ICON_VULPIX        ; Vulpix
-	db ICON_NINETALES     ; Ninetales
 	db ICON_JIGGLYPUFF    ; Jigglypuff
 	db ICON_WIGGLYTUFF    ; Wigglytuff
 	db ICON_SANDSHREW     ; Sandshrew
@@ -64,43 +64,47 @@ MonPartyData:
 	db ICON_ABRA          ; Abra
 	db ICON_KADABRA       ; Kadabra
 	db ICON_ALAKAZAM      ; Alakazam
+	db ICON_BELLSPROUT    ; Bellsprout
+	db ICON_WEEPINBELL    ; Weepinbell
+	db ICON_VICTREEBEL    ; Victreebel
+	db ICON_VENONAT       ; Venonat
+	db ICON_VENOMOTH      ; Venomoth
 	db ICON_MEOWTH        ; Meowth
 	db ICON_PERSIAN       ; Persian
-	db ICON_GROWLITHE     ; Growlithe
-	db ICON_ARCANINE      ; Arcanine
+	db ICON_DROWZEE       ; Drowzee
+	db ICON_HYPNO         ; Hypno
 	db ICON_LICKITUNG     ; Lickitung
-	db ICON_MAGIKARP      ; Magikarp
-	db ICON_GYARADOS      ; Gyarados
-	db ICON_MACHOP        ; Machop
-	db ICON_MACHOKE       ; Machoke
-	db ICON_MACHAMP       ; Machamp
 	db ICON_MAGNEMITE     ; Magnemite
 	db ICON_MAGNETON      ; Magneton
+	db ICON_KRABBY        ; Krabby
+	db ICON_HORSEA        ; Horsea
+	db ICON_SEADRA        ; Seadra
+	db ICON_KINGLER       ; Kingler
+	db ICON_MAGIKARP      ; Magikarp
+	db ICON_GYARADOS      ; Gyarados
 	db ICON_DIGLETT       ; Diglett
 	db ICON_DUGTRIO       ; Dugtrio
 	db ICON_ONIX          ; Onix
 	db ICON_RHYHORN       ; Rhyhorn
 	db ICON_RHYDON        ; Rhydon
-	db ICON_BELLSPROUT    ; Bellsprout
-	db ICON_WEEPINBELL    ; Weepinbell
-	db ICON_VICTREEBEL    ; Victreebel
-	db ICON_PONYTA        ; Ponyta
-	db ICON_RAPIDASH      ; Rapidash
+	db ICON_MACHOP        ; Machop
+	db ICON_MACHOKE       ; Machoke
+	db ICON_MACHAMP       ; Machamp
 	db ICON_GASTLY        ; Gastly
 	db ICON_HAUNTER       ; Haunter
 	db ICON_GENGAR        ; Gengar
 	db ICON_CUBONE        ; Cubone
 	db ICON_MAROWAK       ; Marowak
-	db ICON_DROWZEE       ; Drowzee
-	db ICON_HYPNO         ; Hypno
-	db ICON_VENONAT       ; Venonat
-	db ICON_VENOMOTH      ; Venomoth
+	db ICON_GROWLITHE     ; Growlithe
+	db ICON_ARCANINE      ; Arcanine
 	db ICON_DODUO         ; Doduo
 	db ICON_DODRIO        ; Dodrio
 	db ICON_GRIMER        ; Grimer
 	db ICON_MUK           ; Muk
-	db ICON_HITMONLEE     ; Hitmonlee
-	db ICON_HITMONCHAN    ; Hitmonchan
+	db ICON_PONYTA        ; Ponyta
+	db ICON_RAPIDASH      ; Rapidash
+	db ICON_KOFFING       ; Koffing
+	db ICON_WEEZING       ; Weezing
 	db ICON_EXEGGCUTE     ; Exeggcute
 	db ICON_EXEGGUTOR     ; Exeggutor
 	db ICON_CHANSEY       ; Chansey
@@ -109,8 +113,6 @@ MonPartyData:
 	db ICON_TAUROS        ; Tauros
 	db ICON_VOLTORB       ; Voltorb
 	db ICON_ELECTRODE     ; Electrode
-	db ICON_KOFFING       ; Koffing
-	db ICON_WEEZING       ; Weezing
 	db ICON_ELECTABUZZ    ; Electabuzz
 	db ICON_TENTACOOL     ; Tentacool
 	db ICON_TENTACRUEL    ; Tentacruel
@@ -118,19 +120,17 @@ MonPartyData:
 	db ICON_SLOWBRO       ; Slowbro
 	db ICON_STARYU        ; Staryu
 	db ICON_STARMIE       ; Starmie
-	db ICON_KRABBY        ; Krabby
-	db ICON_HORSEA        ; Horsea
-	db ICON_SEADRA        ; Seadra
-	db ICON_KINGLER       ; Kingler
 	db ICON_SHELLDER      ; Shellder
 	db ICON_CLOYSTER      ; Cloyster
 	db ICON_SEEL          ; Seel
 	db ICON_DEWGONG       ; Dewgong
 	db ICON_JYNX          ; Jynx
 	db ICON_MAGMAR        ; Magmar
-	db ICON_MR_MIME       ; Mr.Mime
-	db ICON_LAPRAS        ; Lapras
 	db ICON_DITTO         ; Ditto
+	db ICON_MR_MIME       ; Mr.Mime
+	db ICON_HITMONLEE     ; Hitmonlee
+	db ICON_HITMONCHAN    ; Hitmonchan
+	db ICON_LAPRAS        ; Lapras
 	db ICON_EEVEE         ; Eevee
 	db ICON_VAPOREON      ; Vaporeon
 	db ICON_JOLTEON       ; Jolteon

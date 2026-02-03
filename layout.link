@@ -232,6 +232,10 @@ ROMX $3E
 	"Surfing Minigame"
 ROMX $3F
 	"Overworld Pikachu"
+ROMX $40
+	"Mon Icons 1"
+ROMX $41
+	"Text 9"
 WRAM0
 	"Audio RAM"
 	org $c100

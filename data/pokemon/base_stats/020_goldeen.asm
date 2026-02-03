@@ -1,11 +1,13 @@
 	db DEX_GOLDEEN ; pokedex id
 
-	db  45,  67,  60,  63,  50 ; 285 -> 335
-	;   hp  atk  def  spd  spc
+	db  45,  67,  60,  63,  50 ; 285 / 335
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,   0,   0,   0 =   0 / +15
 
 	db WATER, WATER ; type
 	db 225 ; catch rate
 	db 111 ; base exp
+    ; STAT_EXP_EFFICIENCY = (285 * 7) / 111 = 18.0
 
 	INCBIN "gfx/pokemon/front/goldeen.pic", 0, 1 ; sprite dimensions
 	dw GoldeenPicFront, GoldeenPicBack

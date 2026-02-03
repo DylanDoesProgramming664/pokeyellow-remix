@@ -1,7 +1,8 @@
 	db DEX_FLAREON ; pokedex id
 
-	db  65, 130,  60,  65, 110 ; 430 -> 540
-	;   hp  atk  def  spd  spc
+	db  70, 130,  65,  70, 110 ; 445 / 555
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;   +5,   0,  +5,  +5,   0 = +15 / +30
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate

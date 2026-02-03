@@ -179,3 +179,6 @@ gfx/surfing_pikachu/surfing_pikachu_3.2bpp: tools/gfx += --trim-whitespace
 
 %.pcm: %.wav
 	tools/pcm $< $@
+
+watch:
+	@find . -name "*.asm" | entr -r make yellow -j$(nproc) 2>&1 | tee Makefile.log

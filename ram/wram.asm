@@ -286,6 +286,7 @@ wc6f2:: db
 wc6f3:: db
 	ds 11
 wTempLevelStore:: db
+wLevelCap:: db
 wLYOverrides:: ds $100
 wLYOverridesEnd::
 wLYOverridesBuffer:: ds $100
@@ -557,12 +558,7 @@ NEXTU
 wBoostExpByExpAll::
 wUnusedCC5B:: db
 
-	ds 50
-
-wLevelCap::
-    ds 1
-    ; padding
-    ds 2
+	ds 53
 
 wCutTrees::
 ; Check CutTreeLocations for the indexes

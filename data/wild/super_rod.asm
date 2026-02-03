@@ -45,7 +45,7 @@ CheckMapForFishingMon:
 
 	ld b, $0
 .loop2
-	ld a, $4 ; 4 pokemon per map
+	ld a, $5 ; 5 pokemon per map
 	cp b
 	jr z, .loop
 	ld a, [wd11e] ; ID of the mon we're searching for
@@ -57,6 +57,8 @@ CheckMapForFishingMon:
 	cp HORSEA
 	jr z, .found
 	cp KRABBY
+	jr z, .found
+	cp MAGIKARP
 	jr z, .found
 	cp [hl]
 	jr nz, .notfound

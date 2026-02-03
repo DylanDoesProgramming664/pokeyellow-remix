@@ -1,11 +1,13 @@
 	db DEX_NIDORINA ; pokedex id
 
-	db  70,  62,  67,  56,  55 ; 310 -> 365
-	;   hp  atk  def  spd  spc
+	db  74,  64,  70,  57,  55 ; 320 / 375
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;   +4,  +2,  +3,  +1,   0 = +10 / +10
 
 	db POISON, POISON ; type
 	db 120 ; catch rate
 	db 117 ; base exp
+    ; STAT_EXP_EFFICIENCY = (320 * 7) / 117 = 19.1
 
 	INCBIN "gfx/pokemon/front/nidorina.pic", 0, 1 ; sprite dimensions
 	dw NidorinaPicFront, NidorinaPicBack

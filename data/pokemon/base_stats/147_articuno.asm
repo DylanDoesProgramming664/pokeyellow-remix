@@ -1,7 +1,8 @@
 	db DEX_ARTICUNO ; pokedex id
 
-	db  90,  85, 100,  85, 125 ; 485 -> 610
-	;   hp  atk  def  spd  spc
+	db  90,  85, 100,  85, 125 ; 485 / 610
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,   0,   0,   0 =   0 / +30
 
 	db ICE, FLYING ; type
 	db 3 ; catch rate

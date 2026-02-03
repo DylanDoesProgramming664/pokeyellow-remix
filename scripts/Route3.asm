@@ -31,7 +31,7 @@ Route3TrainerHeaders:
 Route3TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_3_TRAINER_0, 2, Route3Youngster1BattleText, Route3Youngster1EndBattleText, Route3Youngster1AfterBattleText
 Route3TrainerHeader1:
-	trainer EVENT_BEAT_ROUTE_3_TRAINER_1, 3, Route3Youngster2BattleText, Route3Youngster2EndBattleText, Route3Youngster2AfterBattleText
+	trainer EVENT_BEAT_ROUTE_3_TRAINER_1, 2, Route3Youngster2BattleText, Route3Youngster2EndBattleText, Route3Youngster2AfterBattleText
 Route3TrainerHeader2:
 	trainer EVENT_BEAT_ROUTE_3_TRAINER_2, 2, Route3CooltrainerF1BattleText, Route3CooltrainerF1EndBattleText, Route3CooltrainerF1AfterBattleText
 Route3TrainerHeader3:

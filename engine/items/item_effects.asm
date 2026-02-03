@@ -1503,10 +1503,10 @@ ItemUseMedicine:
 	ld b, 43 ; Venomoth's level
 	jr nc, .next1
 	cp 3
-	ld b, 35 ; Vileplume's level
+	ld b, 36 ; Vileplume's level
 	jr nc, .next1
 	cp 2
-    ld b, 26 ; Bit below Raichu's level
+    ld b, 29 ; Bit below Raichu's level
 	jr nc, .next1
 	cp 1
 	ld b, 22 ; Starmie's level
@@ -2029,7 +2029,7 @@ ItemUseOldRod:
 	srl a
 	jr c, .SetBite
 	and %11
-	cp 2
+	cp OLD_ROD_SLOTS
 	jr nc, .RandomLoop
 	; choose which monster appears
 	ld hl, OldRodMons
@@ -2057,7 +2057,7 @@ ItemUseGoodRod:
 	srl a
 	jr c, .SetBite
 	and %11
-	cp 2
+	cp GOOD_ROD_SLOTS
 	jr nc, .RandomLoop
 	; choose which monster appears
 	ld hl, GoodRodMons

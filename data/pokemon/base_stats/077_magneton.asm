@@ -1,7 +1,8 @@
 	db DEX_MAGNETON ; pokedex id
 
-	db  60,  60,  95,  70, 120 ; 405 -> 525
-	;   hp  atk  def  spd  spc
+	db  60,  60,  95,  70, 120 ; 405 / 525
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;  +10,   0,   0,   0,   0 = +10 / +60
 
 	db ELECTRIC, STEEL ; type
 	db 60 ; catch rate

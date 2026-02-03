@@ -1,7 +1,8 @@
 	db DEX_EKANS ; pokedex id
 
-	db  35,  63,  44,  55,  54 ; 241 -> 305
-	;   hp  atk  def  spd  spc
+	db  38,  60,  44,  55,  54 ; 241 / 305
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;   +3,   0,   0,   0, +14 = +17 / +17
 
 	db POISON, POISON ; type
 	db 255 ; catch rate

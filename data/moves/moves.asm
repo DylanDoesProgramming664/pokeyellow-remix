@@ -109,7 +109,7 @@ Moves:
 	move MEDITATE,     ATTACK_UP1_EFFECT,            0, PSYCHIC_TYPE, STATUS,      100, 40
 	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, STATUS,      100, 30
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       PHYSICAL,    100, 30
-	move RAGE,         RAGE_EFFECT,                 40, DRAGON,       MIXED,       100, 20
+	move RAGE,         RAGE_EFFECT,                 60, DRAGON,       MIXED,       100, 20
 	move TELEPORT,     SWITCH_AND_TELEPORT_EFFECT,   0, PSYCHIC_TYPE, STATUS,      100, 20
 	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        MIXED,       100, 30
 	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       STATUS,      100, 10

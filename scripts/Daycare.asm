@@ -105,10 +105,10 @@ DaycareGentlemanText:
 	ld b, 43 ; Venomoth's level
 	jr nc, .next1
 	cp 3
-	ld b, 35 ; Vileplume's level
+	ld b, 36 ; Vileplume's level
 	jr nc, .next1
 	cp 2
-    ld b, 26 ; Bit below Raichu's level
+    ld b, 29 ; Bit below Raichu's level
 	jr nc, .next1
 	cp 1
 	ld b, 22 ; Starmie's level

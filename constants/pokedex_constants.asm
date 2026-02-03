@@ -33,21 +33,21 @@
 	const DEX_NIDOKING   ; 027
 	const DEX_MANKEY     ; 028
 	const DEX_PRIMEAPE   ; 029
-	const DEX_CATERPIE   ; 030
-	const DEX_METAPOD    ; 031
-	const DEX_BUTTERFREE ; 032
-	const DEX_WEEDLE     ; 033
-	const DEX_KAKUNA     ; 034
-	const DEX_BEEDRILL   ; 035
-	const DEX_ODDISH     ; 036
-	const DEX_GLOOM      ; 037
-	const DEX_VILEPLUME  ; 038
-	const DEX_PIKACHU    ; 039
-	const DEX_RAICHU     ; 040
-	const DEX_PINSIR     ; 041
-	const DEX_SCYTHER    ; 042
-	const DEX_VULPIX     ; 043
-	const DEX_NINETALES  ; 044
+	const DEX_VULPIX     ; 030
+	const DEX_NINETALES  ; 031
+	const DEX_CATERPIE   ; 032
+	const DEX_METAPOD    ; 033
+	const DEX_BUTTERFREE ; 034
+	const DEX_WEEDLE     ; 035
+	const DEX_KAKUNA     ; 036
+	const DEX_BEEDRILL   ; 037
+	const DEX_ODDISH     ; 038
+	const DEX_GLOOM      ; 039
+	const DEX_VILEPLUME  ; 040
+	const DEX_PIKACHU    ; 041
+	const DEX_RAICHU     ; 042
+	const DEX_PINSIR     ; 043
+	const DEX_SCYTHER    ; 044
 	const DEX_JIGGLYPUFF ; 045
 	const DEX_WIGGLYTUFF ; 046
 	const DEX_SANDSHREW  ; 047
@@ -69,73 +69,73 @@
 	const DEX_ABRA       ; 063
 	const DEX_KADABRA    ; 064
 	const DEX_ALAKAZAM   ; 065
-	const DEX_MEOWTH     ; 066
-	const DEX_PERSIAN    ; 067
-	const DEX_GROWLITHE  ; 068
-	const DEX_ARCANINE   ; 069
-	const DEX_LICKITUNG  ; 070
-	const DEX_MAGIKARP   ; 071
-	const DEX_GYARADOS   ; 072
-	const DEX_MACHOP     ; 073
-	const DEX_MACHOKE    ; 074
-	const DEX_MACHAMP    ; 075
+	const DEX_BELLSPROUT ; 066
+	const DEX_WEEPINBELL ; 067
+	const DEX_VICTREEBEL ; 068
+	const DEX_VENONAT    ; 069
+	const DEX_VENOMOTH   ; 070
+	const DEX_MEOWTH     ; 071
+	const DEX_PERSIAN    ; 072
+	const DEX_DROWZEE    ; 073
+	const DEX_HYPNO      ; 074
+	const DEX_LICKITUNG  ; 075
 	const DEX_MAGNEMITE  ; 076
 	const DEX_MAGNETON   ; 077
-	const DEX_DIGLETT    ; 078
-	const DEX_DUGTRIO    ; 079
-	const DEX_ONIX       ; 080
-	const DEX_RHYHORN    ; 081
-	const DEX_RHYDON     ; 082
-	const DEX_BELLSPROUT ; 083
-	const DEX_WEEPINBELL ; 084
-	const DEX_VICTREEBEL ; 085
-	const DEX_PONYTA     ; 086
-	const DEX_RAPIDASH   ; 087
-	const DEX_GASTLY     ; 088
-	const DEX_HAUNTER    ; 089
-	const DEX_GENGAR     ; 090
-	const DEX_CUBONE     ; 091
-	const DEX_MAROWAK    ; 092
-	const DEX_DROWZEE    ; 093
-	const DEX_HYPNO      ; 094
-	const DEX_VENONAT    ; 095
-	const DEX_VENOMOTH   ; 096
-	const DEX_DODUO      ; 097
-	const DEX_DODRIO     ; 098
-	const DEX_GRIMER     ; 099
-	const DEX_MUK        ; 100
-	const DEX_HITMONLEE  ; 101
-	const DEX_HITMONCHAN ; 102
-	const DEX_EXEGGCUTE  ; 103
-	const DEX_EXEGGUTOR  ; 104
-	const DEX_CHANSEY    ; 105
-	const DEX_TANGELA    ; 106
-	const DEX_KANGASKHAN ; 107
-	const DEX_TAUROS     ; 108
-	const DEX_VOLTORB    ; 109
-	const DEX_ELECTRODE  ; 110
-	const DEX_KOFFING    ; 111
-	const DEX_WEEZING    ; 112
-	const DEX_ELECTABUZZ ; 113
-	const DEX_TENTACOOL  ; 114
-	const DEX_TENTACRUEL ; 115
-	const DEX_SLOWPOKE   ; 116
-	const DEX_SLOWBRO    ; 117
-	const DEX_STARYU     ; 118
-	const DEX_STARMIE    ; 119
-	const DEX_KRABBY     ; 120
-	const DEX_KINGLER    ; 121
-	const DEX_HORSEA     ; 122
-	const DEX_SEADRA     ; 123
-	const DEX_SHELLDER   ; 124
-	const DEX_CLOYSTER   ; 125
-	const DEX_SEEL       ; 126
-	const DEX_DEWGONG    ; 127
-	const DEX_JYNX       ; 128
-	const DEX_MAGMAR     ; 129
-	const DEX_MR_MIME    ; 130
-	const DEX_LAPRAS     ; 131
-	const DEX_DITTO      ; 132
+	const DEX_KRABBY     ; 078
+	const DEX_KINGLER    ; 079
+	const DEX_HORSEA     ; 080
+	const DEX_SEADRA     ; 081
+	const DEX_MAGIKARP   ; 082
+	const DEX_GYARADOS   ; 083
+	const DEX_DIGLETT    ; 084
+	const DEX_DUGTRIO    ; 085
+	const DEX_ONIX       ; 086
+	const DEX_RHYHORN    ; 087
+	const DEX_RHYDON     ; 088
+	const DEX_MACHOP     ; 089
+	const DEX_MACHOKE    ; 090
+	const DEX_MACHAMP    ; 091
+	const DEX_GASTLY     ; 092
+	const DEX_HAUNTER    ; 093
+	const DEX_GENGAR     ; 094
+	const DEX_CUBONE     ; 095
+	const DEX_MAROWAK    ; 096
+	const DEX_GROWLITHE  ; 097
+	const DEX_ARCANINE   ; 098
+	const DEX_DODUO      ; 099
+	const DEX_DODRIO     ; 100
+	const DEX_GRIMER     ; 101
+	const DEX_MUK        ; 102
+	const DEX_PONYTA     ; 103
+	const DEX_RAPIDASH   ; 104
+	const DEX_KOFFING    ; 105
+	const DEX_WEEZING    ; 106
+	const DEX_TANGELA    ; 107
+	const DEX_EXEGGCUTE  ; 108
+	const DEX_EXEGGUTOR  ; 109
+	const DEX_CHANSEY    ; 110
+	const DEX_KANGASKHAN ; 111
+	const DEX_TAUROS     ; 112
+	const DEX_VOLTORB    ; 113
+	const DEX_ELECTRODE  ; 114
+	const DEX_ELECTABUZZ ; 115
+	const DEX_TENTACOOL  ; 116
+	const DEX_TENTACRUEL ; 117
+	const DEX_SLOWPOKE   ; 118
+	const DEX_SLOWBRO    ; 119
+	const DEX_STARYU     ; 120
+	const DEX_STARMIE    ; 121
+	const DEX_SHELLDER   ; 122
+	const DEX_CLOYSTER   ; 123
+	const DEX_SEEL       ; 124
+	const DEX_DEWGONG    ; 125
+	const DEX_JYNX       ; 126
+	const DEX_MAGMAR     ; 127
+	const DEX_DITTO      ; 128
+	const DEX_MR_MIME    ; 129
+	const DEX_HITMONLEE  ; 130
+	const DEX_HITMONCHAN ; 131
+	const DEX_LAPRAS     ; 132
 	const DEX_EEVEE      ; 133
 	const DEX_VAPOREON   ; 134
 	const DEX_JOLTEON    ; 135
@@ -155,5 +155,4 @@
 	const DEX_MOLTRES    ; 149
 	const DEX_MEWTWO     ; 150
 	const DEX_MEW        ; 151
-
 DEF NUM_POKEMON EQU const_value - 1

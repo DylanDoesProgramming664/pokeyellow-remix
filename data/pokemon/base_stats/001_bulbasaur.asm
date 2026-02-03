@@ -1,11 +1,13 @@
 	db DEX_BULBASAUR ; pokedex id
 
-	db  46,  49,  49,  46,  70 ; 260 -> 330
-	;   hp  atk  def  spd  spc
+	db  45,  50,  50,  45,  70 ; 260 / 330
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;   +0,   1,   1,  +0,  +5 =  +7 / +12
 
 	db GRASS, POISON ; type
 	db 45 ; catch rate
 	db 64 ; base exp
+    ; STAT_EXP_EFFICIENCY = (260 * 7) /  64 = 28.4
 
 	INCBIN "gfx/pokemon/front/bulbasaur.pic", 0, 1 ; sprite dimensions
 	dw BulbasaurPicFront, BulbasaurPicBack

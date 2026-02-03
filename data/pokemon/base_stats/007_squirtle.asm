@@ -1,11 +1,13 @@
 	db DEX_SQUIRTLE ; pokedex id
 
-	db  48,  53,  72,  47,  55 ; 275 -> 330
-	;   hp  atk  def  spd  spc
+	db  44,  48,  66,  42,  64 ; 266 / 330
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,  +1,  +1,   0, +14 = +16 / +16
 
 	db WATER, WATER ; type
 	db 45 ; catch rate
 	db 66 ; base exp
+    ; STAT_EXP_EFFICIENCY = (266 * 7) /  66 = 28.2
 
 	INCBIN "gfx/pokemon/front/squirtle.pic", 0, 1 ; sprite dimensions
 	dw SquirtlePicFront, SquirtlePicBack

@@ -1,7 +1,8 @@
 	db DEX_MEW ; pokedex id
 
-	db 105, 105, 105, 105, 105 ; 525 -> 630
-	;   hp  atk  def  spd  spc
+	db 105, 105, 105, 105, 105 ; 525 / 630
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;   +5,  +5,  +5,  +5,  +5 = +25 / +30
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
 	db 45 ; catch rate

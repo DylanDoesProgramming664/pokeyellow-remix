@@ -54,3 +54,5 @@ pokeyellow_debug.map
 *.bak
 *.rej
 Makefile.patch
+mail-patches/*
+.air.toml

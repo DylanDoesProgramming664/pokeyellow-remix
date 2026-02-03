@@ -1,11 +1,13 @@
 	db DEX_RATICATE ; pokedex id
 
-	db  57,  81,  60,  97,  60 ; 355 -> 415
-	;   hp  atk  def  spd  spc
+	db  55,  82,  60,  98,  70 ; 365 / 435
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,  +1,   0,  +1, +20 = +22 / +22
 
 	db NORMAL, NORMAL ; type
 	db 90 ; catch rate
 	db 116 ; base exp
+    ; STAT_EXP_EFFICIENCY = (365 * 7) / 116 = __._
 
 	INCBIN "gfx/pokemon/front/raticate.pic", 0, 1 ; sprite dimensions
 	dw RaticatePicFront, RaticatePicBack

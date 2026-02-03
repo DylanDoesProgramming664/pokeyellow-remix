@@ -1,11 +1,13 @@
 	db DEX_POLIWAG ; pokedex id
 
-	db  40,  50,  40,  90,  40 ; 260 -> 300
-	;   hp  atk  def  spd  spc
+	db  40,  50,  40,  90,  40 ; 260 / 300
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,   0,   0,   0 =   0 /   0
 
 	db WATER, WATER ; type
 	db 255 ; catch rate
 	db 77 ; base exp
+    ; STAT_EXP_EFFICIENCY = (260 * 7) /  77 = 23.6
 
 	INCBIN "gfx/pokemon/front/poliwag.pic", 0, 1 ; sprite dimensions
 	dw PoliwagPicFront, PoliwagPicBack

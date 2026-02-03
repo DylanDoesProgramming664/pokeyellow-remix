@@ -150,10 +150,10 @@ GainExperience:
 	ld d, 43 ; Venomoth's level
 	jr nc, .next1
 	cp 3
-	ld d, 35 ; Vileplume's level
+	ld d, 36 ; Vileplume's level
 	jr nc, .next1
 	cp 2
-    ld d, 26 ; Bit below Raichu's level
+    ld d, 29 ; Bit below Raichu's level
 	jr nc, .next1
 	cp 1
 	ld d, 22 ; Starmie's level
@@ -335,7 +335,6 @@ GainExperience:
 	pop hl
 	pop af
 	ld [wCurEnemyLVL], a
-
 .nextMon
 	ld a, [wPartyCount]
 	ld b, a

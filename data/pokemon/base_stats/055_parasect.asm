@@ -1,7 +1,8 @@
 	db DEX_PARASECT ; pokedex id
 
-	db  60,  95,  80,  30,  80 ; 345 -> 425
-	;   hp  atk  def  spd  spc
+	db  60,  95,  80,  30,  80 ; 345 / 425
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,   0,   0, +20 =   0 / +20
 
 	db BUG, GRASS ; type
 	db 75 ; catch rate

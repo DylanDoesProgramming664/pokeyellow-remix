@@ -3,3 +3,4 @@ OldRodMons:
 	; level, species
 	db 5, GOLDEEN
 	db 5, POLIWAG
+DEF OLD_ROD_SLOTS EQU 2

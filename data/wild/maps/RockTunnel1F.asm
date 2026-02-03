@@ -5,7 +5,7 @@ RockTunnel1FWildMons:
 	db 17, MACHOP
 	db 19, ZUBAT
 	db 18, GEODUDE
-	db 20, GEODUDE
+	db 20, RHYHORN
 	db 21, ZUBAT
 	db 17, CUBONE
 	db 19, CUBONE

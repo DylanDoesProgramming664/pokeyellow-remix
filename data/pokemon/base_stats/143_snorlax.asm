@@ -1,7 +1,8 @@
 	db DEX_SNORLAX ; pokedex id
 
-	db 160, 110,  65,  30,  90 ; 455 -> 545
-	;   hp  atk  def  spd  spc
+	db 160, 110,  70,  30,  90 ; 460 / 550
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,  +5,   0, +25 = +30 / +10
 
 	db NORMAL, NORMAL ; type
 	db 25 ; catch rate

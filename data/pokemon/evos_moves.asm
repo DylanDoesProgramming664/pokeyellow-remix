@@ -854,7 +854,7 @@ ParasectEvosMoves:
 
 PsyduckEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 33, GOLDUCK
+	db EVOLVE_LEVEL, 30, GOLDUCK
 	db 0
 ; Learnset
 	db 10, DISABLE
@@ -1832,7 +1832,7 @@ GolduckEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 28, TAIL_WHIP
+	db 8, TAIL_WHIP
 	db 10, DISABLE
 	db 15, CONFUSION
 	db 17, BUBBLEBEAM

@@ -1,13 +1,13 @@
 ItemPrices::
 	table_width 3, ItemPrices
 	bcd3 0     ; MASTER_BALL
-	bcd3 1200  ; ULTRA_BALL
-	bcd3 600   ; GREAT_BALL
-	bcd3 200   ; POKE_BALL
+	bcd3 600   ; ULTRA_BALL
+	bcd3 300   ; GREAT_BALL
+	bcd3 100   ; POKE_BALL
 	bcd3 0     ; TOWN_MAP
 	bcd3 0     ; BICYCLE
 	bcd3 0     ; SURFBOARD
-	bcd3 1000  ; SAFARI_BALL
+	bcd3 600   ; SAFARI_BALL
 	bcd3 0     ; POKEDEX
 	bcd3 0     ; MOON_STONE
 	bcd3 100   ; ANTIDOTE
@@ -34,11 +34,11 @@ ItemPrices::
 	bcd3 2100  ; FIRE_STONE
 	bcd3 2100  ; THUNDER_STONE
 	bcd3 2100  ; WATER_STONE
-	bcd3 9800  ; HP_UP
-	bcd3 9800  ; PROTEIN
-	bcd3 9800  ; IRON
-	bcd3 9800  ; CARBOS
-	bcd3 9800  ; CALCIUM
+	bcd3 5800  ; HP_UP
+	bcd3 5800  ; PROTEIN
+	bcd3 5800  ; IRON
+	bcd3 5800  ; CARBOS
+	bcd3 5800  ; CALCIUM
 	bcd3 4800  ; RARE_CANDY
 	bcd3 0     ; DOME_FOSSIL
 	bcd3 0     ; HELIX_FOSSIL
@@ -78,7 +78,7 @@ ItemPrices::
 	bcd3 0     ; OLD_ROD
 	bcd3 0     ; GOOD_ROD
 	bcd3 0     ; SUPER_ROD
-	bcd3 9800  ; PP_UP
+	bcd3 5800  ; PP_UP
 	bcd3 0     ; ETHER
 	bcd3 0     ; MAX_ETHER
 	bcd3 0     ; ELIXER

@@ -1,0 +1,22 @@
+	db DEX_CATERPIE ; pokedex id
+
+	db  47,  30,  35,  48,  20 ; 180 / 200
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;    0,   0,   0,   0,   0 =   0 /   0
+
+	db BUG, BUG ; type
+	db 255 ; catch rate
+	db 53 ; base exp
+    ; STAT_EXP_EFFICIENCY = (180 * 7) /  53 = 23.8
+
+	INCBIN "gfx/pokemon/front/caterpie.pic", 0, 1 ; sprite dimensions
+	dw CaterpiePicFront, CaterpiePicBack
+
+	db TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset
+	db GROWTH_MEDIUM_FAST ; growth rate
+
+	; tm/hm learnset
+	tmhm CUT
+	; end
+
+	db 0 ; padding

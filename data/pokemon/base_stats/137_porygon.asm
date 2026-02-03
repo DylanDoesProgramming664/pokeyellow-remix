@@ -1,7 +1,8 @@
 	db DEX_PORYGON ; pokedex id
 
-	db  75,  70,  70,  40,  95 ; 350 -> 445
-	;   hp  atk  def  spd  spc
+	db  75,  70,  70,  40,  95 ; 350 / 445
+	;   hp  atk  def  spd  spc   Gen1/Gen2-5
+    ;  +10, +10,   0,   0, +20 = +40 / +50
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate
