@@ -1,8 +1,8 @@
 	db DEX_RAPIDASH ; pokedex id
 
 	db  65, 100,  70, 110,  95 ; 440 / 535
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,  +5, +15 = +20 / +35
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,  +5, +15 = +20 / +35
 
 	db FIRE, FIRE ; type
 	db 60 ; catch rate

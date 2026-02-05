@@ -1,8 +1,8 @@
 	db DEX_MACHOKE ; pokedex id
 
 	db  80, 100,  70,  45,  60 ; 355 / 415
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +10 = +10 / +10
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +10 = +10 / +10
 
 	db FIGHTING, FIGHTING ; type
 	db 90 ; catch rate

@@ -4,6 +4,13 @@
 ;	db 0
 
 SpecialTrainerMoves:
+	db YOUNGSTER, 8
+	db 1, 1, DOUBLE_KICK
+	db 1, 2, ACID
+	db 1, 3, DIG
+	db 1, 4, BITE
+	db 0
+
 	db YOUNGSTER, 9
 	db 1, 1, SUBSTITUTE
 	db 1, 2, CONSTRICT
@@ -35,9 +42,12 @@ SpecialTrainerMoves:
 
 	db LASS, 15
 	db 3, 2, BODY_SLAM
+	db 3, 3, DIG
 	db 3, 4, BITE
-	db 5, 3, POISON_STING
-	db 5, 4, DIG
+	db 5, 1, DOUBLE_KICK
+	db 5, 2, ACID
+	db 5, 3, DIG
+	db 5, 4, BITE
 	db 0
 
 	db LASS, 17

@@ -1,8 +1,8 @@
 	db DEX_KOFFING ; pokedex id
 
 	db  40,  65,  95,  35,  60 ; 295 / 355
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +15
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +15
 
 	db POISON, POISON ; type
 	db 190 ; catch rate

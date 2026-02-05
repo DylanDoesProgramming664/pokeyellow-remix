@@ -1,8 +1,8 @@
 	db DEX_DODRIO ; pokedex id
 
 	db  60, 110,  70, 110,  60 ; 410 / 470
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0, +10,   0 = +10 / +10
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0, +10,   0 = +10 / +10
 
 	db NORMAL, FLYING ; type
 	db 45 ; catch rate

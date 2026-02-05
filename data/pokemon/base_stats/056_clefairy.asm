@@ -1,10 +1,10 @@
 	db DEX_CLEFAIRY ; pokedex id
 
 	db  70,  45,  50,  35,  65 ; 265 / 330
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,  +2,   0,  +5 =  +7 /  +7
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,  +2,   0,  +5 =  +7 /  +7
 
-	db NORMAL, NORMAL ; type
+	db NORMAL, FAIRY ; type
 	db 150 ; catch rate
 	db 68 ; base exp
 

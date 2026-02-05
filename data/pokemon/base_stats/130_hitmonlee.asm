@@ -1,8 +1,8 @@
 	db DEX_HITMONLEE ; pokedex id
 
 	db  66, 120,  71,  93,  75 ; 420 / 500
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;  +16,   0, +18,  +6, +40 = +80 / +45
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;  +16,   0, +18,  +6, +40 = +80 / +45
 
 	db FIGHTING, FIGHTING ; type
 	db 45 ; catch rate

@@ -1,8 +1,8 @@
 	db DEX_GENGAR ; pokedex id
 
 	db  60,  65,  60, 110, 130 ; 425 / 555
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +55
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +55
 
 	db GHOST, POISON ; type
 	db 45 ; catch rate

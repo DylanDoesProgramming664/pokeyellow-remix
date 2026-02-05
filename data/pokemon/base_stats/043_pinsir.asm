@@ -1,13 +1,13 @@
 	db DEX_PINSIR ; pokedex id
 
 	db  65, 125, 100,  85,  70 ; 445 / 515
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +15 = +15 / +15
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +15 = +15 / +15
 
 	db BUG, BUG ; type
 	db 45 ; catch rate
 	db 200 ; base exp
-    ; STAT_EXP_EFFICIENCY = (445 * 7) / 200 = 15.6
+	; STAT_EXP_EFFICIENCY = (445 * 7) / 200 = 15.6
 
 	INCBIN "gfx/pokemon/front/pinsir.pic", 0, 1 ; sprite dimensions
 	dw PinsirPicFront, PinsirPicBack

@@ -1,8 +1,8 @@
 	db DEX_PERSIAN ; pokedex id
 
 	db  75,  80,  60, 115,  65 ; 395 / 460
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;  +10, +10,   0,   0,   0 = +20 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;  +10, +10,   0,   0,   0 = +20 / +20
 
 	db NORMAL, NORMAL ; type
 	db 90 ; catch rate

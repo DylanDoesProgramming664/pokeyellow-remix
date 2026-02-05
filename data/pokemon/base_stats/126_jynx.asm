@@ -1,8 +1,8 @@
 	db DEX_JYNX ; pokedex id
 
 	db  70,  55,  40, 105, 120 ; 390 / 510
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;   +5,  +5,  +5, +10, +25 = +50 / +55
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;   +5,  +5,  +5, +10, +25 = +50 / +55
 
 	db ICE, PSYCHIC_TYPE ; type
 	db 45 ; catch rate

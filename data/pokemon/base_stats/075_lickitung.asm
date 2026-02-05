@@ -1,8 +1,8 @@
 	db DEX_LICKITUNG ; pokedex id
 
 	db  95,  70,  85,  30,  75 ; 355 / 430
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;   +5, +15, +10,   0, +15 = +45 / +45
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;   +5, +15, +10,   0, +15 = +45 / +45
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate

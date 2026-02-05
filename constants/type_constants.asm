@@ -18,6 +18,7 @@
 	const DRAGON       ; $0E
 	const DARK         ; $0F
 	const STEEL        ; $10
+	const FAIRY        ; $11
 
 DEF NUM_TYPES EQU const_value
 

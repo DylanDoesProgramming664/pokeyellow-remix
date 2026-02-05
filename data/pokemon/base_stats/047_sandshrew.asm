@@ -1,8 +1,8 @@
 	db DEX_SANDSHREW ; pokedex id
 
 	db  50,  75,  85,  40,  30 ; 280 / 310
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +10
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +10
 
 	db GROUND, GROUND ; type
 	db 255 ; catch rate

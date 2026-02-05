@@ -1,8 +1,8 @@
 	db DEX_CUBONE ; pokedex id
 
 	db  50,  50,  95,  35,  50 ; 280 / 330
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 /   0
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 /   0
 
 	db GROUND, GROUND ; type
 	db 190 ; catch rate

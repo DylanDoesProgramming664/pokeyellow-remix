@@ -1,8 +1,8 @@
 	db DEX_GRIMER ; pokedex id
 
 	db  80,  80,  50,  25,  50 ; 285 / 335
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +10 = +10 / +10
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +10 = +10 / +10
 
 	db POISON, POISON ; type
 	db 190 ; catch rate

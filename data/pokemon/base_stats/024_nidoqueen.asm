@@ -1,13 +1,13 @@
 	db DEX_NIDOQUEEN ; pokedex id
 
 	db  94,  94,  90,  77,  85 ; 440 / 525
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;   +4, +12,  +3,  +1, +10 = +30 / +30
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;   +4, +12,  +3,  +1, +10 = +30 / +30
 
 	db POISON, GROUND ; type
 	db 45 ; catch rate
 	db 194 ; base exp
-    ; STAT_EXP_EFFICIENCY = (440 * 7) / 194 = 15.9
+	; STAT_EXP_EFFICIENCY = (440 * 7) / 194 = 15.9
 
 	INCBIN "gfx/pokemon/front/nidoqueen.pic", 0, 1 ; sprite dimensions
 	dw NidoqueenPicFront, NidoqueenPicBack

@@ -1,13 +1,13 @@
 	db DEX_POLIWHIRL ; pokedex id
 
 	db  65,  65,  65,  90,  50 ; 335 / 385
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 /   0
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 /   0
 
 	db WATER, WATER ; type
 	db 120 ; catch rate
 	db 131 ; base exp
-    ; STAT_EXP_EFFICIENCY = (335 * 7) / 131 = 17.9
+	; STAT_EXP_EFFICIENCY = (335 * 7) / 131 = 17.9
 
 	INCBIN "gfx/pokemon/front/poliwhirl.pic", 0, 1 ; sprite dimensions
 	dw PoliwhirlPicFront, PoliwhirlPicBack

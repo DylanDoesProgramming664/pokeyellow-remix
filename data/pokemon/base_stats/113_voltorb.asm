@@ -1,8 +1,8 @@
 	db DEX_VOLTORB ; pokedex id
 
 	db  40,  30,  50, 100,  55 ; 275 / 330
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 /   0
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 /   0
 
 	db ELECTRIC, ELECTRIC ; type
 	db 190 ; catch rate

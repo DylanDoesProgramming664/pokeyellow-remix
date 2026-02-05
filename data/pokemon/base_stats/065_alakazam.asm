@@ -1,8 +1,8 @@
 	db DEX_ALAKAZAM ; pokedex id
 
 	db  55,  50,  45, 120, 135 ; 405 / 540
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +50
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +50
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
 	db 50 ; catch rate

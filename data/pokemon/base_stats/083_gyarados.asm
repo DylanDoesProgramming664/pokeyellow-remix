@@ -1,8 +1,8 @@
 	db DEX_GYARADOS ; pokedex id
 
 	db  95, 125,  79,  81, 100 ; 480 / 580
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +40
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +40
 
 	db WATER, FLYING ; type
 	db 45 ; catch rate

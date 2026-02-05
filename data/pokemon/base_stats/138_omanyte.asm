@@ -1,8 +1,8 @@
 	db DEX_OMANYTE ; pokedex id
 
 	db  40,  45, 105,  40,  95 ; 315 / 410
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;   +5,  +5,  +5,  +5,  +5 = +25 / +65
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;   +5,  +5,  +5,  +5,  +5 = +25 / +65
 
 	db ROCK, WATER ; type
 	db 45 ; catch rate

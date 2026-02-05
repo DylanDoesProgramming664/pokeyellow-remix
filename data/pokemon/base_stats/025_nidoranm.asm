@@ -1,13 +1,13 @@
 	db DEX_NIDORAN_M ; pokedex id
 
 	db  48,  61,  43,  53,  40 ; 245 / 285
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;   +2,  +4,  +1,  +3,   0 = +10 / +10
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;   +2,  +4,  +1,  +3,   0 = +10 / +10
 
 	db POISON, POISON ; type
 	db 235 ; catch rate
 	db 60 ; base exp
-    ; STAT_EXP_EFFICIENCY = (245 * 7) /  60 = 28.6
+	; STAT_EXP_EFFICIENCY = (245 * 7) /  60 = 28.6
 
 	INCBIN "gfx/pokemon/front/nidoranm.pic", 0, 1 ; sprite dimensions
 	dw NidoranMPicFront, NidoranMPicBack

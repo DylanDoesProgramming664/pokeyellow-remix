@@ -1,10 +1,10 @@
 	db DEX_BLASTOISE ; pokedex id
 
-	db  80,  85, 104,  79, 101 ; 449 / 550
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;   +1,  +2,  +4,  +1, +16 = +24 / +20
+	db  81,  86, 106,  80, 101 ; 454 / 555
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;   +2,  +3,  +6,  +2, +16 = +29 / +25
 
-	db WATER, WATER ; type
+	db WATER, STEEL ; type
 	db 45 ; catch rate
 	db 210 ; base exp
 
@@ -13,7 +13,7 @@
 
 	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
-    ; STAT_EXP_EFFICIENCY = (449 * 7) / 210 = 15.0
+	; STAT_EXP_EFFICIENCY = (454 * 7) / 210 = 15.0
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \

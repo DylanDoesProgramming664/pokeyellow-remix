@@ -1,13 +1,13 @@
 	db DEX_RATTATA ; pokedex id
 
 	db  30,  57,  35,  73,  35 ; 230 / 265
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,  +1,   0,  +1, +10 = +12 / +12
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,  +1,   0,  +1, +10 = +12 / +12
 
 	db NORMAL, NORMAL ; type
 	db 255 ; catch rate
 	db 57 ; base exp
-    ; STAT_EXP_EFFICIENCY = (230 * 7) /  57 = 28.2
+	; STAT_EXP_EFFICIENCY = (230 * 7) /  57 = 28.2
 
 	INCBIN "gfx/pokemon/front/rattata.pic", 0, 1 ; sprite dimensions
 	dw RattataPicFront, RattataPicBack

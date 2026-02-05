@@ -1,8 +1,8 @@
 	db DEX_ZAPDOS ; pokedex id
 
 	db  90,  90,  85, 100, 125 ; 490 / 615
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +35
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +35
 
 	db ELECTRIC, FLYING ; type
 	db 3 ; catch rate

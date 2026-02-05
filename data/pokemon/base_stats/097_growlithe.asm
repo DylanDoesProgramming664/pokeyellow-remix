@@ -1,8 +1,8 @@
 	db DEX_GROWLITHE ; pokedex id
 
 	db  55,  70,  45,  60,  70 ; 300 / 370
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +20 = +20 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +20 = +20 / +20
 
 	db FIRE, FIRE ; type
 	db 190 ; catch rate

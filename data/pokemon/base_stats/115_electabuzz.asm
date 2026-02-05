@@ -1,8 +1,8 @@
 	db DEX_ELECTABUZZ ; pokedex id
 
 	db  65,  83,  57, 105, 100 ; 410 / 510
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +15 = +15 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +15 = +15 / +20
 
 	db ELECTRIC, ELECTRIC ; type
 	db 45 ; catch rate

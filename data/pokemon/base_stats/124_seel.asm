@@ -1,8 +1,8 @@
 	db DEX_SEEL ; pokedex id
 
 	db  65,  45,  55,  45,  70 ; 280 / 350
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +25
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +25
 
 	db WATER, WATER ; type
 	db 190 ; catch rate

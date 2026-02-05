@@ -1,8 +1,8 @@
 	db DEX_RHYHORN ; pokedex id
 
 	db  80,  85,  95,  25,  30 ; 315 / 345
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 /   0
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 /   0
 
 	db GROUND, ROCK ; type
 	db 120 ; catch rate

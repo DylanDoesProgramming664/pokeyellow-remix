@@ -1,8 +1,8 @@
 	db DEX_ONIX ; pokedex id
 
 	db  75,  80, 160,  85,  65 ; 465 / 530
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;  +40, +35,   0, +15, +35 =+125 /+145
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;  +40, +35,   0, +15, +35 =+125 /+145
 
 	db ROCK, ROCK ; type
 	db 45 ; catch rate

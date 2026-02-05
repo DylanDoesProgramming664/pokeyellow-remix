@@ -18,6 +18,7 @@ TypeNames:
 	dw .Dragon
 	dw .Dark
 	dw .Steel
+    dw .Fairy
 
 	assert_table_length NUM_TYPES
 
@@ -38,3 +39,4 @@ TypeNames:
 .Dragon:   db "DRAGON@"
 .Dark:     db "DARK@"
 .Steel:    db "STEEL@"
+.Fairy:    db "FAIRY@"

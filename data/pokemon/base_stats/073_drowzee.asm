@@ -1,8 +1,8 @@
 	db DEX_DROWZEE ; pokedex id
 
 	db  60,  48,  45,  42,  90 ; 285 / 375
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +47
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +47
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
 	db 190 ; catch rate

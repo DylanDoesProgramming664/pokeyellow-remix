@@ -1,8 +1,8 @@
 	db DEX_GOLBAT ; pokedex id
 
 	db  75,  80,  70, 100,  75 ; 400 / 475
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0, +10,   0 = +10 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0, +10,   0 = +10 / +20
 
 	db POISON, FLYING ; type
 	db 90 ; catch rate

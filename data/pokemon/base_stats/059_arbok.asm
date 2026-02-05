@@ -1,8 +1,8 @@
 	db DEX_ARBOK ; pokedex id
 
 	db  63,  95,  69,  90,  79 ; 396 / 475
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;   +3, +10,   0, +10, +14 = +37 / +37
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;   +3, +10,   0, +10, +14 = +37 / +37
 
 	db POISON, POISON ; type
 	db 90 ; catch rate

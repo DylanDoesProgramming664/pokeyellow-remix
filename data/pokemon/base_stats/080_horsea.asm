@@ -1,8 +1,8 @@
 	db DEX_HORSEA ; pokedex id
 
 	db  30,  40,  70,  60,  70 ; 270 / 340
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +45 =   0 / +45
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +45 =   0 / +45
 
 	db WATER, WATER ; type
 	db 225 ; catch rate

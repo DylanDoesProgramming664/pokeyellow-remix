@@ -2,7 +2,7 @@
 
 	db  55,  65,  95,  85,  95 ; 395 / 490
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-    ;    0,   0,   0,   0,   0 =   0 / +50
+	;    0,   0,   0,   0,   0 =   0 / +50
 
 	db WATER, WATER ; type
 	db 75 ; catch rate

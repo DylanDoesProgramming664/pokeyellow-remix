@@ -1,8 +1,8 @@
 	db DEX_ELECTRODE ; pokedex id
 
 	db  60,  50,  70, 150,  80 ; 410 / 490
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0, +10,   0 = +10 / +10
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0, +10,   0 = +10 / +10
 
 	db ELECTRIC, ELECTRIC ; type
 	db 60 ; catch rate

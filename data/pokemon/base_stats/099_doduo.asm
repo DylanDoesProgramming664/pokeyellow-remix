@@ -1,8 +1,8 @@
 	db DEX_DODUO ; pokedex id
 
 	db  35,  85,  45,  75,  35 ; 275 / 310
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 /   0
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 /   0
 
 	db NORMAL, FLYING ; type
 	db 190 ; catch rate

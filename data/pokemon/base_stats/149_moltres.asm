@@ -1,8 +1,8 @@
 	db DEX_MOLTRES ; pokedex id
 
 	db  90, 100,  90,  90, 125 ; 495 / 620
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +40
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +40
 
 	db FIRE, FLYING ; type
 	db 3 ; catch rate

@@ -1,8 +1,8 @@
 	db DEX_KANGASKHAN ; pokedex id
 
 	db 105,  95,  80,  90,  80 ; 450 / 530
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +40 = +40 / +40
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +40 = +40 / +40
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate

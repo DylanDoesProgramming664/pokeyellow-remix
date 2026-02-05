@@ -1,8 +1,8 @@
 	db DEX_VENOMOTH ; pokedex id
 
 	db  70,  75,  60, 100,  95 ; 400 / 495
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0, +10,   0, +10,  +5 = +25 / +45
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0, +10,   0, +10,  +5 = +25 / +45
 
 	db BUG, POISON ; type
 	db 75 ; catch rate

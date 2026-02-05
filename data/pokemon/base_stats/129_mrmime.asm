@@ -1,10 +1,10 @@
 	db DEX_MR_MIME ; pokedex id
 
 	db  40,  45,  65,  90, 120 ; 360 / 480
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +20 = +20 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +20 = +20 / +20
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
+	db PSYCHIC_TYPE, FAIRY ; type
 	db 45 ; catch rate
 	db 136 ; base exp
 

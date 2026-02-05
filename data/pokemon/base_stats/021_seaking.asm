@@ -1,13 +1,13 @@
 	db DEX_SEAKING ; pokedex id
 
 	db  80,  92,  65,  68,  80 ; 385 / 465
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +15
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +15
 
 	db WATER, WATER ; type
 	db 60 ; catch rate
 	db 170 ; base exp
-    ; STAT_EXP_EFFICIENCY = (385 * 7) / 170 = 15.9
+	; STAT_EXP_EFFICIENCY = (385 * 7) / 170 = 15.9
 
 	INCBIN "gfx/pokemon/front/seaking.pic", 0, 1 ; sprite dimensions
 	dw SeakingPicFront, SeakingPicBack

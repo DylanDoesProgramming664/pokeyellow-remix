@@ -61,6 +61,7 @@ TypeEffects:
 	db POISON,       ROCK,         NOT_VERY_EFFECTIVE
 	db POISON,       GHOST,        NOT_VERY_EFFECTIVE
 	db POISON,       STEEL,        NO_EFFECT
+	db POISON,       FAIRY,        SUPER_EFFECTIVE
 	db GROUND,       FIRE,         SUPER_EFFECTIVE
 	db GROUND,       ELECTRIC,     SUPER_EFFECTIVE
 	db GROUND,       GRASS,        NOT_VERY_EFFECTIVE
@@ -92,6 +93,7 @@ TypeEffects:
 	db ROCK,         GROUND,       NOT_VERY_EFFECTIVE
 	db ROCK,         FLYING,       SUPER_EFFECTIVE
 	db ROCK,         BUG,          SUPER_EFFECTIVE
+	db ROCK,         ROCK,         NOT_VERY_EFFECTIVE
 	db ROCK,         STEEL,        NOT_VERY_EFFECTIVE
 	db GHOST,        NORMAL,       NO_EFFECT
 	db GHOST,        PSYCHIC_TYPE, SUPER_EFFECTIVE
@@ -99,8 +101,13 @@ TypeEffects:
 	db GHOST,        STEEL,        NOT_VERY_EFFECTIVE
 	db DRAGON,       DRAGON,       SUPER_EFFECTIVE
 	db DRAGON,       STEEL,        NOT_VERY_EFFECTIVE
+	db DRAGON,       FAIRY,        NOT_VERY_EFFECTIVE
 	db DARK,         FIGHTING,     NOT_VERY_EFFECTIVE
 	db DARK,         PSYCHIC_TYPE, SUPER_EFFECTIVE
 	db DARK,         GHOST,        SUPER_EFFECTIVE
 	db DARK,         STEEL,        NOT_VERY_EFFECTIVE
+	db DARK,         FAIRY,        NOT_VERY_EFFECTIVE
+	db FAIRY,        POISON,       NOT_VERY_EFFECTIVE
+	db FAIRY,        DRAGON,       SUPER_EFFECTIVE
+	db FAIRY,        STEEL,        NOT_VERY_EFFECTIVE
 	db -1 ; end

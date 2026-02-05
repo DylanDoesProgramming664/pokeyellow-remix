@@ -1,8 +1,8 @@
 	db DEX_LAPRAS ; pokedex id
 
 	db 130,  85,  80,  60,  95 ; 450 / 545
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +10
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +10
 
 	db WATER, ICE ; type
 	db 45 ; catch rate

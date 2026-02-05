@@ -295,10 +295,10 @@ NidokingEvosMoves:
 	db 6, POISON_STING
 	db 8, HORN_ATTACK
 	db 12, DOUBLE_KICK
-	db 25, THRASH
+	db 25, ACID
 	db 27, FOCUS_ENERGY
-	db 32, SLUDGE
-	db 36, FURY_ATTACK
+	db 35, SLUDGE
+	db 36, THRASH
 	db 40, EARTHQUAKE
 	db 46, HORN_DRILL
 	db 0
@@ -430,6 +430,7 @@ NidoqueenEvosMoves:
 	db 12, DOUBLE_KICK
 	db 25, BODY_SLAM
 	db 32, SLUDGE
+	db 36, THRASH
 	db 40, EARTHQUAKE
 	db 0
 
@@ -2286,12 +2287,12 @@ NidorinoEvosMoves:
 ; Learnset
 	db 8, HORN_ATTACK
 	db 12, DOUBLE_KICK
-	db 19, POISON_STING
+	db 19, HEADBUTT
 	db 21, BITE
 	db 24, DIG
 	db 27, FOCUS_ENERGY
-	db 32, SLUDGE
-	db 36, FURY_ATTACK
+	db 35, SLUDGE
+	db 36, THRASH
 	db 40, EARTHQUAKE
 	db 46, HORN_DRILL
 	db 0

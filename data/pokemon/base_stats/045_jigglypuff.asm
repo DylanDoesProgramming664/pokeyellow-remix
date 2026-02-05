@@ -1,10 +1,10 @@
 	db DEX_JIGGLYPUFF ; pokedex id
 
 	db 115,  45,  20,  20,  45 ; 245 / 290
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +20 = +20 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +20 = +20 / +20
 
-	db NORMAL, NORMAL ; type
+	db NORMAL, FAIRY ; type
 	db 170 ; catch rate
 	db 76 ; base exp
 

@@ -1,8 +1,8 @@
 	db DEX_GASTLY ; pokedex id
 
 	db  30,  35,  30,  80, 100 ; 275 / 375
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +65
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +65
 
 	db GHOST, POISON ; type
 	db 190 ; catch rate

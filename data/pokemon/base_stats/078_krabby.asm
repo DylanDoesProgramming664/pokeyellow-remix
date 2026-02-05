@@ -1,10 +1,10 @@
 	db DEX_KRABBY ; pokedex id
 
 	db  30, 105,  90,  50,  25 ; 300 / 325
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 /   0
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 /   0
 
-	db WATER, WATER ; type
+	db WATER, NORMAL ; type
 	db 225 ; catch rate
 	db 115 ; base exp
 

@@ -1,8 +1,8 @@
 	db DEX_HAUNTER ; pokedex id
 
 	db  45,  50,  45,  95, 115 ; 350 / 465
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +60
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +60
 
 	db GHOST, POISON ; type
 	db 90 ; catch rate

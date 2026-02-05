@@ -1,8 +1,8 @@
 	db DEX_ZUBAT ; pokedex id
 
 	db  40,  50,  35,  55,  45 ; 225 / 270
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,  +5,   0,   0,  +5 = +10 / +25
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,  +5,   0,   0,  +5 = +10 / +25
 
 	db POISON, FLYING ; type
 	db 255 ; catch rate

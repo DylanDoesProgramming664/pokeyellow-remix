@@ -1,8 +1,8 @@
 	db DEX_MEOWTH ; pokedex id
 
 	db  50,  55,  35,  90,  40 ; 270 / 310
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;  +10, +10,   0,   0,   0 = +20 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;  +10, +10,   0,   0,   0 = +20 / +20
 
 	db NORMAL, NORMAL ; type
 	db 255 ; catch rate

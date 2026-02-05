@@ -1,13 +1,13 @@
 	db DEX_RAICHU ; pokedex id
 
 	db  70,  90,  65, 110,  90 ; 425 / 515
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;  +10,   0, +10, +10,   0 = +30 / +30
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;  +10,   0, +10, +10,   0 = +30 / +30
 
 	db ELECTRIC, ELECTRIC ; type
 	db 75 ; catch rate
 	db 122 ; base exp
-    ; STAT_EXP_EFFICIENCY = (425 * 7) / 122 = 24.4
+	; STAT_EXP_EFFICIENCY = (425 * 7) / 122 = 24.4
 
 	INCBIN "gfx/pokemon/front/raichu.pic", 0, 1 ; sprite dimensions
 	dw RaichuPicFront, RaichuPicBack

@@ -1,8 +1,8 @@
 	db DEX_RHYDON ; pokedex id
 
 	db 105, 130, 120,  40,  45 ; 440 / 485
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 /   0
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 /   0
 
 	db GROUND, ROCK ; type
 	db 60 ; catch rate

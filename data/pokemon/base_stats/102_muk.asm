@@ -1,8 +1,8 @@
 	db DEX_MUK ; pokedex id
 
 	db 105, 105,  75,  50, 100 ; 435 / 535
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +35 = +35 / +35
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +35 = +35 / +35
 
 	db POISON, POISON ; type
 	db 75 ; catch rate

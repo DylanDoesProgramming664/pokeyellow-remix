@@ -1,10 +1,10 @@
 	db DEX_KINGLER ; pokedex id
 
 	db  55, 130, 115,  75,  70 ; 425 / 475
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +20 = +20 / +40
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +20 = +20 / +40
 
-	db WATER, WATER ; type
+	db WATER, NORMAL ; type
 	db 60 ; catch rate
 	db 206 ; base exp
 

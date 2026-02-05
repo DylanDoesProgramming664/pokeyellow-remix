@@ -1,8 +1,8 @@
 	db DEX_MACHAMP ; pokedex id
 
 	db  90, 130,  80,  55,  85 ; 440 / 525
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +20 = +20 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +20 = +20 / +20
 
 	db FIGHTING, FIGHTING ; type
 	db 45 ; catch rate

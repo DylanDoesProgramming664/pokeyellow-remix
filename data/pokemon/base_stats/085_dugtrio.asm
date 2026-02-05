@@ -1,8 +1,8 @@
 	db DEX_DUGTRIO ; pokedex id
 
 	db  45, 100,  50, 120,  70 ; 365 / 435
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;  +10, +20,   0,   0,   0 = +30 / +50
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;  +10, +20,   0,   0,   0 = +30 / +50
 
 	db GROUND, GROUND ; type
 	db 50 ; catch rate

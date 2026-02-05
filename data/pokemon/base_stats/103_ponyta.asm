@@ -1,8 +1,8 @@
 	db DEX_PONYTA ; pokedex id
 
 	db  50,  85,  55, 100,  75 ; 355 / 430
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0, +10 = +10 / +20
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0, +10 = +10 / +20
 
 	db FIRE, FIRE ; type
 	db 190 ; catch rate

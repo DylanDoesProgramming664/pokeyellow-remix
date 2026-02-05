@@ -1,8 +1,8 @@
 	db DEX_CLOYSTER ; pokedex id
 
 	db  50,  95, 180,  70,  85 ; 480 / 565
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,   0,   0,   0,   0 =   0 / +40
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 / +40
 
 	db WATER, ICE ; type
 	db 60 ; catch rate

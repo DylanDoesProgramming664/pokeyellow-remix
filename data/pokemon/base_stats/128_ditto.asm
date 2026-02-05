@@ -1,8 +1,8 @@
 	db DEX_DITTO ; pokedex id
 
 	db  60,  60,  60,  90,  60 ; 330 / 390
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;  +12, +12, +12, +42, +12 = +90 /+102
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;  +12, +12, +12, +42, +12 = +90 /+102
 
 	db NORMAL, NORMAL ; type
 	db 35 ; catch rate

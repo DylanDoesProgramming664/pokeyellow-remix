@@ -1,8 +1,8 @@
 	db DEX_VENONAT ; pokedex id
 
 	db  60,  60,  50,  50,  55 ; 275 / 330
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;    0,  +5,   0,  +5, +15 = +25 / +25
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,  +5,   0,  +5, +15 = +25 / +25
 
 	db BUG, POISON ; type
 	db 190 ; catch rate

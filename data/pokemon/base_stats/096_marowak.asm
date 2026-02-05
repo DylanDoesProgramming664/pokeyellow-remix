@@ -1,8 +1,8 @@
 	db DEX_MAROWAK ; pokedex id
 
 	db  65,  90, 110,  55,  90 ; 410 / 500
-	;   hp  atk  def  spd  spc   Gen1/Gen2-5
-    ;   +5, +10,   0, +10, +40 = +65 / +75
+	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;   +5, +10,   0, +10, +40 = +65 / +75
 
 	db GROUND, GHOST ; type
 	db 75 ; catch rate
