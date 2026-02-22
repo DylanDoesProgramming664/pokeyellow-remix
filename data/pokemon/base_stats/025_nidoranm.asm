@@ -1,8 +1,8 @@
 	db DEX_NIDORAN_M ; pokedex id
 
-	db  48,  61,  43,  53,  40 ; 245 / 285
+	db  48,  66,  43,  53,  50 ; 260 / 310
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +2,  +4,  +1,  +3,   0 = +10 / +10
+	;   +2,  +9,  +1,  +3, +10 = +25 / +35
 
 	db POISON, POISON ; type
 	db 235 ; catch rate

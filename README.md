@@ -1,42 +1,24 @@
-# Pokémon Yellow Legacy
+# Pokémon Yellow Remix
 
-The Yellow Legacy project is the prequel to [Crystal Legacy](https://github.com/cRz-Shadows/Pokemon_Crystal_Legacy) by content creator Patrick Smith ([TheSmithPlays](https://www.youtube.com/@TheSmithPlays)), and the second project in his planned Legacy series. It is based on [the Pokémon Yellow Disassembly](https://github.com/pret/pokeyellow). The Legacy project is focused on changing the base game in a way that adds quality of life additions and better balancing with the benefit of twenty years of hindsight. The primary goal of each mod is to keep the original feeling of the game while still making meaningful improvements for the player. This means that certain idiosyncrasies of the first generation of Pokémon games will remain, as they are considered an essential aspect to the core experience.
-
-Pokémon Yellow exists in a unique role in the Pokémon franchise – it was the first truly significant revision of existing Pokémon games, and it still exists as the only core Pokémon game to be influenced by the anime. Furthermore, Pokémon Yellow introduced greater use of color, more challenging boss fights, availability for all three starters, and Pikachu as your companion. As a project to improve this game, Yellow Legacy seeks to find balance between furthering the unique niche of anime-influence while still representing the first generation of Pokémon as a whole.
-
-Yellow Legacy aims to give each Pokémon a special niche. Balance changes were made with the intent to keep the first generation of Pokémon feeling similar to their original incarnations, while also guaranteeing that using your favorite Pokémon will not significantly handicap your journey through Kanto. As the intent is to maintain the feeling of the Generation 1 games, Yellow Legacy will not change core aspects of the battle system such as the sleep status, critical hit chance being based off of speed, or the overpowered functionality of trapping moves such as Wrap or Fire Spin. 
-
-While Yellow Legacy is not designed as a “Kaizo” project, Pokémon trainer fights (especially bosses) throughout the game have been made more difficult. Difficulty is used as a tool to make the game as engaging as possible to the most amount of players. It will not be difficult for the sake of being difficult, but rather, to provide you with a challenge that gives reaching the title of Champion a feeling of genuine earned satisfaction. Major trainers will have Pokémon and attacks designed to counter players attempting to easily sweep through the fight with a single super-effective Pokémon. However, players will also have more opportunities to create unique teams of stellar Pokémon to tackle each major fight. Pokémon availability has also been altered throughout the world to provide appropriately-powerful Pokémon based on your progression through the game. Finally, all 151 Pokémon will be obtainable in a single playthrough, and a small amount of post-game content has been added as well.
-
+[Pokemon Yellow Remix](https://github.com/DylanDoesProgramming/pokeyellow-remix) is a project made by `ddp664`, which is based on [Yellow Legacy](https://github.com/cRz-Shadows/Pokemon_Yellow_Legacy) by content creator Patrick Smith ([TheSmithPlays](https://www.youtube.com/@TheSmithPlays)), which is based on [the Pokémon Yellow Disassembly](https://github.com/pret/pokeyellow).
 
 ## Download and Play
 
-* ### **You should use RGBDS version 0.6.1.**
+* ### **You should use RGBDS version 1.0.0.**
 * To set up the repository, see [**INSTALL.md**](INSTALL.md).
 
 
 ## A complete list of features can be found here:
-- Full doc: 
-    - [Make a Copy (Recommended)](https://docs.google.com/document/d/1JlZRhW2fcBUd7y23DB7MGfJCU95FK_yJI-QdRFdMawI/copy)
-    - [Download as PDF](https://docs.google.com/document/d/1JlZRhW2fcBUd7y23DB7MGfJCU95FK_yJI-QdRFdMawI/export?format=pdf)
+- Full doc:
 
 These videos also provide an overview of the hack and the ideology behind it:
-- Release 1.0: https://youtu.be/jTH2fVqHPwc
-- Prerelease: https://www.youtube.com/playlist?list=PLyv5bsGgaxonXuHoUUsv3mM7xzTwENccO
 
 
 ## Our Other Projects
-* Pokemon Crystal Legacy: https://github.com/cRz-Shadows/Pokemon_Crystal_Legacy
-* Pokemon Cursed Yellow: https://github.com/cRz-Shadows/Pokemon_Cursed_Yellow
-* Pokemon Battle Simulator: https://github.com/cRz-Shadows/Pokemon_Trainer_Tournament_Simulator
 
 
 ## Discussion and Community
-* YouTube: https://www.youtube.com/@smithplayspokemon
-* Discord: https://discord.gg/Wupx8tHRVS
-* Reddit: https://www.reddit.com/r/PokemonLegacy
-* Twitter: https://twitter.com/TheSmithPlays
-* Instagram: https://www.instagram.com/thesmithplays/
+* Discord: https://discord.gg/bScrec9HPF
 
 
 ## Pret Stuff
@@ -50,64 +32,44 @@ These videos also provide an overview of the hack and the ideology behind it:
 ## Credits For Yellow Legacy:
 
 ### Creators:
-- TheSmithPlays - Developer
-- cRz Shadows - Devoloper
-- Weebra - Video Editor
-
+- ddp664 - Developer
 
 ### Playtesters:
-- Aerogod
-- Disq
-- Karlos
-- ZuperZACH
-- Regi
-- Isona
-- Obelisk
-- JanitorOPplznerf
-- Sable
-- Alakadoof
-- ReaderDragon
-- Rwne
-- Talos
-- Tiberius
-- SoulXCross
-- Mogul
-
 
 ### Sprite Artists:
-- Backsprites - Anyone is welcome to use any of our backsprites so long as you **credit the artists** listed here
+- Pokemon Yellow Legacy's Backsprites - Anyone is welcome to use any of our backsprites so long as you **credit the artists** listed here
     - ZuperZACH
     - Isona
     - Karlos
     - Reader Dragon
     - Alakadoof
-- Pokemon overworld sprites - Anyone is welcome to use any of our overworld sprites so long as you **credit the artists** listed here
+- Pokemon Yellow Legacy's Pokemon overworld sprites - Anyone is welcome to use any of our overworld sprites so long as you **credit the artists** listed here
     - Isona
     - Alakadoof
     - Karlos
-- Pokemon party sprites
+- Pokemon Yellow Legacy's Pokemon party sprites
     - Chamber
     - Soloo993
     - Blue Emerald
     - Lake
     - Neslug
     - Pikachu25
-- Green sprite
+- Pokemon Yellow Legacy's Green sprite
     - Madame Frog/Hatun
     - Ghost-MissingNo
-- Porygon Front Sprite - Zeta_Null
-- Nurse Joy Battle Sprite - ZuperZACH
-- Officer Jenny Battle Sprite - Karlos
-- Misty overworld sprite - Isona
-- (Removed) Leaf sprite - Longlostsoul
+- Pokemon Yellow Legacy's Porygon Front Sprite - Zeta_Null
+- Pokemon Yellow Legacy's Nurse Joy Battle Sprite - ZuperZACH
+- Pokemon Yellow Legacy's Officer Jenny Battle Sprite - Karlos
+- Pokemon Yellow Legacy's Misty overworld sprite - Isona
 
 
 ### Where you can find all Pret Tutorials:
 * https://github.com/pret/pokeyellow/wiki/Tutorials
 * https://github.com/pret/pokered/wiki/Tutorials
+* https://github.com/pret/pokecrystal/wiki/Tutorials (some from here translate well to RBY ROM hacks)
 
 
-### Code Credits:
+### Code Credits Used in Pokemon Yellow Legacy:
 - Rangi42:
     - [Talk to Surf water, Cut trees, and Strength boulders](https://github.com/Rangi42/redstarbluestar/commit/050aae8aa99c33df803f945b8138f9a94c838908)
     - [Item Descriptions (Tutorial written by YakiNeen)](https://github.com/pret/pokered/wiki/Item-Descriptions)
@@ -125,7 +87,7 @@ These videos also provide an overview of the hack and the ideology behind it:
     - [Faster Spinners](https://github.com/PlagueVonKarma/kep-hack/commit/7c5c2a3047dd74b9ed014053172e0222b49d486b)
     - [Shorter Exp All Message](https://github.com/pret/pokered/wiki/Experience-System-&-Exp.-All-Enhancements-(Single-message,-etc))
 - Jojobear13:
-    - [Box full reminder ](https://github.com/jojobear13/shinpokered/commit/7223a046997168913e67444b509ec15462bc7ec1)
+    - [Box full reminder](https://github.com/jojobear13/shinpokered/commit/7223a046997168913e67444b509ec15462bc7ec1)
     - [Player animation is faster when running](https://github.com/jojobear13/shinpokered/commit/34b1776a54c7617f749e8ca2757721d58a59c150)
     - [Pokemon can now learn more than 1 move per level](https://github.com/jojobear13/shinpokered/commit/d3357ca3b68af11a66e4f60459cd354f65e99e39)
     - [TM names display on pick up](https://github.com/jojobear13/shinpokered/commit/34c4a36a581769a59e45449fd2bdcad31ee54a99)
@@ -160,24 +122,8 @@ These videos also provide an overview of the hack and the ideology behind it:
 - rjd1922 - [Suggested corrections](https://github.com/cRz-Shadows/Pokemon_Yellow_Legacy/commit/8c927a551da31c750b81fa1baad1c5b376128331)
 
 
-### Other Credits:
-- People that generally helped out with advice or otherwise
-    - Idain
-    - Nayru62
-    - JaaShooUhh
-    - Fortello - [The Potential Yellow Legacy - Google Docs](https://docs.google.com/document/d/179pOjVbPf6k09ON6g0s75xE_qRNET9CIuHWa-aSwQlA/edit#heading=h.fd77qy88i9zy)
-
-
 ### Massive thank you to these hacks in particular:
 - [Kanto Expansion Pak](https://github.com/PlagueVonKarma/kep-hack)
 - [Shinred](https://github.com/jojobear13/shinpokered)
 - [RedStar BlueStar](https://github.com/Rangi42/redstarbluestar)
 - [PureRGB](https://github.com/Vortyne/pureRGB)
-
-
-[wiki]: https://github.com/pret/pokeyellow/wiki
-[tutorials]: https://github.com/pret/pokeyellow/wiki/Tutorials
-[discord]: https://discord.gg/d5dubZ3
-[irc]: https://web.libera.chat/?#pret
-[ci]: https://github.com/pret/pokeyellow/actions
-[ci-badge]: https://github.com/pret/pokecrystal/actions/workflows/main.yml/badge.svg

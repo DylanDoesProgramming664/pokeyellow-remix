@@ -139,7 +139,7 @@ AgathasRoom_TextPointers:
 	dw_const AgathasRoomAgathaDontRunAwayText, TEXT_AGATHASROOM_AGATHA_DONT_RUN_AWAY
 
 AgathasRoomTrainerHeaders:
-	def_trainers
+	def_trainers AGATHAS_ROOM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 AgathasRoomTrainerHeader0:
 	trainer EVENT_BEAT_AGATHAS_ROOM_TRAINER_0, 0, AgathaBeforeBattleText, AgathaEndBattleText, AgathaAfterBattleText
 AgathasRoomTrainerHeader1:

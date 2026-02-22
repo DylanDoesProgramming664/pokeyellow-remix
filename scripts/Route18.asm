@@ -22,7 +22,7 @@ Route18_TextPointers:
 	dw_const Route18CyclingRoadSignText, TEXT_ROUTE18_CYCLING_ROAD_SIGN
 
 Route18TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_18_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route18TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_18_TRAINER_0, 3, Route18CooltrainerM1BattleText, Route18CooltrainerM1EndBattleText, Route18CooltrainerM1AfterBattleText
 Route18TrainerHeader1:

@@ -185,7 +185,7 @@ ViridianGym_TextPointers:
 	dw_const ViridianGymGiovanniTM27NoRoomText,     TEXT_VIRIDIANGYM_GIOVANNI_TM27_NO_ROOM
 
 ViridianGymTrainerHeaders:
-	def_trainers 2
+	def_trainers VIRIDIAN_GYM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 ViridianGymTrainerHeader0:
 	trainer EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0, 4, ViridianGymCooltrainerM1BattleText, ViridianGymCooltrainerM1EndBattleText, ViridianGymCooltrainerM1AfterBattleText
 ViridianGymTrainerHeader1:

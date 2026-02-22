@@ -7,6 +7,7 @@
 	const_export VIRIDIANCITY_FISHER
 	const_export VIRIDIANCITY_OLD_MAN
 	const_export VIRIDIANCITY_OLD_MAN2
+	const_export VIRIDIANCITY_POTION
 
 ViridianCity_Object:
 	db $f ; border block
@@ -35,5 +36,6 @@ ViridianCity_Object:
 	object_event  6, 23, SPRITE_FISHER, STAY, DOWN, TEXT_VIRIDIANCITY_FISHER
 	object_event 17,  5, SPRITE_GAMBLER, WALK, LEFT_RIGHT, TEXT_VIRIDIANCITY_OLD_MAN
 	object_event 18,  9, SPRITE_GAMBLER, STAY, NONE, TEXT_VIRIDIANCITY_OLD_MAN2
+	object_event 13,  6, SPRITE_POKE_BALL, STAY, NONE, TEXT_VIRIDIANCITY_POTION, POTION
 
 	def_warps_to VIRIDIAN_CITY

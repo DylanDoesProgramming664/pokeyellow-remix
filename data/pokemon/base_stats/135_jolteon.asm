@@ -1,8 +1,8 @@
 	db DEX_JOLTEON ; pokedex id
 
-	db  70,  70,  60, 130, 110 ; 445 / 555
+	db  80,  65,  60, 130, 110 ; 445 / 555
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +5,  +5,  +5,   0,   0 = +15 / +30
+	;  +15,   0,   0,   0,   0 = +15 / +30
 
 	db ELECTRIC, ELECTRIC ; type
 	db 45 ; catch rate

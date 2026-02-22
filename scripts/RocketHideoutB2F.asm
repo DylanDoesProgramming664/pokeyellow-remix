@@ -279,7 +279,7 @@ RocketHideoutB2F_TextPointers:
 	dw_const PickUpItemText,             TEXT_ROCKETHIDEOUTB2F_SUPER_POTION
 
 RocketHideout2TrainerHeaders:
-	def_trainers
+	def_trainers ROCKET_HIDEOUT_2_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 RocketHideout2TrainerHeader0:
 	trainer EVENT_BEAT_ROCKET_HIDEOUT_2_TRAINER_0, 4, RocketHideoutB1FRocketBattleText, RocketHideoutB1FRocketEndBattleText, RocketHideoutB1FRocketAfterBattleText
 	db -1 ; end

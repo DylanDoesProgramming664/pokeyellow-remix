@@ -152,7 +152,7 @@ DisplayTitleScreen:
 	call PlaySound
 .loop
 	xor a
-	ld [wUnusedCC5B], a
+	ld [wUnusedTitleScreenFlag], a
 	ld [wTitleScreenScene], a
 	ld [wTitleScreenScene + 1], a
 	ld [wTitleScreenScene + 2], a

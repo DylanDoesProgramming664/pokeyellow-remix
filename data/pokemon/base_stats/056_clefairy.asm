@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
 	;    0,   0,  +2,   0,  +5 =  +7 /  +7
 
-	db NORMAL, FAIRY ; type
+	db FAIRY, FAIRY ; type
 	db 150 ; catch rate
 	db 68 ; base exp
 

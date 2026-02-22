@@ -90,7 +90,7 @@ Route24_TextPointers:
 	dw_const Route24CooltrainerM4Text, TEXT_ROUTE24_COOLTRAINER_M4
 
 Route24TrainerHeaders:
-	def_trainers 2
+	def_trainers ROUTE_24_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route24TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_24_TRAINER_0, 4, Route24CooltrainerM2BattleText, Route24CooltrainerM2EndBattleText, Route24CooltrainerM2AfterBattleText
 Route24TrainerHeader1:

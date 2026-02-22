@@ -79,7 +79,7 @@ Route12_TextPointers:
 	dw_const Route12SnorlaxCalmedDownText, TEXT_ROUTE12_SNORLAX_CALMED_DOWN
 
 Route12TrainerHeaders:
-	def_trainers 2
+	def_trainers ROUTE_12_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route12TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_12_TRAINER_0, 4, Route12Fisher1BattleText, Route12Fisher1EndBattleText, Route12Fisher1AfterBattleText
 Route12TrainerHeader1:

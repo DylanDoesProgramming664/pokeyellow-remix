@@ -13,10 +13,11 @@ SetDebugNewGameParty: ; unreferenced except in _DEBUG
 	jr .loop
 
 DebugNewGameParty: ; unreferenced except in _DEBUG
-	db SNORLAX, 80
-	db PERSIAN, 80
-	db JIGGLYPUFF, 15
-	db STARTER_PIKACHU, 5
+    db ALAKAZAM, 27
+    db MEW, 27
+    db HITMONCHAN, 33
+	db CHARIZARD, 36
+	db JOLTEON, 36
 	db -1 ; end
 
 PrepareNewGameDebug: ; dummy except in _DEBUG
@@ -34,22 +35,6 @@ IF DEF(_DEBUG)
 	ld [wObtainedBadges], a
 
 	call SetDebugNewGameParty
-
-	; Pikachu gets Surf.
-	ld a, SURF
-	ld hl, wPartyMon4Moves + 2
-	ld [hl], a
-
-	; Snorlax gets four HM moves.
-	ld hl, wPartyMon1Moves
-	ld a, FLY
-	ld [hli], a
-	ld a, CUT
-	ld [hli], a
-	ld a, SURF
-	ld [hli], a
-	ld a, STRENGTH
-	ld [hl], a
 
 	; Get some debug items.
 	ld hl, wNumBagItems
@@ -117,6 +102,11 @@ DebugItemsList:
 	db S_S_TICKET, 1
 	db LIFT_KEY, 1
 	db PP_UP, 99
+	db HM_CUT, 1
+	db HM_FLY, 1
+	db HM_SURF, 1
+	db HM_STRENGTH, 1
+	db HM_FLASH, 1
 	db -1 ; end
 
 DebugUnusedList:

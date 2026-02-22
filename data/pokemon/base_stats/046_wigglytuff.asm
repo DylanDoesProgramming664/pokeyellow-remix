@@ -1,8 +1,8 @@
 	db DEX_WIGGLYTUFF ; pokedex id
 
-	db 140,  70,  55,  45,  85 ; 395 / 480
+	db 140,  90,  65,  45,  85 ; 425 / 510
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0, +10,   0, +35 = +45 / +55
+	;    0, +20, +20,   0, +35 = +75 / +85
 
 	db NORMAL, FAIRY ; type
 	db 50 ; catch rate

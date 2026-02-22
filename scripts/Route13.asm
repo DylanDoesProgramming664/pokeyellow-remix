@@ -30,7 +30,7 @@ Route13_TextPointers:
 	dw_const Route13SignText,          TEXT_ROUTE13_SIGN
 
 Route13TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_13_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route13TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_13_TRAINER_0, 2, Route13CooltrainerM1BattleText, Route13CooltrainerM1EndBattleText, Route13CooltrainerM1AfterBattleText
 Route13TrainerHeader1:

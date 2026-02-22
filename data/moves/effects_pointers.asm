@@ -1,7 +1,7 @@
 MoveEffectPointerTable:
 ; entries correspond to *_EFFECT constants
 	table_width 2, MoveEffectPointerTable
-	dw StruggleEffect            ; StruggleEffect
+	dw StruggleEffect            ; STRUGGLE_EFFECT
 	dw PoisonEffect              ; POISON_SIDE_EFFECT1
 	dw DrainHPEffect             ; DRAIN_HP_EFFECT
 	dw FreezeBurnParalyzeEffect  ; BURN_SIDE_EFFECT1
@@ -24,13 +24,13 @@ MoveEffectPointerTable:
 	dw StatModifierDownEffect    ; SPECIAL_DOWN1_EFFECT
 	dw StatModifierDownEffect    ; ACCURACY_DOWN1_EFFECT
 	dw StatModifierDownEffect    ; EVASION_DOWN1_EFFECT
-	dw StatModifierDownEffect    ; KINESIS_EFFECT
 	dw ConversionEffect          ; CONVERSION_EFFECT
 	dw HazeEffect                ; HAZE_EFFECT
 	dw BideEffect                ; BIDE_EFFECT
 	dw ThrashPetalDanceEffect    ; THRASH_PETAL_DANCE_EFFECT
 	dw SwitchAndTeleportEffect   ; SWITCH_AND_TELEPORT_EFFECT
 	dw TwoToFiveAttacksEffect    ; TWO_TO_FIVE_ATTACKS_EFFECT
+	dw TwoToFiveAttacksEffect    ; EFFECT_1E
 	dw FlinchSideEffect          ; FLINCH_SIDE_EFFECT1
 	dw SleepEffect               ; SLEEP_EFFECT
 	dw PoisonEffect              ; POISON_SIDE_EFFECT2

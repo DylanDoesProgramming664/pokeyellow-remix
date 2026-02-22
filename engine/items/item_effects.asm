@@ -1499,14 +1499,14 @@ ItemUseMedicine:
 	cp 5
 	ld b, 50 ; Alakazam's level
 	jr nc, .next1
-    cp 4
+	cp 4
 	ld b, 43 ; Venomoth's level
 	jr nc, .next1
 	cp 3
 	ld b, 36 ; Vileplume's level
 	jr nc, .next1
 	cp 2
-    ld b, 29 ; Bit below Raichu's level
+	ld b, 29 ; Bit below Raichu's level
 	jr nc, .next1
 	cp 1
 	ld b, 22 ; Starmie's level
@@ -2793,7 +2793,7 @@ GetMaxPP:
 	ld de, wcd6d
 	ld a, BANK(Moves)
 	call FarCopyData
-	ld de, wcd6d + 5 ; PP is byte 5 of move data
+	ld de, wcd6d + 6 ; PP is byte 6 of move data
 	ld a, [de]
 	ld b, a ; b = normal max PP
 	pop hl
@@ -3199,6 +3199,9 @@ CheckMapForMon:
 
 AddStaticEncounters: ; manually add gift mons, static encounters and fossil locations
 	ld a, [wd11e]
+	; cp SLOWPOKE
+	; ld b, PEWTER_POKECENTER
+	; jp z, .addEncounter
 	cp MAGIKARP
 	ld b, ROUTE_4
 	jp z, .addEncounter
@@ -3264,7 +3267,7 @@ AddStaticEncounters: ; manually add gift mons, static encounters and fossil loca
 	jr z, .addCinnabarIsland
 	cp JYNX
 	jr z, .addSaffron
-	; game corner mons 
+	; game corner mons
 	cp ABRA
 	jr z, .addCeladon
 	cp SEEL
@@ -3316,13 +3319,13 @@ AddStaticEncounters: ; manually add gift mons, static encounters and fossil loca
 
 ; sets carry flag if DE is greater than HL. Sets zero flag if they're equal.
 CompareDEHL:
-    ld a, h
-    sub d
-    ret nz ; if carry, DE is greater, if no carry, HL is greater
+	ld a, h
+	sub d
+	ret nz ; if carry, DE is greater, if no carry, HL is greater
 ; 2nd byte comparison
-    ld a, l
-    sub e
-    ret ; if carry, DE is greater, if no carry, HL is greater, if z, they're equal
+	ld a, l
+	sub e
+	ret ; if carry, DE is greater, if no carry, HL is greater, if z, they're equal
 BallMultipliers:
 ; 	db ITEM_ID, Numerator, Denominator
 	db POKE_BALL   , 1, 1	; x1

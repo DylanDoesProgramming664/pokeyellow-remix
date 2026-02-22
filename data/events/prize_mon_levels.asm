@@ -2,9 +2,7 @@ PrizeMonLevelDictionary:
 	db ABRA,     	15
 	db SEEL,     	20
 	db MAGMAR,   	22
-	db PINSIR,   	30
 
 	db ELECTABUZZ,  22
-	db SCYTHER,   	30
 	db DRATINI,     25
 	db PORYGON,    	30

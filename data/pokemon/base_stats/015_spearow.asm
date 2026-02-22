@@ -1,8 +1,9 @@
 	db DEX_SPEAROW ; pokedex id
 
-	db  40,  63,  30,  75,  31 ; 239 / 270
+	db  45,  63,  35,  75,  36 ; 254 / 290
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,  +3,   0,  +5,   0 =  +8 /  +8
+	;   +5,  +3,  +5,  +5,  +5 = +23 / +28
+	; In Gen II+, Sp.ATK / Sp.DEF = 31 / 41
 
 	db NORMAL, FLYING ; type
 	db 255 ; catch rate

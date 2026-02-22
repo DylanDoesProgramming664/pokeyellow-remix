@@ -78,7 +78,7 @@ Route20_TextPointers:
 	dw_const Route20SeafoamIslandsSignText, TEXT_ROUTE20_SEAFOAM_ISLANDS_EAST_SIGN
 
 Route20TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_20_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route20TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_20_TRAINER_0, 4, Route20Swimmer1BattleText, Route20Swimmer1EndBattleText, Route20Swimmer1AfterBattleText
 Route20TrainerHeader1:

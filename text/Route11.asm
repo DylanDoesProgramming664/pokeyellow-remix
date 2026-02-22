@@ -157,6 +157,25 @@ _Route11Youngster4AfterBattleText::
 	line "stronger ones!"
 	done
 
+_Route11Youngster5BattleText::
+	text "Beat me and I'll"
+	line "I'll tell you a"
+    cont "secret!"
+	done
+
+_Route11Youngster5EndBattleText::
+	text "Alright! Alright!"
+	line "I'll tell you!"
+	prompt
+
+_Route11Youngster5AfterBattleText::
+	text "I saw a really"
+	line "scary man enter"
+    cont "the VERMILLION"
+    cont "GYM! Lt. Surge"
+    cont "looked terrified!"
+	done
+
 _Route11DiglettsCaveSignText::
 	text "DIGLETT's CAVE"
 	done

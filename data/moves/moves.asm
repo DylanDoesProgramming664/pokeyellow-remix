@@ -2,7 +2,8 @@ MACRO move
 	db \1 ; animation (interchangeable with move id)
 	db \2 ; effect
 	db \3 ; power
-	db \4 | \5 ; type | category (mainly used for status and mixed moves)
+	db \4 ; type
+	db \5 ; category
 	db \6 percent ; accuracy
 	db \7 ; pp
 	assert \7 <= 40, "PP must be 40 or less"
@@ -83,10 +84,10 @@ Moves:
 	move STRENGTH,     NO_ADDITIONAL_EFFECT,        80, NORMAL,       PHYSICAL,    100, 15
 	move ABSORB,       DRAIN_HP_EFFECT,             30, GRASS,        SPECIAL,     100, 25
 	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             60, GRASS,        SPECIAL,     100, 20
-	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,        STATUS,       90, 10
+	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,        STATUS,       95, 10
 	move GROWTH,       SPECIAL_UP1_EFFECT,           0, NORMAL,       STATUS,      100, 40
-	move RAZOR_LEAF,   NO_ADDITIONAL_EFFECT,        55, GRASS,        SPECIAL,      95, 25
-	move SOLARBEAM,    CHARGE_EFFECT,              180, GRASS,        SPECIAL,     100, 10
+	move RAZOR_LEAF,   NO_ADDITIONAL_EFFECT,        55, GRASS,        SPECIAL,     100, 25
+	move SOLARBEAM,    CHARGE_EFFECT,              200, GRASS,        SPECIAL,     100, 10
 	move POISONPOWDER, POISON_EFFECT,                0, POISON,       STATUS,       90, 35
 	move STUN_SPORE,   PARALYZE_EFFECT,              0, GRASS,        STATUS,       75, 30
 	move SLEEP_POWDER, SLEEP_EFFECT,                 0, GRASS,        STATUS,       75, 15
@@ -98,18 +99,18 @@ Moves:
 	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT1,       95, ELECTRIC,     SPECIAL,     100, 15
 	move THUNDER_WAVE, PARALYZE_EFFECT,              0, ELECTRIC,     STATUS,      100, 20
 	move THUNDER,      PARALYZE_SIDE_EFFECT1,      120, ELECTRIC,     SPECIAL,      85,  5
-	move ROCK_THROW,   NO_ADDITIONAL_EFFECT,        50, ROCK,         PHYSICAL,     95, 25
+	move ROCK_THROW,   NO_ADDITIONAL_EFFECT,        50, ROCK,         PHYSICAL,    100, 25
 	move EARTHQUAKE,   NO_ADDITIONAL_EFFECT,       100, GROUND,       PHYSICAL,    100, 10
 	move FISSURE,      OHKO_EFFECT,                  1, GROUND,       PHYSICAL,     30,  5
-	move DIG,          CHARGE_EFFECT,               70, GROUND,       PHYSICAL,    100, 20
-	move TOXIC,        POISON_EFFECT,                0, POISON,       STATUS,       85, 10
+	move DIG,          CHARGE_EFFECT,               80, GROUND,       PHYSICAL,    100, 20
+	move TOXIC,        POISON_EFFECT,                0, POISON,       STATUS,       90, 10
 	move CONFUSION,    CONFUSION_SIDE_EFFECT,       50, PSYCHIC_TYPE, SPECIAL,     100, 25
 	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, SPECIAL,     100, 15
 	move HYPNOSIS,     SLEEP_EFFECT,                 0, PSYCHIC_TYPE, STATUS,       60, 20
 	move MEDITATE,     ATTACK_UP1_EFFECT,            0, PSYCHIC_TYPE, STATUS,      100, 40
 	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, STATUS,      100, 30
 	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       PHYSICAL,    100, 30
-	move RAGE,         RAGE_EFFECT,                 60, DRAGON,       MIXED,       100, 20
+	move RAGE,         RAGE_EFFECT,                 60, DRAGON,       PHYSICAL,    100, 20
 	move TELEPORT,     SWITCH_AND_TELEPORT_EFFECT,   0, PSYCHIC_TYPE, STATUS,      100, 20
 	move SHADOW_CLAW,  NO_ADDITIONAL_EFFECT,        70, GHOST,        MIXED,       100, 30
 	move MIMIC,        MIMIC_EFFECT,                 0, NORMAL,       STATUS,      100, 10
@@ -139,14 +140,14 @@ Moves:
 	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          120, FIRE,         SPECIAL,      85,  5
 	move WATERFALL,    FLINCH_SIDE_EFFECT1,         70, WATER,        SPECIAL,     100, 15
 	move CLAMP,        TRAPPING_EFFECT,             35, WATER,        SPECIAL,      85, 10
-	move SWIFT,        SWIFT_EFFECT,                60, NORMAL,       MIXED,       100, 20
+	move SWIFT,        NO_ADDITIONAL_EFFECT,        60, NORMAL,       MIXED,       100, 20
 	move SKULL_BASH,   HYPER_BEAM_EFFECT,          100, NORMAL,       PHYSICAL,    100, 15
 	move SPIKE_CANNON, TWO_TO_FIVE_ATTACKS_EFFECT,  20, NORMAL,       PHYSICAL,    100, 15
 	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT,      40, NORMAL,       PHYSICAL,    100, 35
 	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, PSYCHIC_TYPE, STATUS,      100, 20
-	move KINESIS,      KINESIS_EFFECT,               0, PSYCHIC_TYPE, STATUS,      100, 15
+	move KINESIS,      SPECIAL_DOWN1_EFFECT,         0, PSYCHIC_TYPE, STATUS,      100, 15
 	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,       STATUS,      100,  5
-	move HI_JUMP_KICK, JUMP_KICK_EFFECT,           120, FIGHTING,     PHYSICAL,     90, 20
+	move HI_JUMP_KICK, JUMP_KICK_EFFECT,           130, FIGHTING,     PHYSICAL,     90, 20
 	move GLARE,        PARALYZE_EFFECT,              0, NORMAL,       STATUS,       90, 30
 	move DREAM_EATER,  DREAM_EATER_EFFECT,         100, PSYCHIC_TYPE, SPECIAL,     100, 15
 	move POISON_GAS,   POISON_EFFECT,                0, POISON,       PHYSICAL,     85, 40
@@ -158,7 +159,7 @@ Moves:
 	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      30, WATER,        SPECIAL,     100, 30
 	move DIZZY_PUNCH,  CONFUSION_SIDE_EFFECT,       70, FIGHTING,     PHYSICAL,    100, 20
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        STATUS,      100, 15
-	move FLASH,        ACCURACY_DOWN1_EFFECT,        0, NORMAL,       STATUS,      100, 20
+	move FLASH,        ACCURACY_DOWN2_EFFECT,        0, NORMAL,       STATUS,      100, 20
 	move PSYWAVE,      SPECIAL_DAMAGE_EFFECT,        1, PSYCHIC_TYPE, SPECIAL,     100, 15
 	move SPLASH,       SPLASH_EFFECT,                0, WATER,        STATUS,      100, 40
 	move ACID_ARMOR,   DEFENSE_UP2_EFFECT,           0, POISON,       STATUS,      100, 40
@@ -171,7 +172,7 @@ Moves:
 	move HYPER_FANG,   FLINCH_SIDE_EFFECT1,         80, NORMAL,       PHYSICAL,     90, 15
 	move SHARPEN,      ATTACK_UP1_EFFECT,            0, NORMAL,       STATUS,      100, 30
 	move CONVERSION,   CONVERSION_EFFECT,            0, NORMAL,       STATUS,      100, 30
-	move TRI_ATTACK,   BURN_SIDE_EFFECT2,           85, NORMAL,       PHYSICAL,    100, 15
+	move TRI_ATTACK,   BURN_SIDE_EFFECT2,           85, NORMAL,       MIXED,       100, 15
 	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,       PHYSICAL,     90, 10
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,       PHYSICAL,    100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,       STATUS,      100, 10

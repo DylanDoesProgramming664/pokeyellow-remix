@@ -27,7 +27,7 @@ Route10_TextPointers:
 	dw_const Route10PowerPlantSignText, TEXT_ROUTE10_POWERPLANT_SIGN
 
 Route10TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_10_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route10TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_10_TRAINER_0, 4, Route10SuperNerd1BattleText, Route10SuperNerd1EndBattleText, Route10SuperNerd1AfterBattleText
 Route10TrainerHeader1:

@@ -26,7 +26,7 @@ Route21_TextPointers:
 	dw_const Route21Fisher4Text,  TEXT_ROUTE21_FISHER4
 
 Route21TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_21_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route21TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_21_TRAINER_0, 0, Route21Fisher1BattleText, Route21Fisher1EndBattleText, Route21Fisher1AfterBattleText
 Route21TrainerHeader1:

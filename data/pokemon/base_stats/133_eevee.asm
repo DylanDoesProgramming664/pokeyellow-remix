@@ -1,8 +1,8 @@
 	db DEX_EEVEE ; pokedex id
 
-	db  70,  65,  65,  65,  75 ; 330 / 405
+	db  70,  65,  60,  65,  65 ; 325 / 390
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;  +10, +10, +10, +10, +10 = +50 / +80
+	;  +15, +10, +10, +10,   0 = +45 / +65
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate

@@ -33,7 +33,7 @@ Route17_TextPointers:
 	dw_const Route17CyclingRoadEndsSignText, TEXT_ROUTE17_CYCLING_ROAD_ENDS_SIGN
 
 Route17TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_17_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route17TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_17_TRAINER_0, 3, Route17Biker1BattleText, Route17Biker1EndBattleText, Route17Biker1AfterBattleText
 Route17TrainerHeader1:

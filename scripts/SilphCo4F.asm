@@ -103,7 +103,7 @@ SilphCo4F_TextPointers:
 	dw_const PickUpItemText,            TEXT_SILPHCO4F_ESCAPE_ROPE
 
 SilphCo4TrainerHeaders:
-	def_trainers 2
+	def_trainers SILPH_CO_4F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SilphCo4TrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_4F_TRAINER_0, 4, SilphCo4FRocket1BattleText, SilphCo4FRocket1EndBattleText, SilphCo4FRocket1AfterBattleText
 SilphCo4TrainerHeader1:

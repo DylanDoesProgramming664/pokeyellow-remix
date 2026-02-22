@@ -64,7 +64,7 @@ SilphCo3F_TextPointers:
 	dw_const PickUpItemText,            TEXT_SILPHCO3F_HYPER_POTION
 
 SilphCo3TrainerHeaders:
-	def_trainers 2
+	def_trainers SILPH_CO_3F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SilphCo3TrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_3F_TRAINER_0, 2, SilphCo3FRocketBattleText, SilphCo3FRocketEndBattleText, SilphCo3FRocketAfterBattleText
 SilphCo3TrainerHeader1:

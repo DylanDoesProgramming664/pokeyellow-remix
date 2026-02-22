@@ -25,3 +25,31 @@ _PewterPokecenterJigglypuffText::
 	text "JIGGLYPUFF: Puu"
 	line "pupuu!"
 	done
+
+_PewterPokecenterSalesmanIGotADealText::
+	text "MAN: Hello, there!"
+	line "Have I got a deal"
+	cont "just for you!"
+
+	para "I'll let you have"
+	line "a swell #MON"
+	cont "for just ¥800!"
+	cont "What do you say?"
+	done
+
+_PewterPokecenterSalesmanNoText::
+	text "No? I'm only"
+	line "doing this as a"
+	cont "favor to you!"
+	done
+
+_PewterPokecenterSalesmanNoMoneyText::
+	text "You'll need more"
+	line "money than that!"
+	done
+
+_PewterPokecenterSalesmanNoRefundsText::
+	text "MAN: Well, I don't"
+	line "give refunds!"
+	done
+

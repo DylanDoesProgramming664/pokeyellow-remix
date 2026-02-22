@@ -138,7 +138,7 @@ LoreleisRoom_TextPointers:
 	dw_const LoreleisRoomLoreleiDontRunAwayText, TEXT_LORELEISROOM_DONT_RUN_AWAY
 
 LoreleisRoomTrainerHeaders:
-	def_trainers
+	def_trainers LORELEIS_ROOM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 LoreleisRoomTrainerHeader0:
 	trainer EVENT_BEAT_LORELEIS_ROOM_TRAINER_0, 0, LoreleisRoomLoreleiBeforeBattleText, LoreleisRoomLoreleiEndBattleText, LoreleisRoomLoreleiAfterBattleText
 LoreleisRoomTrainerHeader1:

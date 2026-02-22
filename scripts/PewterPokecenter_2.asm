@@ -77,3 +77,69 @@ PewterJigglypuff::
 	db $40 | SPRITE_FACING_UP
 	db $40 | SPRITE_FACING_RIGHT
 .FacingDirectionsEnd:
+
+PewterPokecenterSalesman::
+	CheckEvent EVENT_BOUGHT_PEWTERPOKECENTER_SALESMAN_POKEMON, 1
+	jp c, .alreadyBought
+	ld hl, .IGotADealText
+	call PrintText
+	ld a, MONEY_BOX
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jp nz, .choseNo
+	xor a
+	ldh [hMoney], a
+	ldh [hMoney + 2], a
+	ld a, 8
+	ldh [hMoney + 1], a
+	call HasEnoughMoney
+	jr nc, .enoughMoney
+	ld hl, .NoMoneyText
+	jr .printText
+.enoughMoney
+	lb bc, SANDSHREW, 5
+	call GivePokemon
+	jr nc, .done
+	xor a
+	ld [wPriceTemp], a
+	ld [wPriceTemp + 2], a
+	ld a, 8
+	ld [wPriceTemp + 1], a
+	ld hl, wPriceTemp + 2
+	ld de, wPlayerMoney + 2
+	ld c, $3
+	predef SubBCDPredef
+	ld a, MONEY_BOX
+	ld [wTextBoxID], a
+	call DisplayTextBoxID
+	SetEvent EVENT_BOUGHT_PEWTERPOKECENTER_SALESMAN_POKEMON
+	jr .done
+.choseNo
+	ld hl, .NoText
+	jr .printText
+.alreadyBought
+	ld hl, .NoRefundsText
+.printText
+	call PrintText
+.done
+	ret
+
+.IGotADealText
+	text_far _PewterPokecenterSalesmanIGotADealText
+	text_end
+
+.NoText
+	text_far _PewterPokecenterSalesmanNoText
+	text_end
+
+.NoMoneyText
+	text_far _PewterPokecenterSalesmanNoMoneyText
+	text_end
+
+.NoRefundsText
+	text_far _PewterPokecenterSalesmanNoRefundsText
+	text_end
+

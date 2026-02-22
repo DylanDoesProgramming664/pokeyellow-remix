@@ -27,7 +27,7 @@ Route8_TextPointers:
 	dw_const Route8UndergroundSignText, TEXT_ROUTE8_UNDERGROUND_SIGN
 
 Route8TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_8_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route8TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_8_TRAINER_0, 4, Route8SuperNerd1BattleText, Route8SuperNerd1EndBattleText, Route8SuperNerd1AfterBattleText
 Route8TrainerHeader1:

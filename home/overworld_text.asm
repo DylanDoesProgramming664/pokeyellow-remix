@@ -43,7 +43,7 @@ BoulderText::
 	ld [wcf91], a
 	predef PrintStrengthTxt
 .done 
-    jp TextScriptEnd 
+	jp TextScriptEnd 
 
 MartSignText::
 	text_far _MartSignText

@@ -821,7 +821,7 @@ OaksLabOak1Text:
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	predef DisplayDexRating
-	CheckEvent EVENT_BEAT_POKEMONMANSION2F_OAK
+	CheckEvent EVENT_BEAT_POKEMONMANSION_2F_OAK
 	jp nz, .done
 	call OaksLab_PokedexCount
 	cp NUM_POKEMON - 1 ; discount Mew

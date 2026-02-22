@@ -112,7 +112,7 @@ VermilionGym_TextPointers:
 	dw_const VermilionGymRematchPostBattleText, 	  TEXT_VERMILIONGYM_REMATCH_POST_BATTLE
 
 VermilionGymTrainerHeaders:
-	def_trainers 2
+	def_trainers VERMILION_GYM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 VermilionGymTrainerHeader0:
 	trainer EVENT_BEAT_VERMILION_GYM_TRAINER_0, 3, VermilionGymGentlemanBattleText, VermilionGymGentlemanEndBattleText, VermilionGymGentlemanAfterBattleText
 VermilionGymTrainerHeader1:

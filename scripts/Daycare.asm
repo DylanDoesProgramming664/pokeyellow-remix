@@ -101,14 +101,14 @@ DaycareGentlemanText:
 	cp 5
 	ld b, 50 ; Alakazam's level
 	jr nc, .next1
-    cp 4
+	cp 4
 	ld b, 43 ; Venomoth's level
 	jr nc, .next1
 	cp 3
 	ld b, 36 ; Vileplume's level
 	jr nc, .next1
 	cp 2
-    ld b, 29 ; Bit below Raichu's level
+	ld b, 29 ; Five levels below Raichu's level
 	jr nc, .next1
 	cp 1
 	ld b, 22 ; Starmie's level

@@ -3,6 +3,7 @@
 	db  80, 120, 130,  45,  65 ; 440 / 505
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
 	;    0, +10,   0,   0, +10 = +20 / +20
+	; In Gen II, Sp.Atk / Sp.Def = 55 / 75
 
 	db ROCK, GROUND ; type
 	db 45 ; catch rate

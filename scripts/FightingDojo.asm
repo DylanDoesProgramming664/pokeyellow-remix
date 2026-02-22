@@ -92,7 +92,7 @@ FightingDojo_TextPointers:
 	dw_const FightingDojoKarateMasterText.IWillGiveYouAPokemonText, TEXT_FIGHTINGDOJO_KARATE_MASTER_I_WILL_GIVE_YOU_A_POKEMON
 
 FightingDojoTrainerHeaders:
-	def_trainers 2
+	def_trainers FIGHTING_DOJO_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 FightingDojoTrainerHeader0:
 	trainer EVENT_BEAT_FIGHTING_DOJO_TRAINER_0, 4, FightingDojoBlackbelt1BattleText, FightingDojoBlackbelt1EndBattleText, FightingDojoBlackbelt1AfterBattleText
 FightingDojoTrainerHeader1:

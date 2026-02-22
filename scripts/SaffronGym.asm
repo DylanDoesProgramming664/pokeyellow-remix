@@ -97,7 +97,7 @@ SaffronGym_TextPointers:
 	dw_const SaffronGymRematchPostBattleText,     TEXT_SAFFRONGYM_REMATCH_POST_BATTLE
 
 SaffronGymTrainerHeaders:
-	def_trainers 2
+	def_trainers SAFFRON_GYM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SaffronGymTrainerHeader0:
 	trainer EVENT_BEAT_SAFFRON_GYM_TRAINER_0, 3, SaffronGymChanneler1BattleText, SaffronGymChanneler1EndBattleText, SaffronGymChanneler1AfterBattleText
 SaffronGymTrainerHeader1:

@@ -28,7 +28,7 @@ SSAnneB1FRooms_TextPointers:
 	dw_const PickUpItemText,              TEXT_SSANNEB1FROOMS_MAX_POTION
 
 SSAnne10TrainerHeaders:
-	def_trainers
+	def_trainers SS_ANNE_10_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SSAnne10TrainerHeader0:
 	trainer EVENT_BEAT_SS_ANNE_10_TRAINER_0, 2, SSAnneB1FRoomsSailor1BattleText, SSAnneB1FRoomsSailor1EndBattleText, SSAnneB1FRoomsSailor1AfterBattleText
 SSAnne10TrainerHeader1:

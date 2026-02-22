@@ -12,6 +12,7 @@ DEF SHOW EQU $15
 	const HS_OLD_MAN_2                     ; 03
 	const HS_MUSEUM_GUY                    ; 04
 	const HS_GYM_GUY                       ; 05
+	const HS_VIRIDIAN_CITY_1               ; 06
 	const HS_CERULEAN_RIVAL                ; 06
 	const HS_CERULEAN_ROCKET               ; 07
 	const HS_CERULEAN_GUARD_1              ; 08
@@ -124,84 +125,85 @@ DEF SHOW EQU $15
 	const HS_MT_MOON_B2F_FOSSIL_2          ; 70
 	const HS_MT_MOON_B2F_ITEM_1            ; 71
 	const HS_MT_MOON_B2F_ITEM_2            ; 72
-	const HS_SS_ANNE_2F_RIVAL              ; 73
-	const HS_SS_ANNE_1F_ROOMS_ITEM         ; 74
-	const HS_SS_ANNE_2F_ROOMS_ITEM_1       ; 75
-	const HS_SS_ANNE_2F_ROOMS_ITEM_2       ; 76
-	const HS_SS_ANNE_B1F_ROOMS_ITEM_1      ; 77
-	const HS_SS_ANNE_B1F_ROOMS_ITEM_2      ; 78
-	const HS_SS_ANNE_B1F_ROOMS_ITEM_3      ; 79
-	const HS_VICTORY_ROAD_3F_ITEM_1        ; 7A
-	const HS_VICTORY_ROAD_3F_ITEM_2        ; 7B
-	const HS_VICTORY_ROAD_3F_BOULDER       ; 7C
-	const HS_ROCKET_HIDEOUT_B1F_ITEM_1     ; 7D
-	const HS_ROCKET_HIDEOUT_B1F_ITEM_2     ; 7E
-	const HS_ROCKET_HIDEOUT_B2F_ITEM_1     ; 7F
-	const HS_ROCKET_HIDEOUT_B2F_ITEM_2     ; 80
-	const HS_ROCKET_HIDEOUT_B2F_ITEM_3     ; 81
-	const HS_ROCKET_HIDEOUT_B2F_ITEM_4     ; 82
-	const HS_ROCKET_HIDEOUT_B3F_ITEM_1     ; 83
-	const HS_ROCKET_HIDEOUT_B3F_ITEM_2     ; 84
-	const HS_ROCKET_HIDEOUT_B4F_GIOVANNI   ; 85
-	const HS_ROCKET_HIDEOUT_B4F_JAMES      ; 86
-	const HS_ROCKET_HIDEOUT_B4F_JESSIE     ; 87
-	const HS_ROCKET_HIDEOUT_B4F_ITEM_1     ; 88
-	const HS_ROCKET_HIDEOUT_B4F_ITEM_2     ; 89
-	const HS_ROCKET_HIDEOUT_B4F_ITEM_3     ; 8A
-	const HS_ROCKET_HIDEOUT_B4F_ITEM_4     ; 8B
-	const HS_ROCKET_HIDEOUT_B4F_ITEM_5     ; 8C
-	const HS_SILPH_CO_2F_1                 ; 8D XXX never (de)activated?
-	const HS_SILPH_CO_2F_2                 ; 8E
-	const HS_SILPH_CO_2F_3                 ; 8F
-	const HS_SILPH_CO_2F_4                 ; 90
-	const HS_SILPH_CO_2F_5                 ; 91
-	const HS_SILPH_CO_3F_1                 ; 92
-	const HS_SILPH_CO_3F_2                 ; 93
-	const HS_SILPH_CO_3F_ITEM              ; 94
-	const HS_SILPH_CO_4F_1                 ; 95
-	const HS_SILPH_CO_4F_2                 ; 96
-	const HS_SILPH_CO_4F_3                 ; 97
-	const HS_SILPH_CO_4F_ITEM_1            ; 98
-	const HS_SILPH_CO_4F_ITEM_2            ; 99
-	const HS_SILPH_CO_4F_ITEM_3            ; 9A
-	const HS_SILPH_CO_5F_1                 ; 9B
-	const HS_SILPH_CO_5F_2                 ; 9C
-	const HS_SILPH_CO_5F_3                 ; 9D
-	const HS_SILPH_CO_5F_4                 ; 9E
-	const HS_SILPH_CO_5F_ITEM_1            ; 9F
-	const HS_SILPH_CO_5F_ITEM_2            ; A0
-	const HS_SILPH_CO_5F_ITEM_3            ; A1
-	const HS_SILPH_CO_6F_1                 ; A2
-	const HS_SILPH_CO_6F_2                 ; A3
-	const HS_SILPH_CO_6F_3                 ; A4
-	const HS_SILPH_CO_6F_ITEM_1            ; A5
-	const HS_SILPH_CO_6F_ITEM_2            ; A6
-	const HS_SILPH_CO_7F_1                 ; A7
-	const HS_SILPH_CO_7F_2                 ; A8
-	const HS_SILPH_CO_7F_3                 ; A9
-	const HS_SILPH_CO_7F_4                 ; AA
-	const HS_SILPH_CO_7F_RIVAL             ; AB
-	const HS_SILPH_CO_7F_ITEM_1            ; AC
-	const HS_SILPH_CO_7F_ITEM_2            ; AD
-	const HS_SILPH_CO_7F_8                 ; AE XXX sprite doesn't exist
-	const HS_SILPH_CO_8F_1                 ; AF
-	const HS_SILPH_CO_8F_2                 ; B0
-	const HS_SILPH_CO_8F_3                 ; B1
-	const HS_SILPH_CO_9F_1                 ; B2
-	const HS_SILPH_CO_9F_2                 ; B3
-	const HS_SILPH_CO_9F_3                 ; B4
-	const HS_SILPH_CO_10F_1                ; B5
-	const HS_SILPH_CO_10F_2                ; B6
-	const HS_SILPH_CO_10F_3                ; B7 XXX never (de)activated?
-	const HS_SILPH_CO_10F_ITEM_1           ; B8
-	const HS_SILPH_CO_10F_ITEM_2           ; B9
-	const HS_SILPH_CO_10F_ITEM_3           ; BA
-	const HS_SILPH_CO_11F_1                ; BB
-	const HS_SILPH_CO_11F_JAMES            ; BC
-	const HS_SILPH_CO_11F_2                ; BD
-	const HS_SILPH_CO_11F_JESSIE           ; BE
-	const HS_UNUSED_MAP_F4_1               ; BF XXX sprite doesn't exist
-	const HS_POKEMON_MANSION_2F_ITEM       ; C0
+	const HS_MT_MOON_B2F_ROCKET_JERRY      ; 73
+	const HS_SS_ANNE_2F_RIVAL              ; 74
+	const HS_SS_ANNE_1F_ROOMS_ITEM         ; 75
+	const HS_SS_ANNE_2F_ROOMS_ITEM_1       ; 76
+	const HS_SS_ANNE_2F_ROOMS_ITEM_2       ; 77
+	const HS_SS_ANNE_B1F_ROOMS_ITEM_1      ; 78
+	const HS_SS_ANNE_B1F_ROOMS_ITEM_2      ; 79
+	const HS_SS_ANNE_B1F_ROOMS_ITEM_3      ; 7A
+	const HS_VICTORY_ROAD_3F_ITEM_1        ; 7B
+	const HS_VICTORY_ROAD_3F_ITEM_2        ; 7C
+	const HS_VICTORY_ROAD_3F_BOULDER       ; 7D
+	const HS_ROCKET_HIDEOUT_B1F_ITEM_1     ; 7E
+	const HS_ROCKET_HIDEOUT_B1F_ITEM_2     ; 7F
+	const HS_ROCKET_HIDEOUT_B2F_ITEM_1     ; 80
+	const HS_ROCKET_HIDEOUT_B2F_ITEM_2     ; 81
+	const HS_ROCKET_HIDEOUT_B2F_ITEM_3     ; 82
+	const HS_ROCKET_HIDEOUT_B2F_ITEM_4     ; 83
+	const HS_ROCKET_HIDEOUT_B3F_ITEM_1     ; 84
+	const HS_ROCKET_HIDEOUT_B3F_ITEM_2     ; 85
+	const HS_ROCKET_HIDEOUT_B4F_GIOVANNI   ; 86
+	const HS_ROCKET_HIDEOUT_B4F_JAMES      ; 87
+	const HS_ROCKET_HIDEOUT_B4F_JESSIE     ; 88
+	const HS_ROCKET_HIDEOUT_B4F_ITEM_1     ; 89
+	const HS_ROCKET_HIDEOUT_B4F_ITEM_2     ; 8A
+	const HS_ROCKET_HIDEOUT_B4F_ITEM_3     ; 8B
+	const HS_ROCKET_HIDEOUT_B4F_ITEM_4     ; 8C
+	const HS_ROCKET_HIDEOUT_B4F_ITEM_5     ; 8D
+	const HS_SILPH_CO_2F_1                 ; 8E XXX never (de)activated?
+	const HS_SILPH_CO_2F_2                 ; 8F
+	const HS_SILPH_CO_2F_3                 ; 90
+	const HS_SILPH_CO_2F_4                 ; 91
+	const HS_SILPH_CO_2F_5                 ; 92
+	const HS_SILPH_CO_3F_1                 ; 93
+	const HS_SILPH_CO_3F_2                 ; 94
+	const HS_SILPH_CO_3F_ITEM              ; 95
+	const HS_SILPH_CO_4F_1                 ; 96
+	const HS_SILPH_CO_4F_2                 ; 97
+	const HS_SILPH_CO_4F_3                 ; 98
+	const HS_SILPH_CO_4F_ITEM_1            ; 99
+	const HS_SILPH_CO_4F_ITEM_2            ; 9A
+	const HS_SILPH_CO_4F_ITEM_3            ; 9B
+	const HS_SILPH_CO_5F_1                 ; 9C
+	const HS_SILPH_CO_5F_2                 ; 9D
+	const HS_SILPH_CO_5F_3                 ; 9E
+	const HS_SILPH_CO_5F_4                 ; 9F
+	const HS_SILPH_CO_5F_ITEM_1            ; A0
+	const HS_SILPH_CO_5F_ITEM_2            ; A1
+	const HS_SILPH_CO_5F_ITEM_3            ; A2
+	const HS_SILPH_CO_6F_1                 ; A3
+	const HS_SILPH_CO_6F_2                 ; A4
+	const HS_SILPH_CO_6F_3                 ; A5
+	const HS_SILPH_CO_6F_ITEM_1            ; A6
+	const HS_SILPH_CO_6F_ITEM_2            ; A7
+	const HS_SILPH_CO_7F_1                 ; A8
+	const HS_SILPH_CO_7F_2                 ; A9
+	const HS_SILPH_CO_7F_3                 ; AA
+	const HS_SILPH_CO_7F_4                 ; AB
+	const HS_SILPH_CO_7F_RIVAL             ; AC
+	const HS_SILPH_CO_7F_ITEM_1            ; AD
+	const HS_SILPH_CO_7F_ITEM_2            ; AE
+	const HS_SILPH_CO_7F_8                 ; AF XXX sprite doesn't exist
+	const HS_SILPH_CO_8F_1                 ; B0
+	const HS_SILPH_CO_8F_2                 ; B1
+	const HS_SILPH_CO_8F_3                 ; B2
+	const HS_SILPH_CO_9F_1                 ; B3
+	const HS_SILPH_CO_9F_2                 ; B4
+	const HS_SILPH_CO_9F_3                 ; B5
+	const HS_SILPH_CO_10F_1                ; B6
+	const HS_SILPH_CO_10F_2                ; B7
+	const HS_SILPH_CO_10F_3                ; B8 XXX never (de)activated?
+	const HS_SILPH_CO_10F_ITEM_1           ; B9
+	const HS_SILPH_CO_10F_ITEM_2           ; BA
+	const HS_SILPH_CO_10F_ITEM_3           ; BB
+	const HS_SILPH_CO_11F_1                ; BC
+	const HS_SILPH_CO_11F_JAMES            ; BD
+	const HS_SILPH_CO_11F_2                ; BE
+	const HS_SILPH_CO_11F_JESSIE           ; BF
+	const HS_UNUSED_MAP_F4_1               ; C0 XXX sprite doesn't exist
+	const HS_POKEMON_MANSION_2F_ITEM       ; C1
 	const HS_POKEMON_MANSION_2F_OAK
 	const HS_POKEMON_MANSION_3F_ITEM_1     ; C1
 	const HS_POKEMON_MANSION_3F_ITEM_2     ; C2

@@ -2,6 +2,7 @@
 
 	db  90,  65,  65,  15,  40 ; 275 / 315
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
+	;    0,   0,   0,   0,   0 =   0 /   0
 
 	db WATER, PSYCHIC_TYPE ; type
 	db 190 ; catch rate

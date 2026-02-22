@@ -33,7 +33,7 @@ AddPartyMon::
 ; calculates all 5 stats of current mon and writes them to [de]
 CalcStats::
 	homecall _CalcStats
-    ret
+	ret
 
 ; calculates stat c of current mon
 ; c: stat to calc (HP=1,Atk=2,Def=3,Spd=4,Spc=5)
@@ -41,7 +41,7 @@ CalcStats::
 ; hl: base ptr to stat exp values ([hl + 2*c - 1] and [hl + 2*c])
 CalcStat::
 	homecall _CalcStat
-    ret
+	ret
 
 AddEnemyMonToPlayerParty::
 	homecall_sf _AddEnemyMonToPlayerParty

@@ -1,8 +1,8 @@
 	db DEX_GRAVELER ; pokedex id
 
-	db  55,  95, 115,  35,  45 ; 345 / 390
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 /   0
+	db  55,  95, 115,  35,  45  ;   345 /  390
+	;   hp  atk  def  spd  spc     Gen1 / Gen2
+	;    0,  e  0,   0,   0,   0 =    0 /    0
 
 	db ROCK, GROUND ; type
 	db 120 ; catch rate

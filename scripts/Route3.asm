@@ -27,7 +27,7 @@ Route3_TextPointers:
 	dw_const Route3SignText,          TEXT_ROUTE3_SIGN
 
 Route3TrainerHeaders:
-	def_trainers 2
+	def_trainers ROUTE_3_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route3TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_3_TRAINER_0, 2, Route3Youngster1BattleText, Route3Youngster1EndBattleText, Route3Youngster1AfterBattleText
 Route3TrainerHeader1:

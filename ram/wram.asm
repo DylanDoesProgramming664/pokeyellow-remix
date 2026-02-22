@@ -555,15 +555,9 @@ wSimulatedJoypadStatesEnd::
 
 NEXTU
 wBoostExpByExpAll::
-wUnusedCC5B:: db
+wUnusedTitleScreenFlag:: db
 
-	ds 53
-
-wCutTrees::
-; Check CutTreeLocations for the indexes
-	ds 3
-	; unused
-	ds 3
+	ds 59
 
 wNPCMovementDirections2:: ds 10
 ; used in Pallet Town scripted movement
@@ -1353,12 +1347,14 @@ wEnemyMoveNum:: db
 wEnemyMoveEffect:: db
 wEnemyMovePower:: db
 wEnemyMoveType:: db
+wEnemyMoveCategory:: db
 wEnemyMoveAccuracy:: db
 wEnemyMoveMaxPP:: db
 wPlayerMoveNum:: db
 wPlayerMoveEffect:: db
 wPlayerMovePower:: db
 wPlayerMoveType:: db
+wPlayerMoveCategory:: db
 wPlayerMoveAccuracy:: db
 wPlayerMoveMaxPP:: db
 
@@ -2556,8 +2552,11 @@ ENDU
 
 wTrainerHeaderPtr:: dw
 
+wCutTrees::
+	ds 4
+
 ; Used on the new status screen
-wDVCalcVar1:: 
+wDVCalcVar1::
 	ds 2
 
 wDVCalcVar2::
@@ -2640,5 +2639,5 @@ wBGPPalsBuffer:: ds NUM_ACTIVE_PALS * PALETTE_SIZE
 SECTION "Stack", WRAM0
 
 ; the stack grows downward
-	ds $eb - 1
+	ds $e5 - 1
 wStack:: db

@@ -1,8 +1,8 @@
 	db DEX_NIDOKING ; pokedex id
 
-	db  81, 102,  77,  85,  85 ; 440 / 525
+	db  81, 107,  77,  85,  85 ; 445 / 530
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +2, +14,  +1,  +3, +10 = +30 / +30
+	;   +2, +19,  +1,  +3, +10 = +35 / +35
 
 	db POISON, GROUND ; type
 	db 45 ; catch rate

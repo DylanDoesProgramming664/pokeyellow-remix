@@ -133,7 +133,7 @@ RocketHideoutB3F_TextPointers:
 	dw_const PickUpItemText,              TEXT_ROCKETHIDEOUTB3F_RARE_CANDY
 
 RocketHideout3TrainerHeaders:
-	def_trainers
+	def_trainers ROCKET_HIDEOUT_3_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 RocketHideout3TrainerHeader0:
 	trainer EVENT_BEAT_ROCKET_HIDEOUT_3_TRAINER_0, 2, RocketHideoutB3FRocket1BattleText, RocketHideoutB3FRocket1EndBattleText, RocketHideoutB3FRocket1AfterBattleText
 RocketHideout3TrainerHeader1:

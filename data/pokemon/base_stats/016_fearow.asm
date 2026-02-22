@@ -1,8 +1,9 @@
 	db DEX_FEAROW ; pokedex id
 
-	db  65,  95,  65, 108,  61 ; 394 / 455
+	db  75,  95,  75, 108,  71 ; 424 / 495
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,  +5,   0,  +8,   0 = +13 / +13
+	;  +10,  +5, +10,  +8, +10 = +43 / +53
+	; In Gen II+, Sp.ATK / Sp.DEF = 61 / 81
 
 	db NORMAL, FLYING ; type
 	db 90 ; catch rate

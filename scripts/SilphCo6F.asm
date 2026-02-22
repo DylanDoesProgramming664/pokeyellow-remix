@@ -54,7 +54,7 @@ SilphCo6F_TextPointers:
 	dw_const PickUpItemText,             TEXT_SILPHCO6F_X_ACCURACY
 
 SilphCo6TrainerHeaders:
-	def_trainers 6
+	def_trainers SILPH_CO_6F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SilphCo6TrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_6F_TRAINER_0, 2, SilphCo6FRocket1BattleText, SilphCo6Rocket1EndBattleText, SilphCo6Rocket1AfterBattleText
 SilphCo6TrainerHeader1:

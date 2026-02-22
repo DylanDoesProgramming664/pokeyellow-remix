@@ -9,8 +9,6 @@ Repo Changes:
 
 Gameplay Changes:
 - The Good Rod now has three encounter slots, the third slot going to LVL 19 Magikarps
-- Lt. Surge's LVL cap is now LVL 29
-- Erika's LVL cap is now LVL 36
 
 Overworld Changes:
 - Pinsir and Scyther are rare encounters in Viridian Forest because they're bugs
@@ -19,7 +17,7 @@ Overworld Changes:
 Trainer Changes:
 - Added the four unused trainers from Route 6 with reused text for now
 - Many trainers have been buffed to encourage smart play
-- Rival is buffed for the Nugget Bridge, SS Anne and Pokemon Tower fights
+- Rival is buffed for the Nugget Bridge, SS Anne and fights
 - Lt. Surge's Raichu is now LVL 34
 - Erika's Vileplume is now LVL 36
 
@@ -28,7 +26,9 @@ Shop Changes:
 - Pokeball prices are halved
 
 Move Changes:
-- RAGE is back to 60 base power for being so dumb in Gen 1
+- Rage is back to 60 base power for being so dumb in Gen 1
+- Lt. Surge's LVL cap is now LVL 29
+- Erika's LVL cap is now LVL 36
 
 Pokemon Changes:
 - Magikarp now has some TMs and HMs it can learn; The only three attacking moves it can learn are BIDE, COUNTER and SURF; The rest are all status moves because it's funny

@@ -1,8 +1,8 @@
 	db DEX_CHARMANDER ; pokedex id
 
-	db  40,  62,  43,  65,  65 ; 275 / 340
+	db  39,  60,  43,  66,  56 ; 274 / 330
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +1, +10,   0,   0, +15 = +26 / +31
+	;    0,  +8,   0,  +1,  +6 = +15 / +21
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate

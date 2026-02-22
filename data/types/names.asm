@@ -18,7 +18,7 @@ TypeNames:
 	dw .Dragon
 	dw .Dark
 	dw .Steel
-    dw .Fairy
+	dw .Fairy
 
 	assert_table_length NUM_TYPES
 

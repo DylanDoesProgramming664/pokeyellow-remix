@@ -33,7 +33,7 @@ ViridianForest_TextPointers:
 	dw_const ViridianForestLeavingSignText,     TEXT_VIRIDIANFOREST_LEAVING_SIGN
 
 ViridianForestTrainerHeaders:
-	def_trainers 2
+	def_trainers VIRIDIAN_FOREST_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 ViridianForestTrainerHeader0:
 	trainer EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_0, 4, ViridianForestYoungster2BattleText, ViridianForestYoungster2EndBattleText, ViridianForestYoungster2AfterBattleText
 ViridianForestTrainerHeader1:
@@ -73,6 +73,8 @@ ViridianForestCooltrainerFText:
 ViridianForestYoungster5Text:
 	text_asm
 	ld hl, ViridianForestTrainerHeader4
+	jr ViridianForestTalkToTrainer
+
 ViridianForestTalkToTrainer:
 	call TalkToTrainer
 	jp TextScriptEnd

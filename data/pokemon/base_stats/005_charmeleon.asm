@@ -1,8 +1,8 @@
 	db DEX_CHARMELEON ; pokedex id
 
-	db  58,  74,  58,  80,  80 ; 350 / 430
+	db  58,  77,  58,  80,  71 ; 344 / 430
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0, +10,   0,   0, +15 = +25 / +25
+	;    0, +13,   0,   0,  +6 = +19 / +25
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate

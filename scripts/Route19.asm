@@ -28,7 +28,7 @@ Route19_TextPointers:
 	dw_const Route19SignText,          TEXT_ROUTE19_SIGN
 
 Route19TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_19_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route19TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_19_TRAINER_0, 4, Route19CooltrainerM1BattleText, Route19CooltrainerM1EndBattleText, Route19CooltrainerM1AfterBattleText
 Route19TrainerHeader1:

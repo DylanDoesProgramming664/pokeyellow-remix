@@ -2,29 +2,33 @@ CutTreeLocations:
 ; first byte = The map the tree is on
 ; second byte = The Y coordinate of the block
 ; third byte = The X coordinate of the block
-	db VIRIDIAN_CITY, 2, 7
+	db VIRIDIAN_CITY, 3, 7
 	db VIRIDIAN_CITY, 11, 4
+	db ROUTE_2, 5, 2
 	db ROUTE_2, 11, 7
 	db ROUTE_2, 26, 6
 	db ROUTE_2, 30, 6
-	db ROUTE_2, 34, 6
+	db ROUTE_2, 33, 6
 	db PEWTER_CITY, 2, 13
 	db CERULEAN_CITY, 14, 9
 	db ROUTE_8, 5, 20
 	db ROUTE_8, 6, 14
-	db ROUTE_9, 4, 2
+	db ROUTE_9, 4, 3
 	db VERMILION_CITY, 9, 7
 	db ROUTE_10, 9, 4
 	db ROUTE_10, 10, 4
 	db ROUTE_10, 11, 4
 	db ROUTE_10, 12, 4
 	db CELADON_CITY, 10, 23
+	db CELADON_CITY, 16, 17
+	db CELADON_GYM, 3, 2
+	db CELADON_GYM, 2, 1
+	db CELADON_GYM, 2, 3
 	db ROUTE_13, 2, 17
 	db ROUTE_14, 16, 5
 	db ROUTE_14, 13, 2
 	db ROUTE_14, 21, 1
 	db ROUTE_16, 4, 17
-	db ROUTE_25, 1, 13
 	db $FF ; list terminator
 
 SetCutTreeFlags::

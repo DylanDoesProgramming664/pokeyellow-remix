@@ -101,7 +101,7 @@ PewterGym_TextPointers:
 	dw_const PewterGymRematchPostBattleText, TEXT_PEWTERGYM_REMATCH_POST_BATTLE
 
 PewterGymTrainerHeaders:
-	def_trainers 2
+	def_trainers PEWTER_GYM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 PewterGymTrainerHeader0:
 	trainer EVENT_BEAT_PEWTER_GYM_TRAINER_0, 5, PewterGymCooltrainerMBattleText, PewterGymCooltrainerMEndBattleText, PewterGymCooltrainerMAfterBattleText
 	db -1 ; end

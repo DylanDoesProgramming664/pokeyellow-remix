@@ -70,9 +70,9 @@ PokemonMansion2F_TextPointers:
 	dw_const PokemonMansion2F_MewText, 		TEXT_POKEMONMANSION2F_MEW
 
 Mansion2TrainerHeaders:
-	def_trainers
+	def_trainers POKEMONMANSION_2F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Mansion2TrainerHeader0:
-	trainer EVENT_BEAT_MANSION_2_TRAINER_0, 0, PokemonMansion2FSuperNerdBattleText, PokemonMansion2FSuperNerdEndBattleText, PokemonMansion2FSuperNerdAfterBattleText
+	trainer EVENT_BEAT_POKEMONMANSION_2F_TRAINER_0, 0, PokemonMansion2FSuperNerdBattleText, PokemonMansion2FSuperNerdEndBattleText, PokemonMansion2FSuperNerdAfterBattleText
 	db -1 ; end
 
 PokemonMansion2FSuperNerdText:
@@ -231,7 +231,7 @@ PokemonMansion2FOakPostBattleScript:
 	call DisplayTextID
 
 	call GBFadeOutToBlack
-	SetEvent EVENT_BEAT_POKEMONMANSION2F_OAK
+	SetEvent EVENT_BEAT_POKEMONMANSION_2F_OAK
 	ld a, HS_OAKS_LAB_OAK_1
 	ld [wMissableObjectIndex], a
 	predef ShowObject

@@ -1,8 +1,8 @@
 	db DEX_CHARIZARD ; pokedex id
 
-	db  78,  99,  78, 100, 100 ; 455 / 555
+	db  78, 102,  78, 101,  98 ; 457 / 555
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0, +15,   0,   0, +15 = +30 / +21
+	;    0, +18,   0,  +1, +13 = +32 / +21
 
 	db FIRE, DRAGON ; type
 	db 45 ; catch rate

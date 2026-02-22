@@ -23,7 +23,7 @@ SSAnneBow_TextPointers:
 	dw_const SSAnneBowSuperNerd2Text,   TEXT_SSANNEBOW_SUPER_NERD_2
 
 SSAnne5TrainerHeaders:
-	def_trainers 4
+	def_trainers SS_ANNE_5_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SSAnne5TrainerHeader0:
 	trainer EVENT_BEAT_SS_ANNE_5_TRAINER_0, 3, SSAnneBowSailor2BattleText, SSAnneBowSailor2EndBattleText, SSAnneBowSailor2AfterBattleText
 SSAnne5TrainerHeader1:

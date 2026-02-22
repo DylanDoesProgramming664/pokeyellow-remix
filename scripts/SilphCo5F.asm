@@ -86,7 +86,7 @@ SilphCo5F_TextPointers:
 	dw_const SilphCo5FPokemonReport3Text, TEXT_SILPHCO5F_POKEMON_REPORT3
 
 SilphCo5TrainerHeaders:
-	def_trainers 2
+	def_trainers SILPH_CO_5F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SilphCo5TrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_5F_TRAINER_0, 1, SilphCo5FRocket1BattleText, SilphCo5FRocket1EndBattleText, SilphCo5FRocket1AfterBattleText
 SilphCo5TrainerHeader1:

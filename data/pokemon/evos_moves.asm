@@ -259,7 +259,7 @@ ClefairyEvosMoves:
 
 SpearowEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 20, FEAROW
+	db EVOLVE_LEVEL, 28, FEAROW
 	db 0
 ; Learnset
 	db 7, LEER
@@ -451,7 +451,7 @@ CuboneEvosMoves:
 
 RhyhornEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 42, RHYDON
+	db EVOLVE_LEVEL, 35, RHYDON
 	db 0
 ; Learnset
 	db 10, TAIL_WHIP
@@ -495,11 +495,15 @@ MewEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 5, MIMIC
 	db 10, TRANSFORM
 	db 15, CONFUSION
 	db 20, MEGA_PUNCH
+	db 23, ICE_PUNCH
 	db 25, PSYBEAM
+	db 27, FIRE_PUNCH
 	db 30, METRONOME
+	db 33, THUNDERPUNCH
 	db 40, PSYCHIC_M
 	db 0
 
@@ -1085,8 +1089,8 @@ DragoniteEvosMoves:
 	db 20, DRAGON_RAGE
 	db 25, AGILITY
 	db 30, SLAM
-	db 55, WING_ATTACK
-	db 60, HYPER_BEAM
+	db 45, SKY_ATTACK
+	db 50, HYPER_BEAM
 	db 0
 
 MissingNo43EvosMoves:
@@ -1154,36 +1158,42 @@ MoltresEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 35, AGILITY
-	db 40, DRILL_PECK
-	db 45, FLAMETHROWER
-	db 51, FIRE_BLAST
-	db 55, SKY_ATTACK
-	db 60, FIRE_SPIN
+	db 15, WING_ATTACK
+	db 25, AGILITY
+	db 30, DRILL_PECK
+	db 35, FLAMETHROWER
+	db 41, FIRE_BLAST
+	db 45, SKY_ATTACK
+	db 50, FIRE_SPIN
+	db 54, HYPER_BEAM
 	db 0
 
 ArticunoEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 35, AGILITY
-	db 40, DRILL_PECK
-	db 45, ICE_BEAM
-	db 51, BLIZZARD
-	db 55, SKY_ATTACK
-	db 60, MIST
+	db 15, WING_ATTACK
+	db 25, AGILITY
+	db 30, DRILL_PECK
+	db 35, ICE_BEAM
+	db 41, BLIZZARD
+	db 45, SKY_ATTACK
+	db 50, MIST
+	db 54, HYPER_BEAM
 	db 0
 
 ZapdosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 35, AGILITY
-	db 40, DRILL_PECK
-	db 45, THUNDERBOLT
-	db 51, THUNDER
-	db 55, SKY_ATTACK
-	db 60, LIGHT_SCREEN
+	db 15, WING_ATTACK
+	db 25, AGILITY
+	db 30, DRILL_PECK
+	db 35, THUNDERBOLT
+	db 41, THUNDER
+	db 45, SKY_ATTACK
+	db 50, LIGHT_SCREEN
+	db 54, HYPER_BEAM
 	db 0
 
 DittoEvosMoves:
@@ -1327,7 +1337,7 @@ DratiniEvosMoves:
 
 DragonairEvosMoves:
 ; Evolutions
-	db EVOLVE_LEVEL, 50, DRAGONITE
+	db EVOLVE_LEVEL, 45, DRAGONITE
 	db 0
 ; Learnset
 	db 10, THUNDER_WAVE
@@ -1876,11 +1886,15 @@ MewtwoEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 63, BARRIER
-	db 66, PSYCHIC_M
-	db 70, RECOVER
-	db 75, MIST
-	db 81, AMNESIA
+	db 23, BARRIER
+	db 24, FIRE_PUNCH
+	db 27, THUNDERPUNCH
+	db 31, PSYCHIC_M
+	db 33, ICE_PUNCH
+	db 35, RECOVER
+	db 40, MIST
+	db 46, AMNESIA
+	db 50, SHADOW_CLAW
 	db 0
 
 SnorlaxEvosMoves:

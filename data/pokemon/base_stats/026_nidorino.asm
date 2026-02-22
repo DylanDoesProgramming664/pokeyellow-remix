@@ -1,8 +1,8 @@
 	db DEX_NIDORINO ; pokedex id
 
-	db  63,  76,  58,  68,  55 ; 320 / 375
+	db  63,  86,  58,  68,  65 ; 340 / 405
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +2,  +4,  +1,  +3,   0 = +10 / +10
+	;   +2, +14,  +1,  +3, +10 = +30 / +40
 
 	db POISON, POISON ; type
 	db 120 ; catch rate

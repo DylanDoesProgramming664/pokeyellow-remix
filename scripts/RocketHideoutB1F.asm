@@ -47,7 +47,7 @@ RocketHideoutB1F_TextPointers:
 	dw_const PickUpItemText,              TEXT_ROCKETHIDEOUTB1F_HYPER_POTION
 
 RocketHideout1TrainerHeaders:
-	def_trainers
+	def_trainers ROCKET_HIDEOUT_1_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 RocketHideout1TrainerHeader0:
 	trainer EVENT_BEAT_ROCKET_HIDEOUT_1_TRAINER_0, 3, RocketHideoutB1FRocket1BattleText, RocketHideoutB1FRocket1EndBattleText, RocketHideoutB1FRocket1AfterBattleText
 RocketHideout1TrainerHeader1:

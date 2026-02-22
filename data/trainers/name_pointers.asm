@@ -54,6 +54,7 @@ TrainerNamePointers:
 	dw wTrainerName
 	dw .JoyName
 	dw .JennyName
+    dw wTrainerName
 	assert_table_length NUM_TRAINERS
 
 .YoungsterName:     db "YOUNGSTER@"

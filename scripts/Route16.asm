@@ -77,7 +77,7 @@ Route16_TextPointers:
 	dw_const Route16SnorlaxReturnedToMountainsText, TEXT_ROUTE16_SNORLAX_RETURNED_TO_MOUNTAINS
 
 Route16TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_16_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route16TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_16_TRAINER_0, 3, Route16Biker1BattleText, Route16Biker1EndBattleText, Route16Biker1AfterBattleText
 Route16TrainerHeader1:

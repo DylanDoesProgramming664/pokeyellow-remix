@@ -136,7 +136,7 @@ BrunosRoom_TextPointers:
 	dw_const BrunosRoomBrunoDontRunAwayText, TEXT_BRUNOSROOM_BRUNO_DONT_RUN_AWAY
 
 BrunosRoomTrainerHeaders:
-	def_trainers
+	def_trainers BRUNOS_ROOM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 BrunosRoomTrainerHeader0:
 	trainer EVENT_BEAT_BRUNOS_ROOM_TRAINER_0, 0, BrunoBeforeBattleText, BrunoEndBattleText, BrunoAfterBattleText
 BrunosRoomTrainerHeader1:

@@ -1,8 +1,8 @@
 	db DEX_MANKEY ; pokedex id
 
-	db  40,  80,  35,  70,  45 ; 270 / 315
+	db  40,  85,  35,  80,  45 ; 285 / 330
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +10 = +10 / +10
+	;    0,  +5,   0, +10, +10 = +25 / +25
 
 	db FIGHTING, FIGHTING ; type
 	db 190 ; catch rate

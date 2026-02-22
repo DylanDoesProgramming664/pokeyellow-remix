@@ -1,8 +1,8 @@
 	db DEX_PRIMEAPE ; pokedex id
 
-	db  65, 105,  60,  95,  70 ; 395 / 465
+	db  65, 110,  60, 105,  80 ; 420 / 500
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +10 = +10 / +10
+	;    0,  +5,   0, +10, +20 = +35 / +45
 
 	db FIGHTING, FIGHTING ; type
 	db 75 ; catch rate

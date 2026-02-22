@@ -66,7 +66,7 @@ Route25_TextPointers:
 	dw_const Route25BillSignText,      TEXT_ROUTE25_BILL_SIGN
 
 Route25TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_25_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route25TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_25_TRAINER_0, 2, Route25Youngster1BattleText, Route25Youngster1EndBattleText, Route25Youngster1AfterBattleText
 Route25TrainerHeader1:

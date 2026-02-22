@@ -144,9 +144,9 @@ CreditsTextPointers:
 	dw CreditsText_Lake
 	dw CreditsText_Neslug
 	dw CreditsText_TomWang
-    dw CreditsText_Remix
-    dw CreditsText_DylanDoesProgramming664
-    dw CreditsText_Dylan
+	dw CreditsText_Remix
+	dw CreditsText_DylanDoesProgramming664
+	dw CreditsText_Dylan
 	assert_table_length NUM_CRED_STRINGS
 
 ; 

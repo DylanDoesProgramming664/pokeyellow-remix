@@ -30,7 +30,7 @@ SSAnne2FRooms_TextPointers:
 	dw_const SSAnne2FRoomsBeautyText,       TEXT_SSANNE2FROOMS_BEAUTY
 
 SSAnne9TrainerHeaders:
-	def_trainers
+	def_trainers SS_ANNE_9_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SSAnne9TrainerHeader0:
 	trainer EVENT_BEAT_SS_ANNE_9_TRAINER_0, 2, SSAnne2FRoomsGentleman1BattleText, SSAnne2FRoomsGentleman1EndBattleText, SSAnne2FRoomsGentleman1AfterBattleText
 SSAnne9TrainerHeader1:

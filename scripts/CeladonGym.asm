@@ -99,7 +99,7 @@ CeladonGym_TextPointers:
 	dw_const CeladonGymRematchPostBattleText,TEXT_CELADONGYM_REMATCH_POST_BATTLE
 
 CeladonGymTrainerHeaders:
-	def_trainers 2
+	def_trainers CELADON_GYM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 CeladonGymTrainerHeader0:
 	trainer EVENT_BEAT_CELADON_GYM_TRAINER_0, 2, CeladonGymBattleText2, CeladonGymEndBattleText2, CeladonGymAfterBattleText2
 CeladonGymTrainerHeader1:

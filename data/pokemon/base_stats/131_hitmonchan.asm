@@ -1,8 +1,9 @@
 	db DEX_HITMONCHAN ; pokedex id
 
-	db  55, 105,  79,  76,  75 ; 425 / 500
+	db  80, 105, 119,  76,  60 ; 440 / 500
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +40 = +40 / +45
+	;  +30,   0, +40,   0, +25 = +95 / +45
+	; In Gen 2, Sp.Atk / Sp.Def = 10 / 110
 
 	db FIGHTING, FIGHTING ; type
 	db 45 ; catch rate

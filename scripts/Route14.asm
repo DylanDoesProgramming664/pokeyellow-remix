@@ -28,7 +28,7 @@ Route14_TextPointers:
 	dw_const Route14SignText,          TEXT_ROUTE14_SIGN
 
 Route14TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_14_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route14TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_14_TRAINER_0, 2, Route14CooltrainerM1BattleText, Route14CooltrainerM1EndBattleText, Route14CooltrainerM1AfterBattleText
 Route14TrainerHeader1:

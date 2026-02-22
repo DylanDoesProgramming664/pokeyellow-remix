@@ -66,6 +66,13 @@ SpecialTrainerMoves:
 	db 2, 4, LEECH_SEED
 	db 0
 
+    db FISHER, 8
+    db 1, 1, SURF
+    db 1, 2, THUNDER_WAVE
+    db 1, 3, TOXIC
+    db 1, 4, REFLECT
+    db 0
+
 	db BROCK, 1
 	db 1, 3, ROCK_THROW
 	db 2, 1, CONSTRICT

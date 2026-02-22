@@ -1,10 +1,10 @@
 	db DEX_CLEFABLE ; pokedex id
 
-	db  95,  70,  75,  60,  95 ; 405 / 500
+	db 103,  70,  75,  60, 101 ; 409 / 510
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,  +2,   0, +10 = +12 / +17
+	;   +8,   0,  +2,   0, +16 = +26 / +37
 
-	db NORMAL, FAIRY ; type
+	db FAIRY, FAIRY ; type
 	db 25 ; catch rate
 	db 129 ; base exp
 

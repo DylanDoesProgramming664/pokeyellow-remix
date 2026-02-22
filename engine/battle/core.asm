@@ -3123,17 +3123,12 @@ PrintMenuItem:
 	ld a, [hl]
 	and $3f
 	ld [wcd6d], a
-; print TYPE/<type> and <curPP>/<maxPP>
-	hlcoord 1, 9
-	ld de, TypeText
-	call PlaceString
+; print <category>/<type> and <curPP>/<maxPP>
 	hlcoord 1, 11
 	ld a, "<BOLD_P>"
 	ld [hli], a
 	ld [hl], "<BOLD_P>"
 	hlcoord 7, 11
-	ld [hl], "/"
-	hlcoord 5, 9
 	ld [hl], "/"
 	hlcoord 5, 11
 	ld de, wcd6d
@@ -3143,6 +3138,9 @@ PrintMenuItem:
 	ld de, wMaxPP
 	lb bc, 1, 2
 	call PrintNumber
+	call GetCurrentMove
+	hlcoord 1, 9
+	predef PrintMoveCategory
 	call GetCurrentMove
 	hlcoord 2, 10
 	predef PrintMoveType
@@ -4362,14 +4360,14 @@ GetDamageVarsForPlayerAttack:
 	and a
 	ld d, a ; d = move power
 	ret z ; return if move power is zero
-	ld a, [hl] ; a = [wPlayerMoveType]
-	and ~TYPE_MASK
-	cp STATUS ; CATEGORY == STATUS
-	jr nc, .specialAttack
-    cp MIXED   ; CATEGORY == MIXED
-	jr nc, .setMixedAttackTrueCategory
+	inc hl
+	ld a, [hl] ; a = [wPlayerMoveCategory]
+	cp STATUS  ; CATEGORY == STATUS
+	jr z, .physicalAttack
+	cp MIXED   ; CATEGORY == MIXED
+	jr z, .setMixedAttackTrueCategory
 	cp SPECIAL ; CATEGORY == SPECIAL
-	jr nc, .specialAttack
+	jr z, .specialAttack
 .physicalAttack
 	ld hl, wEnemyMonDefense
 	ld a, [hli]
@@ -4406,7 +4404,7 @@ GetDamageVarsForPlayerAttack:
 	ld hl, wPartyMon1Attack
 	ld a, [hl]
 	cp c
-	jr nc, .physicalAttack ; if partyMon1.attack >= partyMon1.special then move is PHYSICAL
+	jr nc, .physicalAttack ; if partyMon1.ATK >= partyMon1.SPC then move is PHYSICAL
 .specialAttack
 	ld hl, wEnemyMonSpecial
 	ld a, [hli]
@@ -4487,13 +4485,13 @@ GetDamageVarsForEnemyAttack:
 	ld d, a ; d = move power
 	and a
 	ret z ; return if move power is zero
-	ld a, [hl] ; a = [wEnemyMoveType]
-	and ~TYPE_MASK
-	cp STATUS   ; CATEGORY == STATUS
+    inc hl
+	ld a, [hl] ; a = [wEnemyMoveCategory]
+	cp STATUS  ; CATEGORY == STATUS
 	jr z, .physicalAttack
-	cp MIXED    ; CATEGORY == MIXED
+	cp MIXED   ; CATEGORY == MIXED
 	jr z, .setMixedAttackTrueCategory
-	cp SPECIAL  ; CATEGORY == SPECIAL
+	cp SPECIAL ; CATEGORY == SPECIAL
 	jr z, .specialAttack
 .physicalAttack
 	ld hl, wBattleMonDefense
@@ -5441,7 +5439,6 @@ AdjustDamageForMoveType:
 	ld d, a    ; d = type 1 of defender
 	ld e, [hl] ; e = type 2 of defender
 	ld a, [wPlayerMoveType]
-	and TYPE_MASK
 	ld [wMoveType], a
 	ldh a, [hWhoseTurn]
 	and a
@@ -5456,22 +5453,19 @@ AdjustDamageForMoveType:
 	ld d, a    ; d = type 1 of defender
 	ld e, [hl] ; e = type 2 of defender
 	ld a, [wEnemyMoveType]
-	and TYPE_MASK
 	ld [wMoveType], a
 .nextEnemy
 	ld a, [wMoveType]
-	and TYPE_MASK
 	cp b ; does the move type match type 1 of the attacker?
 	jr z, .sameTypeAttackBonus
 	cp c ; does the move type match type 2 of the attacker?
 	jr z, .sameTypeAttackBonus
 	jr .skipSameTypeAttackBonus
 .nextPlayer
-	ld a, [wPlayerMoveEffect]
-    cp a, STRUGGLE_EFFECT ; does the move effect match Struggle?
-    jr z, .skipSameTypeAttackBonus ; Struggle doesn't get STAB
+	ld a, [wPlayerMoveNum]
+	cp STRUGGLE ; is the move Struggle?
+	jp z, .isStruggle ; Struggle doesn't get STAB
 	ld a, [wMoveType]
-	and TYPE_MASK
 	cp b ; does the move type match type 1 of the attacker?
 	jr z, .sameTypeAttackBonus
 	cp c ; does the move type match type 2 of the attacker?
@@ -5496,8 +5490,6 @@ AdjustDamageForMoveType:
 	ld hl, wDamageMultipliers
 	set 7, [hl]
 .skipSameTypeAttackBonus
-	cp a, STRUGGLE_EFFECT
-    jr z, .isStruggle
 	ld a, [wMoveType]
 	ld b, a
 	ld hl, TypeEffects
@@ -5533,7 +5525,7 @@ AdjustDamageForMoveType:
 	jr .gotMultiplier
 .isStruggle
 	ld a, EFFECTIVE
-    jr .gotMultiplier
+	jr .gotMultiplier
 .nothalf
 	cp SUPER_EFFECTIVE
 	jr nz, .gotMultiplier
@@ -5583,12 +5575,10 @@ AdjustDamageForMoveType:
 ; the result is stored in [wTypeEffectiveness]
 ; as far is can tell, this is only used once in some AI code to help decide which move to use
 AIGetTypeEffectiveness:
-	ld a, [wEnemyMoveType]
-	and ~TYPE_MASK
+	ld a, [wEnemyMoveCategory]
 	cp STATUS
 	jr z, .isNeutral
-    ld a, [wEnemyMoveType]
-    and TYPE_MASK
+	ld a, [wEnemyMoveType]
 	ld d, a                    ; d = type of enemy move
 	ld hl, wBattleMonType
 	ld b, [hl]                 ; b = type 1 of player's pokemon
@@ -5633,7 +5623,7 @@ AIGetTypeEffectiveness:
 .isNeutral
 	ld a, EFFECTIVE
 	ld [wTypeEffectiveness], a
-	ret
+	jr .done
 
 INCLUDE "data/types/type_matchups.asm"
 
@@ -5660,10 +5650,20 @@ MoveHitTest:
 .checkForDigOrFlyStatus
 	bit INVULNERABLE, [hl]
 	jp nz, .moveMissed
-.swiftCheck
-	ld a, [de]
-	cp SWIFT_EFFECT
-	ret z ; Swift never misses (this was fixed from the Japanese versions)
+.alwaysHitMoveCheck
+	ld hl, wPlayerMovePower
+	ld a, [hld]                  ; read base power from RAM
+	and a
+	ret z                        ; do nothing if zero
+	dec hl
+	ld c, [hl]                   ; read move id
+	ld hl, AlwaysHitMoves
+.Loop
+	ld a, [hli]                  ; read move from move table
+	cp c                         ; does it match the move about to be used?
+	ret z ; AlwaysHitMoves never misses (this was fixed from the Japanese versions)
+	inc a                        ; move on to the next move, FF terminates loop
+	jr nz, .Loop                 ; check the next move in HighCriticalMoves
 	call CheckTargetSubstitute ; substitute check (note that this overwrites a)
 	jr z, .noSubstitute
 	ld a, [de]
@@ -5758,6 +5758,8 @@ MoveHitTest:
 	ld hl, wPlayerBattleStatus1
 	res USING_TRAPPING_MOVE, [hl] ; end multi-turn attack e.g. wrap
 	ret
+
+INCLUDE "data/battle/always_hit_moves.asm"
 
 ; values for player turn
 CalcHitChance:
@@ -6532,20 +6534,10 @@ LoadEnemyMonData:
 	inc de
 	ld a, [hl]     ; base exp
 	ld [de], a
-	; Nickname code
-	ld a, [wCurOpponent]
-	cp OPP_CRAIG
-	jr nz, .loadSpeciesName
-	ld hl, .CraigMonsNicks
-	ld a, [wWhichPokemon]
-	call SkipFixedLengthTextEntries
-	jr .copyNick
-.loadSpeciesName
 	ld a, [wEnemyMonSpecies2]
 	ld [wd11e], a
 	call GetMonName
 	ld hl, wcd6d
-.copyNick
 	ld de, wEnemyMonNick
 	ld bc, NAME_LENGTH
 	call CopyData

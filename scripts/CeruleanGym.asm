@@ -92,7 +92,7 @@ CeruleanGym_TextPointers:
 	dw_const CeruleanGymRematchPostBattleText, 	   TEXT_CERULEANGYM_REMATCH_POST_BATTLE
 
 CeruleanGymTrainerHeaders:
-	def_trainers 2
+	def_trainers CERULEAN_GYM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 CeruleanGymTrainerHeader0:
 	trainer EVENT_BEAT_CERULEAN_GYM_TRAINER_0, 3, CeruleanGymBattleText1, CeruleanGymEndBattleText1, CeruleanGymAfterBattleText1
 CeruleanGymTrainerHeader1:

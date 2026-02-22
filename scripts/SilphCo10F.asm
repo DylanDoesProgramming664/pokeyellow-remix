@@ -50,7 +50,7 @@ SilphCo10F_TextPointers:
 	dw_const PickUpItemText,             TEXT_SILPHCO10F_CARBOS
 
 SilphCo10TrainerHeaders:
-	def_trainers
+	def_trainers SILPH_CO_10F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SilphCo10TrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_10F_TRAINER_0, 3, SilphCo10FRocketBattleText, SilphCo10FRocketEndBattleText, SilphCo10FRocketAfterBattleText
 SilphCo10TrainerHeader1:

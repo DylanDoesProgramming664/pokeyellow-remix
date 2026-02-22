@@ -23,13 +23,13 @@ PokemonTower4F_TextPointers:
 	dw_const PickUpItemText,               TEXT_POKEMONTOWER4F_HP_UP
 
 PokemonTower4TrainerHeaders:
-	def_trainers
+	def_trainers POKEMONTOWER4F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 PokemonTower4TrainerHeader0:
-	trainer EVENT_BEAT_POKEMONTOWER_4_TRAINER_0, 2, PokemonTower4FChanneler1BattleText, PokemonTower4FChanneler1EndBattleText, PokemonTower4FChanneler1AfterBattleText
+	trainer EVENT_BEAT_POKEMONTOWER4F_TRAINER_0, 2, PokemonTower4FChanneler1BattleText, PokemonTower4FChanneler1EndBattleText, PokemonTower4FChanneler1AfterBattleText
 PokemonTower4TrainerHeader1:
-	trainer EVENT_BEAT_POKEMONTOWER_4_TRAINER_1, 2, PokemonTower4FChanneler2BattleText, PokemonTower4FChanneler2EndBattleText, PokemonTower4FChanneler2AfterBattleText
+	trainer EVENT_BEAT_POKEMONTOWER4F_TRAINER_1, 2, PokemonTower4FChanneler2BattleText, PokemonTower4FChanneler2EndBattleText, PokemonTower4FChanneler2AfterBattleText
 PokemonTower4TrainerHeader2:
-	trainer EVENT_BEAT_POKEMONTOWER_4_TRAINER_2, 2, PokemonTower4FChanneler3BattleText, PokemonTower4FChanneler3EndBattleText, PokemonTower4FChanneler3AfterBattleText
+	trainer EVENT_BEAT_POKEMONTOWER4F_TRAINER_2, 2, PokemonTower4FChanneler3BattleText, PokemonTower4FChanneler3EndBattleText, PokemonTower4FChanneler3AfterBattleText
 	db -1 ; end
 
 PokemonTower4FChanneler1Text:

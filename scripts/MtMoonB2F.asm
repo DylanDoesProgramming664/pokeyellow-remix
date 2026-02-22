@@ -54,6 +54,13 @@ MtMoonB2FScript_HideJessieJames:
 	call MtMoonB2FScript_HideObject
 	ret
 
+MtMoonB2FClearScripts:
+	xor a ; SCRIPT_MTMOONB2F_DEFAULT
+	ld [wJoyIgnore], a
+	ld [wMtMoonB2FCurScript], a
+    ld [wCurMapScript], a
+    ret
+
 MtMoonB2F_ScriptPointers:
 	def_script_pointers
 	dw_const MtMoonB2FDefaultScript,                   SCRIPT_MTMOONB2F_DEFAULT
@@ -72,15 +79,43 @@ MtMoonB2F_ScriptPointers:
 	dw_const MtMoonB2FScript13,                        SCRIPT_MTMOONB2F_SCRIPT13
 	dw_const MtMoonB2FScript14,                        SCRIPT_MTMOONB2F_SCRIPT14
 	dw_const MtMoonB2FScript15,                        SCRIPT_MTMOONB2F_SCRIPT15
+	dw_const MtMoonB2FRocketDefeatedScript,            SCRIPT_MTMOONB2F_ROCKET_JERRY_DEFEATED
+
+MtMoonB2FRocketDefeatedScript:
+	ld a, [wIsInBattle]
+	cp $ff
+	jp z, MtMoonB2FClearScripts
+    call UpdateSprites
+	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld [wJoyIgnore], a
+	SetEvent EVENT_BEAT_MT_MOONB2F_ROCKET_JERRY
+	ld a, TEXT_MTMOONB2F_ROCKET_JERRY
+	ldh [hSpriteIndexOrTextID], a
+	call DisplayTextID
+	xor a ; SCRIPT_MTMOONB2F_DEFAULT
+	ld [wJoyIgnore], a
+	ld [wMtMoonB2FCurScript], a
+    ld [wCurMapScript], a
+    farcall MtMoonB2FHideRocketJerry
+	ret
 
 MtMoonB2FDefaultScript:
 IF DEF(_DEBUG)
 	call DebugPressedOrHeldB
 	ret nz
 ENDC
+	CheckEvent EVENT_BEAT_MT_MOONB2F_ROCKET_JERRY
+	jr nz, .skipRocketJerryEncounter
+	ld hl, MtMoonB2FCoords1
+	call ArePlayerCoordsInArray
+	jr nc, .skipRocketJerryEncounter
+	ld a, TEXT_MTMOONB2F_ROCKET_JERRY
+	ldh [hSpriteIndexOrTextID], a
+	jp DisplayTextID
+.skipRocketJerryEncounter
 	CheckEitherEventSet EVENT_GOT_DOME_FOSSIL, EVENT_GOT_HELIX_FOSSIL
 	call z, MtMoonB2FScript_49d28
-	CheckEvent EVENT_BEAT_MT_MOON_3_TRAINER_0
+	CheckEvent EVENT_BEAT_MT_MOONB2F_TRAINER_0
 	call z, MtMoonB2FScript_49e15
 	ret
 
@@ -122,16 +157,16 @@ MtMoonB2FMoveSuperNerdScript:
 	ld a, MTMOONB2F_SUPER_NERD
 	ldh [hSpriteIndex], a
 	call SetSpriteMovementBytesToFF
-	ld hl, CoordsData_49dc7
+	ld hl, MtMoonB2FCoords2
 	call ArePlayerCoordsInArray
 	jr c, .asm_49da8
-	ld hl, CoordsData_49dc0
+	ld hl, MtMoonB2FCoords3
 	call ArePlayerCoordsInArray
 	jr c, .asm_49db0
-	ld hl, CoordsData_49dd5
+	ld hl, MtMoonB2FCoords4
 	call ArePlayerCoordsInArray
 	jr c, .asm_49d9b
-	ld hl, CoordsData_49dce
+	ld hl, MtMoonB2FCoords5
 	call ArePlayerCoordsInArray
 	jr c, .asm_49da3
 	jp CheckFightingMapTrainers
@@ -158,14 +193,18 @@ MtMoonB2FMoveSuperNerdScript:
 	call MtMoonB2FSetScript
 	ret
 
-CoordsData_49dc0:
+MtMoonB2FCoords1:
+	dbmapcoord 12, 15
+	db -1 ; end
+
+MtMoonB2FCoords2:
+	dbmapcoord 12,  7
+	db -1 ; end
+
+MtMoonB2FCoords3:
 	dbmapcoord 12,  7
 	dbmapcoord 11,  6
 	dbmapcoord 12,  5
-	db -1 ; end
-
-CoordsData_49dc7:
-	dbmapcoord 12,  7
 	db -1 ; end
 
 PikachuMovementData_49dca:
@@ -174,14 +213,14 @@ PikachuMovementData_49dca:
 	db $33
 	db $3f
 
-CoordsData_49dce:
+MtMoonB2FCoords4:
+	dbmapcoord 13,  7
+	db -1 ; end
+
+MtMoonB2FCoords5:
 	dbmapcoord 13,  7
 	dbmapcoord 14,  6
 	dbmapcoord 14,  5
-	db -1 ; end
-
-CoordsData_49dd5:
-	dbmapcoord 13,  7
 	db -1 ; end
 
 PikachuMovementData_49dd8:
@@ -259,9 +298,9 @@ MtMoonB2FScript_49e15:
 	call MtMoonB2FSetScript
 	ret
 
-MovementData_f9e65:
+MtMoonB2FJessieMovementData:
 	db $06
-MovementData_f9e66:
+MtMoonB2FJamesMovementData:
 	db $06
 	db $06
 	db $06
@@ -278,7 +317,7 @@ MtMoonB2FScript6:
 	call Delay3
 	ld a, MTMOONB2F_JESSIE
 	ldh [hSpriteIndex], a
-	ld de, MovementData_f9e65
+	ld de, MtMoonB2FJessieMovementData
 	call MoveSprite
 	ld a, A_BUTTON | B_BUTTON | SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
@@ -300,7 +339,7 @@ MtMoonB2FScript8:
 MtMoonB2FScript9:
 	ld a, MTMOONB2F_JAMES
 	ldh [hSpriteIndex], a
-	ld de, MovementData_f9e66
+	ld de, MtMoonB2FJamesMovementData
 	call MoveSprite
 	ld a, A_BUTTON | B_BUTTON | SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
@@ -395,7 +434,7 @@ MtMoonB2FScript15:
 	xor a
 	ldh [hJoyHeld], a
 	ld [wJoyIgnore], a
-	SetEvent EVENT_BEAT_MT_MOON_3_TRAINER_0
+	SetEvent EVENT_BEAT_MT_MOONB2F_TRAINER_0
 	ResetEventReuseHL EVENT_57E
 	ld a, SCRIPT_MTMOONB2F_DEFAULT
 	call MtMoonB2FSetScript
@@ -420,7 +459,7 @@ MtMoonB2F_TextPointers:
 	dw_const MtMoonB2FRocket1Text,                  TEXT_MTMOONB2F_ROCKET1
 	dw_const MtMoonB2FRocket2Text,                  TEXT_MTMOONB2F_ROCKET2
 	dw_const MtMoonB2FRocket3Text,                  TEXT_MTMOONB2F_ROCKET3
-	dw_const MtMoonB2FRocket4Text,                  TEXT_MTMOONB2F_ROCKET4
+	dw_const MtMoonB2FRocketJerryText,              TEXT_MTMOONB2F_ROCKET_JERRY
 	dw_const MtMoonB2FJessieJamesText,              TEXT_MTMOONB2F_JAMES
 	dw_const MtMoonB2FDomeFossilText,               TEXT_MTMOONB2F_DOME_FOSSIL
 	dw_const MtMoonB2FHelixFossilText,              TEXT_MTMOONB2F_HELIX_FOSSIL
@@ -432,16 +471,52 @@ MtMoonB2F_TextPointers:
 	dw_const MtMoonB2FText14,                       TEXT_MTMOONB2F_TEXT14
 
 MtMoon3TrainerHeaders:
-	def_trainers 3
+	def_trainers MT_MOONB2F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 MtMoon3TrainerHeader0:
-	trainer EVENT_BEAT_MT_MOON_3_TRAINER_1, 4, MtMoonB2FRocket2BattleText, MtMoonB2FRocket2EndBattleText, MtMoonB2FRocket2AfterBattleText
+	trainer EVENT_BEAT_MT_MOONB2F_TRAINER_1, 4, MtMoonB2FRocket2BattleText, MtMoonB2FRocket2EndBattleText, MtMoonB2FRocket2AfterBattleText
 MtMoon3TrainerHeader1:
-	trainer EVENT_BEAT_MT_MOON_3_TRAINER_2, 4, MtMoonB2FRocket3BattleText, MtMoonB2FRocket3EndBattleText, MtMoonB2FRocket3AfterBattleText
+	trainer EVENT_BEAT_MT_MOONB2F_TRAINER_2, 4, MtMoonB2FRocket3BattleText, MtMoonB2FRocket3EndBattleText, MtMoonB2FRocket3AfterBattleText
 MtMoon3TrainerHeader2:
-	trainer EVENT_BEAT_MT_MOON_3_TRAINER_3, 4, MtMoonB2FRocket4BattleText, MtMoonB2FRocket4EndBattleText, MtMoonB2FRocket4AfterBattleText
-MtMoon3TrainerHeader3:
-	trainer EVENT_BEAT_MT_MOON_3_TRAINER_4, 4, MtMoonB2FRocket5BattleText, MtMoonB2FRocket5EndBattleText, MtMoonB2FRocket5AfterBattleText
+	trainer EVENT_BEAT_MT_MOONB2F_TRAINER_3, 4, MtMoonB2FRocket4BattleText, MtMoonB2FRocket4EndBattleText, MtMoonB2FRocket4AfterBattleText
 	db -1 ; end
+
+MtMoonB2FRocketJerryText:
+	text_asm
+	CheckEvent EVENT_BEAT_MT_MOONB2F_ROCKET_JERRY
+	jr nz, .beatRocketJerry
+	ld hl, .BattleText
+	call PrintText
+	ld hl, wd72d
+	set 6, [hl]
+	set 7, [hl]
+	ld hl, .EndBattleText
+	ld de, .EndBattleText
+	call SaveEndBattleTextPointers
+	ldh a, [hSpriteIndexOrTextID]
+	ld [wSpriteIndex], a
+	call EngageMapTrainer
+	call InitBattleEnemyParameters
+	xor a
+	ldh [hJoyHeld], a
+	ld a, SCRIPT_MTMOONB2F_ROCKET_JERRY_DEFEATED
+	call MtMoonB2FSetScript
+	jp TextScriptEnd
+.beatRocketJerry
+	ld hl, .AfterBattleText
+	call PrintText
+	jp TextScriptEnd
+
+.BattleText:
+	text_far _MtMoonB2FRocketJerryBattleText
+	text_end
+
+.EndBattleText:
+	text_far _MtMoonB2FRocketJerryEndBattleText
+	text_end
+
+.AfterBattleText:
+	text_far _MtMoonB2FRocketJerryAfterBattleText
+	text_end
 
 MtMoonB2FJessieJamesText:
 	text_end
@@ -522,11 +597,6 @@ MtMoonB2FRocket2Text:
 MtMoonB2FRocket3Text:
 	text_asm
 	ld hl, MtMoon3TrainerHeader2
-	jr MtMoonB2FTalkToTrainer
-
-MtMoonB2FRocket4Text:
-	text_asm
-	ld hl, MtMoon3TrainerHeader3
 MtMoonB2FTalkToTrainer:
 	call TalkToTrainer
 	jp TextScriptEnd
@@ -660,16 +730,4 @@ MtMoonB2FRocket4EndBattleText:
 
 MtMoonB2FRocket4AfterBattleText:
 	text_far _MtMoonB2FRocket4AfterBattleText
-	text_end
-
-MtMoonB2FRocket5BattleText:
-	text_far _MtMoonB2FRocket5BattleText
-	text_end
-
-MtMoonB2FRocket5EndBattleText:
-	text_far _MtMoonB2FRocket5EndBattleText
-	text_end
-
-MtMoonB2FRocket5AfterBattleText:
-	text_far _MtMoonB2FRocket5AfterBattleText
 	text_end

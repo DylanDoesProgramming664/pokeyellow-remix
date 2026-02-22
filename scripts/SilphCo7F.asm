@@ -268,7 +268,7 @@ SilphCo7F_TextPointers:
 	dw_const SilphCo7FRivalGoodLuckToYouText, TEXT_SILPHCO7F_RIVAL_GOOD_LUCK_TO_YOU
 
 SilphCo7TrainerHeaders:
-	def_trainers 5
+	def_trainers SILPH_CO_7F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SilphCo7TrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_7F_TRAINER_0, 2, SilphCo7FRocket1BattleText, SilphCo7FRocket1EndBattleText, SilphCo7FRocket1AfterBattleText
 SilphCo7TrainerHeader1:

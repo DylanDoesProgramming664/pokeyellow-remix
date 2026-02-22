@@ -1,10 +1,10 @@
 	db DEX_PINSIR ; pokedex id
 
-	db  65, 125, 100,  85,  70 ; 445 / 515
+	db  75, 125, 100,  85,  70 ; 455 / 525
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +15 = +15 / +15
+	;  +10,   0,   0,   0, +15 = +25 / +25
 
-	db BUG, BUG ; type
+	db BUG, NORMAL ; type
 	db 45 ; catch rate
 	db 200 ; base exp
 	; STAT_EXP_EFFICIENCY = (445 * 7) / 200 = 15.6

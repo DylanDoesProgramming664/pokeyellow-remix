@@ -1,12 +1,13 @@
 	db DEX_JIGGLYPUFF ; pokedex id
 
-	db 115,  45,  20,  20,  45 ; 245 / 290
+	db 115,  55,  30,  20,  45 ; 265 / 310
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +20 = +20 / +20
+	;    0, +10, +10,   0, +20 = +40 / +40
 
 	db NORMAL, FAIRY ; type
 	db 170 ; catch rate
 	db 76 ; base exp
+	; STAT_EXP_EFFICIENCY = (245 * 7) /  76 = 22.6
 
 	INCBIN "gfx/pokemon/front/jigglypuff.pic", 0, 1 ; sprite dimensions
 	dw JigglypuffPicFront, JigglypuffPicBack

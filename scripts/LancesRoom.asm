@@ -146,7 +146,7 @@ LancesRoom_TextPointers:
 	dw_const LancesRoomLanceRematchText, TEXT_LANCESROOM_LANCE_REMATCH
 
 LancesRoomTrainerHeaders:
-	def_trainers
+	def_trainers LANCES_ROOM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 LancesRoomTrainerHeader0:
 	trainer EVENT_BEAT_LANCES_ROOM_TRAINER_0, 0, LancesRoomLanceBeforeBattleText, LancesRoomLanceEndBattleText, LancesRoomLanceAfterBattleText
 LancesRoomTrainerHeader1:

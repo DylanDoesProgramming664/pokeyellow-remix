@@ -21,13 +21,13 @@ PokemonTower3F_TextPointers:
 	dw_const PickUpItemText,               TEXT_POKEMONTOWER3F_ESCAPE_ROPE
 
 PokemonTower3TrainerHeaders:
-	def_trainers
+	def_trainers POKEMONTOWER3F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 PokemonTower3TrainerHeader0:
-	trainer EVENT_BEAT_POKEMONTOWER_3_TRAINER_0, 2, PokemonTower3FChanneler1BattleText, PokemonTower3FChanneler1EndBattleText, PokemonTower3FChanneler1AfterBattleText
+	trainer EVENT_BEAT_POKEMONTOWER3F_TRAINER_0, 2, PokemonTower3FChanneler1BattleText, PokemonTower3FChanneler1EndBattleText, PokemonTower3FChanneler1AfterBattleText
 PokemonTower3TrainerHeader1:
-	trainer EVENT_BEAT_POKEMONTOWER_3_TRAINER_1, 3, PokemonTower3FChanneler2BattleText, PokemonTower3FChanneler2EndBattleText, PokemonTower3FChanneler2AfterBattleText
+	trainer EVENT_BEAT_POKEMONTOWER3F_TRAINER_1, 3, PokemonTower3FChanneler2BattleText, PokemonTower3FChanneler2EndBattleText, PokemonTower3FChanneler2AfterBattleText
 PokemonTower3TrainerHeader2:
-	trainer EVENT_BEAT_POKEMONTOWER_3_TRAINER_2, 2, PokemonTower3FChanneler3BattleText, PokemonTower3FChanneler3EndBattleText, PokemonTower3FChanneler3AfterBattleText
+	trainer EVENT_BEAT_POKEMONTOWER3F_TRAINER_2, 2, PokemonTower3FChanneler3BattleText, PokemonTower3FChanneler3EndBattleText, PokemonTower3FChanneler3AfterBattleText
 	db -1 ; end
 
 PokemonTower3FChanneler1Text:

@@ -18,6 +18,7 @@ ViridianCity_ScriptPointers:
 	dw_const ViridianCityOldManEndInitialCatchTrainingScript, SCRIPT_VIRIDIANCITY_OLD_MAN_END_INITIAL_CATCH_TRAINING
 	dw_const ViridianCityPostInitialCatchTraining,            SCRIPT_VIRIDIANCITY_POST_INITIAL_CATCH_TRAINING
 	dw_const ViridianCityOldManMovingDownScript,              SCRIPT_VIRIDIANCITY_OLD_MAN_MOVING_DOWN
+	; hidden_item VIRIDIAN_CITY,                 14,   4
 
 ViridianCityDefaultScript:
 	call ViridianCityCheckGymOpenScript
@@ -265,6 +266,7 @@ ViridianCity_TextPointers:
 	dw_const ViridianCityFisherText,                         TEXT_VIRIDIANCITY_FISHER
 	dw_const ViridianCityOldManText,                         TEXT_VIRIDIANCITY_OLD_MAN
 	dw_const ViridianCityOldMan2Text,                        TEXT_VIRIDIANCITY_OLD_MAN2
+	dw_const PickUpItemText,                                 TEXT_VIRIDIANCITY_POTION
 	dw_const ViridianCitySignText,                           TEXT_VIRIDIANCITY_SIGN
 	dw_const ViridianCityTrainerTips1Text,                   TEXT_VIRIDIANCITY_TRAINER_TIPS1
 	dw_const ViridianCityTrainerTips2Text,                   TEXT_VIRIDIANCITY_TRAINER_TIPS2

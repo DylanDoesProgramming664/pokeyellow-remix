@@ -25,7 +25,7 @@ RockTunnel1F_TextPointers:
 	dw_const RockTunnel1FSignText,          TEXT_ROCKTUNNEL1F_SIGN
 
 RockTunnel1TrainerHeaders:
-	def_trainers
+	def_trainers ROCK_TUNNEL_1_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 RockTunnel1TrainerHeader0:
 	trainer EVENT_BEAT_ROCK_TUNNEL_1_TRAINER_0, 4, RockTunnel1FHiker1BattleText, RockTunnel1FHiker1EndBattleText, RockTunnel1FHiker1AfterBattleText
 RockTunnel1TrainerHeader1:

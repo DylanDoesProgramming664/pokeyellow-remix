@@ -305,7 +305,7 @@ RocketHideoutB4F_TextPointers:
 	dw_const RocketHideoutB4FText13,                      TEXT_ROCKETHIDEOUTB4F_TEXT13
 
 RocketHideout4TrainerHeaders:
-	def_trainers 4
+	def_trainers ROCKET_HIDEOUT_4_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 RocketHideout4TrainerHeader0:
 	trainer EVENT_BEAT_ROCKET_HIDEOUT_4_TRAINER_2, 1, RocketHideoutB4FRocketBattleText, RocketHideoutB4FRocketEndBattleText, RocketHideoutB4FRocketAfterBattleText
 	db -1 ; end

@@ -1,8 +1,12 @@
 	db DEX_HITMONLEE ; pokedex id
 
-	db  66, 120,  71,  93,  75 ; 420 / 500
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;  +16,   0, +18,  +6, +40 = +80 / +45
+	db  80, 120,  53, 127,  60  ;  440 /  500
+	;   hp  atk  def  spd  spc    Gen1 / Gen2
+	;  +30,   0,   0, +40, +25  =  +95 /  +45
+	; In Gen 2, Sp.Atk / Sp.Def =  10  /  110
+
+	;   80, 112,  86, 102,  10, 110 ; HITMONTOP = 500
+	;   40,  56,  43,  51,   5,  55 ; TYROGUE   = 250
 
 	db FIGHTING, FIGHTING ; type
 	db 45 ; catch rate

@@ -98,7 +98,7 @@ FuchsiaGym_TextPointers:
 	dw_const FuchsiaGymRematchPostBattleText, TEXT_FUCHSIAGYM_REMATCH_POST_BATTLE
 
 FuchsiaGymTrainerHeaders:
-	def_trainers 2
+	def_trainers FUCHSIA_GYM_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 FuchsiaGymTrainerHeader0:
 	trainer EVENT_BEAT_FUCHSIA_GYM_TRAINER_0, 2, FuchsiaGymRocker1BattleText, FuchsiaGymRocker1EndBattleText, FuchsiaGymRocker1AfterBattleText
 FuchsiaGymTrainerHeader1:

@@ -1,8 +1,8 @@
 	db DEX_PARAS ; pokedex id
 
-	db  35,  70,  55,  25,  55 ; 230 / 295
+	db  75,  70,  55,  25,  55 ; 280 / 335
 	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +10
+	;  +40,   0,   0,   0,   0 = +40 / +50
 
 	db BUG, GRASS ; type
 	db 190 ; catch rate

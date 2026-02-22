@@ -69,9 +69,9 @@ PokemonMansion1F_TextPointers:
 	dw_const PokemonMansion1FSwitchText,    TEXT_POKEMONMANSION1F_SWITCH
 
 Mansion1TrainerHeaders:
-	def_trainers
+	def_trainers POKEMONMANSION_1F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Mansion1TrainerHeader0:
-	trainer EVENT_BEAT_MANSION_1_TRAINER_0, 3, PokemonMansion1FScientistBattleText, PokemonMansion1FScientistEndBattleText, PokemonMansion1FScientistAfterBattleText
+	trainer EVENT_BEAT_POKEMONMANSION_1F_TRAINER_0, 3, PokemonMansion1FScientistBattleText, PokemonMansion1FScientistEndBattleText, PokemonMansion1FScientistAfterBattleText
 	db -1 ; end
 
 PokemonMansion1FScientistText:

@@ -93,11 +93,11 @@ PokemonMansion3F_TextPointers:
 	dw_const PokemonMansion2FSwitchText,    TEXT_POKEMONMANSION3F_SWITCH ; This switch uses the text script from the 2F.
 
 Mansion3TrainerHeaders:
-	def_trainers
+	def_trainers POKEMONMANSION_3F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Mansion3TrainerHeader0:
-	trainer EVENT_BEAT_MANSION_3_TRAINER_0, 0, PokemonMansion3FSuperNerdBattleText, PokemonMansion3FSuperNerdEndBattleText, PokemonMansion3FSuperNerdAfterBattleText
+	trainer EVENT_BEAT_POKEMONMANSION_3F_TRAINER_0, 0, PokemonMansion3FSuperNerdBattleText, PokemonMansion3FSuperNerdEndBattleText, PokemonMansion3FSuperNerdAfterBattleText
 Mansion3TrainerHeader1:
-	trainer EVENT_BEAT_MANSION_3_TRAINER_1, 2, PokemonMansion3FScientistBattleText, PokemonMansion3FScientistEndBattleText, PokemonMansion3FScientistAfterBattleText
+	trainer EVENT_BEAT_POKEMONMANSION_3F_TRAINER_1, 2, PokemonMansion3FScientistBattleText, PokemonMansion3FScientistEndBattleText, PokemonMansion3FScientistAfterBattleText
 	db -1 ; end
 
 PokemonMansion3FSuperNerdText:

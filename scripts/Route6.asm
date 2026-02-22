@@ -28,7 +28,7 @@ Route6_TextPointers:
 	dw_const Route6UndergroundPathSignText, TEXT_ROUTE6_UNDERGROUND_PATH_SIGN
 
 Route6TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_6_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route6TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_6_TRAINER_0, 0, Route6CooltrainerM1BattleText, Route6CooltrainerM1EndBattleText, Route6CooltrainerM1AfterBattleText
 Route6TrainerHeader1:
@@ -44,7 +44,7 @@ Route6TrainerHeader5:
 Route6TrainerHeader6:
 	trainer EVENT_BEAT_ROUTE_6_TRAINER_6, 3, Route6Youngster3BattleText, Route6Youngster3EndBattleText, Route6Youngster3AfterBattleText
 Route6TrainerHeader7:
-	trainer EVENT_BEAT_ROUTE_6_TRAINER_7, 3, Route6CooltrainerM3BattleText, Route6CooltrainerM3EndBattleText, Route6CooltrainerM3AfterBattleText
+	trainer EVENT_BEAT_ROUTE_6_TRAINER_7, 4, Route6CooltrainerM3BattleText, Route6CooltrainerM3EndBattleText, Route6CooltrainerM3AfterBattleText
 Route6TrainerHeader8:
 	trainer EVENT_BEAT_ROUTE_6_TRAINER_8, 0, Route6CooltrainerM4BattleText, Route6CooltrainerM4EndBattleText, Route6CooltrainerM4AfterBattleText
 Route6TrainerHeader9:

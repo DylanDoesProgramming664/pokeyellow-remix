@@ -29,7 +29,7 @@ Route15_TextPointers:
 	dw_const Route15SignText,          TEXT_ROUTE15_SIGN
 
 Route15TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_15_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route15TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_15_TRAINER_0, 2, Route15CooltrainerF1BattleText, Route15CooltrainerF1EndBattleText, Route15CooltrainerF1AfterBattleText
 Route15TrainerHeader1:

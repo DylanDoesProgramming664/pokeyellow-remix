@@ -40,7 +40,7 @@ HealParty:
 	ld de, wcd6d
 	ld a, BANK(Moves)
 	call FarCopyData
-	ld a, [wcd6d + 5] ; PP is byte 5 of move data
+	ld a, [wcd6d + 6] ; PP is byte 6 of move data
 
 	pop bc
 	pop de

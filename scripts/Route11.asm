@@ -25,10 +25,12 @@ Route11_TextPointers:
 	dw_const Route11Youngster3Text,       TEXT_ROUTE11_YOUNGSTER3
 	dw_const Route11SuperNerd2Text,       TEXT_ROUTE11_SUPER_NERD2
 	dw_const Route11Youngster4Text,       TEXT_ROUTE11_YOUNGSTER4
+	dw_const Route11Youngster5Text,       TEXT_ROUTE11_YOUNGSTER5
+	dw_const Route11SuperNerd3Text,       TEXT_ROUTE11_SUPER_NERD3
 	dw_const Route11DiglettsCaveSignText, TEXT_ROUTE11_DIGLETTSCAVE_SIGN
 
 Route11TrainerHeaders:
-	def_trainers
+	def_trainers ROUTE_11_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 Route11TrainerHeader0:
 	trainer EVENT_BEAT_ROUTE_11_TRAINER_0, 3, Route11Gambler1BattleText, Route11Gambler1EndBattleText, Route11Gambler1AfterBattleText
 Route11TrainerHeader1:
@@ -49,6 +51,10 @@ Route11TrainerHeader8:
 	trainer EVENT_BEAT_ROUTE_11_TRAINER_8, 3, Route11SuperNerd2BattleText, Route11SuperNerd2EndBattleText, Route11SuperNerd2AfterBattleText
 Route11TrainerHeader9:
 	trainer EVENT_BEAT_ROUTE_11_TRAINER_9, 4, Route11Youngster4BattleText, Route11Youngster4EndBattleText, Route11Youngster4AfterBattleText
+Route11TrainerHeader10:
+	trainer EVENT_BEAT_ROUTE_11_TRAINER_10, 0, Route11Youngster5BattleText, Route11Youngster5EndBattleText, Route11Youngster5AfterBattleText
+Route11TrainerHeader11:
+	trainer EVENT_BEAT_ROUTE_11_TRAINER_11, 0, Route11SuperNerd2BattleText, Route11SuperNerd2EndBattleText, Route11SuperNerd2AfterBattleText
 	db -1 ; end
 
 Route11Gambler1Text:
@@ -229,6 +235,42 @@ Route11Youngster4EndBattleText:
 
 Route11Youngster4AfterBattleText:
 	text_far _Route11Youngster4AfterBattleText
+	text_end
+
+Route11Youngster5Text:
+	text_asm
+	ld hl, Route11TrainerHeader10
+	call TalkToTrainer
+	jp TextScriptEnd
+
+Route11Youngster5BattleText:
+	text_far _Route11Youngster4BattleText
+	text_end
+
+Route11Youngster5EndBattleText:
+	text_far _Route11Youngster4EndBattleText
+	text_end
+
+Route11Youngster5AfterBattleText:
+	text_far _Route11Youngster4AfterBattleText
+	text_end
+
+Route11SuperNerd3Text:
+	text_asm
+	ld hl, Route11TrainerHeader11
+	call TalkToTrainer
+	jp TextScriptEnd
+
+Route11SuperNerd3BattleText:
+	text_far _Route11SuperNerd2BattleText
+	text_end
+
+Route11SuperNerd3EndBattleText:
+	text_far _Route11SuperNerd2EndBattleText
+	text_end
+
+Route11SuperNerd3AfterBattleText:
+	text_far _Route11SuperNerd2AfterBattleText
 	text_end
 
 Route11DiglettsCaveSignText:

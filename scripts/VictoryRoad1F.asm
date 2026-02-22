@@ -59,7 +59,7 @@ VictoryRoad1F_TextPointers:
 	dw_const BoulderText,                   TEXT_VICTORYROAD1F_BOULDER3
 
 VictoryRoad1TrainerHeaders:
-	def_trainers
+	def_trainers VICTORY_ROAD_1_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 VictoryRoad1TrainerHeader0:
 	trainer EVENT_BEAT_VICTORY_ROAD_1_TRAINER_0, 2, VictoryRoad1FCooltrainerFBattleText, VictoryRoad1FCooltrainerFEndBattleText, VictoryRoad1FCooltrainerFAfterBattleText
 VictoryRoad1TrainerHeader1:

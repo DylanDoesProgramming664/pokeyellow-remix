@@ -132,7 +132,7 @@ SilphCo9F_TextPointers:
 	dw_const SilphCo9FRocket2Text,   TEXT_SILPHCO9F_ROCKET2
 
 SilphCo9TrainerHeaders:
-	def_trainers 2
+	def_trainers SILPH_CO_9F_TRAINER_EVENT_OFFSET ; replaced by def_trainers_sub.py
 SilphCo9TrainerHeader0:
 	trainer EVENT_BEAT_SILPH_CO_9F_TRAINER_0, 4, SilphCo9FRocket1BattleText, SilphCo9FRocket1EndBattleText, SilphCo9FRocket1AfterBattleText
 SilphCo9TrainerHeader1:
