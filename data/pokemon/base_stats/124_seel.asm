@@ -1,8 +1,8 @@
 	db DEX_SEEL ; pokedex id
 
-	db  65,  45,  55,  45,  70 ; 280 / 350
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +25
+	db  65,  45,  55,  45,  70 ; 280/ 350
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +25
 
 	db WATER, WATER ; type
 	db 190 ; catch rate
@@ -15,7 +15,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
+	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
 	     BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     PAY_DAY,      \
 	     RAGE,         MIMIC,        DOUBLE_TEAM,  BIDE,         SKULL_BASH,   \
 	     REST,         SUBSTITUTE,   SURF,         STRENGTH

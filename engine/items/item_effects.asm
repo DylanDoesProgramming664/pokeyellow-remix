@@ -302,7 +302,7 @@ ItemUseBall:
 	jr z, .ailmentMultiplierFound
 	ld b, 3
 	ld c, 2
-	and (1 << FRZ) | SLP_MASK
+	and SLP_MASK
 	jr z, .ailmentMultiplierFound
 	ld b, 2
 	ld c, 1
@@ -393,13 +393,13 @@ ItemUseBall:
 	call Divide
 
 ; Determine Status2.
-; no status ailment:     Status2 = 0
-; Burn/Paralysis/Poison: Status2 = 5
-; Freeze/Sleep:          Status2 = 10
+; no status ailment:            Status2 = 0
+; Burn/Paralysis/Poison/Freeze: Status2 = 5
+; Sleep:                        Status2 = 10
 	ld a, [wEnemyMonStatus]
 	and a
 	jr z, .skip5
-	and (1 << FRZ) | SLP_MASK
+	and SLP_MASK
 	ld b, 5
 	jr z, .addAilmentValue
 	ld b, 10
@@ -1422,8 +1422,6 @@ ItemUseMedicine:
 	ld a, 10
 	ld b, a
 	ld a, [hl] ; a = MSB of stat experience of the appropriate stat
-	cp 100 ; is there already at least 25600 (256 * 100) stat experience?
-	jr nc, .vitaminNoEffect ; if so, vitamins can't add any more
 	add b ; add 2560 (256 * 10) stat experience
 	jr nc, .noCarry3 ; a carry should be impossible here, so this will always jump
 	ld a, 255
@@ -3326,6 +3324,7 @@ CompareDEHL:
 	ld a, l
 	sub e
 	ret ; if carry, DE is greater, if no carry, HL is greater, if z, they're equal
+
 BallMultipliers:
 ; 	db ITEM_ID, Numerator, Denominator
 	db POKE_BALL   , 1, 1	; x1

@@ -1,13 +1,15 @@
 	db DEX_IVYSAUR ; pokedex id
 
-	db  63,  64,  65,  63,  85 ; 340 / 425
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +2,  +3,  +3,  +2,  +5 = +15 / +20
+	db  60,  66,  69,  60,  90 ; 345/ 435
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,  +4,  +6,   0, +10 = +20/ +30
+	; BAYLEEF =  70,  62,  90,  60,  63,  90 -> 435
+	;            hp  atk  def  spd  sat  sde
+	;           +10,   0, +10,   0,   0, +10 =  +30
 
 	db GRASS, POISON ; type
 	db 45 ; catch rate
 	db 141 ; base exp
-	; STAT_EXP_EFFICIENCY = (340 * 7) / 141 = 16.9
 
 	INCBIN "gfx/pokemon/front/ivysaur.pic", 0, 1 ; sprite dimensions
 	dw IvysaurPicFront, IvysaurPicBack

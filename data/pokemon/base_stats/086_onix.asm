@@ -1,8 +1,10 @@
 	db DEX_ONIX ; pokedex id
 
-	db  75,  80, 160,  85,  65 ; 465 / 530
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;  +40, +35,   0, +15, +35 =+125 /+145
+	db  75,  80, 160,  85,  65 ; 465/ 530
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +40, +35,   0, +15, +35 =+125/+145
+	; STEELIX = 115, 120, 200,  65,  30,  65 -> 595
+	;            hp  atk  def  spd  sat  sdf
 
 	db ROCK, ROCK ; type
 	db 45 ; catch rate
@@ -16,9 +18,9 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         \
-	     EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,         SELFDESTRUCT, SKULL_BASH,   REST,         EXPLOSION,    \
-	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
+	     EARTHQUAKE,   BULLDOZE,     DIG,          MIMIC,        DOUBLE_TEAM,  \
+	     BIDE,         SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   \
+	     STRENGTH,     STONE_EDGE
 	; end
 
 	db 0 ; padding

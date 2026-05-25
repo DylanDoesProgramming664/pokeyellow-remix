@@ -1,13 +1,13 @@
 	db DEX_MANKEY ; pokedex id
 
-	db  40,  85,  35,  80,  45 ; 285 / 330
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,  +5,   0, +10, +10 = +25 / +25
+	db  40,  90,  35, 105,  40 ; 310/ 350
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +10,   0, +35,  +5 = +50/ +45
+    ; sat/sde = 35/45
 
 	db FIGHTING, FIGHTING ; type
 	db 190 ; catch rate
 	db 74 ; base exp
-	; STAT_EXP_EFFICIENCY = (270 * 7) /  74 = 25.5
 
 	INCBIN "gfx/pokemon/front/mankey.pic", 0, 1 ; sprite dimensions
 	dw MankeyPicFront, MankeyPicBack
@@ -20,7 +20,8 @@
 	     DOUBLE_EDGE,  PAY_DAY,      SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     RAGE,         THUNDERBOLT,  THUNDER,      DIG,          MIMIC,        \
 	     DOUBLE_TEAM,  BIDE,         METRONOME,    SWIFT,        SKULL_BASH,   \
-	     REST,         ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
+	     REST,         SHADOW_CLAW,  ROCK_SLIDE,   SUBSTITUTE,   STRENGTH,     \
+	     BULLDOZE,     EARTHQUAKE
 	; end
 
 	db 0 ; padding

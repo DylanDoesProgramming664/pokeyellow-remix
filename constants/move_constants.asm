@@ -17,7 +17,7 @@
 	const THUNDERPUNCH ; 09
 	const SCRATCH      ; 0a
 	const VICEGRIP     ; 0b
-	const GUILLOTINE   ; 0c
+	const SHOCK_WAVE   ; 0c
 	const RAZOR_WIND   ; 0d
 	const SWORDS_DANCE ; 0e
 	const CUT          ; 0f
@@ -37,7 +37,7 @@
 	const HEADBUTT     ; 1d
 	const HORN_ATTACK  ; 1e
 	const FURY_ATTACK  ; 1f
-	const HORN_DRILL   ; 20
+	const STONE_EDGE   ; 20
 	const TACKLE       ; 21
 	const BODY_SLAM    ; 22
 	const WRAP         ; 23
@@ -95,7 +95,7 @@
 	const THUNDER      ; 57
 	const ROCK_THROW   ; 58
 	const EARTHQUAKE   ; 59
-	const FISSURE      ; 5a
+	const BULLDOZE     ; 5a
 	const DIG          ; 5b
 	const TOXIC        ; 5c
 	const CONFUSION    ; 5d
@@ -125,7 +125,7 @@
 	const BIDE         ; 75
 	const METRONOME    ; 76
 	const MIRROR_MOVE  ; 77
-	const SELFDESTRUCT ; 78
+	const FLASH_CANNON ; 78
 	const EGG_BOMB     ; 79
 	const LICK         ; 7a
 	const SMOG         ; 7b
@@ -158,7 +158,7 @@
 	const SPLASH       ; 96
 	const ACID_ARMOR   ; 97
 	const CRABHAMMER   ; 98
-	const EXPLOSION    ; 99
+	const DISCHARGE    ; 99
 	const FURY_SWIPES  ; 9a
 	const BONEMERANG   ; 9b
 	const REST         ; 9c

@@ -1,8 +1,8 @@
 	db DEX_DRATINI ; pokedex id
 
-	db  41,  64,  45,  50,  50 ; 250 / 300
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 /   0
+	db  66,  89,  70,  55,  55 ; 335/ 390
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +25, +25,  25,  +5,  +5 = +85/ +90
 
 	db DRAGON, DRAGON ; type
 	db 45 ; catch rate
@@ -19,7 +19,7 @@
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     RAGE,         DRAGON_RAGE,  \
 	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     BIDE,         FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         \
-	     THUNDER_WAVE, SUBSTITUTE,   SURF
+	     THUNDER_WAVE, SUBSTITUTE,   SHOCK_WAVE,   SURF
 	; end
 
 	db 0 ; padding

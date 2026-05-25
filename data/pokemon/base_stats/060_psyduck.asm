@@ -1,8 +1,8 @@
 	db DEX_PSYDUCK ; pokedex id
 
-	db  50,  52,  48,  55,  65 ; 270 / 335
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +15 = +15 / +15
+	db  50,  52,  48,  55,  75 ; 280/ 355
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0, +25 = +25/ +35
 
 	db WATER, WATER ; type
 	db 190 ; catch rate
@@ -19,7 +19,8 @@
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     PAY_DAY,      SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
 	     DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         SWIFT,        \
-	     SKULL_BASH,   REST, PSYCHIC_M, PSYWAVE,  SUBSTITUTE,  SURF, STRENGTH	   
+	     SKULL_BASH,   REST,         PSYCHIC_M,    PSYWAVE,      SHADOW_CLAW,  \
+	     SUBSTITUTE,   SURF,         STRENGTH
 	; end
 
 	db 0 ; padding

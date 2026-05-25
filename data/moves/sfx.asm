@@ -12,7 +12,7 @@ MoveSoundTable:
 	db SFX_BATTLE_0D,          $00, $a0 ; THUNDERPUNCH
 	db SFX_DAMAGE,             $00, $80 ; SCRATCH
 	db SFX_BATTLE_0F,          $20, $40 ; VICEGRIP
-	db SFX_BATTLE_0F,          $00, $80 ; GUILLOTINE
+	db SFX_BATTLE_2F,          $00, $80 ; SHOCK_WAVE
 	db SFX_BATTLE_0E,          $00, $a0 ; RAZOR_WIND
 	db SFX_NOT_VERY_EFFECTIVE, $10, $c0 ; SWORDS_DANCE
 	db SFX_NOT_VERY_EFFECTIVE, $00, $a0 ; CUT
@@ -32,7 +32,7 @@ MoveSoundTable:
 	db SFX_BATTLE_18,          $00, $80 ; HEADBUTT
 	db SFX_BATTLE_1E,          $00, $60 ; HORN_ATTACK
 	db SFX_BATTLE_1E,          $01, $40 ; FURY_ATTACK
-	db SFX_HORN_DRILL,         $00, $a0 ; HORN_DRILL
+	db SFX_BATTLE_36,          $f0, $80 ; STONE_EDGE
 	db SFX_SUPER_EFFECTIVE,    $10, $a0 ; TACKLE
 	db SFX_BATTLE_20,          $00, $c0 ; BODY_SLAM
 	db SFX_BATTLE_14,          $10, $60 ; WRAP
@@ -90,7 +90,7 @@ MoveSoundTable:
 	db SFX_BATTLE_26,          $00, $80 ; THUNDER
 	db SFX_BATTLE_14,          $01, $e0 ; ROCK_THROW
 	db SFX_BATTLE_29,          $0f, $e0 ; EARTHQUAKE
-	db SFX_BATTLE_29,          $11, $20 ; FISSURE
+	db SFX_BATTLE_29,          $11, $20 ; BULLDOZE
 	db SFX_DAMAGE,             $10, $40 ; DIG
 	db SFX_BATTLE_0F,          $10, $c0 ; TOXIC
 	db SFX_BATTLE_14,          $00, $20 ; CONFUSION
@@ -120,7 +120,7 @@ MoveSoundTable:
 	db SFX_BATTLE_18,          $00, $c0 ; BIDE
 	db SFX_BATTLE_32,          $c0, $ff ; METRONOME
 	db SFX_BATTLE_09,          $f2, $20 ; MIRROR_MOVE
-	db SFX_BATTLE_34,          $00, $80 ; SELFDESTRUCT
+	db SFX_BATTLE_36,          $00, $80 ; FLASH_CANNON
 	db SFX_BATTLE_34,          $00, $40 ; EGG_BOMB
 	db SFX_BATTLE_09,          $00, $40 ; LICK
 	db SFX_NOT_VERY_EFFECTIVE, $10, $ff ; SMOG
@@ -153,7 +153,7 @@ MoveSoundTable:
 	db SFX_BATTLE_0F,          $08, $10 ; SPLASH
 	db SFX_BATTLE_0D,          $f0, $ff ; ACID_ARMOR
 	db SFX_SUPER_EFFECTIVE,    $f0, $ff ; CRABHAMMER
-	db SFX_BATTLE_34,          $10, $ff ; EXPLOSION
+	db SFX_BATTLE_2F,          $20, $80 ; DISCHARGE
 	db SFX_BATTLE_0E,          $f0, $20 ; FURY_SWIPES
 	db SFX_BATTLE_2B,          $f0, $60 ; BONEMERANG
 	db SFX_BATTLE_21,          $12, $10 ; REST

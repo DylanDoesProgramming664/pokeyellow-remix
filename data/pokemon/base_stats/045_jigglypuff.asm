@@ -1,13 +1,13 @@
 	db DEX_JIGGLYPUFF ; pokedex id
 
-	db 115,  55,  30,  20,  45 ; 265 / 310
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0, +10, +10,   0, +20 = +40 / +40
+	db 115,  65,  40,  20,  45 ; 285/ 330
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +20, +20,   0, +20 = +60/ +60
+	; IGGLYBUFF? Never heard of it! Get lost!
 
 	db NORMAL, FAIRY ; type
 	db 170 ; catch rate
 	db 76 ; base exp
-	; STAT_EXP_EFFICIENCY = (245 * 7) /  76 = 22.6
 
 	INCBIN "gfx/pokemon/front/jigglypuff.pic", 0, 1 ; sprite dimensions
 	dw JigglypuffPicFront, JigglypuffPicBack
@@ -22,7 +22,7 @@
 	     THUNDERBOLT,  THUNDER,      PSYCHIC_M,    TELEPORT,     MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   SKULL_BASH,   \
 	     REST,         THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   \
-	     STRENGTH,     FLASH
+	     SHOCK_WAVE,   STRENGTH,     FLASH,        DIG
 	; end
 
 	db 0 ; padding

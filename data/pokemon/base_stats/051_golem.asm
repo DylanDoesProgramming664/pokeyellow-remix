@@ -1,9 +1,9 @@
 	db DEX_GOLEM ; pokedex id
 
-	db  80, 120, 130,  45,  65 ; 440 / 505
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0, +10,   0,   0, +10 = +20 / +20
-	; In Gen II, Sp.Atk / Sp.Def = 55 / 75
+	db  80, 120, 130,  45,  65 ; 440/ 505
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +10,   0,   0, +10 = +20/ +20
+	; In Gen2, Sp.Atk/Sp.Def = 55/ 75
 
 	db ROCK, GROUND ; type
 	db 45 ; catch rate
@@ -18,9 +18,9 @@
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
-	     RAGE,         EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        \
-	     DOUBLE_TEAM,  BIDE,         METRONOME,    SELFDESTRUCT, FIRE_BLAST,   \
-	     REST,         EXPLOSION,    ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
+	     RAGE,         EARTHQUAKE,   BULLDOZE,     DIG,          MIMIC,        \
+	     DOUBLE_TEAM,  BIDE,         METRONOME,    FIRE_BLAST,   STONE_EDGE,   \
+	     REST,         ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
 	db 0 ; padding

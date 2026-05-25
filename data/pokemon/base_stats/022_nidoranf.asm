@@ -1,13 +1,12 @@
 	db DEX_NIDORAN_F ; pokedex id
 
-	db  59,  54,  53,  42,  50 ; 260 / 310
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +4,  +7,  +3,  +1, +10 = +25 / +35
+	db  65,  47,  62,  41,  50 ; 265/ 315
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +10,   0, +10,   0, +10 = +30/ +40
 
 	db POISON, POISON ; type
 	db 235 ; catch rate
 	db 59 ; base exp
-	; STAT_EXP_EFFICIENCY = (245 * 7) /  59 = 29.1
 
 	INCBIN "gfx/pokemon/front/nidoranf.pic", 0, 1 ; sprite dimensions
 	dw NidoranFPicFront, NidoranFPicBack
@@ -18,7 +17,8 @@
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BLIZZARD,     \
 	     RAGE,         THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  \
-	     REFLECT,      BIDE,         SKULL_BASH,   REST,         SUBSTITUTE
+	     REFLECT,      BIDE,         SKULL_BASH,   REST,         SHADOW_CLAW,  \
+	     SUBSTITUTE,   SHOCK_WAVE,   DIG,          BULLDOZE
 	; end
 
 	db 0 ; padding

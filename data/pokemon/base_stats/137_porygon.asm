@@ -1,8 +1,11 @@
 	db DEX_PORYGON ; pokedex id
 
-	db  75,  70,  70,  40,  95 ; 350 / 445
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;  +10, +10,   0,   0, +20 = +40 / +50
+	db  75,  70,  70,  40,  95 ; 350/ 445
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +10, +10,   0,   0, +20 = +40/ +50
+	; PORYGON2  =  95,  90,  90,  60, 115, 115 -> 565
+	; PORYGON-Z =  95,  90,  70,  90, 145,  95 -> 585
+	;              hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate
@@ -19,7 +22,7 @@
 	     HYPER_BEAM,   RAGE,         THUNDERBOLT,  THUNDER,      PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      \
-	     TRI_ATTACK,   SUBSTITUTE,   FLASH
+	     TRI_ATTACK,   SUBSTITUTE,   SHOCK_WAVE,   FLASH
 	; end
 
 	db 0 ; padding

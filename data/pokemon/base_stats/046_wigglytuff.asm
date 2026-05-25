@@ -1,8 +1,8 @@
 	db DEX_WIGGLYTUFF ; pokedex id
 
-	db 140,  90,  65,  45,  85 ; 425 / 510
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0, +20, +20,   0, +35 = +75 / +85
+	db 140,  90,  65,  45,  85 ; 425/ 510
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +20, +20,   0, +35 = +75/ +85
 
 	db NORMAL, FAIRY ; type
 	db 50 ; catch rate
@@ -21,7 +21,7 @@
 	     SOLARBEAM,    THUNDERBOLT,  THUNDER,      PSYCHIC_M,    TELEPORT,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   \
 	     SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   \
-	     SUBSTITUTE,   STRENGTH,     FLASH
+	     SUBSTITUTE,   SHOCK_WAVE,   STRENGTH,     FLASH,        DIG
 	; end
 
 	db 0 ; padding

@@ -993,7 +993,7 @@ _VoltorbDexEntry::
 	next "camouflage itself"
 	next "as a # BALL. It"
 
-	page "will self-destruct"
+	page "will discharge"
 	next "with very little"
 	next "stimulus"
 	dex
@@ -1005,7 +1005,7 @@ _ElectrodeDexEntry::
 
 	page "slightest shock"
 	next "could trigger a"
-	next "huge explosion"
+	next "huge discharge"
 	dex
 
 _ExeggcuteDexEntry::
@@ -1083,7 +1083,7 @@ _KoffingDexEntry::
 	next "internal gases"
 	next "could expand and"
 
-	page "explode without"
+	page "combust without"
 	next "any warning. Be"
 	next "very careful!@@"
 

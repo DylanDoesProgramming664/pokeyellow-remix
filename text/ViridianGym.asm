@@ -63,16 +63,16 @@ _ViridianGymGiovanniEarthBadgeInfoText::
 
 _ViridianGymGiovanniReceivedTM27Text::
 	text "<PLAYER> received"
-	line "TM27 FISSURE!@"
+	line "TM27 BULLDOZE!@"
 	text_end
 
 _ViridianGymGiovanniTM27ExplanationText::
 	text_start
 
-	para "TM27 is FISSURE!"
-	line "It will take out"
-	cont "#MON with just"
-	cont "one hit!"
+	para "TM27 is BULLDOZE!"
+	line "It will lower a"
+	cont "#MON's with each"
+	cont "hit!"
 
 	para "I made it when I"
 	line "ran the GYM here,"

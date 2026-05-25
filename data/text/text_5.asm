@@ -32,7 +32,7 @@ _BurnedText::
 
 _FrozenText::
 	text "<TARGET>"
-	line "was frozen solid!"
+	line "was partially frozen!"
 	prompt
 
 _FireDefrostedText::

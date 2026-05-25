@@ -1,8 +1,10 @@
 	db DEX_TAUROS ; pokedex id
 
-	db  75, 100,  95, 110,  70 ; 450 / 520
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +30
+	db  75, 100,  95, 110,  70 ; 450/ 520
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +30
+	; MILTANK = 105,  90, 115, 100,  40,  70 -> 520
+	;            hp  atk  def  spd  sat  sde
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate
@@ -15,11 +17,11 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm FLAMETHROWER, TOXIC, HORN_DRILL, BODY_SLAM, TAKE_DOWN,  DOUBLE_EDGE,  \
+	tmhm FLAMETHROWER, TOXIC, STONE_EDGE, BODY_SLAM, TAKE_DOWN,  DOUBLE_EDGE,  \
 	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   RAGE,         THUNDERBOLT,  \
-	     THUNDER,      EARTHQUAKE,   FISSURE,      MIMIC,        DOUBLE_TEAM,  \
+	     THUNDER,      EARTHQUAKE,   BULLDOZE,     MIMIC,        DOUBLE_TEAM,  \
 	     BIDE,         FIRE_BLAST,   SKULL_BASH,   REST,         SUBSTITUTE,   \
-	     STRENGTH
+	     SHOCK_WAVE,   STRENGTH
 	; end
 
 	db 0 ; padding

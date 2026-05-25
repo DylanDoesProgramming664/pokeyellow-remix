@@ -1,8 +1,8 @@
 	db DEX_VOLTORB ; pokedex id
 
-	db  40,  30,  50, 100,  55 ; 275 / 330
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 /   0
+	db  40,  30,  50, 110,  65 ; 295/ 360
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0, +10, +10 = +20/ +30
 
 	db ELECTRIC, ELECTRIC ; type
 	db 190 ; catch rate
@@ -17,8 +17,8 @@
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    RAGE,         THUNDERBOLT,  THUNDER,      \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
-	     SELFDESTRUCT, SWIFT,        REST,         THUNDER_WAVE, EXPLOSION,    \
-	     SUBSTITUTE,   FLASH
+	     SWIFT,        REST,         THUNDER_WAVE, SHOCK_WAVE,   SUBSTITUTE,   \
+	     FLASH
 	; end
 
 	db 0 ; padding

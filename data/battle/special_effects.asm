@@ -3,7 +3,6 @@ SpecialEffects:
 ; Includes all effects that do not need to be called at the end of
 ; ExecutePlayerMove (or ExecuteEnemyMove), because they have already been handled
 	db DRAIN_HP_EFFECT
-	db EXPLODE_EFFECT
 	db DREAM_EATER_EFFECT
 	db PAY_DAY_EFFECT
 	db SWIFT_EFFECT

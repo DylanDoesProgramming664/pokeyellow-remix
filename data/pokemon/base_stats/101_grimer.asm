@@ -1,8 +1,8 @@
 	db DEX_GRIMER ; pokedex id
 
-	db  80,  80,  50,  25,  50 ; 285 / 335
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +10 = +10 / +10
+	db  80,  80,  50,  25,  50 ; 285/ 335
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0, +10 = +10/ +10
 
 	db POISON, POISON ; type
 	db 190 ; catch rate
@@ -16,8 +16,8 @@
 
 	; tm/hm learnset
 	tmhm FLAMETHROWER, TOXIC, BODY_SLAM,   RAGE,   MEGA_DRAIN,   THUNDERBOLT,  \
-	     THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, \
-	     FIRE_BLAST,   REST,         EXPLOSION,    SUBSTITUTE
+	     THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,         DIG,          \
+	     FIRE_BLAST,   REST,         SUBSTITUTE,   SHOCK_WAVE
 	; end
 
 	db 0 ; padding

@@ -113,18 +113,18 @@ _AddPartyMon::
 ; Not wild.
 ; Check if Pikachu
 	ld a, [wcf91]
-    cp STARTER_PIKACHU
-    jr z, .setStarterDVs
+	cp STARTER_PIKACHU
+	jr z, .setStarterDVs
 
 ; Not Pikachu
 	call Random ; generate random IVs
 	ld b, a
 	call Random
-    jr .next4
+	jr .next4
 
 .setStarterDVs
-    ld a, $ff
-    ld b, a
+	ld a, $ff
+	ld b, a
 
 .next4
 	push bc

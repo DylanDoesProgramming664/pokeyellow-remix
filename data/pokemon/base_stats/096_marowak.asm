@@ -1,8 +1,8 @@
 	db DEX_MAROWAK ; pokedex id
 
-	db  65,  90, 110,  55,  90 ; 410 / 500
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +5, +10,   0, +10, +40 = +65 / +75
+	db  65,  90, 110,  55,  90 ; 410/ 500
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;   +5, +10,   0, +10, +40 = +65/ +75
 
 	db GROUND, GHOST ; type
 	db 75 ; catch rate
@@ -18,9 +18,10 @@
 	tmhm MEGA_PUNCH, FLAMETHROWER, MEGA_KICK, TOXIC,  BODY_SLAM, TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
-	     EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,    	FIRE_BLAST,   	SKULL_BASH,   REST, ROCK_SLIDE,  SUBSTITUTE,   \
-	     CUT, 		STRENGTH, 		SWORDS_DANCE
+	     EARTHQUAKE,   BULLDOZE,     DIG,          MIMIC,        DOUBLE_TEAM,  \
+	     BIDE,         FIRE_BLAST,   SKULL_BASH,   REST,         ROCK_SLIDE,  \
+	     SUBSTITUTE,   CUT,          STRENGTH,     SWORDS_DANCE, SHADOW_CLAW, \
+	     STONE_EDGE
 	; end
 
 	db 0 ; padding

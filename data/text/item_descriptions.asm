@@ -353,8 +353,9 @@ _TM01Description::
 	prompt
 
 _TM02Description::
-	text "1st turn: Attack"
-	next "2nd turn: Rest"
+	text "Blades of wind hit"
+	next "the foe. May"
+	cont "cause confusion."
 	prompt
 
 _TM03Description::
@@ -378,8 +379,8 @@ _TM06Description::
 	prompt
 
 _TM07Description::
-	text "A one-hit KO,"
-	next "drill attack."
+	text "Stabs the foe with"
+	next "a sharpened stone."
 	prompt
 
 _TM08Description::
@@ -523,8 +524,11 @@ _TM35Description::
 	prompt
 
 _TM36Description::
-	text "Powerful but makes"
-	next "the user faint."
+	text "The user gathers"
+	next "all its light"
+	cont "energy and"
+	cont "releases it at"
+	cont "once."
 	prompt
 
 _TM37Description::
@@ -578,8 +582,9 @@ _TM46Description::
 	prompt
 
 _TM47Description::
-	text "Very powerful but"
-	next "makes user faint."
+	text "Slashes with a"
+	next "sharp claw made"
+	cont "from shadows."
 	prompt
 
 _TM48Description::
@@ -595,6 +600,12 @@ _TM49Description::
 _TM50Description::
 	text "Makes a decoy with"
 	next "1/4 user's max HP."
+	prompt
+
+_TM51Description::
+	text "A fast and"
+	next "unavoidable"
+	cont "electric attack."
 	prompt
 
 _UnusedItemDescription::

@@ -1,10 +1,10 @@
 	db DEX_HYPNO ; pokedex id
 
-	db  85,  73,  70,  67, 115 ; 410 / 525
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +42
+	db  85,  73,  70,  67, 115 ; 410/ 525
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +42
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
+	db PSYCHIC_TYPE, DARK ; type
 	db 75 ; catch rate
 	db 165 ; base exp
 

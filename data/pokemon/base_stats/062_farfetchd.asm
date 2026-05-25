@@ -1,8 +1,8 @@
 	db DEX_FARFETCHD ; pokedex id
 
-	db  64,  90,  67,  70,  72 ; 363 / 435
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;  +12, +25, +12, +10, +14 = +73 / +83
+	db  64,  90,  67,  70,  72 ; 363/ 435
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +12, +25, +12, +10, +14 = +73/ +83
 
 	db NORMAL, FLYING ; type
 	db 45 ; catch rate

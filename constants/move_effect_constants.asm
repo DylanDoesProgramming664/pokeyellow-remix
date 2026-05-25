@@ -11,7 +11,7 @@
 	const BURN_SIDE_EFFECT1          ; $04
 	const FREEZE_SIDE_EFFECT         ; $05
 	const PARALYZE_SIDE_EFFECT1      ; $06
-	const EXPLODE_EFFECT             ; $07 Explosion, Self Destruct
+	const EFFECT_07                  ; $07 Formerly used for Explosion, Self Destruct
 	const DREAM_EATER_EFFECT         ; $08
 	const MIRROR_MOVE_EFFECT         ; $09
 	const ATTACK_UP1_EFFECT          ; $0A
@@ -42,7 +42,7 @@
 	const UNUSED_EFFECT_23           ; $23
 	const PARALYZE_SIDE_EFFECT2      ; $24
 	const FLINCH_SIDE_EFFECT2        ; $25
-	const OHKO_EFFECT                ; $26 moves like Horn Drill
+	const CONFUSION_SIDE_EFFECT2     ; $26 formerly OHKO_EFFECT
 	const CHARGE_EFFECT              ; $27 moves like Solar Beam
 	const SUPER_FANG_EFFECT          ; $28
 	const SPECIAL_DAMAGE_EFFECT      ; $29 Seismic Toss, Sonic Boom, Dragon Rage, Psywave

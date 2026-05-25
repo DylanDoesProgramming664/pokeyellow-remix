@@ -1,8 +1,8 @@
 	db DEX_HAUNTER ; pokedex id
 
-	db  45,  50,  45,  95, 115 ; 350 / 465
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +60
+	db  45,  50,  45,  95, 115 ; 350/ 465
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +60
 
 	db GHOST, POISON ; type
 	db 90 ; catch rate
@@ -16,8 +16,8 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        RAGE,         MEGA_DRAIN,   THUNDERBOLT,  THUNDER,      \
-	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, \
-	     DREAM_EATER,  REST,         PSYWAVE,      EXPLOSION,    SUBSTITUTE
+	     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  BIDE,         SHADOW_CLAW,  \
+	     DREAM_EATER,  REST,         PSYWAVE,      SUBSTITUTE
 	; end
 
 	db 0 ; padding

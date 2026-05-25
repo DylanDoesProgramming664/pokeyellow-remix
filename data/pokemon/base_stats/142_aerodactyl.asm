@@ -1,8 +1,8 @@
 	db DEX_AERODACTYL ; pokedex id
 
-	db  85, 110,  70, 135,  75 ; 475 / 550
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +5,  +5,  +5,  +5, +15 = +35 / +35
+	db 104, 117,  65, 143,  78  ; 507 /  585
+	;   hp  atk  def  spd  spc   Gen1 / Gen2
+	;  +24, +12,   0, +13, +18  = +67 /  +70
 
 	db ROCK, FLYING ; type
 	db 45 ; catch rate
@@ -15,10 +15,11 @@
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm RAZOR_WIND,   FLAMETHROWER,   TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \
-	     HYPER_BEAM,   RAGE,         DRAGON_RAGE,  EARTHQUAKE, MIMIC,          \
-	     DOUBLE_TEAM, REFLECT,      BIDE,         FIRE_BLAST,   SWIFT,         \
-		 SKY_ATTACK,  REST,         SUBSTITUTE,   FLY,  ROCK_SLIDE
+	tmhm RAZOR_WIND,  FLAMETHROWER, TOXIC,        TAKE_DOWN,   DOUBLE_EDGE,  \
+	     HYPER_BEAM,  RAGE,         DRAGON_RAGE,  EARTHQUAKE,  MIMIC,        \
+	     DOUBLE_TEAM, REFLECT,      BIDE,         FIRE_BLAST,  SWIFT,        \
+		 SKY_ATTACK,  REST,         SUBSTITUTE,   FLY,         ROCK_SLIDE,   \
+	     BULLDOZE,    STONE_EDGE
 	; end
 
 	db 0 ; padding

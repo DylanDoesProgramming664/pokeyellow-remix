@@ -1,10 +1,10 @@
 	db DEX_MAGMAR ; pokedex id
 
-	db  65,  95,  57,  93, 100 ; 410 / 510
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +15 = +15 / +15
+	db  65,  85,  57,  93, 105 ; 405/ 510
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, -10,   0,   0, +20 = +10/ +15
 
-	db FIRE, FIRE ; type
+	db FIRE, POISON ; type
 	db 45 ; catch rate
 	db 167 ; base exp
 

@@ -1,8 +1,10 @@
 	db DEX_SEADRA ; pokedex id
 
-	db  55,  65,  95,  85,  95 ; 395 / 490
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +50
+	db  55,  65,  95,  85,  95 ; 395/ 490
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +50
+	; KINGDRA =  75,  95,  95,  85,  95, 145 -> 590
+	;            hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type
 	db 75 ; catch rate
@@ -18,7 +20,7 @@
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    \
 	     ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   RAGE,         MIMIC,        \
 	     DOUBLE_TEAM,  BIDE,         SWIFT,        SKULL_BASH,   REST,         \
-	     SUBSTITUTE,   SURF
+	     SUBSTITUTE,   SURF,         FLASH_CANNON
 	; end
 
 	db 0 ; padding

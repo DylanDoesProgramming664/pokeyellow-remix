@@ -13,11 +13,11 @@ SetDebugNewGameParty: ; unreferenced except in _DEBUG
 	jr .loop
 
 DebugNewGameParty: ; unreferenced except in _DEBUG
-    db ALAKAZAM, 27
-    db MEW, 27
-    db HITMONCHAN, 33
+	db MAGNETON, 36
+	db ALAKAZAM, 27
+	db MEW, 27
+	db HITMONCHAN, 33
 	db CHARIZARD, 36
-	db JOLTEON, 36
 	db -1 ; end
 
 PrepareNewGameDebug: ; dummy except in _DEBUG
@@ -127,7 +127,7 @@ DebugUnusedList:
 	db ELIXER, 99
 	db MAX_ELIXER, 99
 	db TM_RAZOR_WIND, 10
-	db TM_HORN_DRILL, 10
+	db TM_STONE_EDGE, 10
 	db TM_TAKE_DOWN, 10
 	db TM_BLIZZARD, 10
 	db TM_HYPER_BEAM, 10
@@ -136,7 +136,7 @@ DebugUnusedList:
 	db TM_MIMIC, 10
 	db TM_BIDE, 10
 	db TM_METRONOME, 10
-	db TM_SELFDESTRUCT, 10
+	db TM_FLASH_CANNON, 10
 	db TM_SWIFT, 10
 	db TM_SOFTBOILED, 10
 	db TM_DREAM_EATER, 10

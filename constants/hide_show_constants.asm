@@ -38,6 +38,7 @@ DEF SHOW EQU $15
 	const HS_ROUTE_2_ITEM_2                ; 1B
 	const HS_ROUTE_4_ITEM                  ; 1C
 	const HS_ROUTE_9_ITEM                  ; 1D
+	const HS_ROUTE_10_ROCKET_JERRY
 	const HS_ROUTE_12_SNORLAX              ; 1E
 	const HS_ROUTE_12_ITEM_1               ; 1F
 	const HS_ROUTE_12_ITEM_2               ; 20

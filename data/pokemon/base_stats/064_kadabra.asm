@@ -1,8 +1,8 @@
 	db DEX_KADABRA ; pokedex id
 
-	db  40,  35,  30, 105, 120 ; 330 / 450
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +50
+	db  40,  35,  30, 105, 120 ; 330/ 450
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +50
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
 	db 100 ; catch rate
@@ -19,7 +19,8 @@
 	     DOUBLE_EDGE,  SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
 	     DIG,          PSYCHIC_M,    TELEPORT,     MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      BIDE,         METRONOME,    SKULL_BASH,   REST,         \
-	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   FLASH
+	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   SHOCK_WAVE,   \
+         FLASH
 	; end
 
 	db 0 ; padding

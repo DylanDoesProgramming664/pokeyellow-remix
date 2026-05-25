@@ -1,10 +1,10 @@
 	db DEX_ARCANINE ; pokedex id
 
-	db  90, 110,  80,  95, 100 ; 475 / 575
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +20 = +20 / +20
+	db  90, 110,  80,  95, 100 ; 475/ 575
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0, +20 = +20/ +20
 
-	db FIRE, FIRE ; type
+	db FIRE, FAIRY ; type
 	db 75 ; catch rate
 	db 213 ; base exp
 

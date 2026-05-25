@@ -7,7 +7,7 @@ MoveEffectPointerTable:
 	dw FreezeBurnParalyzeEffect  ; BURN_SIDE_EFFECT1
 	dw FreezeBurnParalyzeEffect  ; FREEZE_SIDE_EFFECT
 	dw FreezeBurnParalyzeEffect  ; PARALYZE_SIDE_EFFECT1
-	dw ExplodeEffect             ; EXPLODE_EFFECT
+	dw NULL                      ; EFFECT_07
 	dw DrainHPEffect             ; DREAM_EATER_EFFECT
 	dw NULL                      ; MIRROR_MOVE_EFFECT
 	dw StatModifierUpEffect      ; ATTACK_UP1_EFFECT
@@ -38,7 +38,7 @@ MoveEffectPointerTable:
 	dw FreezeBurnParalyzeEffect  ; unused effect
 	dw FreezeBurnParalyzeEffect  ; PARALYZE_SIDE_EFFECT2
 	dw FlinchSideEffect          ; FLINCH_SIDE_EFFECT2
-	dw OneHitKOEffect            ; OHKO_EFFECT
+	dw ConfusionSideEffect2      ; CONFUSION_SIDE_EFFECT2
 	dw ChargeEffect              ; CHARGE_EFFECT
 	dw NULL                      ; SUPER_FANG_EFFECT
 	dw NULL                      ; SPECIAL_DAMAGE_EFFECT

@@ -116,7 +116,7 @@ DEF NUM_FLOORS EQU const_value - 1 - NUM_ITEMS
 ; HMs are defined before TMs, so the actual number of TM definitions
 ; is not yet available. The TM quantity is hard-coded here and must
 ; match the actual number below.
-DEF NUM_TMS EQU 50
+DEF NUM_TMS EQU 51
 
 DEF __tmhm_value__ = NUM_TMS + 1
 
@@ -163,7 +163,7 @@ DEF TM01 EQU const_value
 	add_tm FLAMETHROWER ; $CC
 	add_tm MEGA_KICK    ; $CD
 	add_tm TOXIC        ; $CE
-	add_tm HORN_DRILL   ; $CF
+	add_tm STONE_EDGE   ; $CF
 	add_tm BODY_SLAM    ; $D0
 	add_tm TAKE_DOWN    ; $D1
 	add_tm DOUBLE_EDGE  ; $D2
@@ -183,7 +183,7 @@ DEF TM01 EQU const_value
 	add_tm THUNDERBOLT  ; $E0
 	add_tm THUNDER      ; $E1
 	add_tm EARTHQUAKE   ; $E2
-	add_tm FISSURE      ; $E3
+	add_tm BULLDOZE     ; $E3
 	add_tm DIG          ; $E4
 	add_tm PSYCHIC_M    ; $E5
 	add_tm TELEPORT     ; $E6
@@ -192,7 +192,7 @@ DEF TM01 EQU const_value
 	add_tm REFLECT      ; $E9
 	add_tm BIDE         ; $EA
 	add_tm METRONOME    ; $EB
-	add_tm SELFDESTRUCT ; $EC
+	add_tm FLASH_CANNON ; $EC
 	add_tm EGG_BOMB     ; $ED
 	add_tm FIRE_BLAST   ; $EE
 	add_tm SWIFT        ; $EF
@@ -203,10 +203,11 @@ DEF TM01 EQU const_value
 	add_tm REST         ; $F4
 	add_tm THUNDER_WAVE ; $F5
 	add_tm PSYWAVE      ; $F6
-	add_tm EXPLOSION    ; $F7
+	add_tm SHADOW_CLAW  ; $F7
 	add_tm ROCK_SLIDE   ; $F8
 	add_tm TRI_ATTACK   ; $F9
 	add_tm SUBSTITUTE   ; $FA
+	add_tm SHOCK_WAVE   ; $FB
 ASSERT NUM_TMS == const_value - TM01, "NUM_TMS ({d:NUM_TMS}) does not match the number of add_tm definitions"
 
 DEF NUM_TM_HM EQU NUM_TMS + NUM_HMS

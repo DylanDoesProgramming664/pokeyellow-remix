@@ -1,8 +1,9 @@
 	db DEX_GRAVELER ; pokedex id
 
-	db  55,  95, 115,  35,  45  ;   345 /  390
-	;   hp  atk  def  spd  spc     Gen1 / Gen2
-	;    0,  e  0,   0,   0,   0 =    0 /    0
+	db  55, 105, 115,  35,  55 ; 365/ 420
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +10,   0,   0, +10 = +20/ +30
+	; sat/sde = 45/ 65
 
 	db ROCK, GROUND ; type
 	db 120 ; catch rate
@@ -17,9 +18,9 @@
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
 	     SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         EARTHQUAKE,   \
-	     FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         \
-	     METRONOME,    SELFDESTRUCT, FIRE_BLAST,   REST,         EXPLOSION,    \
-	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
+	     BULLDOZE,     DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         \
+	     METRONOME,    FIRE_BLAST,   REST,         FLASH_CANNON, ROCK_SLIDE,   \
+	     SUBSTITUTE,   STRENGTH,     STONE_EDGE
 	; end
 
 	db 0 ; padding

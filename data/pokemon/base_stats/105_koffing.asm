@@ -1,8 +1,8 @@
 	db DEX_KOFFING ; pokedex id
 
-	db  40,  65,  95,  35,  60 ; 295 / 355
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +15
+	db  40,  65,  95,  35,  60 ; 295/ 355
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +15
 
 	db POISON, POISON ; type
 	db 190 ; catch rate
@@ -15,9 +15,9 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm FLAMETHROWER, TOXIC,  RAGE,  THUNDERBOLT,  THUNDER,     MIMIC,        \
-	     DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, FIRE_BLAST,   REST,         \
-	     EXPLOSION,    SUBSTITUTE
+	tmhm RAZOR_WIND,   FLAMETHROWER, TOXIC,        RAGE,   THUNDERBOLT, \
+         THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,   FIRE_BLAST,  \
+         REST,         SUBSTITUTE,   SHOCK_WAVE,   FLY
 	; end
 
 	db 0 ; padding

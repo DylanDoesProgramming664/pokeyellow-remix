@@ -38,7 +38,7 @@ DEF FIRST_SE_ID EQU const_value
 	const SE_FLASH_SCREEN_LONG         ; $F8 used in Confusion/Psychic/etc.
 	const SE_DARKEN_MON_PALETTE        ; $F9 used in Smokescreen/Smog/etc.
 	const SE_WATER_DROPLETS_EVERYWHERE ; $FA used in Mist/Surf/Toxic/etc.
-	const SE_SHAKE_SCREEN              ; $FB used in Earthquake/Fissure/etc.
+	const SE_SHAKE_SCREEN              ; $FB used in Earthquake/Bulldoze/etc.
 	const SE_RESET_SCREEN_PALETTE      ; $FC used in Leer/Thunderpunch/etc.
 	const SE_DARK_SCREEN_PALETTE       ; $FD used in Hyper Beam/Thunderpunch/etc.
 	const SE_DARK_SCREEN_FLASH         ; $FE used in Cut/Take Down/etc.
@@ -101,7 +101,6 @@ DEF FIRST_SE_ID EQU const_value
 	const SUBANIM_0_SOUND_WAVE
 	const SUBANIM_0_CIRCLE_1_SQUARE_HALF_TOSS ; unused
 	const SUBANIM_1_BARRIER
-	const SUBANIM_1_SELFDESTRUCT
 	const SUBANIM_0_WATER_BUBBLES
 	const SUBANIM_0_CIRCLES_FALLING
 	const SUBANIM_0_STRING_SHOT

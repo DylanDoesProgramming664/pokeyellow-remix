@@ -1,8 +1,8 @@
 	db DEX_MUK ; pokedex id
 
-	db 105, 105,  75,  50, 100 ; 435 / 535
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +35 = +35 / +35
+	db 105, 105,  75,  50, 100 ; 435/ 535
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0, +35 = +35/ +35
 
 	db POISON, POISON ; type
 	db 75 ; catch rate
@@ -17,7 +17,7 @@
 	; tm/hm learnset
 	tmhm FLAMETHROWER, TOXIC, BODY_SLAM,   HYPER_BEAM,   RAGE,   MEGA_DRAIN,   \
 	     THUNDERBOLT,  THUNDER,      MIMIC,        DOUBLE_TEAM,  BIDE,         \
-	     SELFDESTRUCT, FIRE_BLAST,   REST,         EXPLOSION,    SUBSTITUTE
+	     FIRE_BLAST,   REST,         SUBSTITUTE,   SHOCK_WAVE,   DIG
 	; end
 
 	db 0 ; padding

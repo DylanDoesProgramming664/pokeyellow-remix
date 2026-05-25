@@ -1,8 +1,8 @@
 	db DEX_MR_MIME ; pokedex id
 
-	db  40,  45,  65,  90, 120 ; 360 / 480
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +20 = +20 / +20
+	db  70,  45,  65,  90, 120 ; 390/ 510
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +30,   0,   0,   0, +20 = +50/ +50
 
 	db PSYCHIC_TYPE, FAIRY ; type
 	db 45 ; catch rate
@@ -20,7 +20,7 @@
 	     RAGE,         SOLARBEAM,    THUNDERBOLT,  THUNDER,      PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     METRONOME,    SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      \
-	     SUBSTITUTE,   FLASH
+	     SUBSTITUTE,   SHOCK_WAVE,   FLASH
 	; end
 
 	db 0 ; padding

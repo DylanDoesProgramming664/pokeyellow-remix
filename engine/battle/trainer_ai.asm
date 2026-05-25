@@ -152,8 +152,6 @@ AIMoveChoiceModification1:
 	ld a, [wEnemyMoveEffect]
 	cp DREAM_EATER_EFFECT
 	jp z, .checkAsleep
-	cp OHKO_EFFECT
-	jr z, .ohko
 	ld a, [wEnemyMovePower]
 	and a
 	jr nz, .nextMove

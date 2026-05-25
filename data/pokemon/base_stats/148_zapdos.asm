@@ -1,8 +1,8 @@
 	db DEX_ZAPDOS ; pokedex id
 
-	db  90,  90,  85, 100, 125 ; 490 / 615
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +35
+	db  90,  90,  85, 100, 125  ; 490 /  615
+	;   hp  atk  def  spd  spc   Gen1 / Gen2
+	;    0,   0,   0,   0,   0  =   0 /  +35
 
 	db ELECTRIC, FLYING ; type
 	db 3 ; catch rate
@@ -18,7 +18,8 @@
 	tmhm RAZOR_WIND,    TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  \
 	     HYPER_BEAM,   RAGE,         THUNDERBOLT,  THUNDER,      MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         SWIFT,        SKY_ATTACK,   \
-	     REST,         THUNDER_WAVE, SUBSTITUTE,   FLY,          FLASH
+	     REST,         THUNDER_WAVE, SUBSTITUTE,   SHOCK_WAVE,   FLY,          \
+         FLASH
 	; end
 
 	db 0 ; padding

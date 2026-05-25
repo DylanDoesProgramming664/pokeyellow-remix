@@ -1,8 +1,9 @@
 	db DEX_FLAREON ; pokedex id
 
-	db  80, 130,  60,  65, 110 ; 445 / 555
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;  +15,   0,   0,   0,   0 = +15 / +30
+	db  85, 110,  60,  60, 120 ; 435/ 555
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +20, -20,   0,  -5, +10 =  +5/ +30
+	; sat/sde = 130/110
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate
@@ -15,9 +16,10 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm FLAMETHROWER, TOXIC, BODY_SLAM, TAKE_DOWN, DOUBLE_EDGE,  HYPER_BEAM,   \
-	     RAGE,         MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
-	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE
+	tmhm FLAMETHROWER, TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
+	     HYPER_BEAM,   RAGE,         MIMIC,        DOUBLE_TEAM,  REFLECT,      \
+	     BIDE,         FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         \
+	     SUBSTITUTE,   STRENGTH,     DIG
 	; end
 
 	db 0 ; padding

@@ -1,8 +1,8 @@
 	db DEX_MACHAMP ; pokedex id
 
-	db  90, 130,  80,  55,  85 ; 440 / 525
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +20 = +20 / +20
+	db  90, 140,  80,  55,  85 ; 450/ 535
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +10,   0,   0, +20 = +30/ +30
 
 	db FIGHTING, FIGHTING ; type
 	db 45 ; catch rate
@@ -16,10 +16,10 @@
 
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   FLAMETHROWER, MEGA_KICK,    TOXIC,        BODY_SLAM,    \
-         TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      \
-         SEISMIC_TOSS, RAGE,         EARTHQUAKE,   FISSURE,      DIG,          \
-         MIMIC,        DOUBLE_TEAM,  BIDE,         METRONOME,    FIRE_BLAST,   \
-         SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
+	     TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   SUBMISSION,   COUNTER,      \
+	     SEISMIC_TOSS, RAGE,         EARTHQUAKE,   BULLDOZE,     DIG,          \
+	     MIMIC,        DOUBLE_TEAM,  BIDE,         METRONOME,    FIRE_BLAST,   \
+	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end
 
 	db 0 ; padding

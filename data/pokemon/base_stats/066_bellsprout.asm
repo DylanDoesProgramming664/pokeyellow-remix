@@ -1,8 +1,8 @@
 	db DEX_BELLSPROUT ; pokedex id
 
-	db  50,  75,  40,  40,  70 ; 275 / 345
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,  +5,   0,   0 =  +5 / +45
+	db  50,  75,  50,  40,  70 ; 285/ 355
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0, +15,   0,   0 = +15/ +55
 
 	db GRASS, POISON ; type
 	db 255 ; catch rate

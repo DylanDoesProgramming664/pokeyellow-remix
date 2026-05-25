@@ -1,8 +1,10 @@
 	db DEX_LICKITUNG ; pokedex id
 
-	db  95,  70,  85,  30,  75 ; 355 / 430
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +5, +15, +10,   0, +15 = +45 / +45
+	db  95,  70,  85,  30,  75 ; 355/ 430
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;   +5, +15, +10,   0, +15 = +45/ +45
+	; LICKILICKY = 115, 100, 105,  50,  95,  95 -> 560
+	;               hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate
@@ -18,9 +20,10 @@
 	tmhm MEGA_PUNCH,   SWORDS_DANCE, MEGA_KICK,    TOXIC,        BODY_SLAM,    \
 	     TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     \
 	     BLIZZARD,     HYPER_BEAM,   SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
-	     RAGE,         THUNDERBOLT,  THUNDER,      EARTHQUAKE,   FISSURE,      \
+	     RAGE,         THUNDERBOLT,  THUNDER,      EARTHQUAKE,   BULLDOZE,     \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         FIRE_BLAST,   SKULL_BASH,   \
-	     REST,         SUBSTITUTE,   CUT,          SURF,         STRENGTH
+	     REST,         SUBSTITUTE,   SHOCK_WAVE,   CUT,          SURF,         \
+	     STRENGTH,     STONE_EDGE,   DIG
 	; end
 
 	db 0 ; padding

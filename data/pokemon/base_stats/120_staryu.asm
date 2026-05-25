@@ -1,8 +1,8 @@
 	db DEX_STARYU ; pokedex id
 
-	db  30,  45,  55,  85,  70 ; 285 / 355
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +15
+	db  30,  45,  55,  85,  70 ; 285/ 355
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +15
 
 	db WATER, WATER ; type
 	db 225 ; catch rate

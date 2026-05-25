@@ -1,8 +1,8 @@
 	db DEX_ALAKAZAM ; pokedex id
 
-	db  55,  50,  45, 120, 135 ; 405 / 540
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +50
+	db  55,  50,  45, 120, 135 ; 405/ 540
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +40
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
 	db 50 ; catch rate
@@ -20,7 +20,7 @@
 	     RAGE,         DIG,          PSYCHIC_M,    TELEPORT,     MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    SKULL_BASH,   \
 	     REST,         THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   \
-	     FLASH
+	     SHOCK_WAVE,   FLASH
 	; end
 
 	db 0 ; padding

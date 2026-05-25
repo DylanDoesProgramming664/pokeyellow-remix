@@ -1,8 +1,8 @@
 	db DEX_SLOWBRO ; pokedex id
 
-	db  95,  75, 110,  30, 100 ; 410 / 510
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +20 = +20 / +20
+	db  95,  75, 110,  30, 100 ; 410/ 510
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0, +20 = +20/ +20
 
 	db WATER, PSYCHIC_TYPE ; type
 	db 75 ; catch rate
@@ -18,7 +18,7 @@
 	tmhm MEGA_PUNCH,  FLAMETHROWER, MEGA_KICK, TOXIC, BODY_SLAM, TAKE_DOWN,    \
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   PAY_DAY,      SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
-	     RAGE,         EARTHQUAKE,   FISSURE,      DIG,          PSYCHIC_M,    \
+	     RAGE,         EARTHQUAKE,   BULLDOZE,     DIG,          PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
 	     FIRE_BLAST,   SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, \
 	     PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   SURF,         STRENGTH,     \

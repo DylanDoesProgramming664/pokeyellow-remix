@@ -1,8 +1,10 @@
 	db DEX_TANGELA ; pokedex id
 
-	db  65,  55, 115,  60, 100 ; 395 / 495
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +60
+	db  65,  55, 115,  60, 100 ; 395/ 495
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +60
+	; TANGROWTH = 100, 100, 125,  50, 110, 110 -> 595
+	;              hp  atk  def  spd  sat  sdf
 
 	db GRASS, GRASS ; type
 	db 45 ; catch rate
@@ -18,7 +20,7 @@
 	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
 	     HYPER_BEAM,   RAGE,         MEGA_DRAIN,   SOLARBEAM,    MIMIC,        \
 	     DOUBLE_TEAM,  BIDE,         SKULL_BASH,   REST,         SUBSTITUTE,   \
-	     CUT
+	     SHOCK_WAVE,   CUT
 	; end
 
 	db 0 ; padding

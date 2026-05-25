@@ -1,8 +1,8 @@
 	db DEX_SLOWPOKE ; pokedex id
 
-	db  90,  65,  65,  15,  40 ; 275 / 315
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 /   0
+	db  90,  65,  65,  15,  60 ; 295/ 355
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0, +20 = +20/ +40
 
 	db WATER, PSYCHIC_TYPE ; type
 	db 190 ; catch rate
@@ -17,7 +17,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     PAY_DAY,      RAGE,         \
-	     EARTHQUAKE,   FISSURE,      DIG,          PSYCHIC_M,    TELEPORT,     \
+	     EARTHQUAKE,   BULLDOZE,     DIG,          PSYCHIC_M,    TELEPORT,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         FIRE_BLAST,   \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      \
 	     TRI_ATTACK,   SUBSTITUTE,   SURF,         STRENGTH,     FLASH

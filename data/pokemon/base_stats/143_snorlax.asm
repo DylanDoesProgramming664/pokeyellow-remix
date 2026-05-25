@@ -1,8 +1,10 @@
 	db DEX_SNORLAX ; pokedex id
 
-	db 160, 110,  65,  30, 110 ; 475 / 585
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +30 = +30 / +15
+	db 160, 110,  65,  30, 110  ; 475 /  585
+	;   hp  atk  def  spd  spc   Gen1 / Gen2
+	;    0,   0,   0,   0, +45  = +45 /  +45
+	; MUNCHLAX = 135,  85,  40,   5,  85,  85 -> 435
+	;             hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
 	db 25 ; catch rate
@@ -19,10 +21,10 @@
 	     DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     \
 	     HYPER_BEAM,   PAY_DAY,      SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     RAGE,         SOLARBEAM,    THUNDERBOLT,  THUNDER,      EARTHQUAKE,   \
-	     FISSURE,      PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
-	     BIDE,         METRONOME,    SELFDESTRUCT, FIRE_BLAST,   SKULL_BASH,   \
-	     REST,         PSYWAVE,      ROCK_SLIDE,   SUBSTITUTE,   SURF,         \
-	     STRENGTH
+	     BULLDOZE,     PSYCHIC_M,    MIMIC,        DOUBLE_TEAM,  REFLECT,      \
+	     BIDE,         METRONOME,    FIRE_BLAST,   SKULL_BASH,   REST,         \
+	     PSYWAVE,      ROCK_SLIDE,   SUBSTITUTE,   SHOCK_WAVE,   SURF,         \
+	     STRENGTH,     STONE_EDGE
 	; end
 
 	db 0 ; padding

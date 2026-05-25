@@ -1,8 +1,8 @@
 	db DEX_DEWGONG ; pokedex id
 
-	db  90,  70,  80,  70,  95 ; 405 / 500
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +25
+	db  90,  70,  80,  70,  95 ; 405/ 500
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +25
 
 	db WATER, ICE ; type
 	db 75 ; catch rate
@@ -15,7 +15,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        HORN_DRILL,   BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
+	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
 	     BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     HYPER_BEAM,   \
 	     PAY_DAY,      RAGE,         MIMIC,        DOUBLE_TEAM,  BIDE,         \
 	     SKULL_BASH,   REST,         SUBSTITUTE,   SURF,         STRENGTH

@@ -896,6 +896,11 @@ _HurtByBurnText::
 	line "hurt by the burn!"
 	prompt
 
+_HurtByFrostbiteText::
+	text "<USER>'s"
+	line "hurt by frostbite!"
+	prompt
+
 _HurtByLeechSeedText::
 	text "LEECH SEED saps"
 	line "<USER>!"
@@ -1052,7 +1057,7 @@ _WokeUpText::
 
 _IsFrozenText::
 	text "<USER>"
-	line "is frozen solid!"
+	line "is partially frozen!"
 	prompt
 
 _FullyParalyzedText::

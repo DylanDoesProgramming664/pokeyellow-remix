@@ -1,8 +1,8 @@
 	db DEX_SANDSHREW ; pokedex id
 
-	db  55,  75,  85,  45,  30 ; 290 / 320
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +5,   0,   0,  +5,   0 = +10 / +20
+	db  60,  75,  85,  50,  30 ; 300/ 330
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +10,   0,   0, +10,   0 = +20/ +30
 
 	db GROUND, GROUND ; type
 	db 255 ; catch rate
@@ -16,10 +16,10 @@
 
 	; tm/hm learnset
 	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
-	     SUBMISSION,   SEISMIC_TOSS, RAGE,         EARTHQUAKE,   FISSURE,      \
-	     DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         SWIFT,        \
-	     SKULL_BASH,   REST,         ROCK_SLIDE,   SUBSTITUTE,   CUT,          \
-	     STRENGTH
+	     SUBMISSION,   SEISMIC_TOSS, RAGE,         EARTHQUAKE,   BULLDOZE,     \
+	     DIG,          MIMIC,        DOUBLE_TEAM,  BIDE,         FLASH_CANNON, \
+	     SWIFT,        SKULL_BASH,   REST,         SHADOW_CLAW,  ROCK_SLIDE,   \
+	     SUBSTITUTE,   CUT,          STRENGTH
 	; end
 
 	db 0 ; padding

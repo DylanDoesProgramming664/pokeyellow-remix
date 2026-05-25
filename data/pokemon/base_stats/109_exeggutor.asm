@@ -1,8 +1,8 @@
 	db DEX_EXEGGUTOR ; pokedex id
 
-	db  95,  95,  85,  55, 125 ; 455 / 580
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +50
+	db  95,  95,  85,  55, 125 ; 455/ 580
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +50
 
 	db GRASS, PSYCHIC_TYPE ; type
 	db 45 ; catch rate
@@ -17,8 +17,8 @@
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  HYPER_BEAM,   RAGE,         \
 	     MEGA_DRAIN,   SOLARBEAM,    PSYCHIC_M,    TELEPORT,     MIMIC,        \
-	     DOUBLE_TEAM,  REFLECT,      BIDE,         SELFDESTRUCT, EGG_BOMB,     \
-	     SOFTBOILED,   REST,   PSYWAVE,  EXPLOSION,   SUBSTITUTE,  STRENGTH,   \
+	     DOUBLE_TEAM,  REFLECT,      BIDE,         EGG_BOMB,     \
+	     SOFTBOILED,   REST,   PSYWAVE,  SUBSTITUTE,  STRENGTH,   \
 		 MEGA_DRAIN,   DREAM_EATER
 	; end
 

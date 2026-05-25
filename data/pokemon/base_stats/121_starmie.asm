@@ -1,8 +1,8 @@
 	db DEX_STARMIE ; pokedex id
 
-	db  60,  75,  85, 115, 100 ; 435 / 535
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +15
+	db  60,  75,  85, 115, 100 ; 435/ 535
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +15
 
 	db WATER, PSYCHIC_TYPE ; type
 	db 60 ; catch rate

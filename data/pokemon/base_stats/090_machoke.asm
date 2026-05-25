@@ -1,8 +1,8 @@
 	db DEX_MACHOKE ; pokedex id
 
-	db  80, 100,  70,  45,  60 ; 355 / 415
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +10 = +10 / +10
+	db  80, 110,  70,  45,  60 ; 365/ 425
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +10,   0,   0, +10 = +20/ +20
 
 	db FIGHTING, FIGHTING ; type
 	db 90 ; catch rate
@@ -17,7 +17,7 @@
 	; tm/hm learnset
 	tmhm MEGA_PUNCH,   MEGA_KICK,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    \
 	     DOUBLE_EDGE,  SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
-	     EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  \
+	     EARTHQUAKE,   BULLDOZE,     DIG,          MIMIC,        DOUBLE_TEAM,  \
 	     BIDE,         METRONOME,    FIRE_BLAST,   SKULL_BASH,   REST,         \
 	     ROCK_SLIDE,   SUBSTITUTE,   STRENGTH
 	; end

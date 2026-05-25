@@ -1,8 +1,9 @@
 	db DEX_CHANSEY ; pokedex id
 
-	db 250,   5,   5,  50, 105 ; 415 / 520
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +70
+	db 250,   5,   5,  50, 105 ; 415/ 520
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +70
+	; BLISSEY = 255,  10,  10,  55, 120, 135 = 585
 
 	db NORMAL, FAIRY ; type
 	db 30 ; catch rate
@@ -21,8 +22,8 @@
 	     SOLARBEAM,    THUNDERBOLT,  THUNDER,      PSYCHIC_M,    TELEPORT,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
 	     EGG_BOMB,     FIRE_BLAST,   SKULL_BASH,   SOFTBOILED,   REST,         \
-	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   STRENGTH,     \
-	     FLASH
+	     THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   SHOCK_WAVE,   \
+	     STRENGTH,     FLASH,        BULLDOZE,     EARTHQUAKE
 	; end
 
 	db 0 ; padding

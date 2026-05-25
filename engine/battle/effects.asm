@@ -451,7 +451,7 @@ StatModifierUpEffect:
 	sbc HIGH(MAX_STAT_VALUE)
 	jp z, RestoreOriginalStatModifier
 .recalculateStat ; recalculate affected stat
-                 ; paralysis and burn penalties, as well as badge boosts are ignored
+	             ; paralysis and burn penalties, as well as badge boosts are ignored
 	push hl
 	push bc
 	ld hl, StatModifierRatios
@@ -1028,9 +1028,6 @@ FlinchSideEffect:
 	call ClearHyperBeam
 	ret
 
-OneHitKOEffect:
-	jpfar OneHitKOEffect_
-
 ChargeEffect:
 	ld hl, wPlayerBattleStatus1
 	ld de, wPlayerMoveEffect
@@ -1142,7 +1139,7 @@ TrappingEffect:
 	bit USING_TRAPPING_MOVE, [hl]
 	ret nz
 	call ClearHyperBeam ; since this effect is called before testing whether the move will hit,
-                        ; the target won't need to recharge even if the trapping move missed
+	                    ; the target won't need to recharge even if the trapping move missed
 	set USING_TRAPPING_MOVE, [hl] ; mon is now using a trapping move
 	call BattleRandom ; 3/8 chance for 2 and 3 attacks, and 1/8 chance for 4 and 5 attacks
 	and $3
@@ -1163,6 +1160,12 @@ FocusEnergyEffect:
 
 RecoilEffect:
 	jpfar RecoilEffect_
+
+ConfusionSideEffect2:
+	call BattleRandom
+	cp 30 percent ; chance of confusion
+	ret nc
+	jr ConfusionSideEffectSuccess
 
 ConfusionSideEffect:
 	call BattleRandom

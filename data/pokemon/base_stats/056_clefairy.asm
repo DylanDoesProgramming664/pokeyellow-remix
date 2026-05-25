@@ -1,8 +1,9 @@
 	db DEX_CLEFAIRY ; pokedex id
 
-	db  70,  45,  50,  35,  65 ; 265 / 330
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,  +2,   0,  +5 =  +7 /  +7
+	db  78,  45,  50,  35,  71 ; 279/ 350
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;   +8,   0,  +2,   0, +11 = +21/ +27
+	; CLEFFA? Never heard of it! Get lost!
 
 	db FAIRY, FAIRY ; type
 	db 150 ; catch rate
@@ -20,8 +21,9 @@
 	     SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         SOLARBEAM,    \
 	     THUNDERBOLT,  THUNDER,      PSYCHIC_M,    TELEPORT,     MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    FIRE_BLAST,   \
-	     SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      TRI_ATTACK,   \
-	     SUBSTITUTE,   STRENGTH,     FLASH,  SOFTBOILED
+	     SKULL_BASH,   SOFTBOILED,   REST,         THUNDER_WAVE, PSYWAVE,      \
+	     TRI_ATTACK,   SUBSTITUTE,   SHOCK_WAVE,   STRENGTH,     FLASH,        \
+	     DIG
 	; end
 
 	db 0 ; padding

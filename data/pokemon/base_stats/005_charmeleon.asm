@@ -1,13 +1,15 @@
 	db DEX_CHARMELEON ; pokedex id
 
-	db  58,  77,  58,  80,  71 ; 344 / 430
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0, +13,   0,   0,  +6 = +19 / +25
+	db  58,  74,  58,  95,  75 ; 360/ 435
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +10,   0, +15, +10 = +35/ +30
+	; QUILAVA =  58,  85,  58,  80,  89,  65 -> 435
+	;            hp  atk  def  spd  sat  sde
+	;             0, +21,   0,   0,  +9,   0 =  +30
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate
 	db 142 ; base exp
-	; STAT_EXP_EFFICIENCY = (350 * 7) / 142 = 17.3
 
 	INCBIN "gfx/pokemon/front/charmeleon.pic", 0, 1 ; sprite dimensions
 	dw CharmeleonPicFront, CharmeleonPicBack
@@ -20,7 +22,7 @@
 	     TAKE_DOWN,    DOUBLE_EDGE,  SUBMISSION,   COUNTER,      SEISMIC_TOSS, \
 	     RAGE,         DRAGON_RAGE,  DIG,          MIMIC,        DOUBLE_TEAM,  \
 	     REFLECT,      BIDE,         FIRE_BLAST,   SWIFT,        SKULL_BASH,   \
-	     REST,         SUBSTITUTE,   CUT,          STRENGTH
+	     REST,         SHADOW_CLAW,  SUBSTITUTE,   CUT,          STRENGTH
 	; end
 
 	db 0 ; padding

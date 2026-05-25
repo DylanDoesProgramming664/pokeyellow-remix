@@ -131,19 +131,20 @@ _MtMoonB2FRocket4AfterBattleText::
 
 _MtMoonB2FRocketJerryBattleText::
 	text "You won't get"
-	line "past me with"
-	cont "my powered up"
+	line "past Jerry with"
+	cont "his buffed up"
 	cont "pokemon!"
 	done
 
 _MtMoonB2FRocketJerryEndBattleText::
-	text "B-But, my"
-	line "powered up"
+	text "B-But,"
+    line "Jerry's"
+	cont "buffed up"
 	cont "pokemon!"
 	prompt
 
 _MtMoonB2FRocketJerryAfterBattleText::
-	text "Just... just"
-	line "leave me be..."
+	text "Just... just leave"
+	line "Jerry alone..."
 	cont "[sniffle]"
 	done

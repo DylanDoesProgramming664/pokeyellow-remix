@@ -1,8 +1,8 @@
 	db DEX_SHELLDER ; pokedex id
 
-	db  30,  65, 100,  40,  45 ; 280 / 325
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +25
+	db  30,  65, 100,  40,  45 ; 280/ 325
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +25
 
 	db WATER, WATER ; type
 	db 190 ; catch rate
@@ -17,8 +17,8 @@
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    \
 	     ICE_BEAM,     BLIZZARD,     RAGE,         TELEPORT,     MIMIC,        \
-	     DOUBLE_TEAM,  REFLECT,      BIDE,         SELFDESTRUCT, SWIFT,        \
-	     REST,         EXPLOSION,    TRI_ATTACK,   SUBSTITUTE,   SURF
+	     DOUBLE_TEAM,  REFLECT,      BIDE,         SWIFT,        \
+	     REST,         TRI_ATTACK,   SUBSTITUTE,   SURF
 	; end
 
 	db 0 ; padding

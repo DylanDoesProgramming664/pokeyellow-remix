@@ -1,8 +1,8 @@
 	db DEX_ABRA ; pokedex id
 
-	db  25,  20,  15,  90, 105 ; 255 / 360
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +50
+	db  25,  20,  15,  90, 105 ; 255/ 360
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +50
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
 	db 200 ; catch rate
@@ -19,7 +19,7 @@
 	     DOUBLE_EDGE,  SUBMISSION,   COUNTER,      SEISMIC_TOSS, RAGE,         \
 	     PSYCHIC_M,    TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      \
 	     BIDE,         METRONOME,    SKULL_BASH,   REST,         THUNDER_WAVE, \
-	     PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   FLASH
+	     PSYWAVE,      TRI_ATTACK,   SUBSTITUTE,   SHOCK_WAVE,   FLASH
 	; end
 
 	db 0 ; padding

@@ -281,10 +281,10 @@ PlayAnimation:
 	pop af
 	vc_hook Stop_reducing_move_anim_flashing_Thunderbolt
 	ldh [rOBP0], a
-	vc_hook Stop_reducing_move_anim_flashing_Explosion
+	vc_hook Stop_reducing_move_anim_flashing_Discharge
 	call UpdateGBCPal_OBP0
 .nextAnimationCommand
-	vc_hook Stop_reducing_move_anim_flashing_Guillotine
+	vc_hook Stop_reducing_move_anim_flashing_ShockWave
 	pop hl
 	vc_hook Stop_reducing_move_anim_flashing_Mega_Kick
 	jr .animationLoop
@@ -305,9 +305,9 @@ LoadSubanimation:
 	ld a, [de]
 	vc_hook Reduce_move_anim_flashing_Mega_Kick
 	ld b, a
-	vc_hook Reduce_move_anim_flashing_Guillotine
+	vc_hook Reduce_move_anim_flashing_ShockWave
 	and %00011111
-	vc_hook Reduce_move_anim_flashing_Mega_Punch_Explosion_Self_Destruct
+	vc_hook Reduce_move_anim_flashing_Mega_Punch_Discharge_Flash_Cannon
 	ld [wSubAnimCounter], a ; number of frame blocks
 	vc_hook Reduce_move_anim_flashing_Blizzard
 	ld a, b
@@ -320,7 +320,7 @@ LoadSubanimation:
 	call GetSubanimationTransform2
 	jr .saveTransformation
 .isNotType5
-	vc_hook Reduce_move_anim_flashing_Self_Destruct
+	vc_hook Reduce_move_anim_flashing_Flash_Cannon
 	call GetSubanimationTransform1
 .saveTransformation
 ; place the upper 3 bits of a into bits 0-2 of a before storing
@@ -351,7 +351,7 @@ LoadSubanimation:
 ; sets the transform to SUBANIMTYPE_NORMAL if it's the player's turn
 ; sets the transform to the subanimation type if it's the enemy's turn
 GetSubanimationTransform1:
-	vc_hook Reduce_move_anim_flashing_Explosion
+	vc_hook Reduce_move_anim_flashing_
 	ld b, a
 	ldh a, [hWhoseTurn]
 	and a
@@ -488,7 +488,7 @@ ShareMoveAnimations:
 PlayApplyingAttackAnimation:
 ; Generic animation that shows after the move's individual animation
 ; Different animation depending on whether the move has an additional effect and on whose turn it is
-	vc_hook Stop_reducing_move_anim_flashing_Self_Destruct
+	vc_hook Stop_reducing_move_anim_flashing_Flash_Cannon
 	ld a, [wAnimationType]
 	and a
 	ret z
@@ -846,15 +846,6 @@ FlashScreenEveryFourFrameBlocks:
 	call z, AnimationFlashScreen
 	ret
 
-; used for Explosion and Selfdestruct
-DoExplodeSpecialEffects:
-	ld a, [wSubAnimCounter]
-	cp 1 ; is it the end of the subanimation?
-	jr nz, FlashScreenEveryFourFrameBlocks
-; if it's the end of the subanimation, make the attacking pokemon disappear
-	hlcoord 1, 5
-	jp AnimationHideMonPic ; make pokemon disappear
-
 ; flashes the screen when subanimation counter is 1 modulo 4
 DoBlizzardSpecialEffects:
 	ld a, [wSubAnimCounter]
@@ -1147,7 +1138,7 @@ AnimationShakeScreenVertically:
 	predef_jump PredefShakeScreenVertically
 
 AnimationShakeScreen:
-; Shakes the screen for a while. Used in Earthquake/Fissure/etc. animations.
+; Shakes the screen for a while. Used in Earthquake/Bulldoze/etc. animations.
 	ld b, $8
 
 AnimationShakeScreenHorizontallyFast:

@@ -323,7 +323,7 @@ MainInBattleLoop:
 	and a
 	ret nz ; return if pokedoll was used to escape from battle
 	ld a, [wBattleMonStatus]
-	and (1 << FRZ) | SLP_MASK
+	and SLP_MASK
 	jr nz, .selectEnemyMove ; if so, jump
 	ld a, [wPlayerBattleStatus1]
 	and (1 << STORING_ENERGY) | (1 << USING_TRAPPING_MOVE) ; check player is using Bide or using a multi-turn attack like wrap
@@ -521,15 +521,17 @@ HandlePoisonBurnLeechSeed:
 	ld de, wEnemyMonStatus
 .playersTurn
 	ld a, [de]
-	and (1 << BRN) | (1 << PSN)
-	jr z, .notBurnedOrPoisoned
+	and (1 << BRN) | (1 << PSN) | (1 << FRZ)
+	jr z, .notBurnedFrozenOrPoisoned
 	push hl
 	ld hl, HurtByPoisonText
 	ld a, [de]
-	and 1 << BRN
+	and (1 << BRN) | (1 << FRZ)
 	jr z, .poisoned
 	ld hl, HurtByBurnText
 .poisoned
+	ld a, [de]
+	ld a, [de]
 	call PrintText
 	xor a
 	ld [wAnimationType], a
@@ -537,7 +539,7 @@ HandlePoisonBurnLeechSeed:
 	call PlayMoveAnimation   ; play burn/poison animation
 	pop hl
 	call HandlePoisonBurnLeechSeed_DecreaseOwnHP
-.notBurnedOrPoisoned
+.notBurnedFrozenOrPoisoned
 	ld de, wPlayerBattleStatus2
 	ldh a, [hWhoseTurn]
 	and a
@@ -3186,7 +3188,7 @@ SelectEnemyMove:
 	and (1 << CHARGING_UP) | (1 << THRASHING_ABOUT) ; using a charging move or thrash/petal dance
 	ret nz
 	ld a, [wEnemyMonStatus]
-	and (1 << FRZ) | SLP_MASK
+	and SLP_MASK
 	ret nz
 	ld a, [wEnemyBattleStatus1]
 	and (1 << USING_TRAPPING_MOVE) | (1 << STORING_ENERGY) ; using a trapping move like wrap or bide
@@ -3394,8 +3396,6 @@ handleIfPlayerMoveMissed:
 	and a
 	jr z, getPlayerAnimationType
 	ld a, [wPlayerMoveEffect]
-	sub EXPLODE_EFFECT
-	jr z, playPlayerMoveAnimation ; don't play any animation if the move missed, unless it was EXPLODE_EFFECT
 	jr playerCheckIfFlyOrChargeEffect
 getPlayerAnimationType:
 	ld a, [wPlayerMoveEffect]
@@ -3414,7 +3414,6 @@ playPlayerMoveAnimation:
 	ld [wAnimationType], a
 	ld a, [wPlayerMoveNum]
 	call PlayMoveAnimation
-	call HandleExplodingAnimation
 	call DrawPlayerHUDAndHPBar
 	ld a, [wPlayerBattleStatus2]
 	bit HAS_SUBSTITUTE_UP, a
@@ -3461,8 +3460,6 @@ MirrorMoveCheck:
 	jr z, .moveDidNotMiss
 	call PrintMoveFailureText
 	ld a, [wPlayerMoveEffect]
-	cp EXPLODE_EFFECT ; even if Explosion or Selfdestruct missed, its effect still needs to be activated
-	jr z, .notDone
 	jp ExecutePlayerMoveDone ; otherwise, we're done if the move missed
 .moveDidNotMiss
 	call ApplyAttackToEnemyPokemon
@@ -3527,7 +3524,7 @@ PrintGhostText:
 	and a
 	jr nz, .Ghost
 	ld a, [wBattleMonStatus] ; player's turn
-	and (1 << FRZ) | SLP_MASK
+	and SLP_MASK
 	ret nz
 	ld hl, ScaredText
 	call PrintText
@@ -3600,7 +3597,6 @@ CheckPlayerStatusConditions:
 	call PrintText
 	xor a
 	ld [wPlayerUsedMove], a
-	ld hl, ExecutePlayerMoveDone ; player can't move this turn
 	jp .returnToHL
 
 .HeldInPlaceCheck
@@ -4400,10 +4396,10 @@ GetDamageVarsForPlayerAttack:
 	jr .scaleStats
 .setMixedAttackTrueCategory
 	ld hl, wPartyMon1Special
-	ld c, [hl]
+	ld b, [hl]
 	ld hl, wPartyMon1Attack
 	ld a, [hl]
-	cp c
+	cp b
 	jr nc, .physicalAttack ; if partyMon1.ATK >= partyMon1.SPC then move is PHYSICAL
 .specialAttack
 	ld hl, wEnemyMonSpecial
@@ -4485,7 +4481,7 @@ GetDamageVarsForEnemyAttack:
 	ld d, a ; d = move power
 	and a
 	ret z ; return if move power is zero
-    inc hl
+	inc hl
 	ld a, [hl] ; a = [wEnemyMoveCategory]
 	cp STATUS  ; CATEGORY == STATUS
 	jr z, .physicalAttack
@@ -4525,10 +4521,10 @@ GetDamageVarsForEnemyAttack:
 	jr .scaleStats
 .setMixedAttackTrueCategory
 	ld hl, wEnemyMonSpecial
-	ld c, [hl]
+	ld b, [hl]
 	ld hl, wEnemyMonAttack
 	ld a, [hl]
-	cp c
+	cp b
 	jr nc, .physicalAttack ; if enemyMon.ATK >= enemyMon.SPC then move is PHYSICAL
 .specialAttack
 	ld hl, wBattleMonSpecial
@@ -4653,16 +4649,8 @@ CalculateDamage:
 	ldh a, [hWhoseTurn] ; whose turn?
 	and a
 	ld a, [wPlayerMoveEffect]
-	jr z, .effect
+	jr z, .ok
 	ld a, [wEnemyMoveEffect]
-.effect
-
-; EXPLODE_EFFECT halves defense.
-	cp EXPLODE_EFFECT
-	jr nz, .ok
-	srl c
-	jr nz, .ok
-	inc c ; ...with a minimum value of 1 (used as a divisor later on)
 .ok
 
 ; Multi-hit attacks may or may not have 0 bp.
@@ -4670,10 +4658,6 @@ CalculateDamage:
 	jr z, .skipbp
 	cp $1e
 	jr z, .skipbp
-
-; Calculate OHKO damage based on remaining HP.
-	cp OHKO_EFFECT
-	jp z, JumpToOHKOMoveEffect
 
 ; Don't calculate damage for moves that don't do any.
 	ld a, d ; base power
@@ -4963,8 +4947,6 @@ HandleCounterMove:
 
 ApplyAttackToEnemyPokemon:
 	ld a, [wPlayerMoveEffect]
-	cp OHKO_EFFECT
-	jr z, ApplyDamageToEnemyPokemon
 	cp SUPER_FANG_EFFECT
 	jr z, .superFangEffect
 	cp SPECIAL_DAMAGE_EFFECT
@@ -5084,8 +5066,6 @@ ApplyAttackToEnemyPokemonDone:
 
 ApplyAttackToPlayerPokemon:
 	ld a, [wEnemyMoveEffect]
-	cp OHKO_EFFECT
-	jr z, ApplyDamageToPlayerPokemon
 	cp SUPER_FANG_EFFECT
 	jr z, .superFangEffect
 	cp SPECIAL_DAMAGE_EFFECT
@@ -5962,8 +5942,6 @@ handleIfEnemyMoveMissed:
 	and a
 	jr z, .moveDidNotMiss
 	ld a, [wEnemyMoveEffect]
-	cp EXPLODE_EFFECT
-	jr z, handleExplosionMiss
 	jr EnemyCheckIfFlyOrChargeEffect
 .moveDidNotMiss
 	call SwapPlayerAndEnemyLevels
@@ -5975,9 +5953,6 @@ GetEnemyAnimationType:
 	jr z, playEnemyMoveAnimation
 	ld a, ANIMATIONTYPE_SHAKE_SCREEN_HORIZONTALLY_HEAVY
 	jr playEnemyMoveAnimation
-handleExplosionMiss:
-	call SwapPlayerAndEnemyLevels
-	xor a
 playEnemyMoveAnimation:
 	push af
 	ld a, [wEnemyBattleStatus2]
@@ -5989,7 +5964,6 @@ playEnemyMoveAnimation:
 	ld [wAnimationType], a
 	ld a, [wEnemyMoveNum]
 	call PlayMoveAnimation
-	call HandleExplodingAnimation
 	call DrawEnemyHUDAndHPBar
 	ld a, [wEnemyBattleStatus2]
 	bit HAS_SUBSTITUTE_UP, a ; does mon have a substitute?
@@ -6036,8 +6010,6 @@ EnemyCheckIfMirrorMoveEffect:
 	jr z, .moveDidNotMiss
 	call PrintMoveFailureText
 	ld a, [wEnemyMoveEffect]
-	cp EXPLODE_EFFECT
-	jr z, .handleExplosionMiss
 	jp ExecuteEnemyMoveDone
 .moveDidNotMiss
 	call ApplyAttackToPlayerPokemon
@@ -6045,7 +6017,7 @@ EnemyCheckIfMirrorMoveEffect:
 	callfar DisplayEffectiveness
 	ld a, 1
 	ld [wMoveDidntMiss], a
-.handleExplosionMiss
+.handleAlwaysHappenSideEffectsMiss
 	ld a, [wEnemyMoveEffect]
 	ld hl, AlwaysHappenSideEffects
 	ld de, $1
@@ -6121,7 +6093,6 @@ CheckEnemyStatusConditions:
 	call PrintText
 	xor a
 	ld [wEnemyUsedMove], a
-	ld hl, ExecuteEnemyMoveDone ; enemy can't move this turn
 	jp .enemyReturnToHL
 .checkIfTrapped
 	ld a, [wPlayerBattleStatus1]
@@ -6708,7 +6679,9 @@ ApplyBurnAndParalysisPenaltiesToEnemy:
 ApplyBurnAndParalysisPenalties:
 	ldh [hWhoseTurn], a
 	call QuarterSpeedDueToParalysis
-	jp HalveAttackDueToBurn
+	call HalveSpeedDueToFreeze
+	call HalveAttackDueToBurn
+	jp   HalveSpecialDueToFreeze
 
 QuarterSpeedDueToParalysis:
 	ldh a, [hWhoseTurn]
@@ -6753,6 +6726,45 @@ QuarterSpeedDueToParalysis:
 	ld [hl], b
 	ret
 
+HalveSpeedDueToFreeze:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .playerTurn
+.enemyTurn ; quarter the player's speed
+	ld a, [wBattleMonStatus]
+	and 1 << FRZ
+	ret z ; return if player not paralysed
+	ld hl, wBattleMonSpeed + 1
+	ld a, [hld]
+	ld b, a
+	ld a, [hl]
+	srl a
+	rr b
+	ld [hli], a
+	or b
+	jr nz, .storePlayerSpeed
+	ld b, 1 ; give the player a minimum of at least one speed point
+.storePlayerSpeed
+	ld [hl], b
+	ret
+.playerTurn ; quarter the enemy's speed
+	ld a, [wEnemyMonStatus]
+	and 1 << FRZ
+	ret z ; return if enemy not paralysed
+	ld hl, wEnemyMonSpeed + 1
+	ld a, [hld]
+	ld b, a
+	ld a, [hl]
+	srl a
+	rr b
+	ld [hli], a
+	or b
+	jr nz, .storeEnemySpeed
+	ld b, 1 ; give the enemy a minimum of at least one speed point
+.storeEnemySpeed
+	ld [hl], b
+	ret
+
 HalveAttackDueToBurn:
 	ldh a, [hWhoseTurn]
 	and a
@@ -6779,6 +6791,45 @@ HalveAttackDueToBurn:
 	and 1 << BRN
 	ret z ; return if enemy not burnt
 	ld hl, wEnemyMonAttack + 1
+	ld a, [hld]
+	ld b, a
+	ld a, [hl]
+	srl a
+	rr b
+	ld [hli], a
+	or b
+	jr nz, .storeEnemyAttack
+	ld b, 1 ; give the enemy a minimum of at least one attack point
+.storeEnemyAttack
+	ld [hl], b
+	ret
+
+HalveSpecialDueToFreeze:
+	ldh a, [hWhoseTurn]
+	and a
+	jr z, .playerTurn
+.enemyTurn ; reduce the player's SPECIAL stat
+	ld a, [wBattleMonStatus]
+	and 1 << FRZ
+	ret z ; return if player not frozen
+	ld hl, wBattleMonSpecial + 1
+	ld a, [hld]
+	ld b, a
+	ld a, [hl]
+	srl a
+	rr b
+	ld [hli], a
+	or b
+	jr nz, .storePlayerAttack
+	ld b, 1 ; give the player a minimum of at least one attack point
+.storePlayerAttack
+	ld [hl], b
+	ret
+.playerTurn ; halve the enemy's attack
+	ld a, [wEnemyMonStatus]
+	and 1 << FRZ
+	ret z ; return if enemy not burnt
+	ld hl, wEnemyMonSpecial + 1
 	ld a, [hld]
 	ld b, a
 	ld a, [hl]
@@ -7033,38 +7084,6 @@ ENDC
 	ret
 
 
-HandleExplodingAnimation:
-	ldh a, [hWhoseTurn]
-	and a
-	ld hl, wEnemyMonType1
-	ld de, wEnemyBattleStatus1
-	ld a, [wPlayerMoveNum]
-	jr z, .player
-	ld hl, wBattleMonType1
-	ld de, wEnemyBattleStatus1
-	ld a, [wEnemyMoveNum]
-.player
-	cp SELFDESTRUCT
-	jr z, .isExplodingMove
-	cp EXPLOSION
-	ret nz
-.isExplodingMove
-	ld a, [de]
-	bit INVULNERABLE, a ; fly/dig
-	ret nz
-	ld a, [hli]
-	cp GHOST
-	ret z
-	ld a, [hl]
-	cp GHOST
-	ret z
-	ld a, [wMoveMissed]
-	and a
-	ret nz
-	ld a, ANIMATIONTYPE_SHAKE_SCREEN_HORIZONTALLY_LIGHT
-	ld [wAnimationType], a
-	assert ANIMATIONTYPE_SHAKE_SCREEN_HORIZONTALLY_LIGHT == MEGA_PUNCH
-	; ld a, MEGA_PUNCH
 ; fallthrough
 PlayMoveAnimation:
 	ld [wAnimationID], a

@@ -18,12 +18,11 @@ _SilphCo2FSilphWorkerFReceivedTM36Text::
 
 _SilphCo2FSilphWorkerFTM36ExplanationText::
 	text "TM36 is"
-	line "SELFDESTRUCT!"
+	line "FLASH CANNON!"
 
-	para "It's powerful, but"
-	line "the #MON that"
-	cont "uses it faints!"
-	cont "Be careful."
+	para "Not many #MON"
+	line "can use it, but"
+	cont "it's very useful."
 	done
 
 _SilphCo2FSilphWorkerFTM36NoRoomText::

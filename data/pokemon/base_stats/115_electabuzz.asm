@@ -1,10 +1,10 @@
 	db DEX_ELECTABUZZ ; pokedex id
 
-	db  65,  83,  57, 105, 100 ; 410 / 510
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +15 = +15 / +20
+	db  65,  93,  57, 105,  95 ; 415/ 510
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0, +10,   0,   0, +10 = +20/ +20
 
-	db ELECTRIC, ELECTRIC ; type
+	db ELECTRIC, FIGHTING ; type
 	db 45 ; catch rate
 	db 156 ; base exp
 
@@ -20,7 +20,7 @@
 	     RAGE,         THUNDERBOLT,  THUNDER,      PSYCHIC_M,    TELEPORT,     \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         METRONOME,    \
 	     SWIFT,        SKULL_BASH,   REST,         THUNDER_WAVE, PSYWAVE,      \
-	     SUBSTITUTE,   STRENGTH,     FLASH
+	     SUBSTITUTE,   SHOCK_WAVE,   STRENGTH,     FLASH
 	; end
 
 	db 0 ; padding

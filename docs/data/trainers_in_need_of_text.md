@@ -1,0 +1,30 @@
+Aside from Jerry, I have 70 unused/new trainers left to make text for. Not a joke.
+
+- Youngster: 2
+- BugCatcher: 2
+- Lass: 1
+- Sailor: 1
+- JrTrainerM: 4
+- JrTrainerF: 3
+- Pokemaniac: 1
+- SuperNerd: 4
+- Biker: 1
+- Burglar: 4
+- Engineer: 2
+- Fisher: 1
+- Swimmer: 1
+- CueBall: 1
+- Gambler: 2
+- Beauty: 1
+- Psychic: 1
+- Rocker: 1
+- Juggler: 2
+- Tamer: 1
+- BirdKeeper: 3
+- Blackbelt: 1
+- Scientist: 2
+- Rocket: 7
+- CoolTrainerM: 5
+- CoolTrainerF: 5
+- Gentleman: 2
+- Channeler: 9

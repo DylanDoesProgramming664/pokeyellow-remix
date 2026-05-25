@@ -24,7 +24,7 @@ Route9_TextPointers:
 	dw_const Route9Youngster1Text,    TEXT_ROUTE9_YOUNGSTER1
 	dw_const Route9Hiker3Text,        TEXT_ROUTE9_HIKER3
 	dw_const Route9Youngster2Text,    TEXT_ROUTE9_YOUNGSTER2
-	dw_const Route9CooltrainerF2Text, TEXT_ROUTE9_COOLTRAINER_F3
+	dw_const Route9CooltrainerF3Text, TEXT_ROUTE9_COOLTRAINER_F3
 	dw_const PickUpItemText,          TEXT_ROUTE9_TM_TELEPORT
 	dw_const Route9SignText,          TEXT_ROUTE9_SIGN
 
@@ -49,7 +49,7 @@ Route9TrainerHeader7:
 Route9TrainerHeader8:
 	trainer EVENT_BEAT_ROUTE_9_TRAINER_8, 2, Route9Youngster2BattleText, Route9Youngster2EndBattleText, Route9Youngster2AfterBattleText
 Route9TrainerHeader9:
-	trainer EVENT_BEAT_ROUTE_9_TRAINER_9, 0, Route9CooltrainerF2BattleText, Route9CooltrainerF2EndBattleText, Route9CooltrainerF2AfterBattleText
+	trainer EVENT_BEAT_ROUTE_9_TRAINER_9, 0, Route9CooltrainerF3BattleText, Route9CooltrainerF3EndBattleText, Route9CooltrainerF3AfterBattleText
 	db -1 ; end
 
 Route9CooltrainerF1Text:

@@ -1,10 +1,11 @@
 	db DEX_KRABBY ; pokedex id
 
-	db  30, 105,  90,  50,  25 ; 300 / 325
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 /   0
+	db  30, 105,  90,  50,  45 ; 320/ 365
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0, +20 = +20/ +40
+	; In Gen2, Sp.ATK/Sp.DEF =  25/ 65
 
-	db WATER, NORMAL ; type
+	db WATER, BUG ; type
 	db 225 ; catch rate
 	db 115 ; base exp
 
@@ -18,7 +19,7 @@
 	tmhm SWORDS_DANCE, TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
 	     BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     BLIZZARD,     RAGE,         \
 	     MIMIC,        DOUBLE_TEAM,  BIDE,         REST,         SUBSTITUTE,   \
-	     CUT,          SURF,         STRENGTH
+	     CUT,          SURF,         STRENGTH,     DIG
 	; end
 
 	db 0 ; padding

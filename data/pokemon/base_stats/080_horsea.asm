@@ -1,8 +1,8 @@
 	db DEX_HORSEA ; pokedex id
 
-	db  30,  40,  70,  60,  70 ; 270 / 340
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +45 =   0 / +45
+	db  30,  40,  70,  60,  70 ; 270/ 340
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +45
 
 	db WATER, WATER ; type
 	db 225 ; catch rate
@@ -18,7 +18,7 @@
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    \
 	     ICE_BEAM,     BLIZZARD,     RAGE,         MIMIC,        DOUBLE_TEAM,  \
 	     BIDE,         SWIFT,        SKULL_BASH,   REST,         SUBSTITUTE,   \
-	     SURF
+	     SURF,         FLASH_CANNON
 	; end
 
 	db 0 ; padding

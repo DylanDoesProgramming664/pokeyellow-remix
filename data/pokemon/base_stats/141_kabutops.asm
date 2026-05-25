@@ -1,8 +1,8 @@
 	db DEX_KABUTOPS ; pokedex id
 
-	db  65, 125, 115,  85,  75 ; 465 / 540
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;   +5, +10, +10,  +5,  +5 = +35 / +45
+	db  63, 133, 119,  84,  70 ; 469/ 539
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;   +3, +18, +14,  +4,   0 = +39/ +44
 
 	db ROCK, WATER ; type
 	db 45 ; catch rate
@@ -19,7 +19,8 @@
 	     TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   WATER_GUN,    ICE_BEAM,     \
 	     BLIZZARD,     HYPER_BEAM,   SUBMISSION,   SEISMIC_TOSS, RAGE,         \
 	     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         SKULL_BASH,   \
-	     REST,         SUBSTITUTE,   CUT,      SURF,  ROCK_SLIDE
+	     REST,         SUBSTITUTE,   CUT,          SURF,         ROCK_SLIDE,   \
+	     DIG,          STONE_EDGE
 	; end
 
 	db 0 ; padding

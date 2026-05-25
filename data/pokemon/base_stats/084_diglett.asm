@@ -1,8 +1,8 @@
 	db DEX_DIGLETT ; pokedex id
 
-	db  20,  70,  25,  95,  45 ; 255 / 300
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;  +10, +15,   0,   0,   0 = +25 / +35
+	db  20,  75,  25,  95,  45 ; 260/ 305
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +10, +20,   0,   0,   0 = +30/ +40
 
 	db GROUND, GROUND ; type
 	db 255 ; catch rate
@@ -16,8 +16,9 @@
 
 	; tm/hm learnset
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         \
-	     EARTHQUAKE,   FISSURE,      DIG,          MIMIC,        DOUBLE_TEAM,  \
-	     BIDE,         REST,         ROCK_SLIDE,   SUBSTITUTE,   CUT
+	     EARTHQUAKE,   BULLDOZE,     DIG,          MIMIC,        DOUBLE_TEAM,  \
+	     BIDE,         FLASH_CANNON, REST,         SHADOW_CLAW,  ROCK_SLIDE,   \
+	     SUBSTITUTE,   CUT
 	; end
 
 	db 0 ; padding

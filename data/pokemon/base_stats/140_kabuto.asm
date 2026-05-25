@@ -1,8 +1,8 @@
 	db DEX_KABUTO ; pokedex id
 
-	db  30,  80,  90,  55,  55 ; 310 / 365
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0, +10 = +10 / +10
+	db  42,  98,  91,  56,  56 ; 343/ 399
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;  +12, +18,  +1,  +1, +11 = +43/ +44
 
 	db ROCK, WATER ; type
 	db 45 ; catch rate
@@ -18,7 +18,7 @@
 	tmhm TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  BUBBLEBEAM,   \
 	     WATER_GUN,    ICE_BEAM,     BLIZZARD,     RAGE,         MIMIC,        \
 	     DOUBLE_TEAM,  REFLECT,      BIDE,         REST,         SUBSTITUTE,   \
-	     SURF,      ROCK_SLIDE
+	     SURF,         ROCK_SLIDE,   DIG
 	; end
 
 	db 0 ; padding

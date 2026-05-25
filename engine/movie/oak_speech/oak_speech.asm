@@ -64,6 +64,36 @@ OakSpeech:
 	ld a, 1
 	ld [wItemQuantity], a
 	call AddItemToInventory
+	ld a, RARE_CANDY
+	ld [wcf91], a
+	ld a, 99
+	ld [wItemQuantity], a
+	call AddItemToInventory
+	ld a, HP_UP
+	ld [wcf91], a
+	ld a, 99
+	ld [wItemQuantity], a
+	call AddItemToInventory
+	ld a, PROTEIN
+	ld [wcf91], a
+	ld a, 99
+	ld [wItemQuantity], a
+	call AddItemToInventory
+	ld a, IRON
+	ld [wcf91], a
+	ld a, 99
+	ld [wItemQuantity], a
+	call AddItemToInventory
+	ld a, CARBOS
+	ld [wcf91], a
+	ld a, 99
+	ld [wItemQuantity], a
+	call AddItemToInventory
+	ld a, CALCIUM
+	ld [wcf91], a
+	ld a, 99
+	ld [wItemQuantity], a
+	call AddItemToInventory
 	ld a, [wDefaultMap]
 	ld [wDestinationMap], a
 	call PrepareForSpecialWarp
@@ -254,8 +284,8 @@ YesNoNormalHardText:
 	text_far _AreYouSureText
 	text_end
 BoyGirlText:
-    text_far _BoyGirlText
-    text_end
+	text_far _BoyGirlText
+	text_end
 
 FadeInIntroPic:
 	ld hl, IntroFadePalettes

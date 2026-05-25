@@ -12,6 +12,50 @@ Route10_ScriptPointers:
 	dw_const CheckFightingMapTrainers,              SCRIPT_ROUTE10_DEFAULT
 	dw_const DisplayEnemyTrainerTextAndStartBattle, SCRIPT_ROUTE10_START_BATTLE
 	dw_const EndTrainerBattle,                      SCRIPT_ROUTE10_END_BATTLE
+    dw_const Route10CheckRocketJerry,               SCRIPT_ROUTE10_CHECK_ROCKET_JERRY
+	dw_const Route10RocketDefeatedScript,           SCRIPT_ROUTE10_ROCKET_JERRY_DEFEATED
+
+Route10RocketDefeatedScript:
+	ld a, [wIsInBattle]
+	cp $ff
+	jp z, Route10ClearScripts
+    call UpdateSprites
+	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
+	ld [wJoyIgnore], a
+	SetEvent EVENT_BEAT_ROUTE_10_ROCKET_JERRY
+	ld a, TEXT_ROUTE10_ROCKET_JERRY
+	ldh [hSpriteIndexOrTextID], a
+	call DisplayTextID
+	xor a ; SCRIPT_ROUTE10_DEFAULT
+	ld [wJoyIgnore], a
+	ld [wMtMoonB2FCurScript], a
+    ld [wCurMapScript], a
+    farcall MtMoonB2FHideRocketJerry
+	ret
+
+Route10CheckRocketJerry:
+IF DEF(_DEBUG)
+	call DebugPressedOrHeldB
+	ret nz
+ENDC
+	CheckEvent EVENT_BEAT_ROUTE_10_ROCKET_JERRY
+	jr nz, .skipRocketJerryEncounter
+	ld hl, MtMoonB2FCoords1
+	call ArePlayerCoordsInArray
+	jr nc, .skipRocketJerryEncounter
+	ld a, TEXT_ROUTE10_ROCKET_JERRY
+	ldh [hSpriteIndexOrTextID], a
+	jp DisplayTextID
+Route10HideRocketJerry:
+; code similar to this appears in a lot of banks; this particular
+; one is called after you beat the Rocket Grunt Jerry in MtMoon.
+; the screen then fades out, he disappears, and fades back in
+	call GBFadeOutToBlack
+	ld a, HS_ROUTE_10_ROCKET_JERRY
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	call GBFadeInFromBlack
+	ret
 
 Route10_TextPointers:
 	def_text_pointers
@@ -21,6 +65,7 @@ Route10_TextPointers:
 	dw_const Route10CooltrainerF1Text,  TEXT_ROUTE10_COOLTRAINER_F1
 	dw_const Route10Hiker2Text,         TEXT_ROUTE10_HIKER2
 	dw_const Route10CooltrainerF2Text,  TEXT_ROUTE10_COOLTRAINER_F2
+	dw_const Route10RocketJerryText,    TEXT_ROUTE10_ROCKET_JERRY
 	dw_const Route10RockTunnelSignText, TEXT_ROUTE10_ROCKTUNNEL_NORTH_SIGN
 	dw_const PokeCenterSignText,        TEXT_ROUTE10_POKECENTER_SIGN
 	dw_const Route10RockTunnelSignText, TEXT_ROUTE10_ROCKTUNNEL_SOUTH_SIGN

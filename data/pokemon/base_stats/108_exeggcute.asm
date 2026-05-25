@@ -1,8 +1,8 @@
 	db DEX_EXEGGCUTE ; pokedex id
 
-	db  60,  40,  80,  40,  60 ; 280 / 340
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 / +15
+	db  60,  40,  80,  40,  60 ; 280/ 340
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/ +15
 
 	db GRASS, PSYCHIC_TYPE ; type
 	db 90 ; catch rate
@@ -17,7 +17,7 @@
 	; tm/hm learnset
 	tmhm TOXIC,        TAKE_DOWN,    DOUBLE_EDGE,  RAGE,         PSYCHIC_M,    \
 	     TELEPORT,     MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
-	     SELFDESTRUCT, EGG_BOMB,     REST,         PSYWAVE,      EXPLOSION,    \
+	     EGG_BOMB,     REST,         PSYWAVE,      \
 	     SUBSTITUTE,   SOFTBOILED,	 MEGA_DRAIN,   DREAM_EATER
 	; end
 

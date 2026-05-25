@@ -6,7 +6,7 @@ ExclamationPointMoveSets:
 
 ; set 1
 	db RECOVER
-	db SELFDESTRUCT
+	db FLASH_CANNON
 	db AMNESIA
 	db 0 ; end set
 
@@ -44,7 +44,7 @@ ExclamationPointMoveSets:
 	db ABSORB
 	db STRING_SHOT
 	db EARTHQUAKE
-	db FISSURE
+	db BULLDOZE
 	db DIG
 	db TOXIC
 	db SCREECH

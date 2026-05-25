@@ -1,13 +1,12 @@
 	db DEX_WEEDLE ; pokedex id
 
-	db  42,  35,  30,  53,  20 ; 180 / 200
-	;   hp  atk  def  spd  spc  Gen1 /Gen2
-	;    0,   0,   0,   0,   0 =   0 /   0
+	db  42,  35,  30,  53,  20 ; 180/ 200
+	;   hp  atk  def  spd  spc  Gen1/Gen2
+	;    0,   0,   0,   0,   0 =   0/   0
 
 	db BUG, POISON ; type
 	db 255 ; catch rate
 	db 52 ; base exp
-	; STAT_EXP_EFFICIENCY = (180 * 7) /  52 = 24.2
 
 	INCBIN "gfx/pokemon/front/weedle.pic", 0, 1 ; sprite dimensions
 	dw WeedlePicFront, WeedlePicBack
